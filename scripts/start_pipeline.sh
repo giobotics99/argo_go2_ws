@@ -6,6 +6,8 @@
 #   MAP=/percorso/mappa.yaml ~/argo_go2_ws/scripts/start_pipeline.sh
 #   YOLO=0 RVIZ=1 ~/argo_go2_ws/scripts/start_pipeline.sh   # senza YOLO, con RViz
 #   NAV=foxy ~/argo_go2_ws/scripts/start_pipeline.sh        # Nav2 Foxy locale invece del container Humble
+#   REALSENSE=True ~/argo_go2_ws/scripts/start_pipeline.sh  # camera accesa anche senza YOLO
+#   VOICE=0 ~/argo_go2_ws/scripts/start_pipeline.sh         # senza voce (per usare l'app Unitree)
 #
 # NAV=humble (default): Nav2 gira nel container docker 'nobody-unitree_ros-1' (ROS 2 Humble,
 #   nobody/src/nobody_bringup/launch/nav.launch_gio.py + config/nav2_params_gio.yaml, mappa fissa
@@ -23,6 +25,8 @@ MAP="${MAP:-$WS/src/go2_nav/maps/map_1779889723.yaml}"
 YOLO="${YOLO:-0}"
 RVIZ="${RVIZ:-0}"
 NAV="${NAV:-humble}"
+REALSENSE="${REALSENSE:-$([ "$YOLO" = "1" ] && echo True || echo False)}"   # la camera serve solo a YOLO (~80% di CPU)
+VOICE="${VOICE:-1}"   # 1 = il cane legge ad alta voce /supervisor/explanation (WebRTC: l'app Unitree deve essere chiusa)
 NAV_CONTAINER=nobody-unitree_ros-1
 GEMMA_MODEL="${GEMMA_MODEL:-$HOME/models/gemma-4-E2B-it-Q8_0.gguf}"
 
@@ -90,7 +94,7 @@ tmux send-keys -t "$SESSION:gemma" \
 
 # 1 — Bringup robot: aspetta che arrivino i dati del Go2, poi driver + LiDAR + RealSense
 new_win bringup \
-  "wait_topic /utlidar/robot_pose geometry_msgs/msg/PoseStamped && ros2 launch go2_bringup go2.launch.py lidar:=True realsense:=True"
+  "wait_topic /utlidar/robot_pose geometry_msgs/msg/PoseStamped && ros2 launch go2_bringup go2.launch.py lidar:=True realsense:=$REALSENSE"
 
 # 2 — Nav2: aspetta la TF odom->base_link e i dati LiDAR, poi avvia Nav2 (container Humble o Foxy locale)
 if [ "$NAV" = "humble" ]; then
@@ -113,6 +117,15 @@ new_win patrol "wait_nav2 && wait_gemma && ros2 launch go2_patrol_mission patrol
 
 # 5 — Spiegazioni di Gemma
 new_win explain "wait_plansys2 && argo_explain"
+
+# 5b — Voce: il Go2 legge /supervisor/explanation dal suo speaker (Piper + WebRTC)
+if [ "$VOICE" = "1" ]; then
+  if [ -d "$WS/venv-voice" ]; then
+    new_win voice "wait_plansys2 && ros2 run go2_hardware argo_voice_node.py"
+  else
+    echo "VOICE=1 ma manca venv-voice: crealo con scripts/setup_voice_venv.sh (avvio senza voce)"
+  fi
+fi
 
 # 6 — RViz (opzionale) per dare la 2D Pose Estimate
 if [ "$RVIZ" = "1" ]; then

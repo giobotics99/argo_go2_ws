@@ -406,7 +406,8 @@ class GemmaBridge(Node):
             "2. If the command mentions ANY place that is not one of the rooms above (e.g. kitchen, bathroom, "
             "office 3, outside, a person's desk), list those places in 'unknown_places' and set 'accepted' to false.\n"
             "3. If the command is not a request to go somewhere or inspect something, set 'accepted' to false.\n"
-            "4. 'reply' is ONE short sentence for the operator, in the SAME language as the command. "
+            "4. 'reply' is ONE short sentence for the operator, ALWAYS written in ITALIAN "
+            "(never Portuguese, Spanish or other languages), even if the command is in English. "
             "If accepted, confirm the rooms. If rejected, explain why and say which places you know.\n"
             "Return ONLY raw JSON (no markdown, no backticks) with this exact schema:\n"
             '{"accepted": true, "target_rooms": ["room_id", ...], "unknown_places": ["..."], "reply": "..."}'
@@ -429,6 +430,11 @@ class GemmaBridge(Node):
             for place in parsed.get("unknown_places") or []:
                 if place and normalize_room(place) is None:
                     unknown_places.append(str(place))
+            # Gemma a volte mette tra i "luoghi" l'intera frase (es. "che tempo fa oggi"):
+            # un luogo vero è breve e non coincide con tutto il comando
+            cmd_norm = command_text.strip(' ?!.').lower()
+            unknown_places = [p for p in unknown_places
+                              if len(p.split()) <= 3 and p.strip(' ?!.').lower() != cmd_norm]
             reply = str(parsed.get("reply") or "").strip()
             accepted = parsed.get("accepted", True) not in (False, 'false', 'False')
             if target_rooms and not unknown_places:
@@ -447,9 +453,9 @@ class GemmaBridge(Node):
             elif not target_rooms:
                 reason = "Non ho riconosciuto nessun luogo che conosco nel comando."
             else:
-                reason = "Il comando non è una richiesta di navigazione o ispezione."
-            msg = (f"Goal RIFIUTATO. {('Gemma: ' + reply) if reply else reason} "
-                   f"Conosco solo: {known_places_it()}.")
+                reason = "Posso solo andare a ispezionare i luoghi che conosco."
+            # Frase composta da noi (non da Gemma): sempre corretta e sempre in italiano
+            msg = f"Goal RIFIUTATO. {reason} Conosco solo: {known_places_it()}."
             self.say(msg)
             response.success = False
             response.message = msg

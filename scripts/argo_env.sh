@@ -12,7 +12,8 @@ if [ -n "$VIRTUAL_ENV" ]; then
   deactivate 2>/dev/null || true
 fi
 unset VIRTUAL_ENV PYENV_VERSION
-PATH=$(echo "$PATH" | tr ':' '\n' | grep -v -e 'venv-argo' -e '\.pyenv' | paste -sd: -)
+# toglie dal PATH qualsiasi venv (venv-argo, venv-voice, ...) e pyenv: i nodi ROS usano /usr/bin/python3
+PATH=$(echo "$PATH" | tr ':' '\n' | grep -v -e '/venv[^/]*/bin' -e '\.pyenv' | paste -sd: -)
 export PATH
 
 # --- CUDA (same as ~/.bashrc) ---
@@ -144,4 +145,13 @@ argo_rec() {
   ffmpeg -loglevel warning -stats -f x11grab -framerate 15 -video_size "${size:-1920x1080}" -i "$disp" \
     -c:v libx264 -preset ultrafast -crf 28 -pix_fmt yuv420p "$out"
   echo "[argo] Salvato: $out"
+}
+
+# Fa dire una frase al cane (serve il nodo voce attivo: finestra tmux 'voice' o
+#   ros2 run go2_hardware argo_voice_node.py)
+#   argo_say "Ciao, sono Argo"
+argo_say() {
+  local txt
+  txt=$(printf '%s' "$*" | sed -e 's/\\/\\\\/g' -e 's/"/\\"/g')
+  ros2 topic pub --once /argo/say std_msgs/msg/String "{data: \"$txt\"}" >/dev/null && echo "[argo] inviato: $*"
 }

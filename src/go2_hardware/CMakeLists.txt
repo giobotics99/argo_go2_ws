@@ -7,6 +7,13 @@ endif()
 
 find_package(ament_cmake REQUIRED)
 
+# Nodo voce: legge /supervisor/explanation con lo speaker del Go2 (Piper + WebRTC, librerie in venv-voice)
+install(PROGRAMS
+  scripts/argo_voice_node.py
+  scripts/go2_speaker_worker.py
+  DESTINATION lib/${PROJECT_NAME}
+)
+
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
   set(ament_cmake_copyright_FOUND TRUE)

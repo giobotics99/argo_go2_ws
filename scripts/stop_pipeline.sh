@@ -8,7 +8,7 @@ if ! tmux has-session -t "$SESSION" 2>/dev/null; then
 fi
 
 # Ordine inverso: prima PlanSys2/YOLO, poi Nav2, poi bringup, per ultimo Gemma
-for w in cmd rviz explain patrol yolo nav2 bringup gemma; do
+for w in cmd rviz voice explain patrol yolo nav2 bringup gemma; do
   tmux send-keys -t "$SESSION:$w" C-c 2>/dev/null || true
   sleep 1
 done
