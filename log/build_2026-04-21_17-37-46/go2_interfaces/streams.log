@@ -1,0 +1,263 @@
+[0.051s] Invoking command in '/home/giovanna/argo_go2_ws/build/go2_interfaces': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/giovanna/argo_go2_ws/build/go2_interfaces -- -j16 -l16
+[0.097s] -- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)
+[0.098s] -- Found ament_cmake_core: 0.9.12 (/opt/ros/foxy/share/ament_cmake_core/cmake)
+[0.107s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.107s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.311s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.314s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.318s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.518s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.559s] -- Found std_msgs: 2.0.5 (/opt/ros/foxy/share/std_msgs/cmake)
+[0.645s] -- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") 
+[0.874s] -- Found ament_cmake_ros: 0.9.2 (/opt/ros/foxy/share/ament_cmake_ros/cmake)
+[0.992s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.003s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.028s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3.5") 
+[1.029s] -- Found python_cmake_module: 0.8.1 (/opt/ros/foxy/share/python_cmake_module/cmake)
+[1.057s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.057s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.8
+[1.057s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.8.so
+[1.082s] -- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[1.096s] -- Added test 'lint_cmake' to check CMake code style
+[1.098s] -- Added test 'xmllint' to check XML markup files
+[1.105s] -- Configuring done
+[1.160s] -- Generating done
+[1.172s] -- Build files have been written to: /home/giovanna/argo_go2_ws/build/go2_interfaces
+[1.221s] [  2%] Built target go2_interfaces__cpp
+[1.221s] [ 12%] Built target go2_interfaces__rosidl_generator_c
+[1.251s] [ 46%] Built target go2_interfaces__rosidl_typesupport_cpp
+[1.251s] [ 46%] Built target go2_interfaces__rosidl_typesupport_c
+[1.252s] [ 47%] Built target go2_interfaces__rosidl_typesupport_introspection_cpp
+[1.260s] [ 58%] Built target go2_interfaces__rosidl_typesupport_fastrtps_cpp
+[1.279s] [ 70%] Built target go2_interfaces__rosidl_typesupport_introspection_c
+[1.297s] [ 82%] Built target go2_interfaces__rosidl_typesupport_fastrtps_c
+[1.323s] [ 82%] Built target go2_interfaces
+[1.352s] [ 83%] Built target go2_interfaces__py
+[1.386s] [ 93%] Built target go2_interfaces__python
+[1.418s] [100%] Built target go2_interfaces__rosidl_typesupport_fastrtps_c__pyext
+[1.418s] [100%] Built target go2_interfaces__rosidl_typesupport_introspection_c__pyext
+[1.418s] [100%] Built target go2_interfaces__rosidl_typesupport_c__pyext
+[1.434s] Invoked command in '/home/giovanna/argo_go2_ws/build/go2_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/giovanna/argo_go2_ws/build/go2_interfaces -- -j16 -l16
+[1.438s] Invoking command in '/home/giovanna/argo_go2_ws/build/go2_interfaces': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/giovanna/argo_go2_ws/build/go2_interfaces
+[1.451s] -- Install configuration: ""
+[1.451s] -- Execute custom install script
+[1.452s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/ament_index/resource_index/rosidl_interfaces/go2_interfaces
+[1.453s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/msg/rosidl_generator_c__visibility_control.h
+[1.453s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/body_height.h
+[1.453s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/continuous_gait.h
+[1.453s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/body_height__functions.h
+[1.453s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/body_height__struct.h
+[1.454s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/body_height__type_support.h
+[1.454s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/continuous_gait__functions.h
+[1.454s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/continuous_gait__struct.h
+[1.454s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/continuous_gait__type_support.h
+[1.454s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/euler__functions.h
+[1.454s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/euler__struct.h
+[1.455s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/euler__type_support.h
+[1.455s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/foot_raise_height__functions.h
+[1.455s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/foot_raise_height__struct.h
+[1.455s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/foot_raise_height__type_support.h
+[1.455s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/mode__functions.h
+[1.456s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/mode__struct.h
+[1.456s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/mode__type_support.h
+[1.456s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/pose__functions.h
+[1.456s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/pose__struct.h
+[1.457s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/pose__type_support.h
+[1.457s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/speed_level__functions.h
+[1.457s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/speed_level__struct.h
+[1.457s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/speed_level__type_support.h
+[1.457s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/switch_gait__functions.h
+[1.458s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/switch_gait__struct.h
+[1.458s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/switch_gait__type_support.h
+[1.458s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/switch_joystick__functions.h
+[1.458s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/switch_joystick__struct.h
+[1.458s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/switch_joystick__type_support.h
+[1.458s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/euler.h
+[1.459s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/foot_raise_height.h
+[1.459s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/mode.h
+[1.459s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/pose.h
+[1.459s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/speed_level.h
+[1.459s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/switch_gait.h
+[1.459s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/switch_joystick.h
+[1.460s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/environment/library_path.sh
+[1.460s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/environment/library_path.dsv
+[1.461s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[1.461s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/body_height__rosidl_typesupport_fastrtps_c.h
+[1.462s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/continuous_gait__rosidl_typesupport_fastrtps_c.h
+[1.462s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/euler__rosidl_typesupport_fastrtps_c.h
+[1.462s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/foot_raise_height__rosidl_typesupport_fastrtps_c.h
+[1.462s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/mode__rosidl_typesupport_fastrtps_c.h
+[1.462s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/pose__rosidl_typesupport_fastrtps_c.h
+[1.462s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/speed_level__rosidl_typesupport_fastrtps_c.h
+[1.462s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/switch_gait__rosidl_typesupport_fastrtps_c.h
+[1.463s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/switch_joystick__rosidl_typesupport_fastrtps_c.h
+[1.463s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/lib/libgo2_interfaces__rosidl_typesupport_fastrtps_c.so
+[1.464s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[1.464s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/body_height__rosidl_typesupport_fastrtps_cpp.hpp
+[1.464s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/continuous_gait__rosidl_typesupport_fastrtps_cpp.hpp
+[1.464s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/euler__rosidl_typesupport_fastrtps_cpp.hpp
+[1.465s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/foot_raise_height__rosidl_typesupport_fastrtps_cpp.hpp
+[1.465s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/mode__rosidl_typesupport_fastrtps_cpp.hpp
+[1.465s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/pose__rosidl_typesupport_fastrtps_cpp.hpp
+[1.465s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/speed_level__rosidl_typesupport_fastrtps_cpp.hpp
+[1.465s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/switch_gait__rosidl_typesupport_fastrtps_cpp.hpp
+[1.465s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/switch_joystick__rosidl_typesupport_fastrtps_cpp.hpp
+[1.466s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/lib/libgo2_interfaces__rosidl_typesupport_fastrtps_cpp.so
+[1.466s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[1.467s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/body_height__rosidl_typesupport_introspection_c.h
+[1.467s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/continuous_gait__rosidl_typesupport_introspection_c.h
+[1.467s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/euler__rosidl_typesupport_introspection_c.h
+[1.467s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/foot_raise_height__rosidl_typesupport_introspection_c.h
+[1.467s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/mode__rosidl_typesupport_introspection_c.h
+[1.468s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/pose__rosidl_typesupport_introspection_c.h
+[1.468s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/speed_level__rosidl_typesupport_introspection_c.h
+[1.468s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/switch_gait__rosidl_typesupport_introspection_c.h
+[1.468s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/switch_joystick__rosidl_typesupport_introspection_c.h
+[1.469s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp
+[1.469s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/body_height.hpp
+[1.470s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/continuous_gait.hpp
+[1.470s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/body_height__builder.hpp
+[1.470s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/body_height__struct.hpp
+[1.470s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/body_height__traits.hpp
+[1.470s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/body_height__type_support.hpp
+[1.470s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/continuous_gait__builder.hpp
+[1.471s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/continuous_gait__struct.hpp
+[1.471s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/continuous_gait__traits.hpp
+[1.471s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/continuous_gait__type_support.hpp
+[1.471s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/euler__builder.hpp
+[1.471s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/euler__struct.hpp
+[1.471s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/euler__traits.hpp
+[1.472s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/euler__type_support.hpp
+[1.472s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/foot_raise_height__builder.hpp
+[1.472s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/foot_raise_height__struct.hpp
+[1.472s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/foot_raise_height__traits.hpp
+[1.472s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/foot_raise_height__type_support.hpp
+[1.473s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/mode__builder.hpp
+[1.473s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/mode__struct.hpp
+[1.473s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/mode__traits.hpp
+[1.473s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/mode__type_support.hpp
+[1.473s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/pose__builder.hpp
+[1.473s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/pose__struct.hpp
+[1.474s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/pose__traits.hpp
+[1.474s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/pose__type_support.hpp
+[1.474s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/speed_level__builder.hpp
+[1.474s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/speed_level__struct.hpp
+[1.474s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/speed_level__traits.hpp
+[1.475s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/speed_level__type_support.hpp
+[1.475s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/switch_gait__builder.hpp
+[1.475s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/switch_gait__struct.hpp
+[1.475s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/switch_gait__traits.hpp
+[1.475s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/switch_gait__type_support.hpp
+[1.476s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/switch_joystick__builder.hpp
+[1.476s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/switch_joystick__struct.hpp
+[1.476s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/switch_joystick__traits.hpp
+[1.476s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/switch_joystick__type_support.hpp
+[1.476s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/euler.hpp
+[1.476s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/foot_raise_height.hpp
+[1.477s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/mode.hpp
+[1.477s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/pose.hpp
+[1.477s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/speed_level.hpp
+[1.477s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/switch_gait.hpp
+[1.477s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/switch_joystick.hpp
+[1.478s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/body_height__rosidl_typesupport_introspection_cpp.hpp
+[1.478s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/continuous_gait__rosidl_typesupport_introspection_cpp.hpp
+[1.478s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/euler__rosidl_typesupport_introspection_cpp.hpp
+[1.479s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/foot_raise_height__rosidl_typesupport_introspection_cpp.hpp
+[1.479s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/mode__rosidl_typesupport_introspection_cpp.hpp
+[1.479s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/pose__rosidl_typesupport_introspection_cpp.hpp
+[1.479s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/speed_level__rosidl_typesupport_introspection_cpp.hpp
+[1.479s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/switch_gait__rosidl_typesupport_introspection_cpp.hpp
+[1.479s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/switch_joystick__rosidl_typesupport_introspection_cpp.hpp
+[1.480s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/environment/pythonpath.sh
+[1.480s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/environment/pythonpath.dsv
+[1.480s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/lib/python3.8/site-packages/go2_interfaces/__init__.py
+[1.481s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/lib/python3.8/site-packages/go2_interfaces/srv/__init__.py
+[1.481s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/lib/python3.8/site-packages/go2_interfaces/srv/_body_height.py
+[1.481s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/lib/python3.8/site-packages/go2_interfaces/srv/_continuous_gait.py
+[1.481s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/lib/python3.8/site-packages/go2_interfaces/srv/_euler.py
+[1.482s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/lib/python3.8/site-packages/go2_interfaces/srv/_foot_raise_height.py
+[1.482s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/lib/python3.8/site-packages/go2_interfaces/srv/_mode.py
+[1.482s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/lib/python3.8/site-packages/go2_interfaces/srv/_pose.py
+[1.482s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/lib/python3.8/site-packages/go2_interfaces/srv/_speed_level.py
+[1.482s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/lib/python3.8/site-packages/go2_interfaces/srv/_switch_gait.py
+[1.482s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/lib/python3.8/site-packages/go2_interfaces/srv/_switch_joystick.py
+[1.483s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/lib/python3.8/site-packages/go2_interfaces/go2_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so
+[1.483s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/lib/python3.8/site-packages/go2_interfaces/go2_interfaces_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so
+[1.484s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/lib/python3.8/site-packages/go2_interfaces/go2_interfaces_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so
+[1.484s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/lib/libgo2_interfaces__python.so
+[1.484s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/srv/BodyHeight.idl
+[1.485s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/srv/ContinuousGait.idl
+[1.485s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/srv/Euler.idl
+[1.485s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/srv/FootRaiseHeight.idl
+[1.486s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/srv/Mode.idl
+[1.486s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/srv/Pose.idl
+[1.486s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/srv/SpeedLevel.idl
+[1.486s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/srv/SwitchGait.idl
+[1.487s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/srv/SwitchJoystick.idl
+[1.487s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/srv/BodyHeight.srv
+[1.487s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/srv/BodyHeight_Request.msg
+[1.487s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/srv/BodyHeight_Response.msg
+[1.488s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/srv/ContinuousGait.srv
+[1.488s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/srv/ContinuousGait_Request.msg
+[1.488s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/srv/ContinuousGait_Response.msg
+[1.488s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/srv/Euler.srv
+[1.489s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/srv/Euler_Request.msg
+[1.489s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/srv/Euler_Response.msg
+[1.489s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/srv/FootRaiseHeight.srv
+[1.489s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/srv/FootRaiseHeight_Request.msg
+[1.490s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/srv/FootRaiseHeight_Response.msg
+[1.490s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/srv/Mode.srv
+[1.490s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/srv/Mode_Request.msg
+[1.490s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/srv/Mode_Response.msg
+[1.490s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/srv/Pose.srv
+[1.491s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/srv/Pose_Request.msg
+[1.491s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/srv/Pose_Response.msg
+[1.491s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/srv/SpeedLevel.srv
+[1.492s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/srv/SpeedLevel_Request.msg
+[1.492s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/srv/SpeedLevel_Response.msg
+[1.492s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/srv/SwitchGait.srv
+[1.492s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/srv/SwitchGait_Request.msg
+[1.493s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/srv/SwitchGait_Response.msg
+[1.493s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/srv/SwitchJoystick.srv
+[1.493s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/srv/SwitchJoystick_Request.msg
+[1.493s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/srv/SwitchJoystick_Response.msg
+[1.494s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/ament_index/resource_index/package_run_dependencies/go2_interfaces
+[1.494s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/ament_index/resource_index/parent_prefix_path/go2_interfaces
+[1.494s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/environment/ament_prefix_path.sh
+[1.494s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/environment/ament_prefix_path.dsv
+[1.495s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/environment/path.sh
+[1.495s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/environment/path.dsv
+[1.495s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/local_setup.bash
+[1.495s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/local_setup.sh
+[1.496s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/local_setup.zsh
+[1.496s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/local_setup.dsv
+[1.496s] -- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/package.dsv
+[1.509s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/ament_index/resource_index/packages/go2_interfaces
+[1.509s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/cmake/rosidl_cmake-extras.cmake
+[1.509s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake
+[1.510s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/cmake/ament_cmake_export_libraries-extras.cmake
+[1.510s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/cmake/ament_cmake_export_targets-extras.cmake
+[1.510s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake
+[1.511s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[1.511s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[1.511s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/cmake/go2_interfacesConfig.cmake
+[1.511s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/cmake/go2_interfacesConfig-version.cmake
+[1.512s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/package.xml
+[1.512s] -- Up-to-date: /home/giovanna/argo_go2_ws/install/go2_interfaces/lib/libgo2_interfaces__rosidl_generator_c.so
+[1.513s] -- Up-to-date: /home/giovanna/argo_go2_ws/install/go2_interfaces/lib/libgo2_interfaces__rosidl_typesupport_introspection_c.so
+[1.513s] -- Up-to-date: /home/giovanna/argo_go2_ws/install/go2_interfaces/lib/libgo2_interfaces__rosidl_typesupport_c.so
+[1.514s] -- Up-to-date: /home/giovanna/argo_go2_ws/install/go2_interfaces/lib/libgo2_interfaces__rosidl_typesupport_introspection_cpp.so
+[1.514s] -- Up-to-date: /home/giovanna/argo_go2_ws/install/go2_interfaces/lib/libgo2_interfaces__rosidl_typesupport_cpp.so
+[1.544s] Compiling '/home/giovanna/argo_go2_ws/install/go2_interfaces/lib/python3.8/site-packages/go2_interfaces/__init__.py'...
+[1.549s] -- Up-to-date: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/cmake/go2_interfaces__rosidl_generator_cExport.cmake
+[1.549s] -- Installing: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/cmake/go2_interfaces__rosidl_generator_cExport-noconfig.cmake
+[1.549s] -- Up-to-date: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/cmake/go2_interfaces__rosidl_typesupport_introspection_cExport.cmake
+[1.549s] -- Installing: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/cmake/go2_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[1.549s] -- Up-to-date: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/cmake/go2_interfaces__rosidl_typesupport_cExport.cmake
+[1.550s] -- Installing: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/cmake/go2_interfaces__rosidl_typesupport_cExport-noconfig.cmake
+[1.550s] -- Up-to-date: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/cmake/go2_interfaces__rosidl_generator_cppExport.cmake
+[1.550s] -- Up-to-date: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/cmake/go2_interfaces__rosidl_typesupport_introspection_cppExport.cmake
+[1.550s] -- Installing: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/cmake/go2_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[1.550s] -- Up-to-date: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/cmake/go2_interfaces__rosidl_typesupport_cppExport.cmake
+[1.550s] -- Installing: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/cmake/go2_interfaces__rosidl_typesupport_cppExport-noconfig.cmake
+[1.554s] Invoked command in '/home/giovanna/argo_go2_ws/build/go2_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/giovanna/argo_go2_ws/build/go2_interfaces

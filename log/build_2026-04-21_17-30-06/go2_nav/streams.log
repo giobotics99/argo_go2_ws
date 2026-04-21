@@ -1,0 +1,54 @@
+[0.050s] Invoking command in '/home/giovanna/argo_go2_ws/build/go2_nav': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/giovanna/argo_go2_ws/src/go2_nav -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/giovanna/argo_go2_ws/install/go2_nav
+[0.172s] -- The C compiler identification is GNU 9.4.0
+[0.307s] -- The CXX compiler identification is GNU 9.4.0
+[0.317s] -- Check for working C compiler: /usr/bin/cc
+[0.430s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.432s] -- Detecting C compiler ABI info
+[0.531s] -- Detecting C compiler ABI info - done
+[0.542s] -- Detecting C compile features
+[0.543s] -- Detecting C compile features - done
+[0.546s] -- Check for working CXX compiler: /usr/bin/c++
+[0.647s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[0.648s] -- Detecting CXX compiler ABI info
+[0.760s] -- Detecting CXX compiler ABI info - done
+[0.781s] -- Detecting CXX compile features
+[0.782s] -- Detecting CXX compile features - done
+[0.786s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.817s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.817s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.088s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[1.119s] -- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[1.213s] -- Added test 'flake8' to check Python code syntax and style conventions
+[1.213s] -- Added test 'lint_cmake' to check CMake code style
+[1.213s] -- Added test 'pep257' to check Python code against some of the style conventions in PEP 257
+[1.213s] -- Added test 'xmllint' to check XML markup files
+[1.219s] -- Configuring done
+[1.219s] -- Generating done
+[1.220s] -- Build files have been written to: /home/giovanna/argo_go2_ws/build/go2_nav
+[1.225s] Invoked command in '/home/giovanna/argo_go2_ws/build/go2_nav' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/giovanna/argo_go2_ws/src/go2_nav -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/giovanna/argo_go2_ws/install/go2_nav
+[1.229s] Invoking command in '/home/giovanna/argo_go2_ws/build/go2_nav': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/giovanna/argo_go2_ws/build/go2_nav -- -j16 -l16
+[1.294s] Invoked command in '/home/giovanna/argo_go2_ws/build/go2_nav' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/giovanna/argo_go2_ws/build/go2_nav -- -j16 -l16
+[1.300s] Invoking command in '/home/giovanna/argo_go2_ws/build/go2_nav': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/giovanna/argo_go2_ws/build/go2_nav
+[1.310s] -- Install configuration: ""
+[1.311s] -- Execute custom install script
+[1.311s] -- Symlinking: /home/giovanna/argo_go2_ws/install/go2_nav/share/go2_nav/launch/navigation.launch.foxy.py
+[1.323s] -- Symlinking: /home/giovanna/argo_go2_ws/install/go2_nav/share/go2_nav/launch/navigation.launch.py
+[1.335s] -- Symlinking: /home/giovanna/argo_go2_ws/install/go2_nav/share/go2_nav/launch/slam.launch.py
+[1.346s] -- Symlinking: /home/giovanna/argo_go2_ws/install/go2_nav/share/go2_nav/params/go2_nav_params.yaml
+[1.358s] -- Symlinking: /home/giovanna/argo_go2_ws/install/go2_nav/share/go2_nav/params/go2_nav_params_foxy.yaml
+[1.371s] -- Symlinking: /home/giovanna/argo_go2_ws/install/go2_nav/share/ament_index/resource_index/package_run_dependencies/go2_nav
+[1.382s] -- Symlinking: /home/giovanna/argo_go2_ws/install/go2_nav/share/ament_index/resource_index/parent_prefix_path/go2_nav
+[1.394s] -- Symlinking: /home/giovanna/argo_go2_ws/install/go2_nav/share/go2_nav/environment/ament_prefix_path.sh
+[1.405s] -- Symlinking: /home/giovanna/argo_go2_ws/install/go2_nav/share/go2_nav/environment/ament_prefix_path.dsv
+[1.416s] -- Symlinking: /home/giovanna/argo_go2_ws/install/go2_nav/share/go2_nav/environment/path.sh
+[1.427s] -- Symlinking: /home/giovanna/argo_go2_ws/install/go2_nav/share/go2_nav/environment/path.dsv
+[1.439s] -- Symlinking: /home/giovanna/argo_go2_ws/install/go2_nav/share/go2_nav/local_setup.bash
+[1.451s] -- Symlinking: /home/giovanna/argo_go2_ws/install/go2_nav/share/go2_nav/local_setup.sh
+[1.462s] -- Symlinking: /home/giovanna/argo_go2_ws/install/go2_nav/share/go2_nav/local_setup.zsh
+[1.474s] -- Symlinking: /home/giovanna/argo_go2_ws/install/go2_nav/share/go2_nav/local_setup.dsv
+[1.488s] -- Symlinking: /home/giovanna/argo_go2_ws/install/go2_nav/share/go2_nav/package.dsv
+[1.500s] -- Symlinking: /home/giovanna/argo_go2_ws/install/go2_nav/share/ament_index/resource_index/packages/go2_nav
+[1.514s] -- Symlinking: /home/giovanna/argo_go2_ws/install/go2_nav/share/go2_nav/cmake/go2_navConfig.cmake
+[1.523s] -- Symlinking: /home/giovanna/argo_go2_ws/install/go2_nav/share/go2_nav/cmake/go2_navConfig-version.cmake
+[1.535s] -- Symlinking: /home/giovanna/argo_go2_ws/install/go2_nav/share/go2_nav/package.xml
+[1.547s] Invoked command in '/home/giovanna/argo_go2_ws/build/go2_nav' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/giovanna/argo_go2_ws/build/go2_nav

@@ -1,0 +1,2 @@
+Invoking command in '/home/giovanna/argo_go2_ws/build/unitree_go': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/giovanna/argo_go2_ws/src/unitree_go -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/giovanna/argo_go2_ws/install/unitree_go
+Invoked command in '/home/giovanna/argo_go2_ws/build/unitree_go' returned '1': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/giovanna/argo_go2_ws/src/unitree_go -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/giovanna/argo_go2_ws/install/unitree_go

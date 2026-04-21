@@ -1,0 +1,46 @@
+[0.046s] Invoking command in '/home/giovanna/argo_go2_ws/build/unitree_go': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/giovanna/argo_go2_ws/src/unitree_go -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/giovanna/argo_go2_ws/install/unitree_go
+[0.200s] -- The C compiler identification is GNU 9.4.0
+[0.324s] -- The CXX compiler identification is GNU 9.4.0
+[0.333s] -- Check for working C compiler: /usr/bin/cc
+[0.463s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.464s] -- Detecting C compiler ABI info
+[0.555s] -- Detecting C compiler ABI info - done
+[0.571s] -- Detecting C compile features
+[0.571s] -- Detecting C compile features - done
+[0.574s] -- Check for working CXX compiler: /usr/bin/c++
+[0.689s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[0.691s] -- Detecting CXX compiler ABI info
+[0.804s] -- Detecting CXX compiler ABI info - done
+[0.818s] -- Detecting CXX compile features
+[0.819s] -- Detecting CXX compile features - done
+[0.822s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.854s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.854s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.063s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[1.099s] -- Found geometry_msgs: 2.0.5 (/opt/ros/foxy/share/geometry_msgs/cmake)
+[1.146s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.155s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[1.293s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[1.331s] -- Found FastRTPS: /opt/ros/foxy/include  
+[1.444s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.552s] -- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)
+[1.577s] CMake Error at CMakeLists.txt:26 (find_package):
+[1.577s]   By not providing "Findrosidl_generator_dds_idl.cmake" in CMAKE_MODULE_PATH
+[1.578s]   this project has asked CMake to find a package configuration file provided
+[1.578s]   by "rosidl_generator_dds_idl", but CMake did not find one.
+[1.578s] 
+[1.578s]   Could not find a package configuration file provided by
+[1.578s]   "rosidl_generator_dds_idl" with any of the following names:
+[1.578s] 
+[1.579s]     rosidl_generator_dds_idlConfig.cmake
+[1.579s]     rosidl_generator_dds_idl-config.cmake
+[1.579s] 
+[1.579s]   Add the installation prefix of "rosidl_generator_dds_idl" to
+[1.579s]   CMAKE_PREFIX_PATH or set "rosidl_generator_dds_idl_DIR" to a directory
+[1.579s]   containing one of the above files.  If "rosidl_generator_dds_idl" provides
+[1.579s]   a separate development package or SDK, be sure it has been installed.
+[1.580s] 
+[1.580s] 
+[1.580s] -- Configuring incomplete, errors occurred!
+[1.580s] See also "/home/giovanna/argo_go2_ws/build/unitree_go/CMakeFiles/CMakeOutput.log".
+[1.586s] Invoked command in '/home/giovanna/argo_go2_ws/build/unitree_go' returned '1': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/giovanna/argo_go2_ws/src/unitree_go -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/giovanna/argo_go2_ws/install/unitree_go

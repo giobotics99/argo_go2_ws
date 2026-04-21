@@ -1,0 +1,510 @@
+[0.000000] (-) TimerEvent: {}
+[0.000551] (-) JobUnselected: {'identifier': 'go2_bringup'}
+[0.000731] (-) JobUnselected: {'identifier': 'go2_description'}
+[0.000759] (-) JobUnselected: {'identifier': 'go2_driver'}
+[0.000781] (-) JobUnselected: {'identifier': 'go2_hardware'}
+[0.000801] (-) JobUnselected: {'identifier': 'go2_nav'}
+[0.000822] (-) JobUnselected: {'identifier': 'go2_robot'}
+[0.001111] (-) JobUnselected: {'identifier': 'go2_rviz'}
+[0.001132] (-) JobUnselected: {'identifier': 'go2_simulation'}
+[0.001152] (-) JobUnselected: {'identifier': 'hesai_ros_driver'}
+[0.001170] (-) JobUnselected: {'identifier': 'unitree_go'}
+[0.001191] (go2_interfaces) JobQueued: {'identifier': 'go2_interfaces', 'dependencies': OrderedDict()}
+[0.001213] (unitree_api) JobQueued: {'identifier': 'unitree_api', 'dependencies': OrderedDict()}
+[0.001233] (go2_interfaces) JobStarted: {'identifier': 'go2_interfaces'}
+[0.007739] (unitree_api) JobStarted: {'identifier': 'unitree_api'}
+[0.014383] (go2_interfaces) JobProgress: {'identifier': 'go2_interfaces', 'progress': 'cmake'}
+[0.015136] (go2_interfaces) JobProgress: {'identifier': 'go2_interfaces', 'progress': 'build'}
+[0.016003] (go2_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/giovanna/argo_go2_ws/build/go2_interfaces', '--', '-j16', '-l16'], 'cwd': '/home/giovanna/argo_go2_ws/build/go2_interfaces', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('VSCODE_CWD', '/home/giovanna'), ('USER', 'giovanna'), ('LC_TIME', 'it_IT.UTF-8'), ('VSCODE_NLS_CONFIG', '{"userLocale":"en-us","osLocale":"en-us","resolvedLanguage":"en","defaultMessagesFile":"/usr/share/antigravity/resources/app/out/nls.messages.json","locale":"en-us","availableLanguages":{}}'), ('SSH_AGENT_PID', '1697'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '0'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/home/giovanna'), ('CHROME_DESKTOP', 'antigravity.desktop'), ('DESKTOP_SESSION', 'ubuntu'), ('VSCODE_IPC_HOOK', '/run/user/1000/vscode-de51444a-1.10-main.sock'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/antigravity.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('PAGER', 'cat'), ('LC_MONETARY', 'it_IT.UTF-8'), ('MANAGERPID', '1544'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('ANTIGRAVITY_AGENT', '1'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '4222'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'giovanna'), ('JOURNAL_STREAM', '8:40948'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'giovanna'), ('TERM', 'dumb'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('FC_FONTATIONS', '1'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('ANTIGRAVITY_EDITOR_APP_ROOT', '/usr/share/antigravity/resources/app'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/giovanna-lenovo20:@/tmp/.ICE-unix/1771,unix/giovanna-lenovo20:/tmp/.ICE-unix/1771'), ('INVOCATION_ID', '8a18892a46224c8c9d24bb25afa494f3'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'it_IT.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'it_IT.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', ''), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'it_IT.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'it_IT.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'it_IT.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('ANTIGRAVITY_TRAJECTORY_ID', '1f6d3fbb-af4b-4da7-8d7e-c84ab60d6b73'), ('PWD', '/home/giovanna/argo_go2_ws/build/go2_interfaces'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('VSCODE_CODE_CACHE_PATH', '/home/giovanna/.config/Antigravity/CachedData/15487b3041e65228cae24980a3f796c905ef582c'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'it_IT.UTF-8'), ('LC_PAPER', 'it_IT.UTF-8'), ('COLCON', '1'), ('VSCODE_PID', '4222'), ('CMAKE_PREFIX_PATH', '/opt/ros/foxy')]), 'shell': False}
+[0.022067] (unitree_api) JobProgress: {'identifier': 'unitree_api', 'progress': 'cmake'}
+[0.022618] (unitree_api) JobProgress: {'identifier': 'unitree_api', 'progress': 'build'}
+[0.024019] (unitree_api) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/giovanna/argo_go2_ws/build/unitree_api', '--', '-j16', '-l16'], 'cwd': '/home/giovanna/argo_go2_ws/build/unitree_api', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('VSCODE_CWD', '/home/giovanna'), ('USER', 'giovanna'), ('LC_TIME', 'it_IT.UTF-8'), ('VSCODE_NLS_CONFIG', '{"userLocale":"en-us","osLocale":"en-us","resolvedLanguage":"en","defaultMessagesFile":"/usr/share/antigravity/resources/app/out/nls.messages.json","locale":"en-us","availableLanguages":{}}'), ('SSH_AGENT_PID', '1697'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '0'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/home/giovanna'), ('CHROME_DESKTOP', 'antigravity.desktop'), ('DESKTOP_SESSION', 'ubuntu'), ('VSCODE_IPC_HOOK', '/run/user/1000/vscode-de51444a-1.10-main.sock'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/antigravity.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('PAGER', 'cat'), ('LC_MONETARY', 'it_IT.UTF-8'), ('MANAGERPID', '1544'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('ANTIGRAVITY_AGENT', '1'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '4222'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'giovanna'), ('JOURNAL_STREAM', '8:40948'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'giovanna'), ('TERM', 'dumb'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('FC_FONTATIONS', '1'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('ANTIGRAVITY_EDITOR_APP_ROOT', '/usr/share/antigravity/resources/app'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/giovanna-lenovo20:@/tmp/.ICE-unix/1771,unix/giovanna-lenovo20:/tmp/.ICE-unix/1771'), ('INVOCATION_ID', '8a18892a46224c8c9d24bb25afa494f3'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'it_IT.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'it_IT.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', ''), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'it_IT.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'it_IT.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'it_IT.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('ANTIGRAVITY_TRAJECTORY_ID', '1f6d3fbb-af4b-4da7-8d7e-c84ab60d6b73'), ('PWD', '/home/giovanna/argo_go2_ws/build/unitree_api'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('VSCODE_CODE_CACHE_PATH', '/home/giovanna/.config/Antigravity/CachedData/15487b3041e65228cae24980a3f796c905ef582c'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'it_IT.UTF-8'), ('LC_PAPER', 'it_IT.UTF-8'), ('COLCON', '1'), ('VSCODE_PID', '4222'), ('CMAKE_PREFIX_PATH', '/opt/ros/foxy')]), 'shell': False}
+[0.099077] (unitree_api) StdoutLine: {'line': b'[  2%] Built target unitree_api__dds_connext_idl\n'}
+[0.099464] (unitree_api) StdoutLine: {'line': b'[  2%] Built target unitree_api__cpp\n'}
+[0.099637] (-) TimerEvent: {}
+[0.099869] (go2_interfaces) StdoutLine: {'line': b'[  5%] Built target go2_interfaces__cpp\n'}
+[0.100066] (go2_interfaces) StdoutLine: {'line': b'[ 12%] Built target go2_interfaces__rosidl_generator_c\n'}
+[0.100210] (unitree_api) StdoutLine: {'line': b'[ 13%] Built target unitree_api__rosidl_generator_c\n'}
+[0.150313] (go2_interfaces) StdoutLine: {'line': b'[ 51%] Built target go2_interfaces__rosidl_typesupport_cpp\n'}
+[0.150792] (go2_interfaces) StdoutLine: {'line': b'[ 52%] Built target go2_interfaces__rosidl_typesupport_introspection_cpp\n'}
+[0.150926] (unitree_api) StdoutLine: {'line': b'[ 59%] Built target unitree_api__rosidl_typesupport_c\n'}
+[0.151035] (unitree_api) StdoutLine: {'line': b'[ 61%] Built target unitree_api__rosidl_typesupport_cpp\n'}
+[0.151125] (unitree_api) StdoutLine: {'line': b'[ 61%] Built target unitree_api__rosidl_typesupport_introspection_c\n'}
+[0.151214] (unitree_api) StdoutLine: {'line': b'[ 63%] Built target unitree_api__rosidl_typesupport_introspection_cpp\n'}
+[0.151304] (unitree_api) StdoutLine: {'line': b'[ 70%] Built target unitree_api__rosidl_typesupport_fastrtps_cpp\n'}
+[0.151693] (go2_interfaces) StdoutLine: {'line': b'[ 56%] Built target go2_interfaces__rosidl_typesupport_introspection_c\n'}
+[0.151840] (go2_interfaces) StdoutLine: {'line': b'[ 58%] Built target go2_interfaces__rosidl_typesupport_c\n'}
+[0.188738] (unitree_api) StdoutLine: {'line': b'[ 81%] Built target unitree_api__rosidl_typesupport_fastrtps_c\n'}
+[0.189016] (go2_interfaces) StdoutLine: {'line': b'[ 70%] Built target go2_interfaces__rosidl_typesupport_fastrtps_cpp\n'}
+[0.199775] (-) TimerEvent: {}
+[0.209481] (unitree_api) StdoutLine: {'line': b'[ 81%] Built target unitree_api\n'}
+[0.221921] (go2_interfaces) StdoutLine: {'line': b'[ 82%] Built target go2_interfaces__rosidl_typesupport_fastrtps_c\n'}
+[0.235740] (unitree_api) StdoutLine: {'line': b'[ 82%] Built target unitree_api__py\n'}
+[0.246453] (go2_interfaces) StdoutLine: {'line': b'[ 82%] Built target go2_interfaces\n'}
+[0.266499] (unitree_api) StdoutLine: {'line': b'[ 93%] Built target unitree_api__python\n'}
+[0.270731] (go2_interfaces) StdoutLine: {'line': b'[ 83%] Built target go2_interfaces__py\n'}
+[0.291874] (unitree_api) StdoutLine: {'line': b'[ 95%] Built target unitree_api__rosidl_typesupport_introspection_c__pyext\n'}
+[0.292667] (unitree_api) StdoutLine: {'line': b'[ 97%] Built target unitree_api__rosidl_typesupport_fastrtps_c__pyext\n'}
+[0.293402] (unitree_api) StdoutLine: {'line': b'[100%] Built target unitree_api__rosidl_typesupport_c__pyext\n'}
+[0.300472] (-) TimerEvent: {}
+[0.300666] (go2_interfaces) StdoutLine: {'line': b'[ 93%] Built target go2_interfaces__python\n'}
+[0.305328] (unitree_api) CommandEnded: {'returncode': 0}
+[0.306237] (unitree_api) JobProgress: {'identifier': 'unitree_api', 'progress': 'install'}
+[0.319644] (unitree_api) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/giovanna/argo_go2_ws/build/unitree_api'], 'cwd': '/home/giovanna/argo_go2_ws/build/unitree_api', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('VSCODE_CWD', '/home/giovanna'), ('USER', 'giovanna'), ('LC_TIME', 'it_IT.UTF-8'), ('VSCODE_NLS_CONFIG', '{"userLocale":"en-us","osLocale":"en-us","resolvedLanguage":"en","defaultMessagesFile":"/usr/share/antigravity/resources/app/out/nls.messages.json","locale":"en-us","availableLanguages":{}}'), ('SSH_AGENT_PID', '1697'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '0'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/home/giovanna'), ('CHROME_DESKTOP', 'antigravity.desktop'), ('DESKTOP_SESSION', 'ubuntu'), ('VSCODE_IPC_HOOK', '/run/user/1000/vscode-de51444a-1.10-main.sock'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/antigravity.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('PAGER', 'cat'), ('LC_MONETARY', 'it_IT.UTF-8'), ('MANAGERPID', '1544'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('ANTIGRAVITY_AGENT', '1'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '4222'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'giovanna'), ('JOURNAL_STREAM', '8:40948'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'giovanna'), ('TERM', 'dumb'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('FC_FONTATIONS', '1'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('ANTIGRAVITY_EDITOR_APP_ROOT', '/usr/share/antigravity/resources/app'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/giovanna-lenovo20:@/tmp/.ICE-unix/1771,unix/giovanna-lenovo20:/tmp/.ICE-unix/1771'), ('INVOCATION_ID', '8a18892a46224c8c9d24bb25afa494f3'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'it_IT.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'it_IT.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', ''), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'it_IT.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'it_IT.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'it_IT.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('ANTIGRAVITY_TRAJECTORY_ID', '1f6d3fbb-af4b-4da7-8d7e-c84ab60d6b73'), ('PWD', '/home/giovanna/argo_go2_ws/build/unitree_api'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('VSCODE_CODE_CACHE_PATH', '/home/giovanna/.config/Antigravity/CachedData/15487b3041e65228cae24980a3f796c905ef582c'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'it_IT.UTF-8'), ('LC_PAPER', 'it_IT.UTF-8'), ('COLCON', '1'), ('VSCODE_PID', '4222'), ('CMAKE_PREFIX_PATH', '/opt/ros/foxy')]), 'shell': False}
+[0.328787] (go2_interfaces) StdoutLine: {'line': b'[100%] Built target go2_interfaces__rosidl_typesupport_fastrtps_c__pyext\n'}
+[0.329056] (go2_interfaces) StdoutLine: {'line': b'[100%] Built target go2_interfaces__rosidl_typesupport_c__pyext\n'}
+[0.329168] (go2_interfaces) StdoutLine: {'line': b'[100%] Built target go2_interfaces__rosidl_typesupport_introspection_c__pyext\n'}
+[0.329335] (unitree_api) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.329740] (unitree_api) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[0.330185] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/share/ament_index/resource_index/rosidl_interfaces/unitree_api\n'}
+[0.339285] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/detail/request__functions.h\n'}
+[0.343035] (go2_interfaces) CommandEnded: {'returncode': 0}
+[0.345560] (go2_interfaces) JobProgress: {'identifier': 'go2_interfaces', 'progress': 'install'}
+[0.348103] (go2_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/giovanna/argo_go2_ws/build/go2_interfaces'], 'cwd': '/home/giovanna/argo_go2_ws/build/go2_interfaces', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('VSCODE_CWD', '/home/giovanna'), ('USER', 'giovanna'), ('LC_TIME', 'it_IT.UTF-8'), ('VSCODE_NLS_CONFIG', '{"userLocale":"en-us","osLocale":"en-us","resolvedLanguage":"en","defaultMessagesFile":"/usr/share/antigravity/resources/app/out/nls.messages.json","locale":"en-us","availableLanguages":{}}'), ('SSH_AGENT_PID', '1697'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '0'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/home/giovanna'), ('CHROME_DESKTOP', 'antigravity.desktop'), ('DESKTOP_SESSION', 'ubuntu'), ('VSCODE_IPC_HOOK', '/run/user/1000/vscode-de51444a-1.10-main.sock'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/antigravity.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('PAGER', 'cat'), ('LC_MONETARY', 'it_IT.UTF-8'), ('MANAGERPID', '1544'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('ANTIGRAVITY_AGENT', '1'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '4222'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'giovanna'), ('JOURNAL_STREAM', '8:40948'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'giovanna'), ('TERM', 'dumb'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('FC_FONTATIONS', '1'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('ANTIGRAVITY_EDITOR_APP_ROOT', '/usr/share/antigravity/resources/app'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/giovanna-lenovo20:@/tmp/.ICE-unix/1771,unix/giovanna-lenovo20:/tmp/.ICE-unix/1771'), ('INVOCATION_ID', '8a18892a46224c8c9d24bb25afa494f3'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'it_IT.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'it_IT.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', ''), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'it_IT.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'it_IT.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'it_IT.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('ANTIGRAVITY_TRAJECTORY_ID', '1f6d3fbb-af4b-4da7-8d7e-c84ab60d6b73'), ('PWD', '/home/giovanna/argo_go2_ws/build/go2_interfaces'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('VSCODE_CODE_CACHE_PATH', '/home/giovanna/.config/Antigravity/CachedData/15487b3041e65228cae24980a3f796c905ef582c'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'it_IT.UTF-8'), ('LC_PAPER', 'it_IT.UTF-8'), ('COLCON', '1'), ('VSCODE_PID', '4222'), ('CMAKE_PREFIX_PATH', '/opt/ros/foxy')]), 'shell': False}
+[0.352306] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/detail/request__struct.h\n'}
+[0.357854] (go2_interfaces) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.358479] (go2_interfaces) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[0.358852] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/ament_index/resource_index/rosidl_interfaces/go2_interfaces\n'}
+[0.360683] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/detail/request__type_support.h\n'}
+[0.369061] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/detail/request_header__functions.h\n'}
+[0.370101] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/msg/rosidl_generator_c__visibility_control.h\n'}
+[0.378744] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/detail/request_header__struct.h\n'}
+[0.379040] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/body_height.h\n'}
+[0.388142] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/continuous_gait.h\n'}
+[0.388376] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/detail/request_header__type_support.h\n'}
+[0.397200] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/detail/request_identity__functions.h\n'}
+[0.397503] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/body_height__functions.h\n'}
+[0.400567] (-) TimerEvent: {}
+[0.406194] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/detail/request_identity__struct.h\n'}
+[0.406442] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/body_height__struct.h\n'}
+[0.416067] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/body_height__type_support.h\n'}
+[0.416314] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/detail/request_identity__type_support.h\n'}
+[0.423315] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/continuous_gait__functions.h\n'}
+[0.423532] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/detail/request_lease__functions.h\n'}
+[0.432129] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/detail/request_lease__struct.h\n'}
+[0.432395] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/continuous_gait__struct.h\n'}
+[0.440650] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/continuous_gait__type_support.h\n'}
+[0.440943] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/detail/request_lease__type_support.h\n'}
+[0.449604] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/detail/request_policy__functions.h\n'}
+[0.449848] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/euler__functions.h\n'}
+[0.456912] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/euler__struct.h\n'}
+[0.457085] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/detail/request_policy__struct.h\n'}
+[0.465932] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/detail/request_policy__type_support.h\n'}
+[0.466137] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/euler__type_support.h\n'}
+[0.473499] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/detail/response__functions.h\n'}
+[0.473703] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/foot_raise_height__functions.h\n'}
+[0.482118] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/foot_raise_height__struct.h\n'}
+[0.482366] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/detail/response__struct.h\n'}
+[0.489546] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/foot_raise_height__type_support.h\n'}
+[0.490106] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/detail/response__type_support.h\n'}
+[0.499162] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/mode__functions.h\n'}
+[0.499320] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/detail/response_header__functions.h\n'}
+[0.500676] (-) TimerEvent: {}
+[0.509824] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/mode__struct.h\n'}
+[0.510031] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/detail/response_header__struct.h\n'}
+[0.517989] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/detail/response_header__type_support.h\n'}
+[0.518138] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/mode__type_support.h\n'}
+[0.525799] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/pose__functions.h\n'}
+[0.526007] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/detail/response_status__functions.h\n'}
+[0.534037] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/detail/response_status__struct.h\n'}
+[0.534348] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/pose__struct.h\n'}
+[0.543096] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/detail/response_status__type_support.h\n'}
+[0.543389] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/pose__type_support.h\n'}
+[0.551534] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/speed_level__functions.h\n'}
+[0.551723] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/request.h\n'}
+[0.559245] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/request_header.h\n'}
+[0.559677] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/speed_level__struct.h\n'}
+[0.572733] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/speed_level__type_support.h\n'}
+[0.572957] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/request_identity.h\n'}
+[0.581602] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/request_lease.h\n'}
+[0.581820] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/switch_gait__functions.h\n'}
+[0.595124] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/request_policy.h\n'}
+[0.595371] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/switch_gait__struct.h\n'}
+[0.600755] (-) TimerEvent: {}
+[0.602637] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/switch_gait__type_support.h\n'}
+[0.603211] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/response.h\n'}
+[0.612580] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/response_header.h\n'}
+[0.612855] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/switch_joystick__functions.h\n'}
+[0.620345] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/switch_joystick__struct.h\n'}
+[0.620561] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/response_status.h\n'}
+[0.628722] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/rosidl_generator_c__visibility_control.h\n'}
+[0.629707] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/switch_joystick__type_support.h\n'}
+[0.636536] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/share/unitree_api/environment/library_path.sh\n'}
+[0.637806] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/euler.h\n'}
+[0.645752] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/share/unitree_api/environment/library_path.dsv\n'}
+[0.647386] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/foot_raise_height.h\n'}
+[0.654330] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/detail/request__rosidl_typesupport_fastrtps_c.h\n'}
+[0.655108] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/mode.h\n'}
+[0.663670] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/pose.h\n'}
+[0.663937] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/detail/request_header__rosidl_typesupport_fastrtps_c.h\n'}
+[0.671255] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/speed_level.h\n'}
+[0.671432] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/detail/request_identity__rosidl_typesupport_fastrtps_c.h\n'}
+[0.679735] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/switch_gait.h\n'}
+[0.680025] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/detail/request_lease__rosidl_typesupport_fastrtps_c.h\n'}
+[0.687630] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/switch_joystick.h\n'}
+[0.687787] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/detail/request_policy__rosidl_typesupport_fastrtps_c.h\n'}
+[0.696040] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/detail/response__rosidl_typesupport_fastrtps_c.h\n'}
+[0.696314] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/environment/library_path.sh\n'}
+[0.700858] (-) TimerEvent: {}
+[0.703981] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/detail/response_header__rosidl_typesupport_fastrtps_c.h\n'}
+[0.704200] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/environment/library_path.dsv\n'}
+[0.712293] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/detail/response_status__rosidl_typesupport_fastrtps_c.h\n'}
+[0.712998] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[0.721326] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/body_height__rosidl_typesupport_fastrtps_c.h\n'}
+[0.721564] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[0.729883] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/continuous_gait__rosidl_typesupport_fastrtps_c.h\n'}
+[0.730160] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/lib/libunitree_api__rosidl_typesupport_fastrtps_c.so\n'}
+[0.738176] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/euler__rosidl_typesupport_fastrtps_c.h\n'}
+[0.739386] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/detail/request__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.747460] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/foot_raise_height__rosidl_typesupport_fastrtps_c.h\n'}
+[0.747728] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/detail/request_header__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.754884] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/mode__rosidl_typesupport_fastrtps_c.h\n'}
+[0.755109] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/detail/request_identity__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.763411] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/detail/request_lease__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.763692] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/pose__rosidl_typesupport_fastrtps_c.h\n'}
+[0.770889] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/detail/request_policy__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.771041] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/speed_level__rosidl_typesupport_fastrtps_c.h\n'}
+[0.779198] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/detail/response__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.779847] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/switch_gait__rosidl_typesupport_fastrtps_c.h\n'}
+[0.788537] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/detail/response_header__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.788698] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/switch_joystick__rosidl_typesupport_fastrtps_c.h\n'}
+[0.796794] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/detail/response_status__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.797214] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/lib/libgo2_interfaces__rosidl_typesupport_fastrtps_c.so\n'}
+[0.801008] (-) TimerEvent: {}
+[0.812199] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[0.813108] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[0.820097] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/body_height__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.820305] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/lib/libunitree_api__rosidl_typesupport_fastrtps_cpp.so\n'}
+[0.828710] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/continuous_gait__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.829144] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/detail/request__rosidl_typesupport_introspection_c.h\n'}
+[0.837088] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/euler__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.837310] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/detail/request_header__rosidl_typesupport_introspection_c.h\n'}
+[0.846218] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/detail/request_identity__rosidl_typesupport_introspection_c.h\n'}
+[0.846487] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/foot_raise_height__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.853868] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/detail/request_lease__rosidl_typesupport_introspection_c.h\n'}
+[0.854022] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/mode__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.862142] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/detail/request_policy__rosidl_typesupport_introspection_c.h\n'}
+[0.862740] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/pose__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.871529] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/speed_level__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.871685] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/detail/response__rosidl_typesupport_introspection_c.h\n'}
+[0.882970] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/switch_gait__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.883206] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/detail/response_header__rosidl_typesupport_introspection_c.h\n'}
+[0.891515] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/detail/response_status__rosidl_typesupport_introspection_c.h\n'}
+[0.891752] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/switch_joystick__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.900094] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[0.900768] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/lib/libgo2_interfaces__rosidl_typesupport_fastrtps_cpp.so\n'}
+[0.901089] (-) TimerEvent: {}
+[0.910615] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[0.910860] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/detail/request__builder.hpp\n'}
+[0.919585] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/body_height__rosidl_typesupport_introspection_c.h\n'}
+[0.919856] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/detail/request__struct.hpp\n'}
+[0.929808] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/continuous_gait__rosidl_typesupport_introspection_c.h\n'}
+[0.930073] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/detail/request__traits.hpp\n'}
+[0.938810] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/euler__rosidl_typesupport_introspection_c.h\n'}
+[0.939094] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/detail/request__type_support.hpp\n'}
+[0.948234] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/foot_raise_height__rosidl_typesupport_introspection_c.h\n'}
+[0.948504] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/detail/request_header__builder.hpp\n'}
+[0.956155] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/detail/request_header__struct.hpp\n'}
+[0.956415] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/mode__rosidl_typesupport_introspection_c.h\n'}
+[0.965114] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/detail/request_header__traits.hpp\n'}
+[0.965419] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/pose__rosidl_typesupport_introspection_c.h\n'}
+[0.972500] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/detail/request_header__type_support.hpp\n'}
+[0.973469] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/speed_level__rosidl_typesupport_introspection_c.h\n'}
+[0.981448] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/switch_gait__rosidl_typesupport_introspection_c.h\n'}
+[0.981686] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/detail/request_identity__builder.hpp\n'}
+[0.989353] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/detail/request_identity__struct.hpp\n'}
+[0.989543] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/switch_joystick__rosidl_typesupport_introspection_c.h\n'}
+[0.998334] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/detail/request_identity__traits.hpp\n'}
+[0.999065] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[1.001184] (-) TimerEvent: {}
+[1.006031] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/detail/request_identity__type_support.hpp\n'}
+[1.006395] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/body_height.hpp\n'}
+[1.015422] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/continuous_gait.hpp\n'}
+[1.015771] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/detail/request_lease__builder.hpp\n'}
+[1.024497] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/body_height__builder.hpp\n'}
+[1.025035] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/detail/request_lease__struct.hpp\n'}
+[1.035249] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/detail/request_lease__traits.hpp\n'}
+[1.035598] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/body_height__struct.hpp\n'}
+[1.045281] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/detail/request_lease__type_support.hpp\n'}
+[1.045524] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/body_height__traits.hpp\n'}
+[1.069953] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/body_height__type_support.hpp\n'}
+[1.070428] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/detail/request_policy__builder.hpp\n'}
+[1.081939] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/continuous_gait__builder.hpp\n'}
+[1.082218] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/detail/request_policy__struct.hpp\n'}
+[1.091278] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/detail/request_policy__traits.hpp\n'}
+[1.091604] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/continuous_gait__struct.hpp\n'}
+[1.100572] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/detail/request_policy__type_support.hpp\n'}
+[1.100840] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/continuous_gait__traits.hpp\n'}
+[1.101275] (-) TimerEvent: {}
+[1.108767] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/continuous_gait__type_support.hpp\n'}
+[1.109762] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/detail/response__builder.hpp\n'}
+[1.117873] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/euler__builder.hpp\n'}
+[1.119078] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/detail/response__struct.hpp\n'}
+[1.125937] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/euler__struct.hpp\n'}
+[1.127243] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/detail/response__traits.hpp\n'}
+[1.135095] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/detail/response__type_support.hpp\n'}
+[1.135344] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/euler__traits.hpp\n'}
+[1.144598] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/detail/response_header__builder.hpp\n'}
+[1.144868] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/euler__type_support.hpp\n'}
+[1.153876] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/detail/response_header__struct.hpp\n'}
+[1.154137] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/foot_raise_height__builder.hpp\n'}
+[1.164787] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/detail/response_header__traits.hpp\n'}
+[1.165137] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/foot_raise_height__struct.hpp\n'}
+[1.174723] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/foot_raise_height__traits.hpp\n'}
+[1.174944] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/detail/response_header__type_support.hpp\n'}
+[1.184533] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/foot_raise_height__type_support.hpp\n'}
+[1.184802] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/detail/response_status__builder.hpp\n'}
+[1.193040] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/mode__builder.hpp\n'}
+[1.193317] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/detail/response_status__struct.hpp\n'}
+[1.201399] (-) TimerEvent: {}
+[1.202438] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/detail/response_status__traits.hpp\n'}
+[1.202659] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/mode__struct.hpp\n'}
+[1.211657] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/detail/response_status__type_support.hpp\n'}
+[1.211960] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/mode__traits.hpp\n'}
+[1.220715] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/mode__type_support.hpp\n'}
+[1.220932] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/request.hpp\n'}
+[1.229181] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/pose__builder.hpp\n'}
+[1.229444] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/request_header.hpp\n'}
+[1.237628] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/pose__struct.hpp\n'}
+[1.237822] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/request_identity.hpp\n'}
+[1.246650] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/request_lease.hpp\n'}
+[1.246896] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/pose__traits.hpp\n'}
+[1.254423] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/pose__type_support.hpp\n'}
+[1.254564] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/request_policy.hpp\n'}
+[1.263328] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/response.hpp\n'}
+[1.263573] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/speed_level__builder.hpp\n'}
+[1.270909] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/response_header.hpp\n'}
+[1.271063] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/speed_level__struct.hpp\n'}
+[1.279900] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/response_status.hpp\n'}
+[1.280082] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/speed_level__traits.hpp\n'}
+[1.287732] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[1.287886] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/speed_level__type_support.hpp\n'}
+[1.296492] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/switch_gait__builder.hpp\n'}
+[1.296928] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/detail/request__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.301495] (-) TimerEvent: {}
+[1.304279] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/switch_gait__struct.hpp\n'}
+[1.304416] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/detail/request_header__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.312600] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/detail/request_identity__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.312883] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/switch_gait__traits.hpp\n'}
+[1.320957] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/detail/request_lease__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.321104] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/switch_gait__type_support.hpp\n'}
+[1.331180] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/switch_joystick__builder.hpp\n'}
+[1.331448] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/detail/request_policy__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.339510] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/switch_joystick__struct.hpp\n'}
+[1.339766] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/detail/response__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.348503] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/switch_joystick__traits.hpp\n'}
+[1.348781] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/detail/response_header__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.356234] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/include/unitree_api/msg/detail/response_status__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.356795] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/switch_joystick__type_support.hpp\n'}
+[1.364797] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/euler.hpp\n'}
+[1.365061] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/share/unitree_api/environment/pythonpath.sh\n'}
+[1.372237] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/foot_raise_height.hpp\n'}
+[1.372417] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/share/unitree_api/environment/pythonpath.dsv\n'}
+[1.381098] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/mode.hpp\n'}
+[1.381371] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/lib/python3.8/site-packages/unitree_api/__init__.py\n'}
+[1.389766] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/pose.hpp\n'}
+[1.390709] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/lib/python3.8/site-packages/unitree_api/msg/__init__.py\n'}
+[1.398584] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/speed_level.hpp\n'}
+[1.398795] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/lib/python3.8/site-packages/unitree_api/msg/_request.py\n'}
+[1.401590] (-) TimerEvent: {}
+[1.423815] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/lib/python3.8/site-packages/unitree_api/msg/_request_header.py\n'}
+[1.424390] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/switch_gait.hpp\n'}
+[1.435623] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/lib/python3.8/site-packages/unitree_api/msg/_request_identity.py\n'}
+[1.435851] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/switch_joystick.hpp\n'}
+[1.444719] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/lib/python3.8/site-packages/unitree_api/msg/_request_lease.py\n'}
+[1.445442] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/body_height__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.452730] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/lib/python3.8/site-packages/unitree_api/msg/_request_policy.py\n'}
+[1.453168] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/continuous_gait__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.466471] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/euler__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.466652] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/lib/python3.8/site-packages/unitree_api/msg/_response.py\n'}
+[1.480049] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/foot_raise_height__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.480301] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/lib/python3.8/site-packages/unitree_api/msg/_response_header.py\n'}
+[1.487459] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/lib/python3.8/site-packages/unitree_api/msg/_response_status.py\n'}
+[1.487648] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/mode__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.495764] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/pose__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.496015] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/lib/python3.8/site-packages/unitree_api/unitree_api_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so\n'}
+[1.501694] (-) TimerEvent: {}
+[1.503818] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/speed_level__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.503992] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/lib/python3.8/site-packages/unitree_api/unitree_api_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so\n'}
+[1.512188] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/switch_gait__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.513274] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/lib/python3.8/site-packages/unitree_api/unitree_api_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so\n'}
+[1.522129] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/lib/libunitree_api__python.so\n'}
+[1.522328] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/switch_joystick__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.530812] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/environment/pythonpath.sh\n'}
+[1.531054] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/share/unitree_api/msg/Request.idl\n'}
+[1.539329] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/share/unitree_api/msg/RequestHeader.idl\n'}
+[1.539524] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/environment/pythonpath.dsv\n'}
+[1.548486] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/lib/python3.8/site-packages/go2_interfaces/__init__.py\n'}
+[1.548863] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/share/unitree_api/msg/RequestIdentity.idl\n'}
+[1.556236] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/share/unitree_api/msg/RequestLease.idl\n'}
+[1.556430] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/lib/python3.8/site-packages/go2_interfaces/srv/__init__.py\n'}
+[1.565517] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/lib/python3.8/site-packages/go2_interfaces/srv/_body_height.py\n'}
+[1.565763] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/share/unitree_api/msg/RequestPolicy.idl\n'}
+[1.573133] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/lib/python3.8/site-packages/go2_interfaces/srv/_continuous_gait.py\n'}
+[1.573448] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/share/unitree_api/msg/Response.idl\n'}
+[1.581835] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/lib/python3.8/site-packages/go2_interfaces/srv/_euler.py\n'}
+[1.582046] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/share/unitree_api/msg/ResponseHeader.idl\n'}
+[1.589338] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/lib/python3.8/site-packages/go2_interfaces/srv/_foot_raise_height.py\n'}
+[1.589500] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/share/unitree_api/msg/ResponseStatus.idl\n'}
+[1.598161] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/lib/python3.8/site-packages/go2_interfaces/srv/_mode.py\n'}
+[1.598398] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/share/unitree_api/msg/Request.msg\n'}
+[1.601779] (-) TimerEvent: {}
+[1.606251] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/lib/python3.8/site-packages/go2_interfaces/srv/_pose.py\n'}
+[1.607110] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/share/unitree_api/msg/RequestHeader.msg\n'}
+[1.616476] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/lib/python3.8/site-packages/go2_interfaces/srv/_speed_level.py\n'}
+[1.617759] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/share/unitree_api/msg/RequestIdentity.msg\n'}
+[1.623991] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/lib/python3.8/site-packages/go2_interfaces/srv/_switch_gait.py\n'}
+[1.625251] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/share/unitree_api/msg/RequestLease.msg\n'}
+[1.633648] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/lib/python3.8/site-packages/go2_interfaces/srv/_switch_joystick.py\n'}
+[1.633894] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/share/unitree_api/msg/RequestPolicy.msg\n'}
+[1.642611] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/lib/python3.8/site-packages/go2_interfaces/go2_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so\n'}
+[1.642949] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/share/unitree_api/msg/Response.msg\n'}
+[1.652016] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/share/unitree_api/msg/ResponseHeader.msg\n'}
+[1.652258] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/lib/python3.8/site-packages/go2_interfaces/go2_interfaces_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so\n'}
+[1.661021] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/share/unitree_api/msg/ResponseStatus.msg\n'}
+[1.661332] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/lib/python3.8/site-packages/go2_interfaces/go2_interfaces_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so\n'}
+[1.669689] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/lib/libgo2_interfaces__python.so\n'}
+[1.669902] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/share/unitree_api/msg/dds_connext/RequestHeader_.idl\n'}
+[1.678533] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/share/unitree_api/msg/dds_connext/RequestIdentity_.idl\n'}
+[1.678910] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/srv/BodyHeight.idl\n'}
+[1.686780] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/share/unitree_api/msg/dds_connext/RequestLease_.idl\n'}
+[1.686985] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/srv/ContinuousGait.idl\n'}
+[1.695512] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/share/unitree_api/msg/dds_connext/RequestPolicy_.idl\n'}
+[1.695755] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/srv/Euler.idl\n'}
+[1.701892] (-) TimerEvent: {}
+[1.704207] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/share/unitree_api/msg/dds_connext/Request_.idl\n'}
+[1.704408] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/srv/FootRaiseHeight.idl\n'}
+[1.713658] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/share/unitree_api/msg/dds_connext/ResponseHeader_.idl\n'}
+[1.713888] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/srv/Mode.idl\n'}
+[1.722009] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/share/unitree_api/msg/dds_connext/ResponseStatus_.idl\n'}
+[1.722220] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/srv/Pose.idl\n'}
+[1.731465] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/srv/SpeedLevel.idl\n'}
+[1.731696] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/share/unitree_api/msg/dds_connext/Response_.idl\n'}
+[1.744538] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/share/ament_index/resource_index/package_run_dependencies/unitree_api\n'}
+[1.744826] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/srv/SwitchGait.idl\n'}
+[1.758058] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/srv/SwitchJoystick.idl\n'}
+[1.758377] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/share/ament_index/resource_index/parent_prefix_path/unitree_api\n'}
+[1.766938] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/srv/BodyHeight.srv\n'}
+[1.767139] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/share/unitree_api/environment/ament_prefix_path.sh\n'}
+[1.774252] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/share/unitree_api/environment/ament_prefix_path.dsv\n'}
+[1.775364] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/srv/BodyHeight_Request.msg\n'}
+[1.783210] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/srv/BodyHeight_Response.msg\n'}
+[1.783397] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/share/unitree_api/environment/path.sh\n'}
+[1.790141] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/share/unitree_api/environment/path.dsv\n'}
+[1.792182] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/srv/ContinuousGait.srv\n'}
+[1.800123] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/srv/ContinuousGait_Request.msg\n'}
+[1.800290] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/share/unitree_api/local_setup.bash\n'}
+[1.801983] (-) TimerEvent: {}
+[1.807681] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/share/unitree_api/local_setup.sh\n'}
+[1.807915] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/srv/ContinuousGait_Response.msg\n'}
+[1.816600] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/share/unitree_api/local_setup.zsh\n'}
+[1.816849] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/srv/Euler.srv\n'}
+[1.824168] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/share/unitree_api/local_setup.dsv\n'}
+[1.824378] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/srv/Euler_Request.msg\n'}
+[1.833674] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/share/unitree_api/package.dsv\n'}
+[1.834103] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/srv/Euler_Response.msg\n'}
+[1.842284] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/srv/FootRaiseHeight.srv\n'}
+[1.842583] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/share/ament_index/resource_index/packages/unitree_api\n'}
+[1.852624] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/srv/FootRaiseHeight_Request.msg\n'}
+[1.852871] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/share/unitree_api/cmake/rosidl_cmake-extras.cmake\n'}
+[1.861048] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/srv/FootRaiseHeight_Response.msg\n'}
+[1.861700] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/share/unitree_api/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[1.869784] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/share/unitree_api/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[1.869977] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/srv/Mode.srv\n'}
+[1.877727] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/share/unitree_api/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[1.881236] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/srv/Mode_Request.msg\n'}
+[1.888285] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/share/unitree_api/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[1.889322] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/srv/Mode_Response.msg\n'}
+[1.898074] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/share/unitree_api/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[1.898289] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/srv/Pose.srv\n'}
+[1.902089] (-) TimerEvent: {}
+[1.907426] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/share/unitree_api/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[1.907684] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/srv/Pose_Request.msg\n'}
+[1.917736] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/share/unitree_api/cmake/unitree_apiConfig.cmake\n'}
+[1.917971] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/srv/Pose_Response.msg\n'}
+[1.925617] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/share/unitree_api/cmake/unitree_apiConfig-version.cmake\n'}
+[1.925993] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/srv/SpeedLevel.srv\n'}
+[1.935136] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/srv/SpeedLevel_Request.msg\n'}
+[1.935295] (unitree_api) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_api/share/unitree_api/package.xml\n'}
+[1.944452] (unitree_api) StdoutLine: {'line': b'-- Installing: /home/giovanna/argo_go2_ws/install/unitree_api/lib/libunitree_api__rosidl_generator_c.so\n'}
+[1.944765] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/srv/SpeedLevel_Response.msg\n'}
+[1.944943] (unitree_api) StdoutLine: {'line': b'-- Set runtime path of "/home/giovanna/argo_go2_ws/install/unitree_api/lib/libunitree_api__rosidl_generator_c.so" to ""\n'}
+[1.945106] (unitree_api) StdoutLine: {'line': b'-- Installing: /home/giovanna/argo_go2_ws/install/unitree_api/lib/libunitree_api__rosidl_typesupport_introspection_c.so\n'}
+[1.945690] (unitree_api) StdoutLine: {'line': b'-- Set runtime path of "/home/giovanna/argo_go2_ws/install/unitree_api/lib/libunitree_api__rosidl_typesupport_introspection_c.so" to ""\n'}
+[1.945893] (unitree_api) StdoutLine: {'line': b'-- Installing: /home/giovanna/argo_go2_ws/install/unitree_api/lib/libunitree_api__rosidl_typesupport_c.so\n'}
+[1.946339] (unitree_api) StdoutLine: {'line': b'-- Set runtime path of "/home/giovanna/argo_go2_ws/install/unitree_api/lib/libunitree_api__rosidl_typesupport_c.so" to ""\n'}
+[1.946519] (unitree_api) StdoutLine: {'line': b'-- Installing: /home/giovanna/argo_go2_ws/install/unitree_api/lib/libunitree_api__rosidl_typesupport_introspection_cpp.so\n'}
+[1.947121] (unitree_api) StdoutLine: {'line': b'-- Set runtime path of "/home/giovanna/argo_go2_ws/install/unitree_api/lib/libunitree_api__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[1.947304] (unitree_api) StdoutLine: {'line': b'-- Installing: /home/giovanna/argo_go2_ws/install/unitree_api/lib/libunitree_api__rosidl_typesupport_cpp.so\n'}
+[1.947700] (unitree_api) StdoutLine: {'line': b'-- Set runtime path of "/home/giovanna/argo_go2_ws/install/unitree_api/lib/libunitree_api__rosidl_typesupport_cpp.so" to ""\n'}
+[1.953670] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/srv/SwitchGait.srv\n'}
+[1.967203] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/srv/SwitchGait_Request.msg\n'}
+[1.975298] (unitree_api) StdoutLine: {'line': b"Compiling '/home/giovanna/argo_go2_ws/install/unitree_api/lib/python3.8/site-packages/unitree_api/__init__.py'...\n"}
+[1.976966] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/srv/SwitchGait_Response.msg\n'}
+[1.979495] (unitree_api) StdoutLine: {'line': b'-- Installing: /home/giovanna/argo_go2_ws/install/unitree_api/share/unitree_api/cmake/unitree_api__rosidl_generator_cExport.cmake\n'}
+[1.979690] (unitree_api) StdoutLine: {'line': b'-- Installing: /home/giovanna/argo_go2_ws/install/unitree_api/share/unitree_api/cmake/unitree_api__rosidl_generator_cExport-noconfig.cmake\n'}
+[1.979970] (unitree_api) StdoutLine: {'line': b'-- Installing: /home/giovanna/argo_go2_ws/install/unitree_api/share/unitree_api/cmake/unitree_api__rosidl_typesupport_introspection_cExport.cmake\n'}
+[1.980143] (unitree_api) StdoutLine: {'line': b'-- Installing: /home/giovanna/argo_go2_ws/install/unitree_api/share/unitree_api/cmake/unitree_api__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[1.980408] (unitree_api) StdoutLine: {'line': b'-- Installing: /home/giovanna/argo_go2_ws/install/unitree_api/share/unitree_api/cmake/unitree_api__rosidl_typesupport_cExport.cmake\n'}
+[1.980608] (unitree_api) StdoutLine: {'line': b'-- Installing: /home/giovanna/argo_go2_ws/install/unitree_api/share/unitree_api/cmake/unitree_api__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[1.980918] (unitree_api) StdoutLine: {'line': b'-- Installing: /home/giovanna/argo_go2_ws/install/unitree_api/share/unitree_api/cmake/unitree_api__rosidl_generator_cppExport.cmake\n'}
+[1.981194] (unitree_api) StdoutLine: {'line': b'-- Installing: /home/giovanna/argo_go2_ws/install/unitree_api/share/unitree_api/cmake/unitree_api__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[1.981410] (unitree_api) StdoutLine: {'line': b'-- Installing: /home/giovanna/argo_go2_ws/install/unitree_api/share/unitree_api/cmake/unitree_api__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[1.981680] (unitree_api) StdoutLine: {'line': b'-- Installing: /home/giovanna/argo_go2_ws/install/unitree_api/share/unitree_api/cmake/unitree_api__rosidl_typesupport_cppExport.cmake\n'}
+[1.981854] (unitree_api) StdoutLine: {'line': b'-- Installing: /home/giovanna/argo_go2_ws/install/unitree_api/share/unitree_api/cmake/unitree_api__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[1.984729] (unitree_api) CommandEnded: {'returncode': 0}
+[1.985785] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/srv/SwitchJoystick.srv\n'}
+[1.994434] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/srv/SwitchJoystick_Request.msg\n'}
+[2.002413] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/srv/SwitchJoystick_Response.msg\n'}
+[2.002982] (-) TimerEvent: {}
+[2.010274] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/ament_index/resource_index/package_run_dependencies/go2_interfaces\n'}
+[2.021900] (unitree_api) JobEnded: {'identifier': 'unitree_api', 'rc': 0}
+[2.029044] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/ament_index/resource_index/parent_prefix_path/go2_interfaces\n'}
+[2.045775] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/environment/ament_prefix_path.sh\n'}
+[2.054345] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/environment/ament_prefix_path.dsv\n'}
+[2.062603] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/environment/path.sh\n'}
+[2.069822] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/environment/path.dsv\n'}
+[2.077106] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/local_setup.bash\n'}
+[2.085193] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/local_setup.sh\n'}
+[2.098492] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/local_setup.zsh\n'}
+[2.103220] (-) TimerEvent: {}
+[2.115940] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/local_setup.dsv\n'}
+[2.124260] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/package.dsv\n'}
+[2.137282] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/ament_index/resource_index/packages/go2_interfaces\n'}
+[2.145989] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/cmake/rosidl_cmake-extras.cmake\n'}
+[2.154774] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[2.166533] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[2.177485] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[2.185440] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[2.192267] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[2.200446] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[2.203364] (-) TimerEvent: {}
+[2.214531] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/cmake/go2_interfacesConfig.cmake\n'}
+[2.232659] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/cmake/go2_interfacesConfig-version.cmake\n'}
+[2.240097] (go2_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/package.xml\n'}
+[2.251556] (go2_interfaces) StdoutLine: {'line': b'-- Installing: /home/giovanna/argo_go2_ws/install/go2_interfaces/lib/libgo2_interfaces__rosidl_generator_c.so\n'}
+[2.251951] (go2_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/giovanna/argo_go2_ws/install/go2_interfaces/lib/libgo2_interfaces__rosidl_generator_c.so" to ""\n'}
+[2.252112] (go2_interfaces) StdoutLine: {'line': b'-- Installing: /home/giovanna/argo_go2_ws/install/go2_interfaces/lib/libgo2_interfaces__rosidl_typesupport_introspection_c.so\n'}
+[2.252566] (go2_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/giovanna/argo_go2_ws/install/go2_interfaces/lib/libgo2_interfaces__rosidl_typesupport_introspection_c.so" to ""\n'}
+[2.252788] (go2_interfaces) StdoutLine: {'line': b'-- Installing: /home/giovanna/argo_go2_ws/install/go2_interfaces/lib/libgo2_interfaces__rosidl_typesupport_c.so\n'}
+[2.253859] (go2_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/giovanna/argo_go2_ws/install/go2_interfaces/lib/libgo2_interfaces__rosidl_typesupport_c.so" to ""\n'}
+[2.254294] (go2_interfaces) StdoutLine: {'line': b'-- Installing: /home/giovanna/argo_go2_ws/install/go2_interfaces/lib/libgo2_interfaces__rosidl_typesupport_introspection_cpp.so\n'}
+[2.255955] (go2_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/giovanna/argo_go2_ws/install/go2_interfaces/lib/libgo2_interfaces__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[2.256369] (go2_interfaces) StdoutLine: {'line': b'-- Installing: /home/giovanna/argo_go2_ws/install/go2_interfaces/lib/libgo2_interfaces__rosidl_typesupport_cpp.so\n'}
+[2.257854] (go2_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/giovanna/argo_go2_ws/install/go2_interfaces/lib/libgo2_interfaces__rosidl_typesupport_cpp.so" to ""\n'}
+[2.286244] (go2_interfaces) StdoutLine: {'line': b"Compiling '/home/giovanna/argo_go2_ws/install/go2_interfaces/lib/python3.8/site-packages/go2_interfaces/__init__.py'...\n"}
+[2.289159] (go2_interfaces) StdoutLine: {'line': b'-- Installing: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/cmake/go2_interfaces__rosidl_generator_cExport.cmake\n'}
+[2.289337] (go2_interfaces) StdoutLine: {'line': b'-- Installing: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/cmake/go2_interfaces__rosidl_generator_cExport-noconfig.cmake\n'}
+[2.289412] (go2_interfaces) StdoutLine: {'line': b'-- Installing: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/cmake/go2_interfaces__rosidl_typesupport_introspection_cExport.cmake\n'}
+[2.289530] (go2_interfaces) StdoutLine: {'line': b'-- Installing: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/cmake/go2_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[2.289649] (go2_interfaces) StdoutLine: {'line': b'-- Installing: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/cmake/go2_interfaces__rosidl_typesupport_cExport.cmake\n'}
+[2.289846] (go2_interfaces) StdoutLine: {'line': b'-- Installing: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/cmake/go2_interfaces__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[2.290072] (go2_interfaces) StdoutLine: {'line': b'-- Installing: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/cmake/go2_interfaces__rosidl_generator_cppExport.cmake\n'}
+[2.290323] (go2_interfaces) StdoutLine: {'line': b'-- Installing: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/cmake/go2_interfaces__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[2.290537] (go2_interfaces) StdoutLine: {'line': b'-- Installing: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/cmake/go2_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[2.290734] (go2_interfaces) StdoutLine: {'line': b'-- Installing: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/cmake/go2_interfaces__rosidl_typesupport_cppExport.cmake\n'}
+[2.290906] (go2_interfaces) StdoutLine: {'line': b'-- Installing: /home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/cmake/go2_interfaces__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[2.295647] (go2_interfaces) CommandEnded: {'returncode': 0}
+[2.303820] (-) TimerEvent: {}
+[2.318492] (go2_interfaces) JobEnded: {'identifier': 'go2_interfaces', 'rc': 0}
+[2.319191] (-) EventReactorShutdown: {}

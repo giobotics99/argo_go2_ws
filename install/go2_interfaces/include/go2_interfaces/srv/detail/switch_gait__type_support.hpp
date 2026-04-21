@@ -1,0 +1,1 @@
+/home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_generator_cpp/go2_interfaces/srv/detail/switch_gait__type_support.hpp

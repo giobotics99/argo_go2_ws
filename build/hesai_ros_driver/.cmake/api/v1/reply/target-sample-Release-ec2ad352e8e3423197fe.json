@@ -1,0 +1,428 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "src/driver/HesaiLidar_SDK_2.0/sample"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_executable",
+			"link_directories",
+			"target_link_libraries",
+			"add_compile_options",
+			"add_definitions",
+			"include",
+			"find_package",
+			"ament_execute_extensions",
+			"rosidl_generate_interfaces",
+			"include_directories"
+		],
+		"files" : 
+		[
+			"src/driver/HesaiLidar_SDK_2.0/CMakeLists.txt",
+			"CMakeLists.txt",
+			"/opt/ros/foxy/share/ament_cmake_ros/cmake/ament_cmake_ros-extras.cmake",
+			"/opt/ros/foxy/share/ament_cmake_ros/cmake/ament_cmake_rosConfig.cmake",
+			"/opt/ros/foxy/share/rosidl_typesupport_fastrtps_c/cmake/rosidl_typesupport_fastrtps_c_generate_interfaces.cmake",
+			"/opt/ros/foxy/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake",
+			"/opt/ros/foxy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 60,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 58,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 64,
+				"parent" : 0
+			},
+			{
+				"file" : 1
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 48,
+				"parent" : 4
+			},
+			{
+				"command" : 4,
+				"file" : 1,
+				"line" : 35,
+				"parent" : 4
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 31,
+				"parent" : 0
+			},
+			{
+				"command" : 4,
+				"file" : 1,
+				"line" : 102,
+				"parent" : 4
+			},
+			{
+				"command" : 8,
+				"file" : 1,
+				"line" : 115,
+				"parent" : 4
+			},
+			{
+				"command" : 7,
+				"file" : 6,
+				"line" : 286,
+				"parent" : 9
+			},
+			{
+				"command" : 5,
+				"file" : 5,
+				"line" : 48,
+				"parent" : 10
+			},
+			{
+				"file" : 4,
+				"parent" : 11
+			},
+			{
+				"command" : 6,
+				"file" : 4,
+				"line" : 15,
+				"parent" : 12
+			},
+			{
+				"file" : 3,
+				"parent" : 13
+			},
+			{
+				"command" : 5,
+				"file" : 3,
+				"line" : 41,
+				"parent" : 14
+			},
+			{
+				"file" : 2,
+				"parent" : 15
+			},
+			{
+				"command" : 4,
+				"file" : 2,
+				"line" : 25,
+				"parent" : 16
+			},
+			{
+				"command" : 9,
+				"file" : 1,
+				"line" : 103,
+				"parent" : 4
+			},
+			{
+				"command" : 9,
+				"file" : 1,
+				"line" : 139,
+				"parent" : 4
+			},
+			{
+				"command" : 9,
+				"file" : 0,
+				"line" : 29,
+				"parent" : 0
+			},
+			{
+				"command" : 9,
+				"file" : 0,
+				"line" : 34,
+				"parent" : 0
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-O3 -DNDEBUG   -O3 -std=c++14 -O3"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-Wall"
+				},
+				{
+					"fragment" : "-std=gnu++14"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 6,
+					"define" : "PROJECT_PATH=\"/home/giovanna/argo_go2_ws/src/hesai_ros_driver\""
+				},
+				{
+					"backtrace" : 7,
+					"define" : "QT_MESSAGELOGCONTEXT"
+				},
+				{
+					"backtrace" : 8,
+					"define" : "ROS2_FOUND"
+				},
+				{
+					"backtrace" : 17,
+					"define" : "ROS_PACKAGE_NAME=\"hesai_ros_driver\""
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 18,
+					"path" : "/opt/ros/foxy/include"
+				},
+				{
+					"backtrace" : 19,
+					"path" : "/home/giovanna/argo_go2_ws/src/hesai_ros_driver/src"
+				},
+				{
+					"backtrace" : 20,
+					"path" : "/home/giovanna/argo_go2_ws/build/hesai_ros_driver/src/driver/HesaiLidar_SDK_2.0"
+				},
+				{
+					"backtrace" : 21,
+					"path" : "/home/giovanna/argo_go2_ws/src/hesai_ros_driver/src/driver/HesaiLidar_SDK_2.0/libhesai"
+				},
+				{
+					"backtrace" : 21,
+					"path" : "/home/giovanna/argo_go2_ws/src/hesai_ros_driver/src/driver/HesaiLidar_SDK_2.0/libhesai/Lidar"
+				},
+				{
+					"backtrace" : 21,
+					"path" : "/home/giovanna/argo_go2_ws/src/hesai_ros_driver/src/driver/HesaiLidar_SDK_2.0/libhesai/UdpParser"
+				},
+				{
+					"backtrace" : 21,
+					"path" : "/home/giovanna/argo_go2_ws/src/hesai_ros_driver/src/driver/HesaiLidar_SDK_2.0/libhesai/UdpParser/include"
+				},
+				{
+					"backtrace" : 21,
+					"path" : "/home/giovanna/argo_go2_ws/src/hesai_ros_driver/src/driver/HesaiLidar_SDK_2.0/libhesai/UdpParser/src"
+				},
+				{
+					"backtrace" : 21,
+					"path" : "/home/giovanna/argo_go2_ws/src/hesai_ros_driver/src/driver/HesaiLidar_SDK_2.0/libhesai/UdpProtocol"
+				},
+				{
+					"backtrace" : 21,
+					"path" : "/home/giovanna/argo_go2_ws/src/hesai_ros_driver/src/driver/HesaiLidar_SDK_2.0/libhesai/Source/include"
+				},
+				{
+					"backtrace" : 21,
+					"path" : "/home/giovanna/argo_go2_ws/src/hesai_ros_driver/src/driver/HesaiLidar_SDK_2.0/libhesai/Container/include"
+				},
+				{
+					"backtrace" : 21,
+					"path" : "/home/giovanna/argo_go2_ws/src/hesai_ros_driver/src/driver/HesaiLidar_SDK_2.0/libhesai/Container/src"
+				},
+				{
+					"backtrace" : 21,
+					"path" : "/home/giovanna/argo_go2_ws/src/hesai_ros_driver/src/driver/HesaiLidar_SDK_2.0/libhesai/UdpParserGpu"
+				},
+				{
+					"backtrace" : 21,
+					"path" : "/home/giovanna/argo_go2_ws/src/hesai_ros_driver/src/driver/HesaiLidar_SDK_2.0/libhesai/UdpParserGpu/include"
+				},
+				{
+					"backtrace" : 21,
+					"path" : "/home/giovanna/argo_go2_ws/src/hesai_ros_driver/src/driver/HesaiLidar_SDK_2.0/libhesai/UdpParserGpu/src"
+				},
+				{
+					"backtrace" : 21,
+					"path" : "/home/giovanna/argo_go2_ws/src/hesai_ros_driver/src/driver/HesaiLidar_SDK_2.0/libhesai/PtcClient/include"
+				},
+				{
+					"backtrace" : 21,
+					"path" : "/home/giovanna/argo_go2_ws/src/hesai_ros_driver/src/driver/HesaiLidar_SDK_2.0/libhesai/SerialClient/include"
+				},
+				{
+					"backtrace" : 21,
+					"path" : "/home/giovanna/argo_go2_ws/src/hesai_ros_driver/src/driver/HesaiLidar_SDK_2.0/libhesai/PtcParser"
+				},
+				{
+					"backtrace" : 21,
+					"path" : "/home/giovanna/argo_go2_ws/src/hesai_ros_driver/src/driver/HesaiLidar_SDK_2.0/libhesai/PtcParser/src"
+				},
+				{
+					"backtrace" : 21,
+					"path" : "/home/giovanna/argo_go2_ws/src/hesai_ros_driver/src/driver/HesaiLidar_SDK_2.0/libhesai/PtcParser/include"
+				},
+				{
+					"backtrace" : 21,
+					"path" : "/home/giovanna/argo_go2_ws/src/hesai_ros_driver/src/driver/HesaiLidar_SDK_2.0/libhesai/Logger/include"
+				},
+				{
+					"backtrace" : 21,
+					"path" : "/home/giovanna/argo_go2_ws/src/hesai_ros_driver/src/driver/HesaiLidar_SDK_2.0/libhesai/include"
+				},
+				{
+					"backtrace" : 21,
+					"path" : "/home/giovanna/argo_go2_ws/src/hesai_ros_driver/src/driver/HesaiLidar_SDK_2.0/driver"
+				},
+				{
+					"backtrace" : 21,
+					"path" : "/home/giovanna/argo_go2_ws/src/hesai_ros_driver/src/driver/HesaiLidar_SDK_2.0/third_party"
+				}
+			],
+			"language" : "CXX",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 3,
+			"id" : "ptcClient_lib::@43583181f402ad81a691"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "serialClient_lib::@43583181f402ad81a691"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "platutils_lib::@43583181f402ad81a691"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "ptcParser_lib::@43583181f402ad81a691"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "source_lib::@43583181f402ad81a691"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "container_lib::@43583181f402ad81a691"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "log_lib::@43583181f402ad81a691"
+		}
+	],
+	"id" : "sample::@7740dfa422c4e9a54568",
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "-O3 -DNDEBUG",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "-L/home/giovanna/argo_go2_ws/src/hesai_ros_driver/src/driver/HesaiLidar_SDK_2.0/./libhesai/PtcClient/lib",
+				"role" : "libraryPath"
+			},
+			{
+				"fragment" : "-Wl,-rpath,/home/giovanna/argo_go2_ws/src/hesai_ros_driver/src/driver/HesaiLidar_SDK_2.0/./libhesai/PtcClient/lib:/home/giovanna/argo_go2_ws/build/hesai_ros_driver/src/driver/HesaiLidar_SDK_2.0/libhesai",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "libhesai/libsource_lib.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "libhesai/libcontainer_lib.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "libhesai/libptcClient_lib.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "libhesai/libserialClient_lib.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "libhesai/libptcParser_lib.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "libhesai/liblog_lib.so",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "/usr/lib/x86_64-linux-gnu/libssl.so",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "/usr/lib/x86_64-linux-gnu/libcrypto.so",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "libhesai/libplatutils_lib.so",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lpthread",
+				"role" : "libraries"
+			}
+		],
+		"language" : "CXX"
+	},
+	"name" : "sample",
+	"nameOnDisk" : "sample",
+	"paths" : 
+	{
+		"build" : "src/driver/HesaiLidar_SDK_2.0",
+		"source" : "src/driver/HesaiLidar_SDK_2.0"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/driver/HesaiLidar_SDK_2.0/test/test.cc",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "EXECUTABLE"
+}

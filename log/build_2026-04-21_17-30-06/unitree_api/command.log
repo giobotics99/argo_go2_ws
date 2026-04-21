@@ -1,0 +1,1 @@
+Invoking command in '/home/giovanna/argo_go2_ws/build/unitree_api': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/giovanna/argo_go2_ws/src/unitree_api -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/giovanna/argo_go2_ws/install/unitree_api

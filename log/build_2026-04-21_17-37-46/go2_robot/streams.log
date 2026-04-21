@@ -1,0 +1,27 @@
+[0.111s] Invoking command in '/home/giovanna/argo_go2_ws/build/go2_robot': AMENT_PREFIX_PATH=/home/giovanna/argo_go2_ws/install/go2_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/giovanna/argo_go2_ws/install/go2_description:/opt/ros/foxy /usr/bin/cmake --build /home/giovanna/argo_go2_ws/build/go2_robot -- -j16 -l16
+[0.160s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.188s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.364s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.444s] -- Configuring done
+[0.446s] -- Generating done
+[0.449s] -- Build files have been written to: /home/giovanna/argo_go2_ws/build/go2_robot
+[0.476s] Invoked command in '/home/giovanna/argo_go2_ws/build/go2_robot' returned '0': AMENT_PREFIX_PATH=/home/giovanna/argo_go2_ws/install/go2_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/giovanna/argo_go2_ws/install/go2_description:/opt/ros/foxy /usr/bin/cmake --build /home/giovanna/argo_go2_ws/build/go2_robot -- -j16 -l16
+[0.481s] Invoking command in '/home/giovanna/argo_go2_ws/build/go2_robot': AMENT_PREFIX_PATH=/home/giovanna/argo_go2_ws/install/go2_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/giovanna/argo_go2_ws/install/go2_description:/opt/ros/foxy /usr/bin/cmake --install /home/giovanna/argo_go2_ws/build/go2_robot
+[0.491s] -- Install configuration: ""
+[0.491s] -- Execute custom install script
+[0.492s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_robot/share/ament_index/resource_index/package_run_dependencies/go2_robot
+[0.492s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_robot/share/ament_index/resource_index/parent_prefix_path/go2_robot
+[0.492s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_robot/share/go2_robot/environment/ament_prefix_path.sh
+[0.493s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_robot/share/go2_robot/environment/ament_prefix_path.dsv
+[0.493s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_robot/share/go2_robot/environment/path.sh
+[0.493s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_robot/share/go2_robot/environment/path.dsv
+[0.493s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_robot/share/go2_robot/local_setup.bash
+[0.494s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_robot/share/go2_robot/local_setup.sh
+[0.494s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_robot/share/go2_robot/local_setup.zsh
+[0.494s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_robot/share/go2_robot/local_setup.dsv
+[0.494s] -- Symlinking: /home/giovanna/argo_go2_ws/install/go2_robot/share/go2_robot/package.dsv
+[0.508s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_robot/share/ament_index/resource_index/packages/go2_robot
+[0.508s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_robot/share/go2_robot/cmake/go2_robotConfig.cmake
+[0.508s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_robot/share/go2_robot/cmake/go2_robotConfig-version.cmake
+[0.508s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_robot/share/go2_robot/package.xml
+[0.512s] Invoked command in '/home/giovanna/argo_go2_ws/build/go2_robot' returned '0': AMENT_PREFIX_PATH=/home/giovanna/argo_go2_ws/install/go2_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/giovanna/argo_go2_ws/install/go2_description:/opt/ros/foxy /usr/bin/cmake --install /home/giovanna/argo_go2_ws/build/go2_robot

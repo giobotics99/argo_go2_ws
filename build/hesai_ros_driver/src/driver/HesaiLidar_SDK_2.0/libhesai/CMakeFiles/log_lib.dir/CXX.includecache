@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/giovanna/argo_go2_ws/src/hesai_ros_driver/src/driver/HesaiLidar_SDK_2.0/libhesai/Logger/include/logger.h
+string
+-
+memory
+-
+thread
+-
+mutex
+-
+condition_variable
+-
+list
+-
+functional
+-
+algorithm
+-
+
+/home/giovanna/argo_go2_ws/src/hesai_ros_driver/src/driver/HesaiLidar_SDK_2.0/libhesai/Logger/src/logger.cc
+logger.h
+/home/giovanna/argo_go2_ws/src/hesai_ros_driver/src/driver/HesaiLidar_SDK_2.0/libhesai/Logger/src/logger.h
+time.h
+-
+stdio.h
+-
+memory
+-
+stdarg.h
+-
+

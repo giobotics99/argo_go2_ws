@@ -1,0 +1,1 @@
+/home/giovanna/argo_go2_ws/build/hesai_ros_driver/rosidl_cmake/rosidl_cmake-extras.cmake

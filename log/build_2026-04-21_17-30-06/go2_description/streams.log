@@ -1,0 +1,65 @@
+[0.048s] Invoking command in '/home/giovanna/argo_go2_ws/build/go2_description': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/giovanna/argo_go2_ws/src/go2_description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/giovanna/argo_go2_ws/install/go2_description
+[0.220s] -- The C compiler identification is GNU 9.4.0
+[0.343s] -- The CXX compiler identification is GNU 9.4.0
+[0.352s] -- Check for working C compiler: /usr/bin/cc
+[0.455s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.457s] -- Detecting C compiler ABI info
+[0.558s] -- Detecting C compiler ABI info - done
+[0.577s] -- Detecting C compile features
+[0.578s] -- Detecting C compile features - done
+[0.580s] -- Check for working CXX compiler: /usr/bin/c++
+[0.685s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[0.686s] -- Detecting CXX compiler ABI info
+[0.803s] -- Detecting CXX compiler ABI info - done
+[0.822s] -- Detecting CXX compile features
+[0.823s] -- Detecting CXX compile features - done
+[0.827s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.858s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.858s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.083s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[1.120s] -- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[1.216s] -- Added test 'flake8' to check Python code syntax and style conventions
+[1.217s] -- Added test 'lint_cmake' to check CMake code style
+[1.218s] -- Added test 'pep257' to check Python code against some of the style conventions in PEP 257
+[1.221s] -- Added test 'xmllint' to check XML markup files
+[1.225s] -- Configuring done
+[1.228s] -- Generating done
+[1.236s] -- Build files have been written to: /home/giovanna/argo_go2_ws/build/go2_description
+[1.244s] Invoked command in '/home/giovanna/argo_go2_ws/build/go2_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/giovanna/argo_go2_ws/src/go2_description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/giovanna/argo_go2_ws/install/go2_description
+[1.248s] Invoking command in '/home/giovanna/argo_go2_ws/build/go2_description': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/giovanna/argo_go2_ws/build/go2_description -- -j16 -l16
+[1.315s] Invoked command in '/home/giovanna/argo_go2_ws/build/go2_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/giovanna/argo_go2_ws/build/go2_description -- -j16 -l16
+[1.320s] Invoking command in '/home/giovanna/argo_go2_ws/build/go2_description': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/giovanna/argo_go2_ws/build/go2_description
+[1.335s] -- Install configuration: ""
+[1.337s] -- Execute custom install script
+[1.337s] -- Symlinking: /home/giovanna/argo_go2_ws/install/go2_description/share/go2_description/launch/robot.launch.py
+[1.344s] -- Symlinking: /home/giovanna/argo_go2_ws/install/go2_description/share/go2_description/urdf/go2_description.urdf
+[1.356s] -- Symlinking: /home/giovanna/argo_go2_ws/install/go2_description/share/go2_description/meshes/calf.dae
+[1.371s] -- Symlinking: /home/giovanna/argo_go2_ws/install/go2_description/share/go2_description/meshes/calf_mirror.dae
+[1.382s] -- Symlinking: /home/giovanna/argo_go2_ws/install/go2_description/share/go2_description/meshes/foot.dae
+[1.395s] -- Symlinking: /home/giovanna/argo_go2_ws/install/go2_description/share/go2_description/meshes/hip.dae
+[1.406s] -- Symlinking: /home/giovanna/argo_go2_ws/install/go2_description/share/go2_description/meshes/thigh.dae
+[1.418s] -- Symlinking: /home/giovanna/argo_go2_ws/install/go2_description/share/go2_description/meshes/thigh_mirror.dae
+[1.429s] -- Symlinking: /home/giovanna/argo_go2_ws/install/go2_description/share/go2_description/meshes/trunk.dae
+[1.441s] -- Symlinking: /home/giovanna/argo_go2_ws/install/go2_description/share/go2_description/dae/base.dae
+[1.453s] -- Symlinking: /home/giovanna/argo_go2_ws/install/go2_description/share/go2_description/dae/calf.dae
+[1.464s] -- Symlinking: /home/giovanna/argo_go2_ws/install/go2_description/share/go2_description/dae/calf_mirror.dae
+[1.476s] -- Symlinking: /home/giovanna/argo_go2_ws/install/go2_description/share/go2_description/dae/foot.dae
+[1.487s] -- Symlinking: /home/giovanna/argo_go2_ws/install/go2_description/share/go2_description/dae/hip.dae
+[1.498s] -- Symlinking: /home/giovanna/argo_go2_ws/install/go2_description/share/go2_description/dae/thigh.dae
+[1.511s] -- Symlinking: /home/giovanna/argo_go2_ws/install/go2_description/share/go2_description/dae/thigh_mirror.dae
+[1.524s] -- Symlinking: /home/giovanna/argo_go2_ws/install/go2_description/share/go2_description/config/go2_description.rviz
+[1.536s] -- Symlinking: /home/giovanna/argo_go2_ws/install/go2_description/share/ament_index/resource_index/package_run_dependencies/go2_description
+[1.546s] -- Symlinking: /home/giovanna/argo_go2_ws/install/go2_description/share/ament_index/resource_index/parent_prefix_path/go2_description
+[1.559s] -- Symlinking: /home/giovanna/argo_go2_ws/install/go2_description/share/go2_description/environment/ament_prefix_path.sh
+[1.571s] -- Symlinking: /home/giovanna/argo_go2_ws/install/go2_description/share/go2_description/environment/ament_prefix_path.dsv
+[1.581s] -- Symlinking: /home/giovanna/argo_go2_ws/install/go2_description/share/go2_description/environment/path.sh
+[1.591s] -- Symlinking: /home/giovanna/argo_go2_ws/install/go2_description/share/go2_description/environment/path.dsv
+[1.602s] -- Symlinking: /home/giovanna/argo_go2_ws/install/go2_description/share/go2_description/local_setup.bash
+[1.612s] -- Symlinking: /home/giovanna/argo_go2_ws/install/go2_description/share/go2_description/local_setup.sh
+[1.624s] -- Symlinking: /home/giovanna/argo_go2_ws/install/go2_description/share/go2_description/local_setup.zsh
+[1.632s] -- Symlinking: /home/giovanna/argo_go2_ws/install/go2_description/share/go2_description/local_setup.dsv
+[1.643s] -- Symlinking: /home/giovanna/argo_go2_ws/install/go2_description/share/go2_description/package.dsv
+[1.652s] -- Symlinking: /home/giovanna/argo_go2_ws/install/go2_description/share/ament_index/resource_index/packages/go2_description
+[1.662s] -- Symlinking: /home/giovanna/argo_go2_ws/install/go2_description/share/go2_description/cmake/go2_descriptionConfig.cmake
+[1.673s] -- Symlinking: /home/giovanna/argo_go2_ws/install/go2_description/share/go2_description/cmake/go2_descriptionConfig-version.cmake
+[1.683s] -- Symlinking: /home/giovanna/argo_go2_ws/install/go2_description/share/go2_description/package.xml

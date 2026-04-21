@@ -1,0 +1,21 @@
+[0.055s] Invoking command in '/home/giovanna/argo_go2_ws/build/go2_hardware': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/giovanna/argo_go2_ws/build/go2_hardware -- -j16 -l16
+[0.128s] Invoked command in '/home/giovanna/argo_go2_ws/build/go2_hardware' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/giovanna/argo_go2_ws/build/go2_hardware -- -j16 -l16
+[0.136s] Invoking command in '/home/giovanna/argo_go2_ws/build/go2_hardware': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/giovanna/argo_go2_ws/build/go2_hardware
+[0.158s] -- Install configuration: ""
+[0.159s] -- Execute custom install script
+[0.159s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_hardware/share/ament_index/resource_index/package_run_dependencies/go2_hardware
+[0.159s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_hardware/share/ament_index/resource_index/parent_prefix_path/go2_hardware
+[0.160s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_hardware/share/go2_hardware/environment/ament_prefix_path.sh
+[0.160s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_hardware/share/go2_hardware/environment/ament_prefix_path.dsv
+[0.160s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_hardware/share/go2_hardware/environment/path.sh
+[0.160s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_hardware/share/go2_hardware/environment/path.dsv
+[0.160s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_hardware/share/go2_hardware/local_setup.bash
+[0.160s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_hardware/share/go2_hardware/local_setup.sh
+[0.160s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_hardware/share/go2_hardware/local_setup.zsh
+[0.161s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_hardware/share/go2_hardware/local_setup.dsv
+[0.161s] -- Symlinking: /home/giovanna/argo_go2_ws/install/go2_hardware/share/go2_hardware/package.dsv
+[0.181s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_hardware/share/ament_index/resource_index/packages/go2_hardware
+[0.181s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_hardware/share/go2_hardware/cmake/go2_hardwareConfig.cmake
+[0.181s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_hardware/share/go2_hardware/cmake/go2_hardwareConfig-version.cmake
+[0.185s] -- Up-to-date symlink: /home/giovanna/argo_go2_ws/install/go2_hardware/share/go2_hardware/package.xml
+[0.262s] Invoked command in '/home/giovanna/argo_go2_ws/build/go2_hardware' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/giovanna/argo_go2_ws/build/go2_hardware

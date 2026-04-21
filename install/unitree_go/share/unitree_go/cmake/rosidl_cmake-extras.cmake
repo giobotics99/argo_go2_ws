@@ -1,0 +1,1 @@
+/home/giovanna/argo_go2_ws/build/unitree_go/rosidl_cmake/rosidl_cmake-extras.cmake

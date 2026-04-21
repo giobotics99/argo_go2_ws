@@ -1,0 +1,359 @@
+[0.055s] Invoking command in '/home/giovanna/argo_go2_ws/build/hesai_ros_driver': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/giovanna/argo_go2_ws/src/hesai_ros_driver -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/giovanna/argo_go2_ws/install/hesai_ros_driver
+[0.077s] =============================================================
+[0.077s] -- ROS_VERSION is 2
+[0.077s] =============================================================
+[0.109s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.110s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.312s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.382s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.388s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.579s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.654s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[0.656s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.813s] =============================================================
+[0.814s] -- ROS2 Found. ROS2 Support is turned On.
+[0.814s] =============================================================
+[0.814s] -- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)
+[0.915s] -- Found rclcpp_action: 2.4.3 (/opt/ros/foxy/share/rclcpp_action/cmake)
+[0.980s] -- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)
+[1.014s] -- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") 
+[1.192s] -- Found ament_cmake_ros: 0.9.2 (/opt/ros/foxy/share/ament_cmake_ros/cmake)
+[1.367s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.424s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.452s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3.5") 
+[1.453s] -- Found python_cmake_module: 0.8.1 (/opt/ros/foxy/share/python_cmake_module/cmake)
+[1.479s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.479s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.8
+[1.479s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.8.so
+[1.534s] CUDA_TOOLKIT_ROOT_DIR not found or specified
+[1.543s] -- Could NOT find CUDA (missing: CUDA_TOOLKIT_ROOT_DIR CUDA_NVCC_EXECUTABLE CUDA_INCLUDE_DIRS CUDA_CUDART_LIBRARY) 
+[1.544s] -- cuda not found!
+[1.562s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.71.0/BoostConfig.cmake (found version "1.71.0") found components: thread 
+[1.567s] CUDA_TOOLKIT_ROOT_DIR not found or specified
+[1.576s] -- Could NOT find CUDA (missing: CUDA_TOOLKIT_ROOT_DIR CUDA_NVCC_EXECUTABLE CUDA_INCLUDE_DIRS CUDA_CUDART_LIBRARY) 
+[1.577s] =============================================================
+[1.577s] -- CUDA Not Found. CUDA Support is turned Off.
+[1.577s] =============================================================
+[1.578s] -- Found ament_index_cpp: 1.1.0 (/opt/ros/foxy/share/ament_index_cpp/cmake)
+[1.597s] -- Configuring done
+[1.681s] -- Generating done
+[1.720s] -- Build files have been written to: /home/giovanna/argo_go2_ws/build/hesai_ros_driver
+[1.733s] Invoked command in '/home/giovanna/argo_go2_ws/build/hesai_ros_driver' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/giovanna/argo_go2_ws/src/hesai_ros_driver -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/giovanna/argo_go2_ws/install/hesai_ros_driver
+[1.737s] Invoking command in '/home/giovanna/argo_go2_ws/build/hesai_ros_driver': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/giovanna/argo_go2_ws/build/hesai_ros_driver -- -j16 -l16
+[1.785s] [35m[1mScanning dependencies of target platutils_lib[0m
+[1.785s] [35m[1mScanning dependencies of target log_lib[0m
+[1.786s] [35m[1mScanning dependencies of target ptcClient_lib[0m
+[1.786s] [  1%] [34m[1mGenerating C code for ROS interfaces[0m
+[1.786s] [35m[1mScanning dependencies of target hesai_ros_driver__cpp[0m
+[1.786s] [35m[1mScanning dependencies of target serialClient_lib[0m
+[1.787s] [35m[1mScanning dependencies of target container_lib[0m
+[1.787s] [35m[1mScanning dependencies of target ptcParser_lib[0m
+[1.801s] [  2%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[1.801s] [  3%] [32mBuilding CXX object src/driver/HesaiLidar_SDK_2.0/libhesai/CMakeFiles/log_lib.dir/Logger/src/logger.cc.o[0m
+[1.803s] [  4%] [32mBuilding CXX object src/driver/HesaiLidar_SDK_2.0/libhesai/CMakeFiles/container_lib.dir/Container/src/ring_2dex.cc.o[0m
+[1.804s] [  5%] [32mBuilding CXX object src/driver/HesaiLidar_SDK_2.0/libhesai/CMakeFiles/container_lib.dir/Container/src/ring_2d_shared.cc.o[0m
+[1.805s] [  6%] [32mBuilding CXX object src/driver/HesaiLidar_SDK_2.0/libhesai/CMakeFiles/platutils_lib.dir/src/plat_utils.cc.o[0m
+[1.806s] [  7%] [32mBuilding CXX object src/driver/HesaiLidar_SDK_2.0/libhesai/CMakeFiles/platutils_lib.dir/src/auto_tick_count.cc.o[0m
+[1.811s] [  8%] [32mBuilding CXX object src/driver/HesaiLidar_SDK_2.0/libhesai/CMakeFiles/serialClient_lib.dir/SerialClient/src/serial_client.cc.o[0m
+[1.817s] [ 10%] [32mBuilding CXX object src/driver/HesaiLidar_SDK_2.0/libhesai/CMakeFiles/ptcParser_lib.dir/PtcParser/src/ptc_1_0_parser.cc.o[0m
+[1.817s] [ 10%] [32mBuilding CXX object src/driver/HesaiLidar_SDK_2.0/libhesai/CMakeFiles/ptcParser_lib.dir/PtcParser/src/general_ptc_parser.cc.o[0m
+[1.818s] [ 12%] [32mBuilding CXX object src/driver/HesaiLidar_SDK_2.0/libhesai/CMakeFiles/ptcParser_lib.dir/PtcParser/src/ptc_2_0_parser.cc.o[0m
+[1.818s] [ 12%] [32mBuilding CXX object src/driver/HesaiLidar_SDK_2.0/libhesai/CMakeFiles/ptcParser_lib.dir/PtcParser/ptc_parser.cc.o[0m
+[1.819s] [ 15%] [32mBuilding CXX object src/driver/HesaiLidar_SDK_2.0/libhesai/CMakeFiles/ptcClient_lib.dir/PtcClient/src/ptc_client.cc.o[0m
+[1.819s] [ 15%] [32mBuilding CXX object src/driver/HesaiLidar_SDK_2.0/libhesai/CMakeFiles/ptcClient_lib.dir/PtcClient/src/tcp_ssl_client.cc.o[0m
+[1.828s] [ 16%] [32mBuilding CXX object src/driver/HesaiLidar_SDK_2.0/libhesai/CMakeFiles/ptcClient_lib.dir/PtcClient/src/tcp_client.cc.o[0m
+[2.466s] [ 17%] [32m[1mLinking CXX shared library libcontainer_lib.so[0m
+[2.674s] [ 17%] Built target container_lib
+[2.763s] [35m[1mScanning dependencies of target hesai_ros_driver__rosidl_generator_c[0m
+[2.811s] [ 18%] [32mBuilding C object CMakeFiles/hesai_ros_driver__rosidl_generator_c.dir/rosidl_generator_c/hesai_ros_driver/msg/detail/udp_packet__functions.c.o[0m
+[2.826s] [ 19%] [32mBuilding C object CMakeFiles/hesai_ros_driver__rosidl_generator_c.dir/rosidl_generator_c/hesai_ros_driver/msg/detail/udp_frame__functions.c.o[0m
+[2.831s] [01m[Kcc1:[m[K [01;35m[Kwarning: [m[Kcommand line option ‘[01m[K-std=c++14[m[K’ is valid for C++/ObjC++ but not for C
+[2.841s] [ 20%] [32mBuilding C object CMakeFiles/hesai_ros_driver__rosidl_generator_c.dir/rosidl_generator_c/hesai_ros_driver/msg/detail/firetime__functions.c.o[0m
+[2.845s] [ 20%] Built target hesai_ros_driver__cpp
+[2.858s] [01m[Kcc1:[m[K [01;35m[Kwarning: [m[Kcommand line option ‘[01m[K-std=c++14[m[K’ is valid for C++/ObjC++ but not for C
+[2.858s] [ 21%] [32mBuilding C object CMakeFiles/hesai_ros_driver__rosidl_generator_c.dir/rosidl_generator_c/hesai_ros_driver/msg/detail/ptp__functions.c.o[0m
+[2.869s] [ 22%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[2.874s] [01m[Kcc1:[m[K [01;35m[Kwarning: [m[Kcommand line option ‘[01m[K-std=c++14[m[K’ is valid for C++/ObjC++ but not for C
+[2.878s] [01m[Kcc1:[m[K [01;35m[Kwarning: [m[Kcommand line option ‘[01m[K-std=c++14[m[K’ is valid for C++/ObjC++ but not for C
+[2.925s] [ 23%] [32m[1mLinking CXX shared library liblog_lib.so[0m
+[2.975s] [ 24%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[3.020s] [ 25%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[3.032s] [ 26%] [32mBuilding C object CMakeFiles/hesai_ros_driver__rosidl_generator_c.dir/rosidl_generator_c/hesai_ros_driver/msg/detail/loss_packet__functions.c.o[0m
+[3.041s] [01m[Kcc1:[m[K [01;35m[Kwarning: [m[Kcommand line option ‘[01m[K-std=c++14[m[K’ is valid for C++/ObjC++ but not for C
+[3.081s] [ 26%] Built target log_lib
+[3.152s] [ 27%] [32m[1mLinking C shared library libhesai_ros_driver__rosidl_generator_c.so[0m
+[3.163s] [ 29%] [32m[1mLinking CXX shared library libptcParser_lib.so[0m
+[3.203s] [ 29%] Built target hesai_ros_driver__rosidl_generator_c
+[3.218s] [ 30%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[3.222s] [ 31%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[3.260s] [ 31%] Built target ptcParser_lib
+[3.286s] [ 32%] [32m[1mLinking CXX shared library libserialClient_lib.so[0m
+[3.326s] [35m[1mScanning dependencies of target hesai_ros_driver__rosidl_typesupport_cpp[0m
+[3.352s] [ 34%] [32mBuilding CXX object CMakeFiles/hesai_ros_driver__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/hesai_ros_driver/msg/udp_frame__type_support.cpp.o[0m
+[3.353s] [ 35%] [32mBuilding CXX object CMakeFiles/hesai_ros_driver__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/hesai_ros_driver/msg/udp_packet__type_support.cpp.o[0m
+[3.353s] [ 35%] [32mBuilding CXX object CMakeFiles/hesai_ros_driver__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/hesai_ros_driver/msg/firetime__type_support.cpp.o[0m
+[3.353s] [ 36%] [32mBuilding CXX object CMakeFiles/hesai_ros_driver__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/hesai_ros_driver/msg/ptp__type_support.cpp.o[0m
+[3.353s] [ 37%] [32mBuilding CXX object CMakeFiles/hesai_ros_driver__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/hesai_ros_driver/msg/loss_packet__type_support.cpp.o[0m
+[3.384s] [ 37%] Built target serialClient_lib
+[3.656s] [35m[1mScanning dependencies of target hesai_ros_driver__rosidl_typesupport_introspection_cpp[0m
+[3.672s] [ 38%] [32m[1mLinking CXX shared library libplatutils_lib.so[0m
+[3.682s] [ 39%] [32mBuilding CXX object CMakeFiles/hesai_ros_driver__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/hesai_ros_driver/msg/detail/udp_packet__type_support.cpp.o[0m
+[3.682s] [ 40%] [32mBuilding CXX object CMakeFiles/hesai_ros_driver__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/hesai_ros_driver/msg/detail/udp_frame__type_support.cpp.o[0m
+[3.684s] [35m[1mScanning dependencies of target hesai_ros_driver__rosidl_typesupport_introspection_c[0m
+[3.688s] [ 41%] [32mBuilding CXX object CMakeFiles/hesai_ros_driver__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/hesai_ros_driver/msg/detail/firetime__type_support.cpp.o[0m
+[3.700s] [ 43%] [32mBuilding CXX object CMakeFiles/hesai_ros_driver__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/hesai_ros_driver/msg/detail/ptp__type_support.cpp.o[0m
+[3.715s] [ 44%] [32mBuilding CXX object CMakeFiles/hesai_ros_driver__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/hesai_ros_driver/msg/detail/loss_packet__type_support.cpp.o[0m
+[3.720s] [ 46%] [32mBuilding C object CMakeFiles/hesai_ros_driver__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/hesai_ros_driver/msg/detail/udp_frame__type_support.c.o[0m
+[3.720s] [ 46%] [32mBuilding C object CMakeFiles/hesai_ros_driver__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/hesai_ros_driver/msg/detail/udp_packet__type_support.c.o[0m
+[3.729s] [01m[Kcc1:[m[K [01;35m[Kwarning: [m[Kcommand line option ‘[01m[K-std=c++14[m[K’ is valid for C++/ObjC++ but not for C
+[3.735s] [35m[1mScanning dependencies of target hesai_ros_driver__rosidl_typesupport_fastrtps_cpp[0m
+[3.759s] [01m[Kcc1:[m[K [01;35m[Kwarning: [m[Kcommand line option ‘[01m[K-std=c++14[m[K’ is valid for C++/ObjC++ but not for C
+[3.786s] [ 47%] [32mBuilding CXX object CMakeFiles/hesai_ros_driver__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/hesai_ros_driver/msg/detail/dds_fastrtps/udp_packet__type_support.cpp.o[0m
+[3.824s] [ 48%] [32mBuilding C object CMakeFiles/hesai_ros_driver__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/hesai_ros_driver/msg/detail/firetime__type_support.c.o[0m
+[3.830s] [ 48%] Built target platutils_lib
+[3.832s] [01m[Kcc1:[m[K [01;35m[Kwarning: [m[Kcommand line option ‘[01m[K-std=c++14[m[K’ is valid for C++/ObjC++ but not for C
+[3.847s] [ 49%] [32mBuilding C object CMakeFiles/hesai_ros_driver__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/hesai_ros_driver/msg/detail/ptp__type_support.c.o[0m
+[3.849s] [ 50%] [32mBuilding C object CMakeFiles/hesai_ros_driver__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/hesai_ros_driver/msg/detail/loss_packet__type_support.c.o[0m
+[3.851s] [35m[1mScanning dependencies of target hesai_ros_driver__rosidl_typesupport_c[0m
+[3.856s] [01m[Kcc1:[m[K [01;35m[Kwarning: [m[Kcommand line option ‘[01m[K-std=c++14[m[K’ is valid for C++/ObjC++ but not for C
+[3.874s] [ 51%] [32mBuilding CXX object CMakeFiles/hesai_ros_driver__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/hesai_ros_driver/msg/detail/dds_fastrtps/udp_frame__type_support.cpp.o[0m
+[3.876s] [01m[Kcc1:[m[K [01;35m[Kwarning: [m[Kcommand line option ‘[01m[K-std=c++14[m[K’ is valid for C++/ObjC++ but not for C
+[3.897s] [ 52%] [32mBuilding CXX object CMakeFiles/hesai_ros_driver__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/hesai_ros_driver/msg/detail/dds_fastrtps/firetime__type_support.cpp.o[0m
+[3.915s] [ 53%] [32mBuilding CXX object CMakeFiles/hesai_ros_driver__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/hesai_ros_driver/msg/detail/dds_fastrtps/ptp__type_support.cpp.o[0m
+[3.919s] [ 54%] [32mBuilding CXX object CMakeFiles/hesai_ros_driver__rosidl_typesupport_c.dir/rosidl_typesupport_c/hesai_ros_driver/msg/udp_packet__type_support.cpp.o[0m
+[3.923s] [ 55%] [32mBuilding CXX object CMakeFiles/hesai_ros_driver__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/hesai_ros_driver/msg/detail/dds_fastrtps/loss_packet__type_support.cpp.o[0m
+[3.928s] [ 56%] [32mBuilding CXX object CMakeFiles/hesai_ros_driver__rosidl_typesupport_c.dir/rosidl_typesupport_c/hesai_ros_driver/msg/firetime__type_support.cpp.o[0m
+[3.930s] [ 58%] [32mBuilding CXX object CMakeFiles/hesai_ros_driver__rosidl_typesupport_c.dir/rosidl_typesupport_c/hesai_ros_driver/msg/udp_frame__type_support.cpp.o[0m
+[3.951s] [ 59%] [32m[1mLinking C shared library libhesai_ros_driver__rosidl_typesupport_introspection_c.so[0m
+[3.979s] [ 60%] [32m[1mLinking CXX shared library libhesai_ros_driver__rosidl_typesupport_cpp.so[0m
+[3.991s] [ 61%] [32mBuilding CXX object CMakeFiles/hesai_ros_driver__rosidl_typesupport_c.dir/rosidl_typesupport_c/hesai_ros_driver/msg/ptp__type_support.cpp.o[0m
+[4.024s] [ 61%] Built target hesai_ros_driver__rosidl_typesupport_introspection_c
+[4.028s] [ 62%] [32mBuilding CXX object CMakeFiles/hesai_ros_driver__rosidl_typesupport_c.dir/rosidl_typesupport_c/hesai_ros_driver/msg/loss_packet__type_support.cpp.o[0m
+[4.092s] [ 63%] [32m[1mLinking CXX shared library libhesai_ros_driver__rosidl_typesupport_c.so[0m
+[4.093s] [ 63%] Built target hesai_ros_driver__rosidl_typesupport_cpp
+[4.168s] [ 64%] [32m[1mLinking CXX shared library libptcClient_lib.so[0m
+[4.187s] [ 64%] Built target hesai_ros_driver__rosidl_typesupport_c
+[4.319s] [ 65%] [32m[1mLinking CXX shared library libhesai_ros_driver__rosidl_typesupport_introspection_cpp.so[0m
+[4.363s] [ 65%] Built target ptcClient_lib
+[4.377s] [35m[1mScanning dependencies of target source_lib[0m
+[4.405s] [ 66%] [32mBuilding CXX object src/driver/HesaiLidar_SDK_2.0/libhesai/CMakeFiles/source_lib.dir/Source/src/pcap_source.cc.o[0m
+[4.406s] [ 66%] Built target hesai_ros_driver__rosidl_typesupport_introspection_cpp
+[4.407s] [ 67%] [32mBuilding CXX object src/driver/HesaiLidar_SDK_2.0/libhesai/CMakeFiles/source_lib.dir/Source/src/source.cc.o[0m
+[4.409s] [ 69%] [32mBuilding CXX object src/driver/HesaiLidar_SDK_2.0/libhesai/CMakeFiles/source_lib.dir/Source/src/pcap_saver.cc.o[0m
+[4.409s] [ 69%] [32mBuilding CXX object src/driver/HesaiLidar_SDK_2.0/libhesai/CMakeFiles/source_lib.dir/Source/src/socket_source.cc.o[0m
+[4.409s] [ 70%] [32mBuilding CXX object src/driver/HesaiLidar_SDK_2.0/libhesai/CMakeFiles/source_lib.dir/Source/src/serial_source.cc.o[0m
+[4.694s] [ 72%] [32m[1mLinking CXX shared library libhesai_ros_driver__rosidl_typesupport_fastrtps_cpp.so[0m
+[4.797s] [ 72%] Built target hesai_ros_driver__rosidl_typesupport_fastrtps_cpp
+[4.810s] [ 73%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[5.153s] [35m[1mScanning dependencies of target hesai_ros_driver__rosidl_typesupport_fastrtps_c[0m
+[5.177s] [ 75%] [32mBuilding CXX object CMakeFiles/hesai_ros_driver__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/hesai_ros_driver/msg/detail/firetime__type_support_c.cpp.o[0m
+[5.178s] [ 75%] [32mBuilding CXX object CMakeFiles/hesai_ros_driver__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/hesai_ros_driver/msg/detail/udp_packet__type_support_c.cpp.o[0m
+[5.178s] [ 76%] [32mBuilding CXX object CMakeFiles/hesai_ros_driver__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/hesai_ros_driver/msg/detail/udp_frame__type_support_c.cpp.o[0m
+[5.181s] [ 77%] [32mBuilding CXX object CMakeFiles/hesai_ros_driver__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/hesai_ros_driver/msg/detail/ptp__type_support_c.cpp.o[0m
+[5.182s] [ 78%] [32mBuilding CXX object CMakeFiles/hesai_ros_driver__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/hesai_ros_driver/msg/detail/loss_packet__type_support_c.cpp.o[0m
+[5.418s] [ 79%] [32m[1mLinking CXX shared library libsource_lib.so[0m
+[5.508s] [ 79%] Built target source_lib
+[5.522s] [35m[1mScanning dependencies of target sample[0m
+[5.553s] [ 80%] [32mBuilding CXX object src/driver/HesaiLidar_SDK_2.0/CMakeFiles/sample.dir/test/test.cc.o[0m
+[5.644s] [ 81%] [32m[1mLinking CXX shared library libhesai_ros_driver__rosidl_typesupport_fastrtps_c.so[0m
+[5.724s] [ 81%] Built target hesai_ros_driver__rosidl_typesupport_fastrtps_c
+[5.735s] [35m[1mScanning dependencies of target hesai_ros_driver[0m
+[5.746s] [ 81%] Built target hesai_ros_driver
+[5.758s] [35m[1mScanning dependencies of target hesai_ros_driver__py[0m
+[5.758s] [35m[1mScanning dependencies of target hesai_ros_driver_node[0m
+[5.769s] [ 82%] [34m[1mGenerating Python code for ROS interfaces[0m
+[5.893s] [ 84%] [32mBuilding CXX object CMakeFiles/hesai_ros_driver_node.dir/src/manager/node_manager.cc.o[0m
+[5.893s] [ 84%] [32mBuilding CXX object CMakeFiles/hesai_ros_driver_node.dir/node/hesai_ros_driver_node.cc.o[0m
+[6.427s] [ 84%] Built target hesai_ros_driver__py
+[6.441s] [35m[1mScanning dependencies of target hesai_ros_driver__python[0m
+[6.477s] [ 86%] [32mBuilding C object CMakeFiles/hesai_ros_driver__python.dir/rosidl_generator_py/hesai_ros_driver/msg/_loss_packet_s.c.o[0m
+[6.477s] [ 87%] [32mBuilding C object CMakeFiles/hesai_ros_driver__python.dir/rosidl_generator_py/hesai_ros_driver/msg/_udp_frame_s.c.o[0m
+[6.477s] [ 88%] [32mBuilding C object CMakeFiles/hesai_ros_driver__python.dir/rosidl_generator_py/hesai_ros_driver/msg/_udp_packet_s.c.o[0m
+[6.478s] [ 89%] [32mBuilding C object CMakeFiles/hesai_ros_driver__python.dir/rosidl_generator_py/hesai_ros_driver/msg/_ptp_s.c.o[0m
+[6.480s] [ 90%] [32mBuilding C object CMakeFiles/hesai_ros_driver__python.dir/rosidl_generator_py/hesai_ros_driver/msg/_firetime_s.c.o[0m
+[6.482s] [01m[Kcc1:[m[K [01;35m[Kwarning: [m[Kcommand line option ‘[01m[K-std=c++14[m[K’ is valid for C++/ObjC++ but not for C
+[6.483s] [01m[Kcc1:[m[K [01;35m[Kwarning: [m[Kcommand line option ‘[01m[K-std=c++14[m[K’ is valid for C++/ObjC++ but not for C
+[6.483s] [01m[Kcc1:[m[K [01;35m[Kwarning: [m[Kcommand line option ‘[01m[K-std=c++14[m[K’ is valid for C++/ObjC++ but not for C
+[6.484s] [01m[Kcc1:[m[K [01;35m[Kwarning: [m[Kcommand line option ‘[01m[K-std=c++14[m[K’ is valid for C++/ObjC++ but not for C
+[6.486s] [01m[Kcc1:[m[K [01;35m[Kwarning: [m[Kcommand line option ‘[01m[K-std=c++14[m[K’ is valid for C++/ObjC++ but not for C
+[6.682s] [ 91%] [32m[1mLinking C shared library rosidl_generator_py/hesai_ros_driver/libhesai_ros_driver__python.so[0m
+[6.731s] [ 91%] Built target hesai_ros_driver__python
+[6.743s] [35m[1mScanning dependencies of target hesai_ros_driver__rosidl_typesupport_introspection_c__pyext[0m
+[6.743s] [35m[1mScanning dependencies of target hesai_ros_driver__rosidl_typesupport_c__pyext[0m
+[6.743s] [35m[1mScanning dependencies of target hesai_ros_driver__rosidl_typesupport_fastrtps_c__pyext[0m
+[6.768s] [ 92%] [32mBuilding C object CMakeFiles/hesai_ros_driver__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/hesai_ros_driver/_hesai_ros_driver_s.ep.rosidl_typesupport_c.c.o[0m
+[6.768s] [ 93%] [32mBuilding C object CMakeFiles/hesai_ros_driver__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/hesai_ros_driver/_hesai_ros_driver_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[6.773s] [ 94%] [32mBuilding C object CMakeFiles/hesai_ros_driver__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/hesai_ros_driver/_hesai_ros_driver_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[6.773s] [01m[Kcc1:[m[K [01;35m[Kwarning: [m[Kcommand line option ‘[01m[K-std=c++14[m[K’ is valid for C++/ObjC++ but not for C
+[6.774s] [01m[Kcc1:[m[K [01;35m[Kwarning: [m[Kcommand line option ‘[01m[K-std=c++14[m[K’ is valid for C++/ObjC++ but not for C
+[6.780s] [01m[Kcc1:[m[K [01;35m[Kwarning: [m[Kcommand line option ‘[01m[K-std=c++14[m[K’ is valid for C++/ObjC++ but not for C
+[6.922s] [ 95%] [32m[1mLinking C shared library rosidl_generator_py/hesai_ros_driver/hesai_ros_driver_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so[0m
+[6.922s] [ 96%] [32m[1mLinking C shared library rosidl_generator_py/hesai_ros_driver/hesai_ros_driver_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so[0m
+[6.933s] [ 97%] [32m[1mLinking CXX shared library rosidl_generator_py/hesai_ros_driver/hesai_ros_driver_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so[0m
+[6.966s] [ 97%] Built target hesai_ros_driver__rosidl_typesupport_c__pyext
+[6.967s] [ 97%] Built target hesai_ros_driver__rosidl_typesupport_introspection_c__pyext
+[7.007s] [ 97%] Built target hesai_ros_driver__rosidl_typesupport_fastrtps_c__pyext
+[11.029s] [ 98%] [32m[1mLinking CXX executable sample[0m
+[11.151s] [ 98%] Built target sample
+[24.898s] [100%] [32m[1mLinking CXX executable hesai_ros_driver_node[0m
+[25.087s] [100%] Built target hesai_ros_driver_node
+[25.104s] Invoked command in '/home/giovanna/argo_go2_ws/build/hesai_ros_driver' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/giovanna/argo_go2_ws/build/hesai_ros_driver -- -j16 -l16
+[25.112s] Invoking command in '/home/giovanna/argo_go2_ws/build/hesai_ros_driver': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/giovanna/argo_go2_ws/build/hesai_ros_driver
+[25.120s] -- Install configuration: "Release"
+[25.121s] -- Execute custom install script
+[25.121s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/share/ament_index/resource_index/rosidl_interfaces/hesai_ros_driver
+[25.141s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/firetime__functions.h
+[25.150s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/firetime__struct.h
+[25.157s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/firetime__type_support.h
+[25.172s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/loss_packet__functions.h
+[25.190s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/loss_packet__struct.h
+[25.203s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/loss_packet__type_support.h
+[25.210s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/ptp__functions.h
+[25.216s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/ptp__struct.h
+[25.223s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/ptp__type_support.h
+[25.229s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/udp_frame__functions.h
+[25.236s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/udp_frame__struct.h
+[25.242s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/udp_frame__type_support.h
+[25.248s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/udp_packet__functions.h
+[25.264s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/udp_packet__struct.h
+[25.270s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/udp_packet__type_support.h
+[25.276s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/firetime.h
+[25.283s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/loss_packet.h
+[25.289s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/ptp.h
+[25.295s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/rosidl_generator_c__visibility_control.h
+[25.302s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/udp_frame.h
+[25.308s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/udp_packet.h
+[25.322s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/share/hesai_ros_driver/environment/library_path.sh
+[25.333s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/share/hesai_ros_driver/environment/library_path.dsv
+[25.343s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/firetime__rosidl_typesupport_fastrtps_c.h
+[25.350s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/loss_packet__rosidl_typesupport_fastrtps_c.h
+[25.363s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/ptp__rosidl_typesupport_fastrtps_c.h
+[25.371s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/udp_frame__rosidl_typesupport_fastrtps_c.h
+[25.389s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/udp_packet__rosidl_typesupport_fastrtps_c.h
+[25.402s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[25.409s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/lib/libhesai_ros_driver__rosidl_typesupport_fastrtps_c.so
+[25.416s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/firetime__rosidl_typesupport_fastrtps_cpp.hpp
+[25.424s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/loss_packet__rosidl_typesupport_fastrtps_cpp.hpp
+[25.430s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/ptp__rosidl_typesupport_fastrtps_cpp.hpp
+[25.436s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/udp_frame__rosidl_typesupport_fastrtps_cpp.hpp
+[25.443s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/udp_packet__rosidl_typesupport_fastrtps_cpp.hpp
+[25.449s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[25.456s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/lib/libhesai_ros_driver__rosidl_typesupport_fastrtps_cpp.so
+[25.468s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/firetime__rosidl_typesupport_introspection_c.h
+[25.486s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/loss_packet__rosidl_typesupport_introspection_c.h
+[25.492s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/ptp__rosidl_typesupport_introspection_c.h
+[25.506s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/udp_frame__rosidl_typesupport_introspection_c.h
+[25.520s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/udp_packet__rosidl_typesupport_introspection_c.h
+[25.531s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[25.538s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/firetime__builder.hpp
+[25.546s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/firetime__struct.hpp
+[25.552s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/firetime__traits.hpp
+[25.558s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/firetime__type_support.hpp
+[25.565s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/loss_packet__builder.hpp
+[25.578s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/loss_packet__struct.hpp
+[25.585s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/loss_packet__traits.hpp
+[25.592s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/loss_packet__type_support.hpp
+[25.609s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/ptp__builder.hpp
+[25.628s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/ptp__struct.hpp
+[25.644s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/ptp__traits.hpp
+[25.650s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/ptp__type_support.hpp
+[25.656s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/udp_frame__builder.hpp
+[25.671s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/udp_frame__struct.hpp
+[25.684s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/udp_frame__traits.hpp
+[25.698s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/udp_frame__type_support.hpp
+[25.711s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/udp_packet__builder.hpp
+[25.718s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/udp_packet__struct.hpp
+[25.724s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/udp_packet__traits.hpp
+[25.730s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/udp_packet__type_support.hpp
+[25.737s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/firetime.hpp
+[25.743s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/loss_packet.hpp
+[25.749s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/ptp.hpp
+[25.756s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/rosidl_generator_cpp__visibility_control.hpp
+[25.763s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/udp_frame.hpp
+[25.773s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/udp_packet.hpp
+[25.787s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/firetime__rosidl_typesupport_introspection_cpp.hpp
+[25.802s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/loss_packet__rosidl_typesupport_introspection_cpp.hpp
+[25.809s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/ptp__rosidl_typesupport_introspection_cpp.hpp
+[25.821s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/udp_frame__rosidl_typesupport_introspection_cpp.hpp
+[25.828s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/udp_packet__rosidl_typesupport_introspection_cpp.hpp
+[25.837s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/share/hesai_ros_driver/environment/pythonpath.sh
+[25.846s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/share/hesai_ros_driver/environment/pythonpath.dsv
+[25.854s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/lib/python3.8/site-packages/hesai_ros_driver/__init__.py
+[25.862s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/lib/python3.8/site-packages/hesai_ros_driver/msg/__init__.py
+[25.870s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/lib/python3.8/site-packages/hesai_ros_driver/msg/_firetime.py
+[25.876s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/lib/python3.8/site-packages/hesai_ros_driver/msg/_loss_packet.py
+[25.883s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/lib/python3.8/site-packages/hesai_ros_driver/msg/_ptp.py
+[25.889s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/lib/python3.8/site-packages/hesai_ros_driver/msg/_udp_frame.py
+[25.896s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/lib/python3.8/site-packages/hesai_ros_driver/msg/_udp_packet.py
+[25.902s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/lib/python3.8/site-packages/hesai_ros_driver/hesai_ros_driver_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so
+[25.910s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/lib/python3.8/site-packages/hesai_ros_driver/hesai_ros_driver_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so
+[25.916s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/lib/python3.8/site-packages/hesai_ros_driver/hesai_ros_driver_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so
+[25.931s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/lib/libhesai_ros_driver__python.so
+[25.937s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/share/hesai_ros_driver/msg/UdpPacket.idl
+[25.944s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/share/hesai_ros_driver/msg/UdpFrame.idl
+[25.950s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/share/hesai_ros_driver/msg/Firetime.idl
+[25.956s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/share/hesai_ros_driver/msg/Ptp.idl
+[25.964s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/share/hesai_ros_driver/msg/LossPacket.idl
+[25.970s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/share/hesai_ros_driver/msg_ros2/UdpPacket.msg
+[25.978s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/share/hesai_ros_driver/msg_ros2/UdpFrame.msg
+[25.991s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/share/hesai_ros_driver/msg_ros2/Firetime.msg
+[25.998s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/share/hesai_ros_driver/msg_ros2/Ptp.msg
+[26.005s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/share/hesai_ros_driver/msg_ros2/LossPacket.msg
+[26.012s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/lib/hesai_ros_driver/hesai_ros_driver_node
+[26.021s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/lib/libsource_lib.so
+[26.027s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/lib/libcontainer_lib.so
+[26.035s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/lib/libptcClient_lib.so
+[26.041s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/lib/libptcParser_lib.so
+[26.048s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/lib/libserialClient_lib.so
+[26.057s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/lib/liblog_lib.so
+[26.064s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/lib/libplatutils_lib.so
+[26.072s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/share/hesai_ros_driver/launch/dashing_start.py
+[26.082s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/share/hesai_ros_driver/launch/start.launch
+[26.095s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/share/hesai_ros_driver/launch/start.py
+[26.102s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/share/hesai_ros_driver/rviz/rviz.rviz
+[26.108s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/share/hesai_ros_driver/rviz/rviz2.rviz
+[26.120s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/share/ament_index/resource_index/package_run_dependencies/hesai_ros_driver
+[26.133s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/share/ament_index/resource_index/parent_prefix_path/hesai_ros_driver
+[26.140s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/share/hesai_ros_driver/environment/ament_prefix_path.sh
+[26.147s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/share/hesai_ros_driver/environment/ament_prefix_path.dsv
+[26.160s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/share/hesai_ros_driver/environment/path.sh
+[26.166s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/share/hesai_ros_driver/environment/path.dsv
+[26.173s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/share/hesai_ros_driver/local_setup.bash
+[26.179s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/share/hesai_ros_driver/local_setup.sh
+[26.187s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/share/hesai_ros_driver/local_setup.zsh
+[26.199s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/share/hesai_ros_driver/local_setup.dsv
+[26.206s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/share/hesai_ros_driver/package.dsv
+[26.212s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/share/ament_index/resource_index/packages/hesai_ros_driver
+[26.224s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/share/hesai_ros_driver/cmake/rosidl_cmake-extras.cmake
+[26.230s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/share/hesai_ros_driver/cmake/ament_cmake_export_dependencies-extras.cmake
+[26.237s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/share/hesai_ros_driver/cmake/ament_cmake_export_libraries-extras.cmake
+[26.243s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/share/hesai_ros_driver/cmake/ament_cmake_export_targets-extras.cmake
+[26.249s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/share/hesai_ros_driver/cmake/ament_cmake_export_include_directories-extras.cmake
+[26.256s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/share/hesai_ros_driver/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[26.263s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/share/hesai_ros_driver/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[26.270s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/share/hesai_ros_driver/cmake/hesai_ros_driverConfig.cmake
+[26.276s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/share/hesai_ros_driver/cmake/hesai_ros_driverConfig-version.cmake
+[26.294s] -- Symlinking: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/share/hesai_ros_driver/package.xml
+[26.301s] -- Installing: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/lib/libhesai_ros_driver__rosidl_generator_c.so
+[26.301s] -- Set runtime path of "/home/giovanna/argo_go2_ws/install/hesai_ros_driver/lib/libhesai_ros_driver__rosidl_generator_c.so" to ""
+[26.301s] -- Installing: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/lib/libhesai_ros_driver__rosidl_typesupport_introspection_c.so
+[26.302s] -- Set runtime path of "/home/giovanna/argo_go2_ws/install/hesai_ros_driver/lib/libhesai_ros_driver__rosidl_typesupport_introspection_c.so" to ""
+[26.302s] -- Installing: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/lib/libhesai_ros_driver__rosidl_typesupport_c.so
+[26.302s] -- Set runtime path of "/home/giovanna/argo_go2_ws/install/hesai_ros_driver/lib/libhesai_ros_driver__rosidl_typesupport_c.so" to ""
+[26.302s] -- Installing: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/lib/libhesai_ros_driver__rosidl_typesupport_introspection_cpp.so
+[26.304s] -- Set runtime path of "/home/giovanna/argo_go2_ws/install/hesai_ros_driver/lib/libhesai_ros_driver__rosidl_typesupport_introspection_cpp.so" to ""
+[26.304s] -- Installing: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/lib/libhesai_ros_driver__rosidl_typesupport_cpp.so
+[26.306s] -- Set runtime path of "/home/giovanna/argo_go2_ws/install/hesai_ros_driver/lib/libhesai_ros_driver__rosidl_typesupport_cpp.so" to ""
+[26.334s] Compiling '/home/giovanna/argo_go2_ws/install/hesai_ros_driver/lib/python3.8/site-packages/hesai_ros_driver/__init__.py'...
+[26.337s] -- Installing: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/share/hesai_ros_driver/cmake/hesai_ros_driver__rosidl_generator_cExport.cmake
+[26.337s] -- Installing: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/share/hesai_ros_driver/cmake/hesai_ros_driver__rosidl_generator_cExport-release.cmake
+[26.338s] -- Installing: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/share/hesai_ros_driver/cmake/hesai_ros_driver__rosidl_typesupport_introspection_cExport.cmake
+[26.338s] -- Installing: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/share/hesai_ros_driver/cmake/hesai_ros_driver__rosidl_typesupport_introspection_cExport-release.cmake
+[26.338s] -- Installing: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/share/hesai_ros_driver/cmake/hesai_ros_driver__rosidl_typesupport_cExport.cmake
+[26.338s] -- Installing: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/share/hesai_ros_driver/cmake/hesai_ros_driver__rosidl_typesupport_cExport-release.cmake
+[26.339s] -- Installing: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/share/hesai_ros_driver/cmake/hesai_ros_driver__rosidl_generator_cppExport.cmake
+[26.340s] -- Installing: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/share/hesai_ros_driver/cmake/hesai_ros_driver__rosidl_typesupport_introspection_cppExport.cmake
+[26.340s] -- Installing: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/share/hesai_ros_driver/cmake/hesai_ros_driver__rosidl_typesupport_introspection_cppExport-release.cmake
+[26.341s] -- Installing: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/share/hesai_ros_driver/cmake/hesai_ros_driver__rosidl_typesupport_cppExport.cmake
+[26.341s] -- Installing: /home/giovanna/argo_go2_ws/install/hesai_ros_driver/share/hesai_ros_driver/cmake/hesai_ros_driver__rosidl_typesupport_cppExport-release.cmake
+[26.346s] Invoked command in '/home/giovanna/argo_go2_ws/build/hesai_ros_driver' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/giovanna/argo_go2_ws/build/hesai_ros_driver

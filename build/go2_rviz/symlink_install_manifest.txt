@@ -1,0 +1,17 @@
+/home/giovanna/argo_go2_ws/install/go2_rviz/share/go2_rviz/launch/rviz.launch.py
+/home/giovanna/argo_go2_ws/install/go2_rviz/share/go2_rviz/config/go2_rviz.rviz
+/home/giovanna/argo_go2_ws/install/go2_rviz/share/ament_index/resource_index/package_run_dependencies/go2_rviz
+/home/giovanna/argo_go2_ws/install/go2_rviz/share/ament_index/resource_index/parent_prefix_path/go2_rviz
+/home/giovanna/argo_go2_ws/install/go2_rviz/share/go2_rviz/environment/ament_prefix_path.sh
+/home/giovanna/argo_go2_ws/install/go2_rviz/share/go2_rviz/environment/ament_prefix_path.dsv
+/home/giovanna/argo_go2_ws/install/go2_rviz/share/go2_rviz/environment/path.sh
+/home/giovanna/argo_go2_ws/install/go2_rviz/share/go2_rviz/environment/path.dsv
+/home/giovanna/argo_go2_ws/install/go2_rviz/share/go2_rviz/local_setup.bash
+/home/giovanna/argo_go2_ws/install/go2_rviz/share/go2_rviz/local_setup.sh
+/home/giovanna/argo_go2_ws/install/go2_rviz/share/go2_rviz/local_setup.zsh
+/home/giovanna/argo_go2_ws/install/go2_rviz/share/go2_rviz/local_setup.dsv
+/home/giovanna/argo_go2_ws/install/go2_rviz/share/go2_rviz/package.dsv
+/home/giovanna/argo_go2_ws/install/go2_rviz/share/ament_index/resource_index/packages/go2_rviz
+/home/giovanna/argo_go2_ws/install/go2_rviz/share/go2_rviz/cmake/go2_rvizConfig.cmake
+/home/giovanna/argo_go2_ws/install/go2_rviz/share/go2_rviz/cmake/go2_rvizConfig-version.cmake
+/home/giovanna/argo_go2_ws/install/go2_rviz/share/go2_rviz/package.xml

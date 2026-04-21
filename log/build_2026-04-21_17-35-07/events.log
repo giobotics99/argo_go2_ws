@@ -1,0 +1,514 @@
+[0.000000] (-) TimerEvent: {}
+[0.000169] (-) JobUnselected: {'identifier': 'go2_bringup'}
+[0.000201] (-) JobUnselected: {'identifier': 'go2_description'}
+[0.000224] (-) JobUnselected: {'identifier': 'go2_driver'}
+[0.000245] (-) JobUnselected: {'identifier': 'go2_hardware'}
+[0.000264] (-) JobUnselected: {'identifier': 'go2_interfaces'}
+[0.000294] (-) JobUnselected: {'identifier': 'go2_nav'}
+[0.000313] (-) JobUnselected: {'identifier': 'go2_robot'}
+[0.000331] (-) JobUnselected: {'identifier': 'go2_rviz'}
+[0.000348] (-) JobUnselected: {'identifier': 'go2_simulation'}
+[0.000366] (-) JobUnselected: {'identifier': 'hesai_ros_driver'}
+[0.000384] (-) JobUnselected: {'identifier': 'unitree_api'}
+[0.000403] (unitree_go) JobQueued: {'identifier': 'unitree_go', 'dependencies': OrderedDict()}
+[0.000797] (unitree_go) JobStarted: {'identifier': 'unitree_go'}
+[0.010362] (unitree_go) JobProgress: {'identifier': 'unitree_go', 'progress': 'cmake'}
+[0.011095] (unitree_go) JobProgress: {'identifier': 'unitree_go', 'progress': 'build'}
+[0.011863] (unitree_go) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/giovanna/argo_go2_ws/build/unitree_go', '--', '-j16', '-l16'], 'cwd': '/home/giovanna/argo_go2_ws/build/unitree_go', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('VSCODE_CWD', '/home/giovanna'), ('USER', 'giovanna'), ('LC_TIME', 'it_IT.UTF-8'), ('VSCODE_NLS_CONFIG', '{"userLocale":"en-us","osLocale":"en-us","resolvedLanguage":"en","defaultMessagesFile":"/usr/share/antigravity/resources/app/out/nls.messages.json","locale":"en-us","availableLanguages":{}}'), ('SSH_AGENT_PID', '1697'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '0'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/home/giovanna'), ('CHROME_DESKTOP', 'antigravity.desktop'), ('DESKTOP_SESSION', 'ubuntu'), ('VSCODE_IPC_HOOK', '/run/user/1000/vscode-de51444a-1.10-main.sock'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/antigravity.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('PAGER', 'cat'), ('LC_MONETARY', 'it_IT.UTF-8'), ('MANAGERPID', '1544'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('ANTIGRAVITY_AGENT', '1'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '4222'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'giovanna'), ('JOURNAL_STREAM', '8:40948'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'giovanna'), ('TERM', 'dumb'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('FC_FONTATIONS', '1'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('ANTIGRAVITY_EDITOR_APP_ROOT', '/usr/share/antigravity/resources/app'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/giovanna-lenovo20:@/tmp/.ICE-unix/1771,unix/giovanna-lenovo20:/tmp/.ICE-unix/1771'), ('INVOCATION_ID', '8a18892a46224c8c9d24bb25afa494f3'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'it_IT.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'it_IT.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', ''), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'it_IT.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'it_IT.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'it_IT.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('ANTIGRAVITY_TRAJECTORY_ID', '1f6d3fbb-af4b-4da7-8d7e-c84ab60d6b73'), ('PWD', '/home/giovanna/argo_go2_ws/build/unitree_go'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('VSCODE_CODE_CACHE_PATH', '/home/giovanna/.config/Antigravity/CachedData/15487b3041e65228cae24980a3f796c905ef582c'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'it_IT.UTF-8'), ('LC_PAPER', 'it_IT.UTF-8'), ('COLCON', '1'), ('VSCODE_PID', '4222'), ('CMAKE_PREFIX_PATH', '/opt/ros/foxy')]), 'shell': False}
+[0.099729] (-) TimerEvent: {}
+[0.102125] (unitree_go) StdoutLine: {'line': b'[  0%] Built target unitree_go__cpp\n'}
+[0.112274] (unitree_go) StdoutLine: {'line': b'[ 12%] Built target unitree_go__rosidl_generator_c\n'}
+[0.134620] (unitree_go) StdoutLine: {'line': b'[ 37%] Built target unitree_go__rosidl_typesupport_cpp\n'}
+[0.134872] (unitree_go) StdoutLine: {'line': b'[ 37%] Built target unitree_go__rosidl_typesupport_introspection_cpp\n'}
+[0.137413] (unitree_go) StdoutLine: {'line': b'[ 49%] Built target unitree_go__rosidl_typesupport_c\n'}
+[0.138593] (unitree_go) StdoutLine: {'line': b'[ 61%] Built target unitree_go__rosidl_typesupport_fastrtps_cpp\n'}
+[0.143741] (unitree_go) StdoutLine: {'line': b'[ 73%] Built target unitree_go__rosidl_typesupport_introspection_c\n'}
+[0.174000] (unitree_go) StdoutLine: {'line': b'[ 85%] Built target unitree_go__rosidl_typesupport_fastrtps_c\n'}
+[0.199853] (-) TimerEvent: {}
+[0.203964] (unitree_go) StdoutLine: {'line': b'[ 85%] Built target unitree_go\n'}
+[0.240325] (unitree_go) StdoutLine: {'line': b'[ 85%] Built target unitree_go__py\n'}
+[0.283827] (unitree_go) StdoutLine: {'line': b'[ 97%] Built target unitree_go__python\n'}
+[0.299984] (-) TimerEvent: {}
+[0.313961] (unitree_go) StdoutLine: {'line': b'[100%] Built target unitree_go__rosidl_typesupport_c__pyext\n'}
+[0.314203] (unitree_go) StdoutLine: {'line': b'[100%] Built target unitree_go__rosidl_typesupport_introspection_c__pyext\n'}
+[0.314298] (unitree_go) StdoutLine: {'line': b'[100%] Built target unitree_go__rosidl_typesupport_fastrtps_c__pyext\n'}
+[0.328158] (unitree_go) CommandEnded: {'returncode': 0}
+[0.329124] (unitree_go) JobProgress: {'identifier': 'unitree_go', 'progress': 'install'}
+[0.344101] (unitree_go) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/giovanna/argo_go2_ws/build/unitree_go'], 'cwd': '/home/giovanna/argo_go2_ws/build/unitree_go', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('VSCODE_CWD', '/home/giovanna'), ('USER', 'giovanna'), ('LC_TIME', 'it_IT.UTF-8'), ('VSCODE_NLS_CONFIG', '{"userLocale":"en-us","osLocale":"en-us","resolvedLanguage":"en","defaultMessagesFile":"/usr/share/antigravity/resources/app/out/nls.messages.json","locale":"en-us","availableLanguages":{}}'), ('SSH_AGENT_PID', '1697'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '0'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/home/giovanna'), ('CHROME_DESKTOP', 'antigravity.desktop'), ('DESKTOP_SESSION', 'ubuntu'), ('VSCODE_IPC_HOOK', '/run/user/1000/vscode-de51444a-1.10-main.sock'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/antigravity.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('PAGER', 'cat'), ('LC_MONETARY', 'it_IT.UTF-8'), ('MANAGERPID', '1544'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('ANTIGRAVITY_AGENT', '1'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '4222'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'giovanna'), ('JOURNAL_STREAM', '8:40948'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'giovanna'), ('TERM', 'dumb'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('FC_FONTATIONS', '1'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('ANTIGRAVITY_EDITOR_APP_ROOT', '/usr/share/antigravity/resources/app'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/giovanna-lenovo20:@/tmp/.ICE-unix/1771,unix/giovanna-lenovo20:/tmp/.ICE-unix/1771'), ('INVOCATION_ID', '8a18892a46224c8c9d24bb25afa494f3'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'it_IT.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'it_IT.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', ''), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'it_IT.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'it_IT.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'it_IT.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('ANTIGRAVITY_TRAJECTORY_ID', '1f6d3fbb-af4b-4da7-8d7e-c84ab60d6b73'), ('PWD', '/home/giovanna/argo_go2_ws/build/unitree_go'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('VSCODE_CODE_CACHE_PATH', '/home/giovanna/.config/Antigravity/CachedData/15487b3041e65228cae24980a3f796c905ef582c'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'it_IT.UTF-8'), ('LC_PAPER', 'it_IT.UTF-8'), ('COLCON', '1'), ('VSCODE_PID', '4222'), ('CMAKE_PREFIX_PATH', '/opt/ros/foxy')]), 'shell': False}
+[0.355322] (unitree_go) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.355973] (unitree_go) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[0.356407] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/share/ament_index/resource_index/rosidl_interfaces/unitree_go\n'}
+[0.368570] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/audio_data.h\n'}
+[0.378766] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/bms_cmd.h\n'}
+[0.386368] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/bms_state.h\n'}
+[0.393377] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/audio_data__functions.h\n'}
+[0.400095] (-) TimerEvent: {}
+[0.400773] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/audio_data__struct.h\n'}
+[0.413434] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/audio_data__type_support.h\n'}
+[0.420512] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/bms_cmd__functions.h\n'}
+[0.430454] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/bms_cmd__struct.h\n'}
+[0.437777] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/bms_cmd__type_support.h\n'}
+[0.446592] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/bms_state__functions.h\n'}
+[0.453566] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/bms_state__struct.h\n'}
+[0.461167] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/bms_state__type_support.h\n'}
+[0.471885] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/error__functions.h\n'}
+[0.479597] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/error__struct.h\n'}
+[0.486969] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/error__type_support.h\n'}
+[0.493777] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/height_map__functions.h\n'}
+[0.500193] (-) TimerEvent: {}
+[0.501086] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/height_map__struct.h\n'}
+[0.508048] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/height_map__type_support.h\n'}
+[0.515454] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/imu_state__functions.h\n'}
+[0.522887] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/imu_state__struct.h\n'}
+[0.531129] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/imu_state__type_support.h\n'}
+[0.547274] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/interface_config__functions.h\n'}
+[0.554989] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/interface_config__struct.h\n'}
+[0.563001] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/interface_config__type_support.h\n'}
+[0.569922] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/lidar_state__functions.h\n'}
+[0.580774] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/lidar_state__struct.h\n'}
+[0.587682] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/lidar_state__type_support.h\n'}
+[0.595581] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/low_cmd__functions.h\n'}
+[0.600908] (-) TimerEvent: {}
+[0.602375] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/low_cmd__struct.h\n'}
+[0.610129] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/low_cmd__type_support.h\n'}
+[0.627442] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/low_state__functions.h\n'}
+[0.639435] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/low_state__struct.h\n'}
+[0.650762] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/low_state__type_support.h\n'}
+[0.659091] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/motor_cmd__functions.h\n'}
+[0.667779] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/motor_cmd__struct.h\n'}
+[0.675174] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/motor_cmd__type_support.h\n'}
+[0.686137] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/motor_cmds__functions.h\n'}
+[0.694936] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/motor_cmds__struct.h\n'}
+[0.701567] (-) TimerEvent: {}
+[0.702547] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/motor_cmds__type_support.h\n'}
+[0.710133] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/motor_state__functions.h\n'}
+[0.718110] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/motor_state__struct.h\n'}
+[0.724713] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/motor_state__type_support.h\n'}
+[0.739919] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/motor_states__functions.h\n'}
+[0.751420] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/motor_states__struct.h\n'}
+[0.758890] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/motor_states__type_support.h\n'}
+[0.771670] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/path_point__functions.h\n'}
+[0.779915] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/path_point__struct.h\n'}
+[0.787195] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/path_point__type_support.h\n'}
+[0.794156] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/req__functions.h\n'}
+[0.801663] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/req__struct.h\n'}
+[0.801805] (-) TimerEvent: {}
+[0.808235] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/req__type_support.h\n'}
+[0.825467] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/res__functions.h\n'}
+[0.845653] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/res__struct.h\n'}
+[0.853679] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/res__type_support.h\n'}
+[0.861985] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/sport_mode_cmd__functions.h\n'}
+[0.869326] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/sport_mode_cmd__struct.h\n'}
+[0.876868] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/sport_mode_cmd__type_support.h\n'}
+[0.883953] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/sport_mode_state__functions.h\n'}
+[0.890739] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/sport_mode_state__struct.h\n'}
+[0.898647] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/sport_mode_state__type_support.h\n'}
+[0.901921] (-) TimerEvent: {}
+[0.906236] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/time_spec__functions.h\n'}
+[0.915931] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/time_spec__struct.h\n'}
+[0.922838] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/time_spec__type_support.h\n'}
+[0.930478] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/uwb_state__functions.h\n'}
+[0.938108] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/uwb_state__struct.h\n'}
+[0.949206] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/uwb_state__type_support.h\n'}
+[0.957367] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/uwb_switch__functions.h\n'}
+[0.971611] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/uwb_switch__struct.h\n'}
+[0.979726] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/uwb_switch__type_support.h\n'}
+[0.995383] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/wireless_controller__functions.h\n'}
+[1.002079] (-) TimerEvent: {}
+[1.007766] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/wireless_controller__struct.h\n'}
+[1.015849] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/wireless_controller__type_support.h\n'}
+[1.028640] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/error.h\n'}
+[1.036243] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/height_map.h\n'}
+[1.044859] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/imu_state.h\n'}
+[1.052352] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/interface_config.h\n'}
+[1.059959] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/lidar_state.h\n'}
+[1.067786] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/low_cmd.h\n'}
+[1.075012] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/low_state.h\n'}
+[1.083001] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/motor_cmd.h\n'}
+[1.097004] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/motor_cmds.h\n'}
+[1.102167] (-) TimerEvent: {}
+[1.104342] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/motor_state.h\n'}
+[1.113656] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/motor_states.h\n'}
+[1.121544] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/path_point.h\n'}
+[1.129523] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/req.h\n'}
+[1.137262] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/res.h\n'}
+[1.146128] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/rosidl_generator_c__visibility_control.h\n'}
+[1.153613] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/sport_mode_cmd.h\n'}
+[1.170180] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/sport_mode_state.h\n'}
+[1.178051] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/time_spec.h\n'}
+[1.185180] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/uwb_state.h\n'}
+[1.192079] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/uwb_switch.h\n'}
+[1.202402] (-) TimerEvent: {}
+[1.212340] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/wireless_controller.h\n'}
+[1.219789] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/environment/library_path.sh\n'}
+[1.227656] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/environment/library_path.dsv\n'}
+[1.237075] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/audio_data__rosidl_typesupport_fastrtps_c.h\n'}
+[1.245958] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/bms_cmd__rosidl_typesupport_fastrtps_c.h\n'}
+[1.260082] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/bms_state__rosidl_typesupport_fastrtps_c.h\n'}
+[1.267496] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/error__rosidl_typesupport_fastrtps_c.h\n'}
+[1.274450] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/height_map__rosidl_typesupport_fastrtps_c.h\n'}
+[1.281722] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/imu_state__rosidl_typesupport_fastrtps_c.h\n'}
+[1.295493] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/interface_config__rosidl_typesupport_fastrtps_c.h\n'}
+[1.303146] (-) TimerEvent: {}
+[1.314026] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/lidar_state__rosidl_typesupport_fastrtps_c.h\n'}
+[1.333118] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/low_cmd__rosidl_typesupport_fastrtps_c.h\n'}
+[1.347217] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/low_state__rosidl_typesupport_fastrtps_c.h\n'}
+[1.354643] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/motor_cmd__rosidl_typesupport_fastrtps_c.h\n'}
+[1.368077] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/motor_cmds__rosidl_typesupport_fastrtps_c.h\n'}
+[1.381798] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/motor_state__rosidl_typesupport_fastrtps_c.h\n'}
+[1.388547] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/motor_states__rosidl_typesupport_fastrtps_c.h\n'}
+[1.396518] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/path_point__rosidl_typesupport_fastrtps_c.h\n'}
+[1.403227] (-) TimerEvent: {}
+[1.403441] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/req__rosidl_typesupport_fastrtps_c.h\n'}
+[1.411335] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/res__rosidl_typesupport_fastrtps_c.h\n'}
+[1.418862] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/sport_mode_cmd__rosidl_typesupport_fastrtps_c.h\n'}
+[1.425519] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/sport_mode_state__rosidl_typesupport_fastrtps_c.h\n'}
+[1.433626] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/time_spec__rosidl_typesupport_fastrtps_c.h\n'}
+[1.446490] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/uwb_state__rosidl_typesupport_fastrtps_c.h\n'}
+[1.464129] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/uwb_switch__rosidl_typesupport_fastrtps_c.h\n'}
+[1.476412] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/wireless_controller__rosidl_typesupport_fastrtps_c.h\n'}
+[1.483686] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[1.498615] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/lib/libunitree_go__rosidl_typesupport_fastrtps_c.so\n'}
+[1.503316] (-) TimerEvent: {}
+[1.506600] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/audio_data__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.515177] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/bms_cmd__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.521842] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/bms_state__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.529468] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/error__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.543671] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/height_map__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.555141] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/imu_state__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.562750] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/interface_config__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.578565] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/lidar_state__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.585593] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/low_cmd__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.592749] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/low_state__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.600279] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/motor_cmd__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.603471] (-) TimerEvent: {}
+[1.618085] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/motor_cmds__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.625608] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/motor_state__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.633263] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/motor_states__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.641290] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/path_point__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.655534] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/req__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.671185] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/res__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.682555] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/sport_mode_cmd__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.689945] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/sport_mode_state__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.703578] (-) TimerEvent: {}
+[1.703982] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/time_spec__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.719166] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/uwb_state__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.734997] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/uwb_switch__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.744735] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/wireless_controller__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.756863] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[1.766267] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/lib/libunitree_go__rosidl_typesupport_fastrtps_cpp.so\n'}
+[1.786260] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/audio_data__rosidl_typesupport_introspection_c.h\n'}
+[1.803744] (-) TimerEvent: {}
+[1.805015] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/bms_cmd__rosidl_typesupport_introspection_c.h\n'}
+[1.818232] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/bms_state__rosidl_typesupport_introspection_c.h\n'}
+[1.825236] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/error__rosidl_typesupport_introspection_c.h\n'}
+[1.839792] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/height_map__rosidl_typesupport_introspection_c.h\n'}
+[1.855177] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/imu_state__rosidl_typesupport_introspection_c.h\n'}
+[1.869298] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/interface_config__rosidl_typesupport_introspection_c.h\n'}
+[1.877797] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/lidar_state__rosidl_typesupport_introspection_c.h\n'}
+[1.894195] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/low_cmd__rosidl_typesupport_introspection_c.h\n'}
+[1.902455] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/low_state__rosidl_typesupport_introspection_c.h\n'}
+[1.903835] (-) TimerEvent: {}
+[1.910746] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/motor_cmd__rosidl_typesupport_introspection_c.h\n'}
+[1.923975] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/motor_cmds__rosidl_typesupport_introspection_c.h\n'}
+[1.932383] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/motor_state__rosidl_typesupport_introspection_c.h\n'}
+[1.945218] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/motor_states__rosidl_typesupport_introspection_c.h\n'}
+[1.953461] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/path_point__rosidl_typesupport_introspection_c.h\n'}
+[1.967118] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/req__rosidl_typesupport_introspection_c.h\n'}
+[1.974322] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/res__rosidl_typesupport_introspection_c.h\n'}
+[1.982751] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/sport_mode_cmd__rosidl_typesupport_introspection_c.h\n'}
+[1.989949] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/sport_mode_state__rosidl_typesupport_introspection_c.h\n'}
+[2.001726] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/time_spec__rosidl_typesupport_introspection_c.h\n'}
+[2.003934] (-) TimerEvent: {}
+[2.009149] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/uwb_state__rosidl_typesupport_introspection_c.h\n'}
+[2.028865] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/uwb_switch__rosidl_typesupport_introspection_c.h\n'}
+[2.043350] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/wireless_controller__rosidl_typesupport_introspection_c.h\n'}
+[2.054410] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[2.066137] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/audio_data.hpp\n'}
+[2.074563] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/bms_cmd.hpp\n'}
+[2.090813] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/bms_state.hpp\n'}
+[2.098951] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/audio_data__builder.hpp\n'}
+[2.104035] (-) TimerEvent: {}
+[2.105702] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/audio_data__struct.hpp\n'}
+[2.113729] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/audio_data__traits.hpp\n'}
+[2.121249] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/audio_data__type_support.hpp\n'}
+[2.134395] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/bms_cmd__builder.hpp\n'}
+[2.148227] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/bms_cmd__struct.hpp\n'}
+[2.166005] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/bms_cmd__traits.hpp\n'}
+[2.173390] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/bms_cmd__type_support.hpp\n'}
+[2.181923] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/bms_state__builder.hpp\n'}
+[2.189008] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/bms_state__struct.hpp\n'}
+[2.201843] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/bms_state__traits.hpp\n'}
+[2.204143] (-) TimerEvent: {}
+[2.210866] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/bms_state__type_support.hpp\n'}
+[2.223444] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/error__builder.hpp\n'}
+[2.235554] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/error__struct.hpp\n'}
+[2.244064] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/error__traits.hpp\n'}
+[2.251706] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/error__type_support.hpp\n'}
+[2.258540] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/height_map__builder.hpp\n'}
+[2.266561] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/height_map__struct.hpp\n'}
+[2.273497] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/height_map__traits.hpp\n'}
+[2.289564] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/height_map__type_support.hpp\n'}
+[2.303018] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/imu_state__builder.hpp\n'}
+[2.304238] (-) TimerEvent: {}
+[2.319226] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/imu_state__struct.hpp\n'}
+[2.332027] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/imu_state__traits.hpp\n'}
+[2.348155] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/imu_state__type_support.hpp\n'}
+[2.369392] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/interface_config__builder.hpp\n'}
+[2.377060] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/interface_config__struct.hpp\n'}
+[2.384383] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/interface_config__traits.hpp\n'}
+[2.391251] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/interface_config__type_support.hpp\n'}
+[2.403504] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/lidar_state__builder.hpp\n'}
+[2.404339] (-) TimerEvent: {}
+[2.411347] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/lidar_state__struct.hpp\n'}
+[2.418406] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/lidar_state__traits.hpp\n'}
+[2.425842] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/lidar_state__type_support.hpp\n'}
+[2.433823] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/low_cmd__builder.hpp\n'}
+[2.446323] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/low_cmd__struct.hpp\n'}
+[2.465818] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/low_cmd__traits.hpp\n'}
+[2.472452] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/low_cmd__type_support.hpp\n'}
+[2.480385] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/low_state__builder.hpp\n'}
+[2.487445] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/low_state__struct.hpp\n'}
+[2.494906] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/low_state__traits.hpp\n'}
+[2.504505] (-) TimerEvent: {}
+[2.513815] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/low_state__type_support.hpp\n'}
+[2.521159] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/motor_cmd__builder.hpp\n'}
+[2.528251] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/motor_cmd__struct.hpp\n'}
+[2.536620] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/motor_cmd__traits.hpp\n'}
+[2.546487] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/motor_cmd__type_support.hpp\n'}
+[2.560232] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/motor_cmds__builder.hpp\n'}
+[2.580886] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/motor_cmds__struct.hpp\n'}
+[2.587822] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/motor_cmds__traits.hpp\n'}
+[2.601174] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/motor_cmds__type_support.hpp\n'}
+[2.604599] (-) TimerEvent: {}
+[2.607938] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/motor_state__builder.hpp\n'}
+[2.615303] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/motor_state__struct.hpp\n'}
+[2.633296] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/motor_state__traits.hpp\n'}
+[2.641852] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/motor_state__type_support.hpp\n'}
+[2.649726] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/motor_states__builder.hpp\n'}
+[2.656951] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/motor_states__struct.hpp\n'}
+[2.664996] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/motor_states__traits.hpp\n'}
+[2.682851] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/motor_states__type_support.hpp\n'}
+[2.697603] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/path_point__builder.hpp\n'}
+[2.704584] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/path_point__struct.hpp\n'}
+[2.704709] (-) TimerEvent: {}
+[2.713151] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/path_point__traits.hpp\n'}
+[2.719976] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/path_point__type_support.hpp\n'}
+[2.727768] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/req__builder.hpp\n'}
+[2.739292] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/req__struct.hpp\n'}
+[2.748844] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/req__traits.hpp\n'}
+[2.755479] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/req__type_support.hpp\n'}
+[2.764016] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/res__builder.hpp\n'}
+[2.781868] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/res__struct.hpp\n'}
+[2.789174] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/res__traits.hpp\n'}
+[2.797248] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/res__type_support.hpp\n'}
+[2.803806] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/sport_mode_cmd__builder.hpp\n'}
+[2.804806] (-) TimerEvent: {}
+[2.811865] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/sport_mode_cmd__struct.hpp\n'}
+[2.822243] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/sport_mode_cmd__traits.hpp\n'}
+[2.829662] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/sport_mode_cmd__type_support.hpp\n'}
+[2.836650] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/sport_mode_state__builder.hpp\n'}
+[2.844862] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/sport_mode_state__struct.hpp\n'}
+[2.852244] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/sport_mode_state__traits.hpp\n'}
+[2.859349] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/sport_mode_state__type_support.hpp\n'}
+[2.871504] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/time_spec__builder.hpp\n'}
+[2.879414] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/time_spec__struct.hpp\n'}
+[2.886397] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/time_spec__traits.hpp\n'}
+[2.893626] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/time_spec__type_support.hpp\n'}
+[2.901450] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/uwb_state__builder.hpp\n'}
+[2.905334] (-) TimerEvent: {}
+[2.913778] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/uwb_state__struct.hpp\n'}
+[2.920622] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/uwb_state__traits.hpp\n'}
+[2.928509] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/uwb_state__type_support.hpp\n'}
+[2.943250] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/uwb_switch__builder.hpp\n'}
+[2.955795] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/uwb_switch__struct.hpp\n'}
+[2.965712] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/uwb_switch__traits.hpp\n'}
+[2.973936] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/uwb_switch__type_support.hpp\n'}
+[2.981732] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/wireless_controller__builder.hpp\n'}
+[2.988467] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/wireless_controller__struct.hpp\n'}
+[2.996689] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/wireless_controller__traits.hpp\n'}
+[3.003192] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/wireless_controller__type_support.hpp\n'}
+[3.005421] (-) TimerEvent: {}
+[3.010496] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/error.hpp\n'}
+[3.017614] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/height_map.hpp\n'}
+[3.028545] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/imu_state.hpp\n'}
+[3.035714] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/interface_config.hpp\n'}
+[3.044174] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/lidar_state.hpp\n'}
+[3.051826] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/low_cmd.hpp\n'}
+[3.059392] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/low_state.hpp\n'}
+[3.067227] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/motor_cmd.hpp\n'}
+[3.074164] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/motor_cmds.hpp\n'}
+[3.087684] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/motor_state.hpp\n'}
+[3.095879] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/motor_states.hpp\n'}
+[3.103204] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/path_point.hpp\n'}
+[3.105519] (-) TimerEvent: {}
+[3.110993] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/req.hpp\n'}
+[3.118396] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/res.hpp\n'}
+[3.131875] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[3.148030] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/sport_mode_cmd.hpp\n'}
+[3.155651] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/sport_mode_state.hpp\n'}
+[3.167007] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/time_spec.hpp\n'}
+[3.184814] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/uwb_state.hpp\n'}
+[3.192214] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/uwb_switch.hpp\n'}
+[3.205634] (-) TimerEvent: {}
+[3.206965] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/wireless_controller.hpp\n'}
+[3.216164] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/audio_data__rosidl_typesupport_introspection_cpp.hpp\n'}
+[3.223990] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/bms_cmd__rosidl_typesupport_introspection_cpp.hpp\n'}
+[3.237691] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/bms_state__rosidl_typesupport_introspection_cpp.hpp\n'}
+[3.247160] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/error__rosidl_typesupport_introspection_cpp.hpp\n'}
+[3.254060] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/height_map__rosidl_typesupport_introspection_cpp.hpp\n'}
+[3.261929] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/imu_state__rosidl_typesupport_introspection_cpp.hpp\n'}
+[3.280458] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/interface_config__rosidl_typesupport_introspection_cpp.hpp\n'}
+[3.287557] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/lidar_state__rosidl_typesupport_introspection_cpp.hpp\n'}
+[3.296169] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/low_cmd__rosidl_typesupport_introspection_cpp.hpp\n'}
+[3.305795] (-) TimerEvent: {}
+[3.312815] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/low_state__rosidl_typesupport_introspection_cpp.hpp\n'}
+[3.324127] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/motor_cmd__rosidl_typesupport_introspection_cpp.hpp\n'}
+[3.331804] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/motor_cmds__rosidl_typesupport_introspection_cpp.hpp\n'}
+[3.340152] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/motor_state__rosidl_typesupport_introspection_cpp.hpp\n'}
+[3.355339] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/motor_states__rosidl_typesupport_introspection_cpp.hpp\n'}
+[3.368054] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/path_point__rosidl_typesupport_introspection_cpp.hpp\n'}
+[3.375163] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/req__rosidl_typesupport_introspection_cpp.hpp\n'}
+[3.382818] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/res__rosidl_typesupport_introspection_cpp.hpp\n'}
+[3.399377] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/sport_mode_cmd__rosidl_typesupport_introspection_cpp.hpp\n'}
+[3.406333] (-) TimerEvent: {}
+[3.406503] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/sport_mode_state__rosidl_typesupport_introspection_cpp.hpp\n'}
+[3.413847] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/time_spec__rosidl_typesupport_introspection_cpp.hpp\n'}
+[3.420696] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/uwb_state__rosidl_typesupport_introspection_cpp.hpp\n'}
+[3.428373] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/uwb_switch__rosidl_typesupport_introspection_cpp.hpp\n'}
+[3.435784] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/include/unitree_go/msg/detail/wireless_controller__rosidl_typesupport_introspection_cpp.hpp\n'}
+[3.444284] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/environment/pythonpath.sh\n'}
+[3.457517] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/environment/pythonpath.dsv\n'}
+[3.466023] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/lib/python3.8/site-packages/unitree_go/__init__.py\n'}
+[3.473704] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/lib/python3.8/site-packages/unitree_go/msg/__init__.py\n'}
+[3.481835] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/lib/python3.8/site-packages/unitree_go/msg/_audio_data.py\n'}
+[3.488447] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/lib/python3.8/site-packages/unitree_go/msg/_bms_cmd.py\n'}
+[3.499231] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/lib/python3.8/site-packages/unitree_go/msg/_bms_state.py\n'}
+[3.506143] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/lib/python3.8/site-packages/unitree_go/msg/_error.py\n'}
+[3.506432] (-) TimerEvent: {}
+[3.522210] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/lib/python3.8/site-packages/unitree_go/msg/_height_map.py\n'}
+[3.530777] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/lib/python3.8/site-packages/unitree_go/msg/_imu_state.py\n'}
+[3.538078] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/lib/python3.8/site-packages/unitree_go/msg/_interface_config.py\n'}
+[3.548576] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/lib/python3.8/site-packages/unitree_go/msg/_lidar_state.py\n'}
+[3.561235] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/lib/python3.8/site-packages/unitree_go/msg/_low_cmd.py\n'}
+[3.569450] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/lib/python3.8/site-packages/unitree_go/msg/_low_state.py\n'}
+[3.576829] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/lib/python3.8/site-packages/unitree_go/msg/_motor_cmd.py\n'}
+[3.584775] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/lib/python3.8/site-packages/unitree_go/msg/_motor_cmds.py\n'}
+[3.591194] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/lib/python3.8/site-packages/unitree_go/msg/_motor_state.py\n'}
+[3.598615] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/lib/python3.8/site-packages/unitree_go/msg/_motor_states.py\n'}
+[3.605705] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/lib/python3.8/site-packages/unitree_go/msg/_path_point.py\n'}
+[3.606523] (-) TimerEvent: {}
+[3.613660] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/lib/python3.8/site-packages/unitree_go/msg/_req.py\n'}
+[3.621084] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/lib/python3.8/site-packages/unitree_go/msg/_res.py\n'}
+[3.637488] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/lib/python3.8/site-packages/unitree_go/msg/_sport_mode_cmd.py\n'}
+[3.646618] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/lib/python3.8/site-packages/unitree_go/msg/_sport_mode_state.py\n'}
+[3.654114] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/lib/python3.8/site-packages/unitree_go/msg/_time_spec.py\n'}
+[3.662512] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/lib/python3.8/site-packages/unitree_go/msg/_uwb_state.py\n'}
+[3.673637] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/lib/python3.8/site-packages/unitree_go/msg/_uwb_switch.py\n'}
+[3.685104] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/lib/python3.8/site-packages/unitree_go/msg/_wireless_controller.py\n'}
+[3.694761] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/lib/python3.8/site-packages/unitree_go/unitree_go_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so\n'}
+[3.704252] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/lib/python3.8/site-packages/unitree_go/unitree_go_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so\n'}
+[3.706639] (-) TimerEvent: {}
+[3.713549] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/lib/python3.8/site-packages/unitree_go/unitree_go_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so\n'}
+[3.723030] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/lib/libunitree_go__python.so\n'}
+[3.732660] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/msg/AudioData.idl\n'}
+[3.743985] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/msg/BmsCmd.idl\n'}
+[3.757493] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/msg/BmsState.idl\n'}
+[3.769227] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/msg/Error.idl\n'}
+[3.780904] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/msg/HeightMap.idl\n'}
+[3.791856] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/msg/IMUState.idl\n'}
+[3.803802] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/msg/InterfaceConfig.idl\n'}
+[3.806753] (-) TimerEvent: {}
+[3.817051] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/msg/LidarState.idl\n'}
+[3.828802] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/msg/LowCmd.idl\n'}
+[3.837571] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/msg/LowState.idl\n'}
+[3.846260] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/msg/MotorCmd.idl\n'}
+[3.857865] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/msg/MotorCmds.idl\n'}
+[3.867308] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/msg/MotorState.idl\n'}
+[3.884605] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/msg/MotorStates.idl\n'}
+[3.891834] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/msg/PathPoint.idl\n'}
+[3.906814] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/msg/Req.idl\n'}
+[3.907020] (-) TimerEvent: {}
+[3.921796] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/msg/Res.idl\n'}
+[3.933678] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/msg/SportModeCmd.idl\n'}
+[3.948927] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/msg/SportModeState.idl\n'}
+[3.957406] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/msg/TimeSpec.idl\n'}
+[3.966156] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/msg/UwbState.idl\n'}
+[3.979193] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/msg/UwbSwitch.idl\n'}
+[3.990332] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/msg/WirelessController.idl\n'}
+[4.001313] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/msg/AudioData.msg\n'}
+[4.007127] (-) TimerEvent: {}
+[4.011049] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/msg/BmsCmd.msg\n'}
+[4.020705] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/msg/BmsState.msg\n'}
+[4.041868] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/msg/Error.msg\n'}
+[4.057488] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/msg/HeightMap.msg\n'}
+[4.066729] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/msg/IMUState.msg\n'}
+[4.075243] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/msg/InterfaceConfig.msg\n'}
+[4.083158] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/msg/LidarState.msg\n'}
+[4.090392] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/msg/LowCmd.msg\n'}
+[4.103671] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/msg/LowState.msg\n'}
+[4.107333] (-) TimerEvent: {}
+[4.117789] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/msg/MotorCmd.msg\n'}
+[4.131909] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/msg/MotorCmds.msg\n'}
+[4.140178] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/msg/MotorState.msg\n'}
+[4.150976] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/msg/MotorStates.msg\n'}
+[4.158243] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/msg/PathPoint.msg\n'}
+[4.167246] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/msg/Req.msg\n'}
+[4.173915] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/msg/Res.msg\n'}
+[4.182588] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/msg/SportModeCmd.msg\n'}
+[4.190046] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/msg/SportModeState.msg\n'}
+[4.198993] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/msg/TimeSpec.msg\n'}
+[4.207476] (-) TimerEvent: {}
+[4.208177] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/msg/UwbState.msg\n'}
+[4.217108] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/msg/UwbSwitch.msg\n'}
+[4.225603] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/msg/WirelessController.msg\n'}
+[4.235911] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/share/ament_index/resource_index/package_run_dependencies/unitree_go\n'}
+[4.245467] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/share/ament_index/resource_index/parent_prefix_path/unitree_go\n'}
+[4.254310] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/environment/ament_prefix_path.sh\n'}
+[4.266642] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/environment/ament_prefix_path.dsv\n'}
+[4.280043] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/environment/path.sh\n'}
+[4.292167] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/environment/path.dsv\n'}
+[4.299816] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/local_setup.bash\n'}
+[4.306726] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/local_setup.sh\n'}
+[4.307557] (-) TimerEvent: {}
+[4.314634] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/local_setup.zsh\n'}
+[4.321354] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/local_setup.dsv\n'}
+[4.329448] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/package.dsv\n'}
+[4.344322] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/share/ament_index/resource_index/packages/unitree_go\n'}
+[4.352037] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/cmake/rosidl_cmake-extras.cmake\n'}
+[4.359561] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[4.367281] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[4.373768] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[4.381859] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[4.392385] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[4.407105] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[4.407655] (-) TimerEvent: {}
+[4.415874] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/cmake/unitree_goConfig.cmake\n'}
+[4.429176] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/cmake/unitree_goConfig-version.cmake\n'}
+[4.436535] (unitree_go) StdoutLine: {'line': b'-- Symlinking: /home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/package.xml\n'}
+[4.446456] (unitree_go) StdoutLine: {'line': b'-- Installing: /home/giovanna/argo_go2_ws/install/unitree_go/lib/libunitree_go__rosidl_generator_c.so\n'}
+[4.446701] (unitree_go) StdoutLine: {'line': b'-- Set runtime path of "/home/giovanna/argo_go2_ws/install/unitree_go/lib/libunitree_go__rosidl_generator_c.so" to ""\n'}
+[4.446843] (unitree_go) StdoutLine: {'line': b'-- Installing: /home/giovanna/argo_go2_ws/install/unitree_go/lib/libunitree_go__rosidl_typesupport_introspection_c.so\n'}
+[4.448281] (unitree_go) StdoutLine: {'line': b'-- Set runtime path of "/home/giovanna/argo_go2_ws/install/unitree_go/lib/libunitree_go__rosidl_typesupport_introspection_c.so" to ""\n'}
+[4.448691] (unitree_go) StdoutLine: {'line': b'-- Installing: /home/giovanna/argo_go2_ws/install/unitree_go/lib/libunitree_go__rosidl_typesupport_c.so\n'}
+[4.449963] (unitree_go) StdoutLine: {'line': b'-- Set runtime path of "/home/giovanna/argo_go2_ws/install/unitree_go/lib/libunitree_go__rosidl_typesupport_c.so" to ""\n'}
+[4.450374] (unitree_go) StdoutLine: {'line': b'-- Installing: /home/giovanna/argo_go2_ws/install/unitree_go/lib/libunitree_go__rosidl_typesupport_introspection_cpp.so\n'}
+[4.453109] (unitree_go) StdoutLine: {'line': b'-- Set runtime path of "/home/giovanna/argo_go2_ws/install/unitree_go/lib/libunitree_go__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[4.453580] (unitree_go) StdoutLine: {'line': b'-- Installing: /home/giovanna/argo_go2_ws/install/unitree_go/lib/libunitree_go__rosidl_typesupport_cpp.so\n'}
+[4.454736] (unitree_go) StdoutLine: {'line': b'-- Set runtime path of "/home/giovanna/argo_go2_ws/install/unitree_go/lib/libunitree_go__rosidl_typesupport_cpp.so" to ""\n'}
+[4.503992] (unitree_go) StdoutLine: {'line': b"Compiling '/home/giovanna/argo_go2_ws/install/unitree_go/lib/python3.8/site-packages/unitree_go/__init__.py'...\n"}
+[4.507052] (unitree_go) StdoutLine: {'line': b'-- Installing: /home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/cmake/unitree_go__rosidl_generator_cExport.cmake\n'}
+[4.507264] (unitree_go) StdoutLine: {'line': b'-- Installing: /home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/cmake/unitree_go__rosidl_generator_cExport-noconfig.cmake\n'}
+[4.507542] (unitree_go) StdoutLine: {'line': b'-- Installing: /home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/cmake/unitree_go__rosidl_typesupport_introspection_cExport.cmake\n'}
+[4.507724] (unitree_go) StdoutLine: {'line': b'-- Installing: /home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/cmake/unitree_go__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[4.507830] (-) TimerEvent: {}
+[4.508319] (unitree_go) StdoutLine: {'line': b'-- Installing: /home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/cmake/unitree_go__rosidl_typesupport_cExport.cmake\n'}
+[4.509028] (unitree_go) StdoutLine: {'line': b'-- Installing: /home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/cmake/unitree_go__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[4.509914] (unitree_go) StdoutLine: {'line': b'-- Installing: /home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/cmake/unitree_go__rosidl_generator_cppExport.cmake\n'}
+[4.510908] (unitree_go) StdoutLine: {'line': b'-- Installing: /home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/cmake/unitree_go__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[4.511827] (unitree_go) StdoutLine: {'line': b'-- Installing: /home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/cmake/unitree_go__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[4.512776] (unitree_go) StdoutLine: {'line': b'-- Installing: /home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/cmake/unitree_go__rosidl_typesupport_cppExport.cmake\n'}
+[4.513695] (unitree_go) StdoutLine: {'line': b'-- Installing: /home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/cmake/unitree_go__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[4.517555] (unitree_go) CommandEnded: {'returncode': 0}
+[4.539795] (unitree_go) JobEnded: {'identifier': 'unitree_go', 'rc': 0}
+[4.540643] (-) EventReactorShutdown: {}

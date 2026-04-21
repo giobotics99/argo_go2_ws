@@ -1,0 +1,904 @@
+[0.128s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--symlink-install']
+[0.128s] DEBUG:colcon:Parsed command line arguments: Namespace(allow_overriding=[], ament_cmake_args=None, base_paths=['.'], build_base='build', catkin_cmake_args=None, catkin_skip_building_tests=False, cmake_args=None, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, cmake_target=None, cmake_target_skip_unavailable=False, continue_on_error=False, event_handlers=None, executor='parallel', ignore_user_meta=False, install_base='install', log_base=None, log_level=None, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7ff80de84fd0>>, merge_install=False, metas=['./colcon.meta'], packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_end=None, packages_ignore=None, packages_ignore_regex=None, packages_select=None, packages_select_build_failed=False, packages_select_by_dep=None, packages_select_regex=None, packages_select_test_failures=False, packages_skip=None, packages_skip_build_finished=False, packages_skip_by_dep=None, packages_skip_regex=None, packages_skip_test_passed=False, packages_skip_up_to=None, packages_start=None, packages_up_to=None, packages_up_to_regex=None, parallel_workers=16, paths=None, symlink_install=True, test_result_base=None, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7ff80de84fd0>, verb_name='build', verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7ff80de124f0>)
+[0.234s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.234s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.234s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.234s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.234s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.234s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.234s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/giovanna/argo_go2_ws'
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_bringup) by extensions ['ignore', 'ignore_ament_install']
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_bringup) by extension 'ignore'
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_bringup) by extension 'ignore_ament_install'
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_bringup) by extensions ['colcon_pkg']
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_bringup) by extension 'colcon_pkg'
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_bringup) by extensions ['colcon_meta']
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_bringup) by extension 'colcon_meta'
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_bringup) by extensions ['ros']
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_bringup) by extension 'ros'
+[0.246s] DEBUG:colcon.colcon_core.package_identification:Package 'src/go2_bringup' with type 'ros.ament_cmake' and name 'go2_bringup'
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_description) by extensions ['ignore', 'ignore_ament_install']
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_description) by extension 'ignore'
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_description) by extension 'ignore_ament_install'
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_description) by extensions ['colcon_pkg']
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_description) by extension 'colcon_pkg'
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_description) by extensions ['colcon_meta']
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_description) by extension 'colcon_meta'
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_description) by extensions ['ros']
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_description) by extension 'ros'
+[0.247s] DEBUG:colcon.colcon_core.package_identification:Package 'src/go2_description' with type 'ros.ament_cmake' and name 'go2_description'
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_driver) by extensions ['ignore', 'ignore_ament_install']
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_driver) by extension 'ignore'
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_driver) by extension 'ignore_ament_install'
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_driver) by extensions ['colcon_pkg']
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_driver) by extension 'colcon_pkg'
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_driver) by extensions ['colcon_meta']
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_driver) by extension 'colcon_meta'
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_driver) by extensions ['ros']
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_driver) by extension 'ros'
+[0.249s] DEBUG:colcon.colcon_core.package_identification:Package 'src/go2_driver' with type 'ros.ament_cmake' and name 'go2_driver'
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_hardware) by extensions ['ignore', 'ignore_ament_install']
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_hardware) by extension 'ignore'
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_hardware) by extension 'ignore_ament_install'
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_hardware) by extensions ['colcon_pkg']
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_hardware) by extension 'colcon_pkg'
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_hardware) by extensions ['colcon_meta']
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_hardware) by extension 'colcon_meta'
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_hardware) by extensions ['ros']
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_hardware) by extension 'ros'
+[0.249s] DEBUG:colcon.colcon_core.package_identification:Package 'src/go2_hardware' with type 'ros.ament_cmake' and name 'go2_hardware'
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_interfaces) by extension 'ignore'
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_interfaces) by extension 'ignore_ament_install'
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_interfaces) by extensions ['colcon_pkg']
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_interfaces) by extension 'colcon_pkg'
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_interfaces) by extensions ['colcon_meta']
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_interfaces) by extension 'colcon_meta'
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_interfaces) by extensions ['ros']
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_interfaces) by extension 'ros'
+[0.250s] DEBUG:colcon.colcon_core.package_identification:Package 'src/go2_interfaces' with type 'ros.ament_cmake' and name 'go2_interfaces'
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_nav) by extensions ['ignore', 'ignore_ament_install']
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_nav) by extension 'ignore'
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_nav) by extension 'ignore_ament_install'
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_nav) by extensions ['colcon_pkg']
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_nav) by extension 'colcon_pkg'
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_nav) by extensions ['colcon_meta']
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_nav) by extension 'colcon_meta'
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_nav) by extensions ['ros']
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_nav) by extension 'ros'
+[0.251s] DEBUG:colcon.colcon_core.package_identification:Package 'src/go2_nav' with type 'ros.ament_cmake' and name 'go2_nav'
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_robot) by extensions ['ignore', 'ignore_ament_install']
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_robot) by extension 'ignore'
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_robot) by extension 'ignore_ament_install'
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_robot) by extensions ['colcon_pkg']
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_robot) by extension 'colcon_pkg'
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_robot) by extensions ['colcon_meta']
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_robot) by extension 'colcon_meta'
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_robot) by extensions ['ros']
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_robot) by extension 'ros'
+[0.252s] DEBUG:colcon.colcon_core.package_identification:Package 'src/go2_robot' with type 'ros.ament_cmake' and name 'go2_robot'
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_rviz) by extensions ['ignore', 'ignore_ament_install']
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_rviz) by extension 'ignore'
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_rviz) by extension 'ignore_ament_install'
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_rviz) by extensions ['colcon_pkg']
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_rviz) by extension 'colcon_pkg'
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_rviz) by extensions ['colcon_meta']
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_rviz) by extension 'colcon_meta'
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_rviz) by extensions ['ros']
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_rviz) by extension 'ros'
+[0.252s] DEBUG:colcon.colcon_core.package_identification:Package 'src/go2_rviz' with type 'ros.ament_cmake' and name 'go2_rviz'
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_simulation) by extensions ['ignore', 'ignore_ament_install']
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_simulation) by extension 'ignore'
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_simulation) by extension 'ignore_ament_install'
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_simulation) by extensions ['colcon_pkg']
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_simulation) by extension 'colcon_pkg'
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_simulation) by extensions ['colcon_meta']
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_simulation) by extension 'colcon_meta'
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_simulation) by extensions ['ros']
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_simulation) by extension 'ros'
+[0.253s] DEBUG:colcon.colcon_core.package_identification:Package 'src/go2_simulation' with type 'ros.ament_cmake' and name 'go2_simulation'
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(src/hesai_ros_driver) by extensions ['ignore', 'ignore_ament_install']
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(src/hesai_ros_driver) by extension 'ignore'
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(src/hesai_ros_driver) by extension 'ignore_ament_install'
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(src/hesai_ros_driver) by extensions ['colcon_pkg']
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(src/hesai_ros_driver) by extension 'colcon_pkg'
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(src/hesai_ros_driver) by extensions ['colcon_meta']
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(src/hesai_ros_driver) by extension 'colcon_meta'
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(src/hesai_ros_driver) by extensions ['ros']
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(src/hesai_ros_driver) by extension 'ros'
+[0.258s] DEBUG:colcon.colcon_core.package_identification:Package 'src/hesai_ros_driver' with type 'ros.ament_cmake' and name 'hesai_ros_driver'
+[0.258s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_api) by extensions ['ignore', 'ignore_ament_install']
+[0.258s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_api) by extension 'ignore'
+[0.258s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_api) by extension 'ignore_ament_install'
+[0.258s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_api) by extensions ['colcon_pkg']
+[0.258s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_api) by extension 'colcon_pkg'
+[0.258s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_api) by extensions ['colcon_meta']
+[0.258s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_api) by extension 'colcon_meta'
+[0.258s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_api) by extensions ['ros']
+[0.258s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_api) by extension 'ros'
+[0.259s] DEBUG:colcon.colcon_core.package_identification:Package 'src/unitree_api' with type 'ros.ament_cmake' and name 'unitree_api'
+[0.259s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_go) by extensions ['ignore', 'ignore_ament_install']
+[0.259s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_go) by extension 'ignore'
+[0.259s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_go) by extension 'ignore_ament_install'
+[0.259s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_go) by extensions ['colcon_pkg']
+[0.259s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_go) by extension 'colcon_pkg'
+[0.259s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_go) by extensions ['colcon_meta']
+[0.259s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_go) by extension 'colcon_meta'
+[0.259s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_go) by extensions ['ros']
+[0.259s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_go) by extension 'ros'
+[0.259s] DEBUG:colcon.colcon_core.package_identification:Package 'src/unitree_go' with type 'ros.ament_cmake' and name 'unitree_go'
+[0.260s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.260s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.260s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.260s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.260s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.282s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.282s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.284s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 291 installed packages in /opt/ros/foxy
+[0.285s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.327s] Level 5:colcon.colcon_core.verb:set package 'go2_description' build argument 'cmake_args' from command line to 'None'
+[0.327s] Level 5:colcon.colcon_core.verb:set package 'go2_description' build argument 'cmake_target' from command line to 'None'
+[0.327s] Level 5:colcon.colcon_core.verb:set package 'go2_description' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.327s] Level 5:colcon.colcon_core.verb:set package 'go2_description' build argument 'cmake_clean_cache' from command line to 'False'
+[0.327s] Level 5:colcon.colcon_core.verb:set package 'go2_description' build argument 'cmake_clean_first' from command line to 'False'
+[0.327s] Level 5:colcon.colcon_core.verb:set package 'go2_description' build argument 'cmake_force_configure' from command line to 'False'
+[0.327s] Level 5:colcon.colcon_core.verb:set package 'go2_description' build argument 'ament_cmake_args' from command line to 'None'
+[0.327s] Level 5:colcon.colcon_core.verb:set package 'go2_description' build argument 'catkin_cmake_args' from command line to 'None'
+[0.327s] Level 5:colcon.colcon_core.verb:set package 'go2_description' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.327s] DEBUG:colcon.colcon_core.verb:Building package 'go2_description' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/giovanna/argo_go2_ws/build/go2_description', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/giovanna/argo_go2_ws/install/go2_description', 'merge_install': False, 'path': '/home/giovanna/argo_go2_ws/src/go2_description', 'symlink_install': True, 'test_result_base': None}
+[0.327s] Level 5:colcon.colcon_core.verb:set package 'go2_hardware' build argument 'cmake_args' from command line to 'None'
+[0.327s] Level 5:colcon.colcon_core.verb:set package 'go2_hardware' build argument 'cmake_target' from command line to 'None'
+[0.327s] Level 5:colcon.colcon_core.verb:set package 'go2_hardware' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.327s] Level 5:colcon.colcon_core.verb:set package 'go2_hardware' build argument 'cmake_clean_cache' from command line to 'False'
+[0.327s] Level 5:colcon.colcon_core.verb:set package 'go2_hardware' build argument 'cmake_clean_first' from command line to 'False'
+[0.327s] Level 5:colcon.colcon_core.verb:set package 'go2_hardware' build argument 'cmake_force_configure' from command line to 'False'
+[0.327s] Level 5:colcon.colcon_core.verb:set package 'go2_hardware' build argument 'ament_cmake_args' from command line to 'None'
+[0.327s] Level 5:colcon.colcon_core.verb:set package 'go2_hardware' build argument 'catkin_cmake_args' from command line to 'None'
+[0.327s] Level 5:colcon.colcon_core.verb:set package 'go2_hardware' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.327s] DEBUG:colcon.colcon_core.verb:Building package 'go2_hardware' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/giovanna/argo_go2_ws/build/go2_hardware', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/giovanna/argo_go2_ws/install/go2_hardware', 'merge_install': False, 'path': '/home/giovanna/argo_go2_ws/src/go2_hardware', 'symlink_install': True, 'test_result_base': None}
+[0.328s] Level 5:colcon.colcon_core.verb:set package 'go2_interfaces' build argument 'cmake_args' from command line to 'None'
+[0.328s] Level 5:colcon.colcon_core.verb:set package 'go2_interfaces' build argument 'cmake_target' from command line to 'None'
+[0.328s] Level 5:colcon.colcon_core.verb:set package 'go2_interfaces' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.328s] Level 5:colcon.colcon_core.verb:set package 'go2_interfaces' build argument 'cmake_clean_cache' from command line to 'False'
+[0.328s] Level 5:colcon.colcon_core.verb:set package 'go2_interfaces' build argument 'cmake_clean_first' from command line to 'False'
+[0.328s] Level 5:colcon.colcon_core.verb:set package 'go2_interfaces' build argument 'cmake_force_configure' from command line to 'False'
+[0.328s] Level 5:colcon.colcon_core.verb:set package 'go2_interfaces' build argument 'ament_cmake_args' from command line to 'None'
+[0.328s] Level 5:colcon.colcon_core.verb:set package 'go2_interfaces' build argument 'catkin_cmake_args' from command line to 'None'
+[0.328s] Level 5:colcon.colcon_core.verb:set package 'go2_interfaces' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.328s] DEBUG:colcon.colcon_core.verb:Building package 'go2_interfaces' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/giovanna/argo_go2_ws/build/go2_interfaces', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/giovanna/argo_go2_ws/install/go2_interfaces', 'merge_install': False, 'path': '/home/giovanna/argo_go2_ws/src/go2_interfaces', 'symlink_install': True, 'test_result_base': None}
+[0.328s] Level 5:colcon.colcon_core.verb:set package 'go2_nav' build argument 'cmake_args' from command line to 'None'
+[0.328s] Level 5:colcon.colcon_core.verb:set package 'go2_nav' build argument 'cmake_target' from command line to 'None'
+[0.328s] Level 5:colcon.colcon_core.verb:set package 'go2_nav' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.328s] Level 5:colcon.colcon_core.verb:set package 'go2_nav' build argument 'cmake_clean_cache' from command line to 'False'
+[0.328s] Level 5:colcon.colcon_core.verb:set package 'go2_nav' build argument 'cmake_clean_first' from command line to 'False'
+[0.328s] Level 5:colcon.colcon_core.verb:set package 'go2_nav' build argument 'cmake_force_configure' from command line to 'False'
+[0.328s] Level 5:colcon.colcon_core.verb:set package 'go2_nav' build argument 'ament_cmake_args' from command line to 'None'
+[0.328s] Level 5:colcon.colcon_core.verb:set package 'go2_nav' build argument 'catkin_cmake_args' from command line to 'None'
+[0.328s] Level 5:colcon.colcon_core.verb:set package 'go2_nav' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.328s] DEBUG:colcon.colcon_core.verb:Building package 'go2_nav' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/giovanna/argo_go2_ws/build/go2_nav', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/giovanna/argo_go2_ws/install/go2_nav', 'merge_install': False, 'path': '/home/giovanna/argo_go2_ws/src/go2_nav', 'symlink_install': True, 'test_result_base': None}
+[0.329s] Level 5:colcon.colcon_core.verb:set package 'go2_rviz' build argument 'cmake_args' from command line to 'None'
+[0.329s] Level 5:colcon.colcon_core.verb:set package 'go2_rviz' build argument 'cmake_target' from command line to 'None'
+[0.329s] Level 5:colcon.colcon_core.verb:set package 'go2_rviz' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.329s] Level 5:colcon.colcon_core.verb:set package 'go2_rviz' build argument 'cmake_clean_cache' from command line to 'False'
+[0.329s] Level 5:colcon.colcon_core.verb:set package 'go2_rviz' build argument 'cmake_clean_first' from command line to 'False'
+[0.329s] Level 5:colcon.colcon_core.verb:set package 'go2_rviz' build argument 'cmake_force_configure' from command line to 'False'
+[0.329s] Level 5:colcon.colcon_core.verb:set package 'go2_rviz' build argument 'ament_cmake_args' from command line to 'None'
+[0.329s] Level 5:colcon.colcon_core.verb:set package 'go2_rviz' build argument 'catkin_cmake_args' from command line to 'None'
+[0.329s] Level 5:colcon.colcon_core.verb:set package 'go2_rviz' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.329s] DEBUG:colcon.colcon_core.verb:Building package 'go2_rviz' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/giovanna/argo_go2_ws/build/go2_rviz', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/giovanna/argo_go2_ws/install/go2_rviz', 'merge_install': False, 'path': '/home/giovanna/argo_go2_ws/src/go2_rviz', 'symlink_install': True, 'test_result_base': None}
+[0.329s] Level 5:colcon.colcon_core.verb:set package 'go2_simulation' build argument 'cmake_args' from command line to 'None'
+[0.329s] Level 5:colcon.colcon_core.verb:set package 'go2_simulation' build argument 'cmake_target' from command line to 'None'
+[0.329s] Level 5:colcon.colcon_core.verb:set package 'go2_simulation' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.329s] Level 5:colcon.colcon_core.verb:set package 'go2_simulation' build argument 'cmake_clean_cache' from command line to 'False'
+[0.329s] Level 5:colcon.colcon_core.verb:set package 'go2_simulation' build argument 'cmake_clean_first' from command line to 'False'
+[0.329s] Level 5:colcon.colcon_core.verb:set package 'go2_simulation' build argument 'cmake_force_configure' from command line to 'False'
+[0.329s] Level 5:colcon.colcon_core.verb:set package 'go2_simulation' build argument 'ament_cmake_args' from command line to 'None'
+[0.329s] Level 5:colcon.colcon_core.verb:set package 'go2_simulation' build argument 'catkin_cmake_args' from command line to 'None'
+[0.329s] Level 5:colcon.colcon_core.verb:set package 'go2_simulation' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.329s] DEBUG:colcon.colcon_core.verb:Building package 'go2_simulation' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/giovanna/argo_go2_ws/build/go2_simulation', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/giovanna/argo_go2_ws/install/go2_simulation', 'merge_install': False, 'path': '/home/giovanna/argo_go2_ws/src/go2_simulation', 'symlink_install': True, 'test_result_base': None}
+[0.329s] Level 5:colcon.colcon_core.verb:set package 'hesai_ros_driver' build argument 'cmake_args' from command line to 'None'
+[0.329s] Level 5:colcon.colcon_core.verb:set package 'hesai_ros_driver' build argument 'cmake_target' from command line to 'None'
+[0.330s] Level 5:colcon.colcon_core.verb:set package 'hesai_ros_driver' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.330s] Level 5:colcon.colcon_core.verb:set package 'hesai_ros_driver' build argument 'cmake_clean_cache' from command line to 'False'
+[0.330s] Level 5:colcon.colcon_core.verb:set package 'hesai_ros_driver' build argument 'cmake_clean_first' from command line to 'False'
+[0.330s] Level 5:colcon.colcon_core.verb:set package 'hesai_ros_driver' build argument 'cmake_force_configure' from command line to 'False'
+[0.330s] Level 5:colcon.colcon_core.verb:set package 'hesai_ros_driver' build argument 'ament_cmake_args' from command line to 'None'
+[0.330s] Level 5:colcon.colcon_core.verb:set package 'hesai_ros_driver' build argument 'catkin_cmake_args' from command line to 'None'
+[0.330s] Level 5:colcon.colcon_core.verb:set package 'hesai_ros_driver' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.330s] DEBUG:colcon.colcon_core.verb:Building package 'hesai_ros_driver' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/giovanna/argo_go2_ws/build/hesai_ros_driver', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/giovanna/argo_go2_ws/install/hesai_ros_driver', 'merge_install': False, 'path': '/home/giovanna/argo_go2_ws/src/hesai_ros_driver', 'symlink_install': True, 'test_result_base': None}
+[0.330s] Level 5:colcon.colcon_core.verb:set package 'unitree_api' build argument 'cmake_args' from command line to 'None'
+[0.330s] Level 5:colcon.colcon_core.verb:set package 'unitree_api' build argument 'cmake_target' from command line to 'None'
+[0.330s] Level 5:colcon.colcon_core.verb:set package 'unitree_api' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.330s] Level 5:colcon.colcon_core.verb:set package 'unitree_api' build argument 'cmake_clean_cache' from command line to 'False'
+[0.330s] Level 5:colcon.colcon_core.verb:set package 'unitree_api' build argument 'cmake_clean_first' from command line to 'False'
+[0.330s] Level 5:colcon.colcon_core.verb:set package 'unitree_api' build argument 'cmake_force_configure' from command line to 'False'
+[0.330s] Level 5:colcon.colcon_core.verb:set package 'unitree_api' build argument 'ament_cmake_args' from command line to 'None'
+[0.330s] Level 5:colcon.colcon_core.verb:set package 'unitree_api' build argument 'catkin_cmake_args' from command line to 'None'
+[0.330s] Level 5:colcon.colcon_core.verb:set package 'unitree_api' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.330s] DEBUG:colcon.colcon_core.verb:Building package 'unitree_api' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/giovanna/argo_go2_ws/build/unitree_api', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/giovanna/argo_go2_ws/install/unitree_api', 'merge_install': False, 'path': '/home/giovanna/argo_go2_ws/src/unitree_api', 'symlink_install': True, 'test_result_base': None}
+[0.330s] Level 5:colcon.colcon_core.verb:set package 'unitree_go' build argument 'cmake_args' from command line to 'None'
+[0.330s] Level 5:colcon.colcon_core.verb:set package 'unitree_go' build argument 'cmake_target' from command line to 'None'
+[0.330s] Level 5:colcon.colcon_core.verb:set package 'unitree_go' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.330s] Level 5:colcon.colcon_core.verb:set package 'unitree_go' build argument 'cmake_clean_cache' from command line to 'False'
+[0.330s] Level 5:colcon.colcon_core.verb:set package 'unitree_go' build argument 'cmake_clean_first' from command line to 'False'
+[0.330s] Level 5:colcon.colcon_core.verb:set package 'unitree_go' build argument 'cmake_force_configure' from command line to 'False'
+[0.330s] Level 5:colcon.colcon_core.verb:set package 'unitree_go' build argument 'ament_cmake_args' from command line to 'None'
+[0.330s] Level 5:colcon.colcon_core.verb:set package 'unitree_go' build argument 'catkin_cmake_args' from command line to 'None'
+[0.330s] Level 5:colcon.colcon_core.verb:set package 'unitree_go' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.331s] DEBUG:colcon.colcon_core.verb:Building package 'unitree_go' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/giovanna/argo_go2_ws/build/unitree_go', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/giovanna/argo_go2_ws/install/unitree_go', 'merge_install': False, 'path': '/home/giovanna/argo_go2_ws/src/unitree_go', 'symlink_install': True, 'test_result_base': None}
+[0.331s] Level 5:colcon.colcon_core.verb:set package 'go2_driver' build argument 'cmake_args' from command line to 'None'
+[0.331s] Level 5:colcon.colcon_core.verb:set package 'go2_driver' build argument 'cmake_target' from command line to 'None'
+[0.331s] Level 5:colcon.colcon_core.verb:set package 'go2_driver' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.331s] Level 5:colcon.colcon_core.verb:set package 'go2_driver' build argument 'cmake_clean_cache' from command line to 'False'
+[0.331s] Level 5:colcon.colcon_core.verb:set package 'go2_driver' build argument 'cmake_clean_first' from command line to 'False'
+[0.331s] Level 5:colcon.colcon_core.verb:set package 'go2_driver' build argument 'cmake_force_configure' from command line to 'False'
+[0.331s] Level 5:colcon.colcon_core.verb:set package 'go2_driver' build argument 'ament_cmake_args' from command line to 'None'
+[0.331s] Level 5:colcon.colcon_core.verb:set package 'go2_driver' build argument 'catkin_cmake_args' from command line to 'None'
+[0.331s] Level 5:colcon.colcon_core.verb:set package 'go2_driver' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.331s] DEBUG:colcon.colcon_core.verb:Building package 'go2_driver' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/giovanna/argo_go2_ws/build/go2_driver', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/giovanna/argo_go2_ws/install/go2_driver', 'merge_install': False, 'path': '/home/giovanna/argo_go2_ws/src/go2_driver', 'symlink_install': True, 'test_result_base': None}
+[0.331s] Level 5:colcon.colcon_core.verb:set package 'go2_robot' build argument 'cmake_args' from command line to 'None'
+[0.331s] Level 5:colcon.colcon_core.verb:set package 'go2_robot' build argument 'cmake_target' from command line to 'None'
+[0.331s] Level 5:colcon.colcon_core.verb:set package 'go2_robot' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.331s] Level 5:colcon.colcon_core.verb:set package 'go2_robot' build argument 'cmake_clean_cache' from command line to 'False'
+[0.331s] Level 5:colcon.colcon_core.verb:set package 'go2_robot' build argument 'cmake_clean_first' from command line to 'False'
+[0.331s] Level 5:colcon.colcon_core.verb:set package 'go2_robot' build argument 'cmake_force_configure' from command line to 'False'
+[0.331s] Level 5:colcon.colcon_core.verb:set package 'go2_robot' build argument 'ament_cmake_args' from command line to 'None'
+[0.331s] Level 5:colcon.colcon_core.verb:set package 'go2_robot' build argument 'catkin_cmake_args' from command line to 'None'
+[0.331s] Level 5:colcon.colcon_core.verb:set package 'go2_robot' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.331s] DEBUG:colcon.colcon_core.verb:Building package 'go2_robot' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/giovanna/argo_go2_ws/build/go2_robot', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/giovanna/argo_go2_ws/install/go2_robot', 'merge_install': False, 'path': '/home/giovanna/argo_go2_ws/src/go2_robot', 'symlink_install': True, 'test_result_base': None}
+[0.332s] Level 5:colcon.colcon_core.verb:set package 'go2_bringup' build argument 'cmake_args' from command line to 'None'
+[0.332s] Level 5:colcon.colcon_core.verb:set package 'go2_bringup' build argument 'cmake_target' from command line to 'None'
+[0.332s] Level 5:colcon.colcon_core.verb:set package 'go2_bringup' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.332s] Level 5:colcon.colcon_core.verb:set package 'go2_bringup' build argument 'cmake_clean_cache' from command line to 'False'
+[0.332s] Level 5:colcon.colcon_core.verb:set package 'go2_bringup' build argument 'cmake_clean_first' from command line to 'False'
+[0.332s] Level 5:colcon.colcon_core.verb:set package 'go2_bringup' build argument 'cmake_force_configure' from command line to 'False'
+[0.332s] Level 5:colcon.colcon_core.verb:set package 'go2_bringup' build argument 'ament_cmake_args' from command line to 'None'
+[0.332s] Level 5:colcon.colcon_core.verb:set package 'go2_bringup' build argument 'catkin_cmake_args' from command line to 'None'
+[0.332s] Level 5:colcon.colcon_core.verb:set package 'go2_bringup' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.332s] DEBUG:colcon.colcon_core.verb:Building package 'go2_bringup' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/giovanna/argo_go2_ws/build/go2_bringup', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/giovanna/argo_go2_ws/install/go2_bringup', 'merge_install': False, 'path': '/home/giovanna/argo_go2_ws/src/go2_bringup', 'symlink_install': True, 'test_result_base': None}
+[0.332s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.333s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.333s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/giovanna/argo_go2_ws/src/go2_description' with build type 'ament_cmake'
+[0.333s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/giovanna/argo_go2_ws/src/go2_description'
+[0.335s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.335s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.335s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.339s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/giovanna/argo_go2_ws/src/go2_interfaces' with build type 'ament_cmake'
+[0.339s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/giovanna/argo_go2_ws/src/go2_interfaces'
+[0.340s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.340s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.343s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/giovanna/argo_go2_ws/src/unitree_api' with build type 'ament_cmake'
+[0.344s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/giovanna/argo_go2_ws/src/unitree_api'
+[0.344s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.344s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.348s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/giovanna/argo_go2_ws/src/unitree_go' with build type 'ament_cmake'
+[0.348s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/giovanna/argo_go2_ws/src/unitree_go'
+[0.348s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.348s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.353s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/giovanna/argo_go2_ws/src/go2_rviz' with build type 'ament_cmake'
+[0.353s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/giovanna/argo_go2_ws/src/go2_rviz'
+[0.353s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.353s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.357s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/giovanna/argo_go2_ws/src/go2_hardware' with build type 'ament_cmake'
+[0.357s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/giovanna/argo_go2_ws/src/go2_hardware'
+[0.358s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.358s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.365s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/giovanna/argo_go2_ws/src/go2_nav' with build type 'ament_cmake'
+[0.365s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/giovanna/argo_go2_ws/src/go2_nav'
+[0.366s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.366s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.372s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/giovanna/argo_go2_ws/src/go2_simulation' with build type 'ament_cmake'
+[0.372s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/giovanna/argo_go2_ws/src/go2_simulation'
+[0.373s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.373s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.376s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/giovanna/argo_go2_ws/src/hesai_ros_driver' with build type 'ament_cmake'
+[0.376s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/giovanna/argo_go2_ws/src/hesai_ros_driver'
+[0.377s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.377s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.387s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/giovanna/argo_go2_ws/build/go2_description': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/giovanna/argo_go2_ws/build/go2_description -- -j16 -l16
+[0.391s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/giovanna/argo_go2_ws/build/go2_interfaces': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/giovanna/argo_go2_ws/build/go2_interfaces -- -j16 -l16
+[0.396s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/giovanna/argo_go2_ws/build/unitree_api': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/giovanna/argo_go2_ws/build/unitree_api -- -j16 -l16
+[0.401s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/giovanna/argo_go2_ws/build/unitree_go': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/giovanna/argo_go2_ws/build/unitree_go -- -j16 -l16
+[0.407s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/giovanna/argo_go2_ws/build/go2_rviz': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/giovanna/argo_go2_ws/build/go2_rviz -- -j16 -l16
+[0.414s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/giovanna/argo_go2_ws/build/go2_hardware': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/giovanna/argo_go2_ws/build/go2_hardware -- -j16 -l16
+[0.419s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/giovanna/argo_go2_ws/build/go2_nav': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/giovanna/argo_go2_ws/build/go2_nav -- -j16 -l16
+[0.424s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/giovanna/argo_go2_ws/build/go2_simulation': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/giovanna/argo_go2_ws/build/go2_simulation -- -j16 -l16
+[0.432s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/giovanna/argo_go2_ws/build/hesai_ros_driver': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/giovanna/argo_go2_ws/src/hesai_ros_driver -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/giovanna/argo_go2_ws/install/hesai_ros_driver
+[0.801s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/giovanna/argo_go2_ws/build/go2_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/giovanna/argo_go2_ws/build/go2_description -- -j16 -l16
+[0.829s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/giovanna/argo_go2_ws/build/go2_description': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/giovanna/argo_go2_ws/build/go2_description
+[0.833s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/giovanna/argo_go2_ws/build/go2_rviz' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/giovanna/argo_go2_ws/build/go2_rviz -- -j16 -l16
+[0.837s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/giovanna/argo_go2_ws/build/go2_rviz': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/giovanna/argo_go2_ws/build/go2_rviz
+[0.841s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/giovanna/argo_go2_ws/build/go2_hardware' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/giovanna/argo_go2_ws/build/go2_hardware -- -j16 -l16
+[0.850s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/giovanna/argo_go2_ws/build/go2_hardware': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/giovanna/argo_go2_ws/build/go2_hardware
+[0.862s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/giovanna/argo_go2_ws/build/go2_nav' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/giovanna/argo_go2_ws/build/go2_nav -- -j16 -l16
+[0.869s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/giovanna/argo_go2_ws/build/go2_nav': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/giovanna/argo_go2_ws/build/go2_nav
+[0.876s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(go2_description)
+[0.879s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/giovanna/argo_go2_ws/build/go2_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/giovanna/argo_go2_ws/build/go2_description
+[0.882s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_description' for CMake module files
+[0.883s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_description' for CMake config files
+[0.884s] Level 1:colcon.colcon_core.shell:create_environment_hook('go2_description', 'cmake_prefix_path')
+[0.884s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/giovanna/argo_go2_ws/install/go2_description/share/go2_description/hook/cmake_prefix_path.ps1'
+[0.886s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/giovanna/argo_go2_ws/install/go2_description/share/go2_description/hook/cmake_prefix_path.dsv'
+[0.887s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/giovanna/argo_go2_ws/install/go2_description/share/go2_description/hook/cmake_prefix_path.sh'
+[0.889s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_description/bin'
+[0.889s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_description/lib/pkgconfig/go2_description.pc'
+[0.890s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_description/lib/python3.8/site-packages'
+[0.890s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_description/bin'
+[0.891s] INFO:colcon.colcon_core.shell:Creating package script '/home/giovanna/argo_go2_ws/install/go2_description/share/go2_description/package.ps1'
+[0.893s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/giovanna/argo_go2_ws/install/go2_description/share/go2_description/package.dsv'
+[0.895s] INFO:colcon.colcon_core.shell:Creating package script '/home/giovanna/argo_go2_ws/install/go2_description/share/go2_description/package.sh'
+[0.897s] INFO:colcon.colcon_core.shell:Creating package script '/home/giovanna/argo_go2_ws/install/go2_description/share/go2_description/package.bash'
+[0.899s] INFO:colcon.colcon_core.shell:Creating package script '/home/giovanna/argo_go2_ws/install/go2_description/share/go2_description/package.zsh'
+[0.901s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/giovanna/argo_go2_ws/install/go2_description/share/colcon-core/packages/go2_description)
+[0.902s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(go2_description)
+[0.902s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_description' for CMake module files
+[0.903s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_description' for CMake config files
+[0.904s] Level 1:colcon.colcon_core.shell:create_environment_hook('go2_description', 'cmake_prefix_path')
+[0.904s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/giovanna/argo_go2_ws/install/go2_description/share/go2_description/hook/cmake_prefix_path.ps1'
+[0.905s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/giovanna/argo_go2_ws/install/go2_description/share/go2_description/hook/cmake_prefix_path.dsv'
+[0.905s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/giovanna/argo_go2_ws/install/go2_description/share/go2_description/hook/cmake_prefix_path.sh'
+[0.906s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_description/bin'
+[0.906s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_description/lib/pkgconfig/go2_description.pc'
+[0.907s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_description/lib/python3.8/site-packages'
+[0.907s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_description/bin'
+[0.907s] INFO:colcon.colcon_core.shell:Creating package script '/home/giovanna/argo_go2_ws/install/go2_description/share/go2_description/package.ps1'
+[0.909s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/giovanna/argo_go2_ws/install/go2_description/share/go2_description/package.dsv'
+[0.910s] INFO:colcon.colcon_core.shell:Creating package script '/home/giovanna/argo_go2_ws/install/go2_description/share/go2_description/package.sh'
+[0.911s] INFO:colcon.colcon_core.shell:Creating package script '/home/giovanna/argo_go2_ws/install/go2_description/share/go2_description/package.bash'
+[0.911s] INFO:colcon.colcon_core.shell:Creating package script '/home/giovanna/argo_go2_ws/install/go2_description/share/go2_description/package.zsh'
+[0.912s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/giovanna/argo_go2_ws/install/go2_description/share/colcon-core/packages/go2_description)
+[0.914s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/giovanna/argo_go2_ws/src/go2_robot' with build type 'ament_cmake'
+[0.914s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/giovanna/argo_go2_ws/src/go2_robot'
+[0.914s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.915s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.940s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(go2_rviz)
+[0.941s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_rviz' for CMake module files
+[0.943s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/giovanna/argo_go2_ws/build/go2_rviz' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/giovanna/argo_go2_ws/build/go2_rviz
+[0.943s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_rviz' for CMake config files
+[0.944s] Level 1:colcon.colcon_core.shell:create_environment_hook('go2_rviz', 'cmake_prefix_path')
+[0.944s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/giovanna/argo_go2_ws/install/go2_rviz/share/go2_rviz/hook/cmake_prefix_path.ps1'
+[0.946s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/giovanna/argo_go2_ws/install/go2_rviz/share/go2_rviz/hook/cmake_prefix_path.dsv'
+[0.946s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/giovanna/argo_go2_ws/install/go2_rviz/share/go2_rviz/hook/cmake_prefix_path.sh'
+[0.947s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_rviz/bin'
+[0.947s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_rviz/lib/pkgconfig/go2_rviz.pc'
+[0.948s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_rviz/lib/python3.8/site-packages'
+[0.948s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_rviz/bin'
+[0.949s] INFO:colcon.colcon_core.shell:Creating package script '/home/giovanna/argo_go2_ws/install/go2_rviz/share/go2_rviz/package.ps1'
+[0.950s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/giovanna/argo_go2_ws/install/go2_rviz/share/go2_rviz/package.dsv'
+[0.950s] INFO:colcon.colcon_core.shell:Creating package script '/home/giovanna/argo_go2_ws/install/go2_rviz/share/go2_rviz/package.sh'
+[0.951s] INFO:colcon.colcon_core.shell:Creating package script '/home/giovanna/argo_go2_ws/install/go2_rviz/share/go2_rviz/package.bash'
+[0.951s] INFO:colcon.colcon_core.shell:Creating package script '/home/giovanna/argo_go2_ws/install/go2_rviz/share/go2_rviz/package.zsh'
+[0.952s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/giovanna/argo_go2_ws/install/go2_rviz/share/colcon-core/packages/go2_rviz)
+[0.953s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(go2_rviz)
+[0.953s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_rviz' for CMake module files
+[0.953s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_rviz' for CMake config files
+[0.954s] Level 1:colcon.colcon_core.shell:create_environment_hook('go2_rviz', 'cmake_prefix_path')
+[0.954s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/giovanna/argo_go2_ws/install/go2_rviz/share/go2_rviz/hook/cmake_prefix_path.ps1'
+[0.955s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/giovanna/argo_go2_ws/install/go2_rviz/share/go2_rviz/hook/cmake_prefix_path.dsv'
+[0.955s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/giovanna/argo_go2_ws/install/go2_rviz/share/go2_rviz/hook/cmake_prefix_path.sh'
+[0.956s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_rviz/bin'
+[0.957s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_rviz/lib/pkgconfig/go2_rviz.pc'
+[0.957s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_rviz/lib/python3.8/site-packages'
+[0.957s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_rviz/bin'
+[0.958s] INFO:colcon.colcon_core.shell:Creating package script '/home/giovanna/argo_go2_ws/install/go2_rviz/share/go2_rviz/package.ps1'
+[0.959s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/giovanna/argo_go2_ws/install/go2_rviz/share/go2_rviz/package.dsv'
+[0.960s] INFO:colcon.colcon_core.shell:Creating package script '/home/giovanna/argo_go2_ws/install/go2_rviz/share/go2_rviz/package.sh'
+[0.960s] INFO:colcon.colcon_core.shell:Creating package script '/home/giovanna/argo_go2_ws/install/go2_rviz/share/go2_rviz/package.bash'
+[0.961s] INFO:colcon.colcon_core.shell:Creating package script '/home/giovanna/argo_go2_ws/install/go2_rviz/share/go2_rviz/package.zsh'
+[0.961s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/giovanna/argo_go2_ws/install/go2_rviz/share/colcon-core/packages/go2_rviz)
+[0.962s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(go2_nav)
+[0.962s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_nav' for CMake module files
+[0.964s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_nav' for CMake config files
+[0.964s] Level 1:colcon.colcon_core.shell:create_environment_hook('go2_nav', 'cmake_prefix_path')
+[0.965s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/giovanna/argo_go2_ws/install/go2_nav/share/go2_nav/hook/cmake_prefix_path.ps1'
+[0.965s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/giovanna/argo_go2_ws/install/go2_nav/share/go2_nav/hook/cmake_prefix_path.dsv'
+[0.966s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/giovanna/argo_go2_ws/install/go2_nav/share/go2_nav/hook/cmake_prefix_path.sh'
+[0.967s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_nav/bin'
+[0.967s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_nav/lib/pkgconfig/go2_nav.pc'
+[0.967s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_nav/lib/python3.8/site-packages'
+[0.967s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_nav/bin'
+[0.968s] INFO:colcon.colcon_core.shell:Creating package script '/home/giovanna/argo_go2_ws/install/go2_nav/share/go2_nav/package.ps1'
+[0.969s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/giovanna/argo_go2_ws/install/go2_nav/share/go2_nav/package.dsv'
+[0.970s] INFO:colcon.colcon_core.shell:Creating package script '/home/giovanna/argo_go2_ws/install/go2_nav/share/go2_nav/package.sh'
+[0.971s] INFO:colcon.colcon_core.shell:Creating package script '/home/giovanna/argo_go2_ws/install/go2_nav/share/go2_nav/package.bash'
+[0.971s] INFO:colcon.colcon_core.shell:Creating package script '/home/giovanna/argo_go2_ws/install/go2_nav/share/go2_nav/package.zsh'
+[0.972s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/giovanna/argo_go2_ws/install/go2_nav/share/colcon-core/packages/go2_nav)
+[0.973s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(go2_nav)
+[0.973s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_nav' for CMake module files
+[0.974s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_nav' for CMake config files
+[0.974s] Level 1:colcon.colcon_core.shell:create_environment_hook('go2_nav', 'cmake_prefix_path')
+[0.975s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/giovanna/argo_go2_ws/install/go2_nav/share/go2_nav/hook/cmake_prefix_path.ps1'
+[0.975s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/giovanna/argo_go2_ws/install/go2_nav/share/go2_nav/hook/cmake_prefix_path.dsv'
+[0.976s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/giovanna/argo_go2_ws/install/go2_nav/share/go2_nav/hook/cmake_prefix_path.sh'
+[0.977s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_nav/bin'
+[0.977s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_nav/lib/pkgconfig/go2_nav.pc'
+[0.977s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_nav/lib/python3.8/site-packages'
+[0.978s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_nav/bin'
+[0.978s] INFO:colcon.colcon_core.shell:Creating package script '/home/giovanna/argo_go2_ws/install/go2_nav/share/go2_nav/package.ps1'
+[0.979s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/giovanna/argo_go2_ws/install/go2_nav/share/go2_nav/package.dsv'
+[0.980s] INFO:colcon.colcon_core.shell:Creating package script '/home/giovanna/argo_go2_ws/install/go2_nav/share/go2_nav/package.sh'
+[0.981s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/giovanna/argo_go2_ws/build/go2_nav' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/giovanna/argo_go2_ws/build/go2_nav
+[0.981s] INFO:colcon.colcon_core.shell:Creating package script '/home/giovanna/argo_go2_ws/install/go2_nav/share/go2_nav/package.bash'
+[0.982s] INFO:colcon.colcon_core.shell:Creating package script '/home/giovanna/argo_go2_ws/install/go2_nav/share/go2_nav/package.zsh'
+[0.982s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/giovanna/argo_go2_ws/install/go2_nav/share/colcon-core/packages/go2_nav)
+[0.983s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(go2_hardware)
+[0.983s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_hardware' for CMake module files
+[0.984s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_hardware' for CMake config files
+[0.985s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/giovanna/argo_go2_ws/build/go2_hardware' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/giovanna/argo_go2_ws/build/go2_hardware
+[0.986s] Level 1:colcon.colcon_core.shell:create_environment_hook('go2_hardware', 'cmake_prefix_path')
+[0.986s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/giovanna/argo_go2_ws/install/go2_hardware/share/go2_hardware/hook/cmake_prefix_path.ps1'
+[0.987s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/giovanna/argo_go2_ws/install/go2_hardware/share/go2_hardware/hook/cmake_prefix_path.dsv'
+[0.987s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/giovanna/argo_go2_ws/install/go2_hardware/share/go2_hardware/hook/cmake_prefix_path.sh'
+[0.988s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_hardware/bin'
+[0.988s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_hardware/lib/pkgconfig/go2_hardware.pc'
+[0.988s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_hardware/lib/python3.8/site-packages'
+[0.989s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_hardware/bin'
+[0.989s] INFO:colcon.colcon_core.shell:Creating package script '/home/giovanna/argo_go2_ws/install/go2_hardware/share/go2_hardware/package.ps1'
+[0.990s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/giovanna/argo_go2_ws/install/go2_hardware/share/go2_hardware/package.dsv'
+[0.991s] INFO:colcon.colcon_core.shell:Creating package script '/home/giovanna/argo_go2_ws/install/go2_hardware/share/go2_hardware/package.sh'
+[0.991s] INFO:colcon.colcon_core.shell:Creating package script '/home/giovanna/argo_go2_ws/install/go2_hardware/share/go2_hardware/package.bash'
+[0.992s] INFO:colcon.colcon_core.shell:Creating package script '/home/giovanna/argo_go2_ws/install/go2_hardware/share/go2_hardware/package.zsh'
+[0.992s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/giovanna/argo_go2_ws/install/go2_hardware/share/colcon-core/packages/go2_hardware)
+[0.994s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(go2_hardware)
+[0.995s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_hardware' for CMake module files
+[0.996s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_hardware' for CMake config files
+[0.996s] Level 1:colcon.colcon_core.shell:create_environment_hook('go2_hardware', 'cmake_prefix_path')
+[0.997s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/giovanna/argo_go2_ws/install/go2_hardware/share/go2_hardware/hook/cmake_prefix_path.ps1'
+[0.997s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/giovanna/argo_go2_ws/install/go2_hardware/share/go2_hardware/hook/cmake_prefix_path.dsv'
+[0.998s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/giovanna/argo_go2_ws/install/go2_hardware/share/go2_hardware/hook/cmake_prefix_path.sh'
+[0.999s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_hardware/bin'
+[0.999s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_hardware/lib/pkgconfig/go2_hardware.pc'
+[0.999s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_hardware/lib/python3.8/site-packages'
+[1.000s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_hardware/bin'
+[1.000s] INFO:colcon.colcon_core.shell:Creating package script '/home/giovanna/argo_go2_ws/install/go2_hardware/share/go2_hardware/package.ps1'
+[1.001s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/giovanna/argo_go2_ws/install/go2_hardware/share/go2_hardware/package.dsv'
+[1.002s] INFO:colcon.colcon_core.shell:Creating package script '/home/giovanna/argo_go2_ws/install/go2_hardware/share/go2_hardware/package.sh'
+[1.003s] INFO:colcon.colcon_core.shell:Creating package script '/home/giovanna/argo_go2_ws/install/go2_hardware/share/go2_hardware/package.bash'
+[1.003s] INFO:colcon.colcon_core.shell:Creating package script '/home/giovanna/argo_go2_ws/install/go2_hardware/share/go2_hardware/package.zsh'
+[1.004s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/giovanna/argo_go2_ws/install/go2_hardware/share/colcon-core/packages/go2_hardware)
+[1.007s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/giovanna/argo_go2_ws/build/go2_simulation' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/giovanna/argo_go2_ws/build/go2_simulation -- -j16 -l16
+[1.008s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/giovanna/argo_go2_ws/build/go2_simulation': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/giovanna/argo_go2_ws/build/go2_simulation
+[1.027s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/giovanna/argo_go2_ws/build/go2_robot': AMENT_PREFIX_PATH=/home/giovanna/argo_go2_ws/install/go2_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/giovanna/argo_go2_ws/install/go2_description:/opt/ros/foxy /usr/bin/cmake --build /home/giovanna/argo_go2_ws/build/go2_robot -- -j16 -l16
+[1.062s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(go2_simulation)
+[1.063s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_simulation' for CMake module files
+[1.064s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/giovanna/argo_go2_ws/build/go2_simulation' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/giovanna/argo_go2_ws/build/go2_simulation
+[1.064s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_simulation' for CMake config files
+[1.065s] Level 1:colcon.colcon_core.shell:create_environment_hook('go2_simulation', 'cmake_prefix_path')
+[1.067s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/giovanna/argo_go2_ws/install/go2_simulation/share/go2_simulation/hook/cmake_prefix_path.ps1'
+[1.068s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/giovanna/argo_go2_ws/install/go2_simulation/share/go2_simulation/hook/cmake_prefix_path.dsv'
+[1.068s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/giovanna/argo_go2_ws/install/go2_simulation/share/go2_simulation/hook/cmake_prefix_path.sh'
+[1.069s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_simulation/bin'
+[1.069s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_simulation/lib/pkgconfig/go2_simulation.pc'
+[1.070s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_simulation/lib/python3.8/site-packages'
+[1.070s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_simulation/bin'
+[1.071s] INFO:colcon.colcon_core.shell:Creating package script '/home/giovanna/argo_go2_ws/install/go2_simulation/share/go2_simulation/package.ps1'
+[1.071s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/giovanna/argo_go2_ws/install/go2_simulation/share/go2_simulation/package.dsv'
+[1.072s] INFO:colcon.colcon_core.shell:Creating package script '/home/giovanna/argo_go2_ws/install/go2_simulation/share/go2_simulation/package.sh'
+[1.072s] INFO:colcon.colcon_core.shell:Creating package script '/home/giovanna/argo_go2_ws/install/go2_simulation/share/go2_simulation/package.bash'
+[1.073s] INFO:colcon.colcon_core.shell:Creating package script '/home/giovanna/argo_go2_ws/install/go2_simulation/share/go2_simulation/package.zsh'
+[1.073s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/giovanna/argo_go2_ws/install/go2_simulation/share/colcon-core/packages/go2_simulation)
+[1.074s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(go2_simulation)
+[1.075s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_simulation' for CMake module files
+[1.076s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_simulation' for CMake config files
+[1.076s] Level 1:colcon.colcon_core.shell:create_environment_hook('go2_simulation', 'cmake_prefix_path')
+[1.076s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/giovanna/argo_go2_ws/install/go2_simulation/share/go2_simulation/hook/cmake_prefix_path.ps1'
+[1.077s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/giovanna/argo_go2_ws/install/go2_simulation/share/go2_simulation/hook/cmake_prefix_path.dsv'
+[1.077s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/giovanna/argo_go2_ws/install/go2_simulation/share/go2_simulation/hook/cmake_prefix_path.sh'
+[1.078s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_simulation/bin'
+[1.078s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_simulation/lib/pkgconfig/go2_simulation.pc'
+[1.078s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_simulation/lib/python3.8/site-packages'
+[1.079s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_simulation/bin'
+[1.079s] INFO:colcon.colcon_core.shell:Creating package script '/home/giovanna/argo_go2_ws/install/go2_simulation/share/go2_simulation/package.ps1'
+[1.079s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/giovanna/argo_go2_ws/install/go2_simulation/share/go2_simulation/package.dsv'
+[1.080s] INFO:colcon.colcon_core.shell:Creating package script '/home/giovanna/argo_go2_ws/install/go2_simulation/share/go2_simulation/package.sh'
+[1.081s] INFO:colcon.colcon_core.shell:Creating package script '/home/giovanna/argo_go2_ws/install/go2_simulation/share/go2_simulation/package.bash'
+[1.081s] INFO:colcon.colcon_core.shell:Creating package script '/home/giovanna/argo_go2_ws/install/go2_simulation/share/go2_simulation/package.zsh'
+[1.082s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/giovanna/argo_go2_ws/install/go2_simulation/share/colcon-core/packages/go2_simulation)
+[1.392s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/giovanna/argo_go2_ws/build/go2_robot' returned '0': AMENT_PREFIX_PATH=/home/giovanna/argo_go2_ws/install/go2_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/giovanna/argo_go2_ws/install/go2_description:/opt/ros/foxy /usr/bin/cmake --build /home/giovanna/argo_go2_ws/build/go2_robot -- -j16 -l16
+[1.396s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/giovanna/argo_go2_ws/build/go2_robot': AMENT_PREFIX_PATH=/home/giovanna/argo_go2_ws/install/go2_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/giovanna/argo_go2_ws/install/go2_description:/opt/ros/foxy /usr/bin/cmake --install /home/giovanna/argo_go2_ws/build/go2_robot
+[1.426s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(go2_robot)
+[1.427s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_robot' for CMake module files
+[1.427s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/giovanna/argo_go2_ws/build/go2_robot' returned '0': AMENT_PREFIX_PATH=/home/giovanna/argo_go2_ws/install/go2_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/giovanna/argo_go2_ws/install/go2_description:/opt/ros/foxy /usr/bin/cmake --install /home/giovanna/argo_go2_ws/build/go2_robot
+[1.428s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_robot' for CMake config files
+[1.428s] Level 1:colcon.colcon_core.shell:create_environment_hook('go2_robot', 'cmake_prefix_path')
+[1.429s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/giovanna/argo_go2_ws/install/go2_robot/share/go2_robot/hook/cmake_prefix_path.ps1'
+[1.429s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/giovanna/argo_go2_ws/install/go2_robot/share/go2_robot/hook/cmake_prefix_path.dsv'
+[1.430s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/giovanna/argo_go2_ws/install/go2_robot/share/go2_robot/hook/cmake_prefix_path.sh'
+[1.430s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_robot/bin'
+[1.430s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_robot/lib/pkgconfig/go2_robot.pc'
+[1.431s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_robot/lib/python3.8/site-packages'
+[1.431s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_robot/bin'
+[1.431s] INFO:colcon.colcon_core.shell:Creating package script '/home/giovanna/argo_go2_ws/install/go2_robot/share/go2_robot/package.ps1'
+[1.432s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/giovanna/argo_go2_ws/install/go2_robot/share/go2_robot/package.dsv'
+[1.432s] INFO:colcon.colcon_core.shell:Creating package script '/home/giovanna/argo_go2_ws/install/go2_robot/share/go2_robot/package.sh'
+[1.433s] INFO:colcon.colcon_core.shell:Creating package script '/home/giovanna/argo_go2_ws/install/go2_robot/share/go2_robot/package.bash'
+[1.433s] INFO:colcon.colcon_core.shell:Creating package script '/home/giovanna/argo_go2_ws/install/go2_robot/share/go2_robot/package.zsh'
+[1.434s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/giovanna/argo_go2_ws/install/go2_robot/share/colcon-core/packages/go2_robot)
+[1.434s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(go2_robot)
+[1.434s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_robot' for CMake module files
+[1.435s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_robot' for CMake config files
+[1.435s] Level 1:colcon.colcon_core.shell:create_environment_hook('go2_robot', 'cmake_prefix_path')
+[1.435s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/giovanna/argo_go2_ws/install/go2_robot/share/go2_robot/hook/cmake_prefix_path.ps1'
+[1.436s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/giovanna/argo_go2_ws/install/go2_robot/share/go2_robot/hook/cmake_prefix_path.dsv'
+[1.436s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/giovanna/argo_go2_ws/install/go2_robot/share/go2_robot/hook/cmake_prefix_path.sh'
+[1.437s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_robot/bin'
+[1.437s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_robot/lib/pkgconfig/go2_robot.pc'
+[1.437s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_robot/lib/python3.8/site-packages'
+[1.438s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_robot/bin'
+[1.438s] INFO:colcon.colcon_core.shell:Creating package script '/home/giovanna/argo_go2_ws/install/go2_robot/share/go2_robot/package.ps1'
+[1.439s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/giovanna/argo_go2_ws/install/go2_robot/share/go2_robot/package.dsv'
+[1.439s] INFO:colcon.colcon_core.shell:Creating package script '/home/giovanna/argo_go2_ws/install/go2_robot/share/go2_robot/package.sh'
+[1.440s] INFO:colcon.colcon_core.shell:Creating package script '/home/giovanna/argo_go2_ws/install/go2_robot/share/go2_robot/package.bash'
+[1.440s] INFO:colcon.colcon_core.shell:Creating package script '/home/giovanna/argo_go2_ws/install/go2_robot/share/go2_robot/package.zsh'
+[1.441s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/giovanna/argo_go2_ws/install/go2_robot/share/colcon-core/packages/go2_robot)
+[1.774s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/giovanna/argo_go2_ws/build/go2_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/giovanna/argo_go2_ws/build/go2_interfaces -- -j16 -l16
+[1.779s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/giovanna/argo_go2_ws/build/go2_interfaces': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/giovanna/argo_go2_ws/build/go2_interfaces
+[1.893s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(go2_interfaces)
+[1.894s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_interfaces' for CMake module files
+[1.894s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/giovanna/argo_go2_ws/build/go2_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/giovanna/argo_go2_ws/build/go2_interfaces
+[1.895s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_interfaces' for CMake config files
+[1.896s] Level 1:colcon.colcon_core.shell:create_environment_hook('go2_interfaces', 'cmake_prefix_path')
+[1.897s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/hook/cmake_prefix_path.ps1'
+[1.898s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/hook/cmake_prefix_path.dsv'
+[1.898s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/hook/cmake_prefix_path.sh'
+[1.899s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_interfaces/lib'
+[1.899s] Level 1:colcon.colcon_core.shell:create_environment_hook('go2_interfaces', 'ld_library_path_lib')
+[1.900s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/hook/ld_library_path_lib.ps1'
+[1.900s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/hook/ld_library_path_lib.dsv'
+[1.901s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/hook/ld_library_path_lib.sh'
+[1.901s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_interfaces/bin'
+[1.901s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_interfaces/lib/pkgconfig/go2_interfaces.pc'
+[1.902s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_interfaces/lib/python3.8/site-packages'
+[1.902s] Level 1:colcon.colcon_core.shell:create_environment_hook('go2_interfaces', 'pythonpath')
+[1.902s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/hook/pythonpath.ps1'
+[1.902s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/hook/pythonpath.dsv'
+[1.903s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/hook/pythonpath.sh'
+[1.903s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_interfaces/bin'
+[1.904s] INFO:colcon.colcon_core.shell:Creating package script '/home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/package.ps1'
+[1.905s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/package.dsv'
+[1.905s] INFO:colcon.colcon_core.shell:Creating package script '/home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/package.sh'
+[1.906s] INFO:colcon.colcon_core.shell:Creating package script '/home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/package.bash'
+[1.906s] INFO:colcon.colcon_core.shell:Creating package script '/home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/package.zsh'
+[1.906s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/giovanna/argo_go2_ws/install/go2_interfaces/share/colcon-core/packages/go2_interfaces)
+[1.907s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(go2_interfaces)
+[1.907s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_interfaces' for CMake module files
+[1.908s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_interfaces' for CMake config files
+[1.910s] Level 1:colcon.colcon_core.shell:create_environment_hook('go2_interfaces', 'cmake_prefix_path')
+[1.910s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/hook/cmake_prefix_path.ps1'
+[1.911s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/hook/cmake_prefix_path.dsv'
+[1.911s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/hook/cmake_prefix_path.sh'
+[1.912s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_interfaces/lib'
+[1.912s] Level 1:colcon.colcon_core.shell:create_environment_hook('go2_interfaces', 'ld_library_path_lib')
+[1.912s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/hook/ld_library_path_lib.ps1'
+[1.913s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/hook/ld_library_path_lib.dsv'
+[1.913s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/hook/ld_library_path_lib.sh'
+[1.913s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_interfaces/bin'
+[1.913s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_interfaces/lib/pkgconfig/go2_interfaces.pc'
+[1.914s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_interfaces/lib/python3.8/site-packages'
+[1.914s] Level 1:colcon.colcon_core.shell:create_environment_hook('go2_interfaces', 'pythonpath')
+[1.914s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/hook/pythonpath.ps1'
+[1.914s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/hook/pythonpath.dsv'
+[1.915s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/hook/pythonpath.sh'
+[1.915s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_interfaces/bin'
+[1.916s] INFO:colcon.colcon_core.shell:Creating package script '/home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/package.ps1'
+[1.916s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/package.dsv'
+[1.917s] INFO:colcon.colcon_core.shell:Creating package script '/home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/package.sh'
+[1.918s] INFO:colcon.colcon_core.shell:Creating package script '/home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/package.bash'
+[1.918s] INFO:colcon.colcon_core.shell:Creating package script '/home/giovanna/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/package.zsh'
+[1.918s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/giovanna/argo_go2_ws/install/go2_interfaces/share/colcon-core/packages/go2_interfaces)
+[2.091s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/giovanna/argo_go2_ws/build/unitree_api' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/giovanna/argo_go2_ws/build/unitree_api -- -j16 -l16
+[2.095s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/giovanna/argo_go2_ws/build/unitree_api': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/giovanna/argo_go2_ws/build/unitree_api
+[2.110s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/giovanna/argo_go2_ws/build/hesai_ros_driver' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/giovanna/argo_go2_ws/src/hesai_ros_driver -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/giovanna/argo_go2_ws/install/hesai_ros_driver
+[2.114s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/giovanna/argo_go2_ws/build/hesai_ros_driver': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/giovanna/argo_go2_ws/build/hesai_ros_driver -- -j16 -l16
+[2.213s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(unitree_api)
+[2.214s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/unitree_api' for CMake module files
+[2.215s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/unitree_api' for CMake config files
+[2.218s] Level 1:colcon.colcon_core.shell:create_environment_hook('unitree_api', 'cmake_prefix_path')
+[2.218s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/giovanna/argo_go2_ws/install/unitree_api/share/unitree_api/hook/cmake_prefix_path.ps1'
+[2.219s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/giovanna/argo_go2_ws/install/unitree_api/share/unitree_api/hook/cmake_prefix_path.dsv'
+[2.220s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/giovanna/argo_go2_ws/build/unitree_api' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/giovanna/argo_go2_ws/build/unitree_api
+[2.220s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/giovanna/argo_go2_ws/install/unitree_api/share/unitree_api/hook/cmake_prefix_path.sh'
+[2.221s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/unitree_api/lib'
+[2.221s] Level 1:colcon.colcon_core.shell:create_environment_hook('unitree_api', 'ld_library_path_lib')
+[2.222s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/giovanna/argo_go2_ws/install/unitree_api/share/unitree_api/hook/ld_library_path_lib.ps1'
+[2.222s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/giovanna/argo_go2_ws/install/unitree_api/share/unitree_api/hook/ld_library_path_lib.dsv'
+[2.223s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/giovanna/argo_go2_ws/install/unitree_api/share/unitree_api/hook/ld_library_path_lib.sh'
+[2.224s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/unitree_api/bin'
+[2.224s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/unitree_api/lib/pkgconfig/unitree_api.pc'
+[2.224s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/unitree_api/lib/python3.8/site-packages'
+[2.224s] Level 1:colcon.colcon_core.shell:create_environment_hook('unitree_api', 'pythonpath')
+[2.225s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/giovanna/argo_go2_ws/install/unitree_api/share/unitree_api/hook/pythonpath.ps1'
+[2.225s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/giovanna/argo_go2_ws/install/unitree_api/share/unitree_api/hook/pythonpath.dsv'
+[2.226s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/giovanna/argo_go2_ws/install/unitree_api/share/unitree_api/hook/pythonpath.sh'
+[2.227s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/unitree_api/bin'
+[2.228s] INFO:colcon.colcon_core.shell:Creating package script '/home/giovanna/argo_go2_ws/install/unitree_api/share/unitree_api/package.ps1'
+[2.229s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/giovanna/argo_go2_ws/install/unitree_api/share/unitree_api/package.dsv'
+[2.230s] INFO:colcon.colcon_core.shell:Creating package script '/home/giovanna/argo_go2_ws/install/unitree_api/share/unitree_api/package.sh'
+[2.230s] INFO:colcon.colcon_core.shell:Creating package script '/home/giovanna/argo_go2_ws/install/unitree_api/share/unitree_api/package.bash'
+[2.231s] INFO:colcon.colcon_core.shell:Creating package script '/home/giovanna/argo_go2_ws/install/unitree_api/share/unitree_api/package.zsh'
+[2.232s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/giovanna/argo_go2_ws/install/unitree_api/share/colcon-core/packages/unitree_api)
+[2.233s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(unitree_api)
+[2.233s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/unitree_api' for CMake module files
+[2.234s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/unitree_api' for CMake config files
+[2.237s] Level 1:colcon.colcon_core.shell:create_environment_hook('unitree_api', 'cmake_prefix_path')
+[2.237s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/giovanna/argo_go2_ws/install/unitree_api/share/unitree_api/hook/cmake_prefix_path.ps1'
+[2.238s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/giovanna/argo_go2_ws/install/unitree_api/share/unitree_api/hook/cmake_prefix_path.dsv'
+[2.239s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/giovanna/argo_go2_ws/install/unitree_api/share/unitree_api/hook/cmake_prefix_path.sh'
+[2.240s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/unitree_api/lib'
+[2.241s] Level 1:colcon.colcon_core.shell:create_environment_hook('unitree_api', 'ld_library_path_lib')
+[2.241s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/giovanna/argo_go2_ws/install/unitree_api/share/unitree_api/hook/ld_library_path_lib.ps1'
+[2.242s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/giovanna/argo_go2_ws/install/unitree_api/share/unitree_api/hook/ld_library_path_lib.dsv'
+[2.242s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/giovanna/argo_go2_ws/install/unitree_api/share/unitree_api/hook/ld_library_path_lib.sh'
+[2.243s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/unitree_api/bin'
+[2.243s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/unitree_api/lib/pkgconfig/unitree_api.pc'
+[2.243s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/unitree_api/lib/python3.8/site-packages'
+[2.243s] Level 1:colcon.colcon_core.shell:create_environment_hook('unitree_api', 'pythonpath')
+[2.244s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/giovanna/argo_go2_ws/install/unitree_api/share/unitree_api/hook/pythonpath.ps1'
+[2.244s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/giovanna/argo_go2_ws/install/unitree_api/share/unitree_api/hook/pythonpath.dsv'
+[2.245s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/giovanna/argo_go2_ws/install/unitree_api/share/unitree_api/hook/pythonpath.sh'
+[2.246s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/unitree_api/bin'
+[2.247s] INFO:colcon.colcon_core.shell:Creating package script '/home/giovanna/argo_go2_ws/install/unitree_api/share/unitree_api/package.ps1'
+[2.248s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/giovanna/argo_go2_ws/install/unitree_api/share/unitree_api/package.dsv'
+[2.249s] INFO:colcon.colcon_core.shell:Creating package script '/home/giovanna/argo_go2_ws/install/unitree_api/share/unitree_api/package.sh'
+[2.250s] INFO:colcon.colcon_core.shell:Creating package script '/home/giovanna/argo_go2_ws/install/unitree_api/share/unitree_api/package.bash'
+[2.251s] INFO:colcon.colcon_core.shell:Creating package script '/home/giovanna/argo_go2_ws/install/unitree_api/share/unitree_api/package.zsh'
+[2.251s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/giovanna/argo_go2_ws/install/unitree_api/share/colcon-core/packages/unitree_api)
+[2.469s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/giovanna/argo_go2_ws/build/unitree_go' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/giovanna/argo_go2_ws/build/unitree_go -- -j16 -l16
+[2.471s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/giovanna/argo_go2_ws/build/unitree_go': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/giovanna/argo_go2_ws/build/unitree_go
+[2.874s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(unitree_go)
+[2.875s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/unitree_go' for CMake module files
+[2.876s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/unitree_go' for CMake config files
+[2.877s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/giovanna/argo_go2_ws/build/unitree_go' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/giovanna/argo_go2_ws/build/unitree_go
+[2.883s] Level 1:colcon.colcon_core.shell:create_environment_hook('unitree_go', 'cmake_prefix_path')
+[2.883s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/hook/cmake_prefix_path.ps1'
+[2.885s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/hook/cmake_prefix_path.dsv'
+[2.885s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/hook/cmake_prefix_path.sh'
+[2.887s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/unitree_go/lib'
+[2.887s] Level 1:colcon.colcon_core.shell:create_environment_hook('unitree_go', 'ld_library_path_lib')
+[2.887s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/hook/ld_library_path_lib.ps1'
+[2.888s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/hook/ld_library_path_lib.dsv'
+[2.889s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/hook/ld_library_path_lib.sh'
+[2.890s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/unitree_go/bin'
+[2.890s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/unitree_go/lib/pkgconfig/unitree_go.pc'
+[2.890s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/unitree_go/lib/python3.8/site-packages'
+[2.890s] Level 1:colcon.colcon_core.shell:create_environment_hook('unitree_go', 'pythonpath')
+[2.891s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/hook/pythonpath.ps1'
+[2.892s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/hook/pythonpath.dsv'
+[2.892s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/hook/pythonpath.sh'
+[2.894s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/unitree_go/bin'
+[2.894s] INFO:colcon.colcon_core.shell:Creating package script '/home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/package.ps1'
+[2.896s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/package.dsv'
+[2.897s] INFO:colcon.colcon_core.shell:Creating package script '/home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/package.sh'
+[2.898s] INFO:colcon.colcon_core.shell:Creating package script '/home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/package.bash'
+[2.899s] INFO:colcon.colcon_core.shell:Creating package script '/home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/package.zsh'
+[2.900s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/giovanna/argo_go2_ws/install/unitree_go/share/colcon-core/packages/unitree_go)
+[2.901s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(unitree_go)
+[2.902s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/unitree_go' for CMake module files
+[2.903s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/unitree_go' for CMake config files
+[2.908s] Level 1:colcon.colcon_core.shell:create_environment_hook('unitree_go', 'cmake_prefix_path')
+[2.909s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/hook/cmake_prefix_path.ps1'
+[2.910s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/hook/cmake_prefix_path.dsv'
+[2.910s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/hook/cmake_prefix_path.sh'
+[2.911s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/unitree_go/lib'
+[2.911s] Level 1:colcon.colcon_core.shell:create_environment_hook('unitree_go', 'ld_library_path_lib')
+[2.912s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/hook/ld_library_path_lib.ps1'
+[2.912s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/hook/ld_library_path_lib.dsv'
+[2.913s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/hook/ld_library_path_lib.sh'
+[2.914s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/unitree_go/bin'
+[2.914s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/unitree_go/lib/pkgconfig/unitree_go.pc'
+[2.914s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/unitree_go/lib/python3.8/site-packages'
+[2.915s] Level 1:colcon.colcon_core.shell:create_environment_hook('unitree_go', 'pythonpath')
+[2.915s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/hook/pythonpath.ps1'
+[2.916s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/hook/pythonpath.dsv'
+[2.917s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/hook/pythonpath.sh'
+[2.918s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/unitree_go/bin'
+[2.919s] INFO:colcon.colcon_core.shell:Creating package script '/home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/package.ps1'
+[2.921s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/package.dsv'
+[2.923s] INFO:colcon.colcon_core.shell:Creating package script '/home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/package.sh'
+[2.924s] INFO:colcon.colcon_core.shell:Creating package script '/home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/package.bash'
+[2.925s] INFO:colcon.colcon_core.shell:Creating package script '/home/giovanna/argo_go2_ws/install/unitree_go/share/unitree_go/package.zsh'
+[2.926s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/giovanna/argo_go2_ws/install/unitree_go/share/colcon-core/packages/unitree_go)
+[2.928s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/giovanna/argo_go2_ws/src/go2_driver' with build type 'ament_cmake'
+[2.929s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/giovanna/argo_go2_ws/src/go2_driver'
+[2.929s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.929s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.049s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/giovanna/argo_go2_ws/build/go2_driver': AMENT_PREFIX_PATH=/home/giovanna/argo_go2_ws/install/unitree_go:/home/giovanna/argo_go2_ws/install/unitree_api:/home/giovanna/argo_go2_ws/install/go2_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/giovanna/argo_go2_ws/install/unitree_go:/home/giovanna/argo_go2_ws/install/unitree_api:/home/giovanna/argo_go2_ws/install/go2_interfaces:/opt/ros/foxy LD_LIBRARY_PATH=/home/giovanna/argo_go2_ws/install/unitree_go/lib:/home/giovanna/argo_go2_ws/install/unitree_api/lib:/home/giovanna/argo_go2_ws/install/go2_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/giovanna/argo_go2_ws/install/unitree_go/lib/python3.8/site-packages:/home/giovanna/argo_go2_ws/install/unitree_api/lib/python3.8/site-packages:/home/giovanna/argo_go2_ws/install/go2_interfaces/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/giovanna/argo_go2_ws/build/go2_driver -- -j16 -l16
+[20.937s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/giovanna/argo_go2_ws/build/go2_driver' returned '0': AMENT_PREFIX_PATH=/home/giovanna/argo_go2_ws/install/unitree_go:/home/giovanna/argo_go2_ws/install/unitree_api:/home/giovanna/argo_go2_ws/install/go2_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/giovanna/argo_go2_ws/install/unitree_go:/home/giovanna/argo_go2_ws/install/unitree_api:/home/giovanna/argo_go2_ws/install/go2_interfaces:/opt/ros/foxy LD_LIBRARY_PATH=/home/giovanna/argo_go2_ws/install/unitree_go/lib:/home/giovanna/argo_go2_ws/install/unitree_api/lib:/home/giovanna/argo_go2_ws/install/go2_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/giovanna/argo_go2_ws/install/unitree_go/lib/python3.8/site-packages:/home/giovanna/argo_go2_ws/install/unitree_api/lib/python3.8/site-packages:/home/giovanna/argo_go2_ws/install/go2_interfaces/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/giovanna/argo_go2_ws/build/go2_driver -- -j16 -l16
+[20.940s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/giovanna/argo_go2_ws/build/go2_driver': AMENT_PREFIX_PATH=/home/giovanna/argo_go2_ws/install/unitree_go:/home/giovanna/argo_go2_ws/install/unitree_api:/home/giovanna/argo_go2_ws/install/go2_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/giovanna/argo_go2_ws/install/unitree_go:/home/giovanna/argo_go2_ws/install/unitree_api:/home/giovanna/argo_go2_ws/install/go2_interfaces:/opt/ros/foxy LD_LIBRARY_PATH=/home/giovanna/argo_go2_ws/install/unitree_go/lib:/home/giovanna/argo_go2_ws/install/unitree_api/lib:/home/giovanna/argo_go2_ws/install/go2_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/giovanna/argo_go2_ws/install/unitree_go/lib/python3.8/site-packages:/home/giovanna/argo_go2_ws/install/unitree_api/lib/python3.8/site-packages:/home/giovanna/argo_go2_ws/install/go2_interfaces/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/giovanna/argo_go2_ws/build/go2_driver
+[21.203s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(go2_driver)
+[21.204s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_driver' for CMake module files
+[21.204s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/giovanna/argo_go2_ws/build/go2_driver' returned '0': AMENT_PREFIX_PATH=/home/giovanna/argo_go2_ws/install/unitree_go:/home/giovanna/argo_go2_ws/install/unitree_api:/home/giovanna/argo_go2_ws/install/go2_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/giovanna/argo_go2_ws/install/unitree_go:/home/giovanna/argo_go2_ws/install/unitree_api:/home/giovanna/argo_go2_ws/install/go2_interfaces:/opt/ros/foxy LD_LIBRARY_PATH=/home/giovanna/argo_go2_ws/install/unitree_go/lib:/home/giovanna/argo_go2_ws/install/unitree_api/lib:/home/giovanna/argo_go2_ws/install/go2_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/giovanna/argo_go2_ws/install/unitree_go/lib/python3.8/site-packages:/home/giovanna/argo_go2_ws/install/unitree_api/lib/python3.8/site-packages:/home/giovanna/argo_go2_ws/install/go2_interfaces/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/giovanna/argo_go2_ws/build/go2_driver
+[21.205s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_driver' for CMake config files
+[21.205s] Level 1:colcon.colcon_core.shell:create_environment_hook('go2_driver', 'cmake_prefix_path')
+[21.205s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/giovanna/argo_go2_ws/install/go2_driver/share/go2_driver/hook/cmake_prefix_path.ps1'
+[21.206s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/giovanna/argo_go2_ws/install/go2_driver/share/go2_driver/hook/cmake_prefix_path.dsv'
+[21.206s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/giovanna/argo_go2_ws/install/go2_driver/share/go2_driver/hook/cmake_prefix_path.sh'
+[21.207s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_driver/lib'
+[21.207s] Level 1:colcon.colcon_core.shell:create_environment_hook('go2_driver', 'ld_library_path_lib')
+[21.207s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/giovanna/argo_go2_ws/install/go2_driver/share/go2_driver/hook/ld_library_path_lib.ps1'
+[21.207s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/giovanna/argo_go2_ws/install/go2_driver/share/go2_driver/hook/ld_library_path_lib.dsv'
+[21.208s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/giovanna/argo_go2_ws/install/go2_driver/share/go2_driver/hook/ld_library_path_lib.sh'
+[21.208s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_driver/bin'
+[21.208s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_driver/lib/pkgconfig/go2_driver.pc'
+[21.208s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_driver/lib/python3.8/site-packages'
+[21.208s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_driver/bin'
+[21.209s] INFO:colcon.colcon_core.shell:Creating package script '/home/giovanna/argo_go2_ws/install/go2_driver/share/go2_driver/package.ps1'
+[21.209s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/giovanna/argo_go2_ws/install/go2_driver/share/go2_driver/package.dsv'
+[21.210s] INFO:colcon.colcon_core.shell:Creating package script '/home/giovanna/argo_go2_ws/install/go2_driver/share/go2_driver/package.sh'
+[21.210s] INFO:colcon.colcon_core.shell:Creating package script '/home/giovanna/argo_go2_ws/install/go2_driver/share/go2_driver/package.bash'
+[21.210s] INFO:colcon.colcon_core.shell:Creating package script '/home/giovanna/argo_go2_ws/install/go2_driver/share/go2_driver/package.zsh'
+[21.211s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/giovanna/argo_go2_ws/install/go2_driver/share/colcon-core/packages/go2_driver)
+[21.211s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(go2_driver)
+[21.211s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_driver' for CMake module files
+[21.212s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_driver' for CMake config files
+[21.212s] Level 1:colcon.colcon_core.shell:create_environment_hook('go2_driver', 'cmake_prefix_path')
+[21.212s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/giovanna/argo_go2_ws/install/go2_driver/share/go2_driver/hook/cmake_prefix_path.ps1'
+[21.213s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/giovanna/argo_go2_ws/install/go2_driver/share/go2_driver/hook/cmake_prefix_path.dsv'
+[21.213s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/giovanna/argo_go2_ws/install/go2_driver/share/go2_driver/hook/cmake_prefix_path.sh'
+[21.214s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_driver/lib'
+[21.214s] Level 1:colcon.colcon_core.shell:create_environment_hook('go2_driver', 'ld_library_path_lib')
+[21.214s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/giovanna/argo_go2_ws/install/go2_driver/share/go2_driver/hook/ld_library_path_lib.ps1'
+[21.214s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/giovanna/argo_go2_ws/install/go2_driver/share/go2_driver/hook/ld_library_path_lib.dsv'
+[21.214s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/giovanna/argo_go2_ws/install/go2_driver/share/go2_driver/hook/ld_library_path_lib.sh'
+[21.215s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_driver/bin'
+[21.215s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_driver/lib/pkgconfig/go2_driver.pc'
+[21.215s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_driver/lib/python3.8/site-packages'
+[21.215s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_driver/bin'
+[21.215s] INFO:colcon.colcon_core.shell:Creating package script '/home/giovanna/argo_go2_ws/install/go2_driver/share/go2_driver/package.ps1'
+[21.224s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/giovanna/argo_go2_ws/install/go2_driver/share/go2_driver/package.dsv'
+[21.224s] INFO:colcon.colcon_core.shell:Creating package script '/home/giovanna/argo_go2_ws/install/go2_driver/share/go2_driver/package.sh'
+[21.225s] INFO:colcon.colcon_core.shell:Creating package script '/home/giovanna/argo_go2_ws/install/go2_driver/share/go2_driver/package.bash'
+[21.225s] INFO:colcon.colcon_core.shell:Creating package script '/home/giovanna/argo_go2_ws/install/go2_driver/share/go2_driver/package.zsh'
+[21.226s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/giovanna/argo_go2_ws/install/go2_driver/share/colcon-core/packages/go2_driver)
+[21.226s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/giovanna/argo_go2_ws/src/go2_bringup' with build type 'ament_cmake'
+[21.226s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/giovanna/argo_go2_ws/src/go2_bringup'
+[21.227s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[21.227s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[21.250s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/giovanna/argo_go2_ws/build/go2_bringup': AMENT_PREFIX_PATH=/home/giovanna/argo_go2_ws/install/go2_driver:/home/giovanna/argo_go2_ws/install/unitree_go:/home/giovanna/argo_go2_ws/install/unitree_api:/home/giovanna/argo_go2_ws/install/go2_rviz:/home/giovanna/argo_go2_ws/install/go2_interfaces:/home/giovanna/argo_go2_ws/install/go2_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/giovanna/argo_go2_ws/install/go2_driver:/home/giovanna/argo_go2_ws/install/unitree_go:/home/giovanna/argo_go2_ws/install/unitree_api:/home/giovanna/argo_go2_ws/install/go2_rviz:/home/giovanna/argo_go2_ws/install/go2_interfaces:/home/giovanna/argo_go2_ws/install/go2_description:/opt/ros/foxy LD_LIBRARY_PATH=/home/giovanna/argo_go2_ws/install/go2_driver/lib:/home/giovanna/argo_go2_ws/install/unitree_go/lib:/home/giovanna/argo_go2_ws/install/unitree_api/lib:/home/giovanna/argo_go2_ws/install/go2_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/giovanna/argo_go2_ws/install/unitree_go/lib/python3.8/site-packages:/home/giovanna/argo_go2_ws/install/unitree_api/lib/python3.8/site-packages:/home/giovanna/argo_go2_ws/install/go2_interfaces/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/giovanna/argo_go2_ws/build/go2_bringup -- -j16 -l16
+[21.547s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/giovanna/argo_go2_ws/build/go2_bringup' returned '0': AMENT_PREFIX_PATH=/home/giovanna/argo_go2_ws/install/go2_driver:/home/giovanna/argo_go2_ws/install/unitree_go:/home/giovanna/argo_go2_ws/install/unitree_api:/home/giovanna/argo_go2_ws/install/go2_rviz:/home/giovanna/argo_go2_ws/install/go2_interfaces:/home/giovanna/argo_go2_ws/install/go2_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/giovanna/argo_go2_ws/install/go2_driver:/home/giovanna/argo_go2_ws/install/unitree_go:/home/giovanna/argo_go2_ws/install/unitree_api:/home/giovanna/argo_go2_ws/install/go2_rviz:/home/giovanna/argo_go2_ws/install/go2_interfaces:/home/giovanna/argo_go2_ws/install/go2_description:/opt/ros/foxy LD_LIBRARY_PATH=/home/giovanna/argo_go2_ws/install/go2_driver/lib:/home/giovanna/argo_go2_ws/install/unitree_go/lib:/home/giovanna/argo_go2_ws/install/unitree_api/lib:/home/giovanna/argo_go2_ws/install/go2_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/giovanna/argo_go2_ws/install/unitree_go/lib/python3.8/site-packages:/home/giovanna/argo_go2_ws/install/unitree_api/lib/python3.8/site-packages:/home/giovanna/argo_go2_ws/install/go2_interfaces/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/giovanna/argo_go2_ws/build/go2_bringup -- -j16 -l16
+[21.551s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/giovanna/argo_go2_ws/build/go2_bringup': AMENT_PREFIX_PATH=/home/giovanna/argo_go2_ws/install/go2_driver:/home/giovanna/argo_go2_ws/install/unitree_go:/home/giovanna/argo_go2_ws/install/unitree_api:/home/giovanna/argo_go2_ws/install/go2_rviz:/home/giovanna/argo_go2_ws/install/go2_interfaces:/home/giovanna/argo_go2_ws/install/go2_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/giovanna/argo_go2_ws/install/go2_driver:/home/giovanna/argo_go2_ws/install/unitree_go:/home/giovanna/argo_go2_ws/install/unitree_api:/home/giovanna/argo_go2_ws/install/go2_rviz:/home/giovanna/argo_go2_ws/install/go2_interfaces:/home/giovanna/argo_go2_ws/install/go2_description:/opt/ros/foxy LD_LIBRARY_PATH=/home/giovanna/argo_go2_ws/install/go2_driver/lib:/home/giovanna/argo_go2_ws/install/unitree_go/lib:/home/giovanna/argo_go2_ws/install/unitree_api/lib:/home/giovanna/argo_go2_ws/install/go2_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/giovanna/argo_go2_ws/install/unitree_go/lib/python3.8/site-packages:/home/giovanna/argo_go2_ws/install/unitree_api/lib/python3.8/site-packages:/home/giovanna/argo_go2_ws/install/go2_interfaces/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/giovanna/argo_go2_ws/build/go2_bringup
+[21.577s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(go2_bringup)
+[21.577s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_bringup' for CMake module files
+[21.578s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/giovanna/argo_go2_ws/build/go2_bringup' returned '0': AMENT_PREFIX_PATH=/home/giovanna/argo_go2_ws/install/go2_driver:/home/giovanna/argo_go2_ws/install/unitree_go:/home/giovanna/argo_go2_ws/install/unitree_api:/home/giovanna/argo_go2_ws/install/go2_rviz:/home/giovanna/argo_go2_ws/install/go2_interfaces:/home/giovanna/argo_go2_ws/install/go2_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/giovanna/argo_go2_ws/install/go2_driver:/home/giovanna/argo_go2_ws/install/unitree_go:/home/giovanna/argo_go2_ws/install/unitree_api:/home/giovanna/argo_go2_ws/install/go2_rviz:/home/giovanna/argo_go2_ws/install/go2_interfaces:/home/giovanna/argo_go2_ws/install/go2_description:/opt/ros/foxy LD_LIBRARY_PATH=/home/giovanna/argo_go2_ws/install/go2_driver/lib:/home/giovanna/argo_go2_ws/install/unitree_go/lib:/home/giovanna/argo_go2_ws/install/unitree_api/lib:/home/giovanna/argo_go2_ws/install/go2_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/giovanna/argo_go2_ws/install/unitree_go/lib/python3.8/site-packages:/home/giovanna/argo_go2_ws/install/unitree_api/lib/python3.8/site-packages:/home/giovanna/argo_go2_ws/install/go2_interfaces/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/giovanna/argo_go2_ws/build/go2_bringup
+[21.578s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_bringup' for CMake config files
+[21.578s] Level 1:colcon.colcon_core.shell:create_environment_hook('go2_bringup', 'cmake_prefix_path')
+[21.579s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/giovanna/argo_go2_ws/install/go2_bringup/share/go2_bringup/hook/cmake_prefix_path.ps1'
+[21.579s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/giovanna/argo_go2_ws/install/go2_bringup/share/go2_bringup/hook/cmake_prefix_path.dsv'
+[21.580s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/giovanna/argo_go2_ws/install/go2_bringup/share/go2_bringup/hook/cmake_prefix_path.sh'
+[21.580s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_bringup/bin'
+[21.580s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_bringup/lib/pkgconfig/go2_bringup.pc'
+[21.580s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_bringup/lib/python3.8/site-packages'
+[21.581s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_bringup/bin'
+[21.581s] INFO:colcon.colcon_core.shell:Creating package script '/home/giovanna/argo_go2_ws/install/go2_bringup/share/go2_bringup/package.ps1'
+[21.581s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/giovanna/argo_go2_ws/install/go2_bringup/share/go2_bringup/package.dsv'
+[21.582s] INFO:colcon.colcon_core.shell:Creating package script '/home/giovanna/argo_go2_ws/install/go2_bringup/share/go2_bringup/package.sh'
+[21.582s] INFO:colcon.colcon_core.shell:Creating package script '/home/giovanna/argo_go2_ws/install/go2_bringup/share/go2_bringup/package.bash'
+[21.582s] INFO:colcon.colcon_core.shell:Creating package script '/home/giovanna/argo_go2_ws/install/go2_bringup/share/go2_bringup/package.zsh'
+[21.583s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/giovanna/argo_go2_ws/install/go2_bringup/share/colcon-core/packages/go2_bringup)
+[21.583s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(go2_bringup)
+[21.583s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_bringup' for CMake module files
+[21.584s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_bringup' for CMake config files
+[21.584s] Level 1:colcon.colcon_core.shell:create_environment_hook('go2_bringup', 'cmake_prefix_path')
+[21.584s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/giovanna/argo_go2_ws/install/go2_bringup/share/go2_bringup/hook/cmake_prefix_path.ps1'
+[21.585s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/giovanna/argo_go2_ws/install/go2_bringup/share/go2_bringup/hook/cmake_prefix_path.dsv'
+[21.585s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/giovanna/argo_go2_ws/install/go2_bringup/share/go2_bringup/hook/cmake_prefix_path.sh'
+[21.585s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_bringup/bin'
+[21.586s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_bringup/lib/pkgconfig/go2_bringup.pc'
+[21.586s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_bringup/lib/python3.8/site-packages'
+[21.586s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/go2_bringup/bin'
+[21.586s] INFO:colcon.colcon_core.shell:Creating package script '/home/giovanna/argo_go2_ws/install/go2_bringup/share/go2_bringup/package.ps1'
+[21.587s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/giovanna/argo_go2_ws/install/go2_bringup/share/go2_bringup/package.dsv'
+[21.587s] INFO:colcon.colcon_core.shell:Creating package script '/home/giovanna/argo_go2_ws/install/go2_bringup/share/go2_bringup/package.sh'
+[21.587s] INFO:colcon.colcon_core.shell:Creating package script '/home/giovanna/argo_go2_ws/install/go2_bringup/share/go2_bringup/package.bash'
+[21.588s] INFO:colcon.colcon_core.shell:Creating package script '/home/giovanna/argo_go2_ws/install/go2_bringup/share/go2_bringup/package.zsh'
+[21.588s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/giovanna/argo_go2_ws/install/go2_bringup/share/colcon-core/packages/go2_bringup)
+[25.482s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/giovanna/argo_go2_ws/build/hesai_ros_driver' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/giovanna/argo_go2_ws/build/hesai_ros_driver -- -j16 -l16
+[25.490s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/giovanna/argo_go2_ws/build/hesai_ros_driver': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/giovanna/argo_go2_ws/build/hesai_ros_driver
+[26.722s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(hesai_ros_driver)
+[26.723s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/hesai_ros_driver' for CMake module files
+[26.723s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/giovanna/argo_go2_ws/build/hesai_ros_driver' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/giovanna/argo_go2_ws/build/hesai_ros_driver
+[26.724s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/hesai_ros_driver' for CMake config files
+[26.725s] Level 1:colcon.colcon_core.shell:create_environment_hook('hesai_ros_driver', 'cmake_prefix_path')
+[26.725s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/giovanna/argo_go2_ws/install/hesai_ros_driver/share/hesai_ros_driver/hook/cmake_prefix_path.ps1'
+[26.726s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/giovanna/argo_go2_ws/install/hesai_ros_driver/share/hesai_ros_driver/hook/cmake_prefix_path.dsv'
+[26.727s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/giovanna/argo_go2_ws/install/hesai_ros_driver/share/hesai_ros_driver/hook/cmake_prefix_path.sh'
+[26.727s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/hesai_ros_driver/lib'
+[26.727s] Level 1:colcon.colcon_core.shell:create_environment_hook('hesai_ros_driver', 'ld_library_path_lib')
+[26.728s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/giovanna/argo_go2_ws/install/hesai_ros_driver/share/hesai_ros_driver/hook/ld_library_path_lib.ps1'
+[26.729s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/giovanna/argo_go2_ws/install/hesai_ros_driver/share/hesai_ros_driver/hook/ld_library_path_lib.dsv'
+[26.730s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/giovanna/argo_go2_ws/install/hesai_ros_driver/share/hesai_ros_driver/hook/ld_library_path_lib.sh'
+[26.730s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/hesai_ros_driver/bin'
+[26.731s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/hesai_ros_driver/lib/pkgconfig/hesai_ros_driver.pc'
+[26.731s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/hesai_ros_driver/lib/python3.8/site-packages'
+[26.731s] Level 1:colcon.colcon_core.shell:create_environment_hook('hesai_ros_driver', 'pythonpath')
+[26.732s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/giovanna/argo_go2_ws/install/hesai_ros_driver/share/hesai_ros_driver/hook/pythonpath.ps1'
+[26.733s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/giovanna/argo_go2_ws/install/hesai_ros_driver/share/hesai_ros_driver/hook/pythonpath.dsv'
+[26.734s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/giovanna/argo_go2_ws/install/hesai_ros_driver/share/hesai_ros_driver/hook/pythonpath.sh'
+[26.735s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/hesai_ros_driver/bin'
+[26.736s] INFO:colcon.colcon_core.shell:Creating package script '/home/giovanna/argo_go2_ws/install/hesai_ros_driver/share/hesai_ros_driver/package.ps1'
+[26.738s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/giovanna/argo_go2_ws/install/hesai_ros_driver/share/hesai_ros_driver/package.dsv'
+[26.739s] INFO:colcon.colcon_core.shell:Creating package script '/home/giovanna/argo_go2_ws/install/hesai_ros_driver/share/hesai_ros_driver/package.sh'
+[26.740s] INFO:colcon.colcon_core.shell:Creating package script '/home/giovanna/argo_go2_ws/install/hesai_ros_driver/share/hesai_ros_driver/package.bash'
+[26.741s] INFO:colcon.colcon_core.shell:Creating package script '/home/giovanna/argo_go2_ws/install/hesai_ros_driver/share/hesai_ros_driver/package.zsh'
+[26.741s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/giovanna/argo_go2_ws/install/hesai_ros_driver/share/colcon-core/packages/hesai_ros_driver)
+[26.742s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(hesai_ros_driver)
+[26.742s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/hesai_ros_driver' for CMake module files
+[26.742s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/hesai_ros_driver' for CMake config files
+[26.743s] Level 1:colcon.colcon_core.shell:create_environment_hook('hesai_ros_driver', 'cmake_prefix_path')
+[26.743s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/giovanna/argo_go2_ws/install/hesai_ros_driver/share/hesai_ros_driver/hook/cmake_prefix_path.ps1'
+[26.743s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/giovanna/argo_go2_ws/install/hesai_ros_driver/share/hesai_ros_driver/hook/cmake_prefix_path.dsv'
+[26.744s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/giovanna/argo_go2_ws/install/hesai_ros_driver/share/hesai_ros_driver/hook/cmake_prefix_path.sh'
+[26.744s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/hesai_ros_driver/lib'
+[26.744s] Level 1:colcon.colcon_core.shell:create_environment_hook('hesai_ros_driver', 'ld_library_path_lib')
+[26.744s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/giovanna/argo_go2_ws/install/hesai_ros_driver/share/hesai_ros_driver/hook/ld_library_path_lib.ps1'
+[26.745s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/giovanna/argo_go2_ws/install/hesai_ros_driver/share/hesai_ros_driver/hook/ld_library_path_lib.dsv'
+[26.745s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/giovanna/argo_go2_ws/install/hesai_ros_driver/share/hesai_ros_driver/hook/ld_library_path_lib.sh'
+[26.745s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/hesai_ros_driver/bin'
+[26.745s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/hesai_ros_driver/lib/pkgconfig/hesai_ros_driver.pc'
+[26.745s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/hesai_ros_driver/lib/python3.8/site-packages'
+[26.745s] Level 1:colcon.colcon_core.shell:create_environment_hook('hesai_ros_driver', 'pythonpath')
+[26.745s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/giovanna/argo_go2_ws/install/hesai_ros_driver/share/hesai_ros_driver/hook/pythonpath.ps1'
+[26.746s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/giovanna/argo_go2_ws/install/hesai_ros_driver/share/hesai_ros_driver/hook/pythonpath.dsv'
+[26.746s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/giovanna/argo_go2_ws/install/hesai_ros_driver/share/hesai_ros_driver/hook/pythonpath.sh'
+[26.746s] Level 1:colcon.colcon_core.environment:checking '/home/giovanna/argo_go2_ws/install/hesai_ros_driver/bin'
+[26.747s] INFO:colcon.colcon_core.shell:Creating package script '/home/giovanna/argo_go2_ws/install/hesai_ros_driver/share/hesai_ros_driver/package.ps1'
+[26.752s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/giovanna/argo_go2_ws/install/hesai_ros_driver/share/hesai_ros_driver/package.dsv'
+[26.754s] INFO:colcon.colcon_core.shell:Creating package script '/home/giovanna/argo_go2_ws/install/hesai_ros_driver/share/hesai_ros_driver/package.sh'
+[26.755s] INFO:colcon.colcon_core.shell:Creating package script '/home/giovanna/argo_go2_ws/install/hesai_ros_driver/share/hesai_ros_driver/package.bash'
+[26.757s] INFO:colcon.colcon_core.shell:Creating package script '/home/giovanna/argo_go2_ws/install/hesai_ros_driver/share/hesai_ros_driver/package.zsh'
+[26.758s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/giovanna/argo_go2_ws/install/hesai_ros_driver/share/colcon-core/packages/hesai_ros_driver)
+[26.759s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[26.760s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[26.760s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[26.760s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[26.772s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[26.772s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[26.772s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[26.792s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[26.793s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/giovanna/argo_go2_ws/install/local_setup.ps1'
+[26.794s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/giovanna/argo_go2_ws/install/_local_setup_util_ps1.py'
+[26.795s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/giovanna/argo_go2_ws/install/setup.ps1'
+[26.795s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/giovanna/argo_go2_ws/install/local_setup.sh'
+[26.796s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/giovanna/argo_go2_ws/install/_local_setup_util_sh.py'
+[26.797s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/giovanna/argo_go2_ws/install/setup.sh'
+[26.797s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/giovanna/argo_go2_ws/install/local_setup.bash'
+[26.798s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/giovanna/argo_go2_ws/install/setup.bash'
+[26.800s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/giovanna/argo_go2_ws/install/local_setup.zsh'
+[26.801s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/giovanna/argo_go2_ws/install/setup.zsh'

@@ -1,0 +1,15 @@
+/home/giovanna/argo_go2_ws/install/go2_robot/share/ament_index/resource_index/package_run_dependencies/go2_robot
+/home/giovanna/argo_go2_ws/install/go2_robot/share/ament_index/resource_index/parent_prefix_path/go2_robot
+/home/giovanna/argo_go2_ws/install/go2_robot/share/go2_robot/environment/ament_prefix_path.sh
+/home/giovanna/argo_go2_ws/install/go2_robot/share/go2_robot/environment/ament_prefix_path.dsv
+/home/giovanna/argo_go2_ws/install/go2_robot/share/go2_robot/environment/path.sh
+/home/giovanna/argo_go2_ws/install/go2_robot/share/go2_robot/environment/path.dsv
+/home/giovanna/argo_go2_ws/install/go2_robot/share/go2_robot/local_setup.bash
+/home/giovanna/argo_go2_ws/install/go2_robot/share/go2_robot/local_setup.sh
+/home/giovanna/argo_go2_ws/install/go2_robot/share/go2_robot/local_setup.zsh
+/home/giovanna/argo_go2_ws/install/go2_robot/share/go2_robot/local_setup.dsv
+/home/giovanna/argo_go2_ws/install/go2_robot/share/go2_robot/package.dsv
+/home/giovanna/argo_go2_ws/install/go2_robot/share/ament_index/resource_index/packages/go2_robot
+/home/giovanna/argo_go2_ws/install/go2_robot/share/go2_robot/cmake/go2_robotConfig.cmake
+/home/giovanna/argo_go2_ws/install/go2_robot/share/go2_robot/cmake/go2_robotConfig-version.cmake
+/home/giovanna/argo_go2_ws/install/go2_robot/share/go2_robot/package.xml
