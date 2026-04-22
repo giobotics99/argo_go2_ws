@@ -74,11 +74,11 @@ def generate_launch_description():
             'launch/'), 'robot.launch.py'])
     )
 
-    driver_cmd = IncludeLaunchDescription(
-        PythonLaunchDescriptionSource([os.path.join(
-            get_package_share_directory('go2_driver'),
-            'launch/'), 'go2_driver.launch.py'])
-    )
+    # driver_cmd = IncludeLaunchDescription(
+    #     PythonLaunchDescriptionSource([os.path.join(
+    #         get_package_share_directory('go2_driver'),
+    #         'launch/'), 'go2_driver.launch.py'])
+    # )
 
     lidar_cmd = IncludeLaunchDescription(
         PythonLaunchDescriptionSource([os.path.join(
@@ -91,10 +91,10 @@ def generate_launch_description():
         PythonLaunchDescriptionSource([os.path.join(
             get_package_share_directory('realsense2_camera'),
             'launch/'), 'rs_launch.py']),
-	    condition=IfCondition(PythonExpression(["'", realsense, "' == 'True'"])),
+        condition=IfCondition(PythonExpression([realsense])),
     	launch_arguments={
-        		'config_file': realsense_config_file,
-    		}.items()
+     		    'config_file': realsense_config_file,
+     	    }.items()
 	)
 
     rviz_cmd = IncludeLaunchDescription(
@@ -103,6 +103,34 @@ def generate_launch_description():
             'launch/'), 'rviz.launch.py']),
         condition=IfCondition(PythonExpression([rviz]))
     )
+
+    ####
+
+    composable_nodes = []
+    
+    composable_node = ComposableNode(
+        package='go2_driver',
+        plugin='go2_driver::Go2Driver',
+        name='go2_driver',
+        namespace='',
+        remappings=[
+            # ('odom', '/utlidar/odom'),
+            # ('/tf', '/unused'),
+        ],
+
+    )
+    composable_nodes.append(composable_node)
+    
+    driver_container = ComposableNodeContainer(
+        name='go2_container',
+        namespace='',
+        package='rclcpp_components',
+        executable='component_container',
+        composable_node_descriptions=composable_nodes,
+        output='screen',
+    )
+
+    ####
 
     pointcloud_to_laserscan_cmd = Node(
         package='pointcloud_to_laserscan',
@@ -150,7 +178,8 @@ def generate_launch_description():
     ld.add_action(robot_description_cmd)
     ld.add_action(lidar_cmd)
     ld.add_action(realsense_cmd)
-    ld.add_action(driver_cmd)
+    # ld.add_action(driver_cmd)
+    ld.add_action(driver_container)
     ld.add_action(rviz_cmd)
     ld.add_action(pointcloud_to_laserscan_cmd)
     ld.add_action(static_tf_lidar_cmd)
