@@ -7,8 +7,15 @@ endif()
 
 find_package(ament_cmake REQUIRED)
 
+# Install configuration directories
 install(DIRECTORY launch params rviz scripts
   DESTINATION share/${PROJECT_NAME}
+)
+
+# Install Python scripts as programs to lib/${PROJECT_NAME}
+# This allows them to be found by 'ros2 run' and in launch files
+install(PROGRAMS scripts/pointcloud_filter.py
+  DESTINATION lib/${PROJECT_NAME}
 )
 
 if(BUILD_TESTING)

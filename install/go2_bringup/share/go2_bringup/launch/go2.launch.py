@@ -93,7 +93,7 @@ def generate_launch_description():
             'launch/'), 'rs_launch.py']),
         condition=IfCondition(PythonExpression([realsense])),
     	# launch_arguments={
-     	# 	    'config_file': realsense_config_file,
+     	# 		    'config_file': realsense_config_file,
      	#     }.items()
 	)
 
@@ -132,13 +132,28 @@ def generate_launch_description():
 
     ####
 
+    # PointCloud Filter Node (GPU accelerated + Timestamp Fix)
+    pointcloud_filter_cmd = Node(
+        package='go2_nav',
+        executable='pointcloud_filter.py',
+        name='pointcloud_filter_node',
+        output='screen',
+        parameters=[{
+            'input_topic': '/lidar_points',
+            'output_topic': '/lidar_points_filtered',
+            'bounding_box_min': [-0.5, -0.4, -0.2],
+            'bounding_box_max': [0.5, 0.4, 0.5],
+            'use_sim_time': False
+        }]
+    )
+
     pointcloud_to_laserscan_cmd = Node(
         package='pointcloud_to_laserscan',
         executable='pointcloud_to_laserscan_node',
         name='pointcloud_to_laserscan',
         namespace='',
         output='screen',
-        remappings=[('/cloud_in', '/filtered_lidar_points')],
+        remappings=[('/cloud_in', '/lidar_points_filtered')],
         parameters=[{
                 'target_frame': 'hesai_lidar',
                 'max_height': 0.7,
@@ -162,6 +177,14 @@ def generate_launch_description():
         output='screen',
     )
 
+    static_tf_camera_color_optical_frame_cmd = Node(
+        package='tf2_ros',
+        executable='static_transform_publisher',
+        name='static_tf_camera_color_optical_frame',
+        arguments=['0', '0', '0', '0', '0', '0', 'camera_link', 'camera_color_optical_frame'],
+        output='screen',
+    )
+
     static_tf_imu_cmd = Node(
         package='tf2_ros',
         executable='static_transform_publisher',
@@ -180,10 +203,12 @@ def generate_launch_description():
     ld.add_action(realsense_cmd)
     # ld.add_action(driver_cmd)
     ld.add_action(driver_container)
-    # ld.add_action(rviz_cmd)
+    ld.add_action(rviz_cmd)
+    ld.add_action(pointcloud_filter_cmd)
     ld.add_action(pointcloud_to_laserscan_cmd)
     ld.add_action(static_tf_lidar_cmd)
     ld.add_action(static_tf_camera_link_cmd)
+    ld.add_action(static_tf_camera_color_optical_frame_cmd)
     ld.add_action(static_tf_imu_cmd)
 
     return ld

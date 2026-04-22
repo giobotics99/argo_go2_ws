@@ -84,7 +84,7 @@ def generate_launch_description():
         executable='pointcloud_to_laserscan_node',
         name='pc2ls_from_cloud',
         output='screen',
-        remappings=[('input', '/lidar_points_filtered'), ('output', '/scan')],
+        remappings=[('cloud_in', '/lidar_points_filtered'), ('output', '/scan')],
         parameters=[{
             'target_frame': target_frame,
             'transform_tolerance': 0.02,
@@ -113,7 +113,8 @@ def generate_launch_description():
         launch_arguments={
             'use_sim_time': use_sim_time,
             'params_file': params_file,
-            'autostart': autostart
+            'autostart': autostart,
+            'map_subscribe_transient_local': 'true'
         }.items()
     )
 
@@ -159,8 +160,8 @@ def generate_launch_description():
     ld.add_action(declare_target_frame)
     
     # Add nodes and included launches
-    ld.add_action(pc_filter)
-    ld.add_action(pc2las)
+    # ld.add_action(pc_filter)
+    # ld.add_action(pc2las)
     ld.add_action(start_slam_toolbox_cmd)
     ld.add_action(start_navigation_cmd)
     ld.add_action(start_map_saver_server_cmd)
