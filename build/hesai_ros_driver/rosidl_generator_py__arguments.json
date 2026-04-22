@@ -1,13 +1,13 @@
 {
   "package_name": "hesai_ros_driver",
-  "output_dir": "/home/giovanna/argo_go2_ws/build/hesai_ros_driver/rosidl_generator_py/hesai_ros_driver",
+  "output_dir": "/home/unitree/argo_go2_ws/build/hesai_ros_driver/rosidl_generator_py/hesai_ros_driver",
   "template_dir": "/opt/ros/foxy/share/rosidl_generator_py/cmake/../resource",
   "idl_tuples": [
-    "/home/giovanna/argo_go2_ws/build/hesai_ros_driver/rosidl_adapter/hesai_ros_driver:msg/UdpPacket.idl",
-    "/home/giovanna/argo_go2_ws/build/hesai_ros_driver/rosidl_adapter/hesai_ros_driver:msg/UdpFrame.idl",
-    "/home/giovanna/argo_go2_ws/build/hesai_ros_driver/rosidl_adapter/hesai_ros_driver:msg/Firetime.idl",
-    "/home/giovanna/argo_go2_ws/build/hesai_ros_driver/rosidl_adapter/hesai_ros_driver:msg/Ptp.idl",
-    "/home/giovanna/argo_go2_ws/build/hesai_ros_driver/rosidl_adapter/hesai_ros_driver:msg/LossPacket.idl"
+    "/home/unitree/argo_go2_ws/build/hesai_ros_driver/rosidl_adapter/hesai_ros_driver:msg/UdpPacket.idl",
+    "/home/unitree/argo_go2_ws/build/hesai_ros_driver/rosidl_adapter/hesai_ros_driver:msg/UdpFrame.idl",
+    "/home/unitree/argo_go2_ws/build/hesai_ros_driver/rosidl_adapter/hesai_ros_driver:msg/Firetime.idl",
+    "/home/unitree/argo_go2_ws/build/hesai_ros_driver/rosidl_adapter/hesai_ros_driver:msg/Ptp.idl",
+    "/home/unitree/argo_go2_ws/build/hesai_ros_driver/rosidl_adapter/hesai_ros_driver:msg/LossPacket.idl"
   ],
   "ros_interface_dependencies": [
     "builtin_interfaces:/opt/ros/foxy/share/builtin_interfaces/msg/Duration.idl",
@@ -57,11 +57,11 @@
     "/opt/ros/foxy/share/rosidl_generator_py/cmake/../resource/_msg.py.em",
     "/opt/ros/foxy/share/rosidl_generator_py/cmake/../resource/_srv_pkg_typesupport_entry_point.c.em",
     "/opt/ros/foxy/share/rosidl_generator_py/cmake/../resource/_srv.py.em",
-    "/home/giovanna/argo_go2_ws/build/hesai_ros_driver/rosidl_adapter/hesai_ros_driver/msg/UdpPacket.idl",
-    "/home/giovanna/argo_go2_ws/build/hesai_ros_driver/rosidl_adapter/hesai_ros_driver/msg/UdpFrame.idl",
-    "/home/giovanna/argo_go2_ws/build/hesai_ros_driver/rosidl_adapter/hesai_ros_driver/msg/Firetime.idl",
-    "/home/giovanna/argo_go2_ws/build/hesai_ros_driver/rosidl_adapter/hesai_ros_driver/msg/Ptp.idl",
-    "/home/giovanna/argo_go2_ws/build/hesai_ros_driver/rosidl_adapter/hesai_ros_driver/msg/LossPacket.idl",
+    "/home/unitree/argo_go2_ws/build/hesai_ros_driver/rosidl_adapter/hesai_ros_driver/msg/UdpPacket.idl",
+    "/home/unitree/argo_go2_ws/build/hesai_ros_driver/rosidl_adapter/hesai_ros_driver/msg/UdpFrame.idl",
+    "/home/unitree/argo_go2_ws/build/hesai_ros_driver/rosidl_adapter/hesai_ros_driver/msg/Firetime.idl",
+    "/home/unitree/argo_go2_ws/build/hesai_ros_driver/rosidl_adapter/hesai_ros_driver/msg/Ptp.idl",
+    "/home/unitree/argo_go2_ws/build/hesai_ros_driver/rosidl_adapter/hesai_ros_driver/msg/LossPacket.idl",
     "/opt/ros/foxy/share/builtin_interfaces/msg/Duration.idl",
     "/opt/ros/foxy/share/builtin_interfaces/msg/Time.idl",
     "/opt/ros/foxy/share/std_msgs/msg/Bool.idl",

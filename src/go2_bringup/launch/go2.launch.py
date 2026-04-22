@@ -37,11 +37,18 @@ from launch.conditions import IfCondition
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch.substitutions import LaunchConfiguration, PythonExpression
 
+from launch_ros.actions import Node, ComposableNodeContainer
+from launch_ros.descriptions import ComposableNode
+
 
 def generate_launch_description():
     lidar = LaunchConfiguration('lidar')
     realsense = LaunchConfiguration('realsense')
     rviz = LaunchConfiguration('rviz')
+
+    go2_bringup_dir = get_package_share_directory('go2_bringup')
+    realsense_config_file = os.path.join(go2_bringup_dir, 'config', 'realsense_params.yaml')
+
 
     declare_lidar_cmd = DeclareLaunchArgument(
         'lidar',
@@ -84,8 +91,11 @@ def generate_launch_description():
         PythonLaunchDescriptionSource([os.path.join(
             get_package_share_directory('realsense2_camera'),
             'launch/'), 'rs_launch.py']),
-        condition=IfCondition(PythonExpression([realsense]))
-    )
+	    condition=IfCondition(PythonExpression(["'", realsense, "' == 'True'"])),
+    	launch_arguments={
+        		'config_file': realsense_config_file,
+    		}.items()
+	)
 
     rviz_cmd = IncludeLaunchDescription(
         PythonLaunchDescriptionSource([os.path.join(
@@ -93,6 +103,45 @@ def generate_launch_description():
             'launch/'), 'rviz.launch.py']),
         condition=IfCondition(PythonExpression([rviz]))
     )
+
+    pointcloud_to_laserscan_cmd = Node(
+        package='pointcloud_to_laserscan',
+        executable='pointcloud_to_laserscan_node',
+        name='pointcloud_to_laserscan',
+        namespace='',
+        output='screen',
+        remappings=[('/cloud_in', '/filtered_lidar_points')],
+        parameters=[{
+                'target_frame': 'hesai_lidar',
+                'max_height': 0.7,
+                # 'transform_tolerance': 0.01,
+        }],
+    )
+
+    static_tf_lidar_cmd = Node(
+        package='tf2_ros',
+        executable='static_transform_publisher',
+        name='static_tf_lidar',
+        arguments=['-0.12', '0', '0.1', '1.5708', '0', '0', 'Head_upper', 'hesai_lidar'],
+        output='screen',
+    )
+
+    static_tf_camera_link_cmd = Node(
+        package='tf2_ros',
+        executable='static_transform_publisher',
+        name='static_tf_camera_link',
+        arguments=['0', '0', '0', '0', '0', '0', 'Head_upper', 'camera_link'],
+        output='screen',
+    )
+
+    static_tf_imu_cmd = Node(
+        package='tf2_ros',
+        executable='static_transform_publisher',
+        name='static_tf_imu',
+        arguments=['0', '0', '0', '0', '0', '0', 'imu', 'utlidar_imu'],
+        output='screen',
+    )
+
 
     ld = LaunchDescription()
     ld.add_action(declare_lidar_cmd)
@@ -103,5 +152,9 @@ def generate_launch_description():
     ld.add_action(realsense_cmd)
     ld.add_action(driver_cmd)
     ld.add_action(rviz_cmd)
+    ld.add_action(pointcloud_to_laserscan_cmd)
+    ld.add_action(static_tf_lidar_cmd)
+    ld.add_action(static_tf_camera_link_cmd)
+    ld.add_action(static_tf_imu_cmd)
 
     return ld

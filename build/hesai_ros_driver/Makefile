@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/giovanna/argo_go2_ws/src/hesai_ros_driver
+CMAKE_SOURCE_DIR = /home/unitree/argo_go2_ws/src/hesai_ros_driver
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/giovanna/argo_go2_ws/build/hesai_ros_driver
+CMAKE_BINARY_DIR = /home/unitree/argo_go2_ws/build/hesai_ros_driver
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -93,8 +93,8 @@ rebuild_cache/fast: rebuild_cache
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
+	/usr/bin/cmake-gui -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -137,9 +137,9 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/giovanna/argo_go2_ws/build/hesai_ros_driver/CMakeFiles /home/giovanna/argo_go2_ws/build/hesai_ros_driver/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/unitree/argo_go2_ws/build/hesai_ros_driver/CMakeFiles /home/unitree/argo_go2_ws/build/hesai_ros_driver/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/giovanna/argo_go2_ws/build/hesai_ros_driver/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/unitree/argo_go2_ws/build/hesai_ros_driver/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -389,6 +389,19 @@ hesai_ros_driver__py/fast:
 .PHONY : hesai_ros_driver__py/fast
 
 #=============================================================================
+# Target rules for targets named sample_gpu
+
+# Build rule for target.
+sample_gpu: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sample_gpu
+.PHONY : sample_gpu
+
+# fast build rule for target.
+sample_gpu/fast:
+	$(MAKE) -f src/driver/HesaiLidar_SDK_2.0/CMakeFiles/sample_gpu.dir/build.make src/driver/HesaiLidar_SDK_2.0/CMakeFiles/sample_gpu.dir/build
+.PHONY : sample_gpu/fast
+
+#=============================================================================
 # Target rules for targets named sample
 
 # Build rule for target.
@@ -491,33 +504,6 @@ log_lib: cmake_check_build_system
 log_lib/fast:
 	$(MAKE) -f src/driver/HesaiLidar_SDK_2.0/libhesai/CMakeFiles/log_lib.dir/build.make src/driver/HesaiLidar_SDK_2.0/libhesai/CMakeFiles/log_lib.dir/build
 .PHONY : log_lib/fast
-
-node/hesai_ros_driver_node.o: node/hesai_ros_driver_node.cc.o
-
-.PHONY : node/hesai_ros_driver_node.o
-
-# target to build an object file
-node/hesai_ros_driver_node.cc.o:
-	$(MAKE) -f CMakeFiles/hesai_ros_driver_node.dir/build.make CMakeFiles/hesai_ros_driver_node.dir/node/hesai_ros_driver_node.cc.o
-.PHONY : node/hesai_ros_driver_node.cc.o
-
-node/hesai_ros_driver_node.i: node/hesai_ros_driver_node.cc.i
-
-.PHONY : node/hesai_ros_driver_node.i
-
-# target to preprocess a source file
-node/hesai_ros_driver_node.cc.i:
-	$(MAKE) -f CMakeFiles/hesai_ros_driver_node.dir/build.make CMakeFiles/hesai_ros_driver_node.dir/node/hesai_ros_driver_node.cc.i
-.PHONY : node/hesai_ros_driver_node.cc.i
-
-node/hesai_ros_driver_node.s: node/hesai_ros_driver_node.cc.s
-
-.PHONY : node/hesai_ros_driver_node.s
-
-# target to generate assembly for a file
-node/hesai_ros_driver_node.cc.s:
-	$(MAKE) -f CMakeFiles/hesai_ros_driver_node.dir/build.make CMakeFiles/hesai_ros_driver_node.dir/node/hesai_ros_driver_node.cc.s
-.PHONY : node/hesai_ros_driver_node.cc.s
 
 rosidl_generator_c/hesai_ros_driver/msg/detail/firetime__functions.o: rosidl_generator_c/hesai_ros_driver/msg/detail/firetime__functions.c.o
 
@@ -1680,33 +1666,6 @@ rosidl_typesupport_introspection_cpp/hesai_ros_driver/msg/detail/udp_packet__typ
 	$(MAKE) -f CMakeFiles/hesai_ros_driver__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/hesai_ros_driver__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/hesai_ros_driver/msg/detail/udp_packet__type_support.cpp.s
 .PHONY : rosidl_typesupport_introspection_cpp/hesai_ros_driver/msg/detail/udp_packet__type_support.cpp.s
 
-src/manager/node_manager.o: src/manager/node_manager.cc.o
-
-.PHONY : src/manager/node_manager.o
-
-# target to build an object file
-src/manager/node_manager.cc.o:
-	$(MAKE) -f CMakeFiles/hesai_ros_driver_node.dir/build.make CMakeFiles/hesai_ros_driver_node.dir/src/manager/node_manager.cc.o
-.PHONY : src/manager/node_manager.cc.o
-
-src/manager/node_manager.i: src/manager/node_manager.cc.i
-
-.PHONY : src/manager/node_manager.i
-
-# target to preprocess a source file
-src/manager/node_manager.cc.i:
-	$(MAKE) -f CMakeFiles/hesai_ros_driver_node.dir/build.make CMakeFiles/hesai_ros_driver_node.dir/src/manager/node_manager.cc.i
-.PHONY : src/manager/node_manager.cc.i
-
-src/manager/node_manager.s: src/manager/node_manager.cc.s
-
-.PHONY : src/manager/node_manager.s
-
-# target to generate assembly for a file
-src/manager/node_manager.cc.s:
-	$(MAKE) -f CMakeFiles/hesai_ros_driver_node.dir/build.make CMakeFiles/hesai_ros_driver_node.dir/src/manager/node_manager.cc.s
-.PHONY : src/manager/node_manager.cc.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -1737,6 +1696,7 @@ help:
 	@echo "... hesai_ros_driver__rosidl_typesupport_cpp"
 	@echo "... hesai_ros_driver__python"
 	@echo "... hesai_ros_driver__py"
+	@echo "... sample_gpu"
 	@echo "... sample"
 	@echo "... ptcClient_lib"
 	@echo "... serialClient_lib"
@@ -1745,9 +1705,6 @@ help:
 	@echo "... source_lib"
 	@echo "... container_lib"
 	@echo "... log_lib"
-	@echo "... node/hesai_ros_driver_node.o"
-	@echo "... node/hesai_ros_driver_node.i"
-	@echo "... node/hesai_ros_driver_node.s"
 	@echo "... rosidl_generator_c/hesai_ros_driver/msg/detail/firetime__functions.o"
 	@echo "... rosidl_generator_c/hesai_ros_driver/msg/detail/firetime__functions.i"
 	@echo "... rosidl_generator_c/hesai_ros_driver/msg/detail/firetime__functions.s"
@@ -1877,9 +1834,6 @@ help:
 	@echo "... rosidl_typesupport_introspection_cpp/hesai_ros_driver/msg/detail/udp_packet__type_support.o"
 	@echo "... rosidl_typesupport_introspection_cpp/hesai_ros_driver/msg/detail/udp_packet__type_support.i"
 	@echo "... rosidl_typesupport_introspection_cpp/hesai_ros_driver/msg/detail/udp_packet__type_support.s"
-	@echo "... src/manager/node_manager.o"
-	@echo "... src/manager/node_manager.i"
-	@echo "... src/manager/node_manager.s"
 .PHONY : help
 
 

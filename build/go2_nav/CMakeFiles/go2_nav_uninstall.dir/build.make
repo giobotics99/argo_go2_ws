@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/giovanna/argo_go2_ws/src/go2_nav
+CMAKE_SOURCE_DIR = /home/unitree/argo_go2_ws/src/go2_nav
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/giovanna/argo_go2_ws/build/go2_nav
+CMAKE_BINARY_DIR = /home/unitree/argo_go2_ws/build/go2_nav
 
 # Utility rule file for go2_nav_uninstall.
 
@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/giovanna/argo_go2_ws/build/go2_nav
 include CMakeFiles/go2_nav_uninstall.dir/progress.make
 
 CMakeFiles/go2_nav_uninstall:
-	/usr/bin/cmake -P /home/giovanna/argo_go2_ws/build/go2_nav/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
+	/usr/bin/cmake -P /home/unitree/argo_go2_ws/build/go2_nav/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
 
 go2_nav_uninstall: CMakeFiles/go2_nav_uninstall
 go2_nav_uninstall: CMakeFiles/go2_nav_uninstall.dir/build.make
@@ -71,6 +71,6 @@ CMakeFiles/go2_nav_uninstall.dir/clean:
 .PHONY : CMakeFiles/go2_nav_uninstall.dir/clean
 
 CMakeFiles/go2_nav_uninstall.dir/depend:
-	cd /home/giovanna/argo_go2_ws/build/go2_nav && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/giovanna/argo_go2_ws/src/go2_nav /home/giovanna/argo_go2_ws/src/go2_nav /home/giovanna/argo_go2_ws/build/go2_nav /home/giovanna/argo_go2_ws/build/go2_nav /home/giovanna/argo_go2_ws/build/go2_nav/CMakeFiles/go2_nav_uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/unitree/argo_go2_ws/build/go2_nav && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/unitree/argo_go2_ws/src/go2_nav /home/unitree/argo_go2_ws/src/go2_nav /home/unitree/argo_go2_ws/build/go2_nav /home/unitree/argo_go2_ws/build/go2_nav /home/unitree/argo_go2_ws/build/go2_nav/CMakeFiles/go2_nav_uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/go2_nav_uninstall.dir/depend
 

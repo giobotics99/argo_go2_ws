@@ -1,8 +1,0 @@
-In file included from /home/giovanna/argo_go2_ws/src/go2_driver/src/go2_driver/go2_driver.cpp:31:
-/home/giovanna/argo_go2_ws/src/go2_driver/include/go2_driver/go2_driver.hpp:45:10: fatal error: nlohmann/json.hpp: No such file or directory
-   45 | #include "nlohmann/json.hpp"
-      |          ^~~~~~~~~~~~~~~~~~~
-compilation terminated.
-make[2]: *** [CMakeFiles/go2_driver.dir/build.make:63: CMakeFiles/go2_driver.dir/src/go2_driver/go2_driver.cpp.o] Error 1
-make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/go2_driver.dir/all] Error 2
-make: *** [Makefile:141: all] Error 2

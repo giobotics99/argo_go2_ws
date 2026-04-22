@@ -1,1 +1,7 @@
-/home/giovanna/argo_go2_ws/src/go2_interfaces/srv/FootRaiseHeight.srv
+# Set the relative height of foot lift during movement
+
+float32 height
+
+---
+bool success
+string message

@@ -1,17 +1,17 @@
 {
   "package_name": "go2_interfaces",
-  "output_dir": "/home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces",
+  "output_dir": "/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces",
   "template_dir": "/opt/ros/foxy/share/rosidl_generator_c/cmake/../resource",
   "idl_tuples": [
-    "/home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_adapter/go2_interfaces:srv/BodyHeight.idl",
-    "/home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_adapter/go2_interfaces:srv/ContinuousGait.idl",
-    "/home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_adapter/go2_interfaces:srv/Euler.idl",
-    "/home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_adapter/go2_interfaces:srv/FootRaiseHeight.idl",
-    "/home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_adapter/go2_interfaces:srv/Mode.idl",
-    "/home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_adapter/go2_interfaces:srv/Pose.idl",
-    "/home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_adapter/go2_interfaces:srv/SpeedLevel.idl",
-    "/home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_adapter/go2_interfaces:srv/SwitchGait.idl",
-    "/home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_adapter/go2_interfaces:srv/SwitchJoystick.idl"
+    "/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_adapter/go2_interfaces:srv/BodyHeight.idl",
+    "/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_adapter/go2_interfaces:srv/ContinuousGait.idl",
+    "/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_adapter/go2_interfaces:srv/Euler.idl",
+    "/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_adapter/go2_interfaces:srv/FootRaiseHeight.idl",
+    "/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_adapter/go2_interfaces:srv/Mode.idl",
+    "/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_adapter/go2_interfaces:srv/Pose.idl",
+    "/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_adapter/go2_interfaces:srv/SpeedLevel.idl",
+    "/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_adapter/go2_interfaces:srv/SwitchGait.idl",
+    "/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_adapter/go2_interfaces:srv/SwitchJoystick.idl"
   ],
   "target_dependencies": [
     "/opt/ros/foxy/share/rosidl_generator_c/cmake/../../../lib/rosidl_generator_c/rosidl_generator_c",
@@ -27,14 +27,14 @@
     "/opt/ros/foxy/share/rosidl_generator_c/cmake/../resource/msg__struct.h.em",
     "/opt/ros/foxy/share/rosidl_generator_c/cmake/../resource/msg__type_support.h.em",
     "/opt/ros/foxy/share/rosidl_generator_c/cmake/../resource/srv__type_support.h.em",
-    "/home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_adapter/go2_interfaces/srv/BodyHeight.idl",
-    "/home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_adapter/go2_interfaces/srv/ContinuousGait.idl",
-    "/home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_adapter/go2_interfaces/srv/Euler.idl",
-    "/home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_adapter/go2_interfaces/srv/FootRaiseHeight.idl",
-    "/home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_adapter/go2_interfaces/srv/Mode.idl",
-    "/home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_adapter/go2_interfaces/srv/Pose.idl",
-    "/home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_adapter/go2_interfaces/srv/SpeedLevel.idl",
-    "/home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_adapter/go2_interfaces/srv/SwitchGait.idl",
-    "/home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_adapter/go2_interfaces/srv/SwitchJoystick.idl"
+    "/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_adapter/go2_interfaces/srv/BodyHeight.idl",
+    "/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_adapter/go2_interfaces/srv/ContinuousGait.idl",
+    "/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_adapter/go2_interfaces/srv/Euler.idl",
+    "/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_adapter/go2_interfaces/srv/FootRaiseHeight.idl",
+    "/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_adapter/go2_interfaces/srv/Mode.idl",
+    "/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_adapter/go2_interfaces/srv/Pose.idl",
+    "/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_adapter/go2_interfaces/srv/SpeedLevel.idl",
+    "/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_adapter/go2_interfaces/srv/SwitchGait.idl",
+    "/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_adapter/go2_interfaces/srv/SwitchJoystick.idl"
   ]
 }

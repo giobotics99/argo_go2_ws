@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/giovanna/argo_go2_ws/src/go2_simulation
+CMAKE_SOURCE_DIR = /home/unitree/argo_go2_ws/src/go2_simulation
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/giovanna/argo_go2_ws/build/go2_simulation
+CMAKE_BINARY_DIR = /home/unitree/argo_go2_ws/build/go2_simulation
 
 # Utility rule file for go2_simulation_uninstall.
 
@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/giovanna/argo_go2_ws/build/go2_simulation
 include CMakeFiles/go2_simulation_uninstall.dir/progress.make
 
 CMakeFiles/go2_simulation_uninstall:
-	/usr/bin/cmake -P /home/giovanna/argo_go2_ws/build/go2_simulation/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
+	/usr/bin/cmake -P /home/unitree/argo_go2_ws/build/go2_simulation/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
 
 go2_simulation_uninstall: CMakeFiles/go2_simulation_uninstall
 go2_simulation_uninstall: CMakeFiles/go2_simulation_uninstall.dir/build.make
@@ -71,6 +71,6 @@ CMakeFiles/go2_simulation_uninstall.dir/clean:
 .PHONY : CMakeFiles/go2_simulation_uninstall.dir/clean
 
 CMakeFiles/go2_simulation_uninstall.dir/depend:
-	cd /home/giovanna/argo_go2_ws/build/go2_simulation && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/giovanna/argo_go2_ws/src/go2_simulation /home/giovanna/argo_go2_ws/src/go2_simulation /home/giovanna/argo_go2_ws/build/go2_simulation /home/giovanna/argo_go2_ws/build/go2_simulation /home/giovanna/argo_go2_ws/build/go2_simulation/CMakeFiles/go2_simulation_uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/unitree/argo_go2_ws/build/go2_simulation && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/unitree/argo_go2_ws/src/go2_simulation /home/unitree/argo_go2_ws/src/go2_simulation /home/unitree/argo_go2_ws/build/go2_simulation /home/unitree/argo_go2_ws/build/go2_simulation /home/unitree/argo_go2_ws/build/go2_simulation/CMakeFiles/go2_simulation_uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/go2_simulation_uninstall.dir/depend
 

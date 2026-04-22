@@ -6,5 +6,5 @@ C_FLAGS = -fPIC   -Wall -std=gnu11
 
 C_DEFINES = -DRCUTILS_ENABLE_FAULT_INJECTION -DROS_PACKAGE_NAME=\"unitree_go\" -Dunitree_go__rosidl_typesupport_introspection_c_EXPORTS
 
-C_INCLUDES = -I/home/giovanna/argo_go2_ws/build/unitree_go/rosidl_generator_c -I/home/giovanna/argo_go2_ws/build/unitree_go/rosidl_typesupport_introspection_c -isystem /opt/ros/foxy/include 
+C_INCLUDES = -I/home/unitree/argo_go2_ws/build/unitree_go/rosidl_generator_c -I/home/unitree/argo_go2_ws/build/unitree_go/rosidl_typesupport_introspection_c -isystem /opt/ros/foxy/include 
 

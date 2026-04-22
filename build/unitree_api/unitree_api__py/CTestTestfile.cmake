@@ -1,6 +1,6 @@
 # CMake generated Testfile for 
-# Source directory: /home/giovanna/argo_go2_ws/build/unitree_api/unitree_api__py
-# Build directory: /home/giovanna/argo_go2_ws/build/unitree_api/unitree_api__py
+# Source directory: /home/unitree/argo_go2_ws/build/unitree_api/unitree_api__py
+# Build directory: /home/unitree/argo_go2_ws/build/unitree_api/unitree_api__py
 # 
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.

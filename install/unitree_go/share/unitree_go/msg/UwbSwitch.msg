@@ -1,1 +1,1 @@
-/home/giovanna/argo_go2_ws/src/unitree_go/msg/UwbSwitch.msg
+uint8 enabled

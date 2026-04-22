@@ -1,8 +1,8 @@
-# Install script for directory: /home/giovanna/argo_go2_ws/src/hesai_ros_driver/src/driver/HesaiLidar_SDK_2.0/libhesai
+# Install script for directory: /home/unitree/argo_go2_ws/src/hesai_ros_driver/src/driver/HesaiLidar_SDK_2.0/libhesai
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/giovanna/argo_go2_ws/install/hesai_ros_driver")
+  set(CMAKE_INSTALL_PREFIX "/home/unitree/argo_go2_ws/install/hesai_ros_driver")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/giovanna/argo_go2_ws/src/go2_interfaces
+CMAKE_SOURCE_DIR = /home/unitree/argo_go2_ws/src/go2_interfaces
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/giovanna/argo_go2_ws/build/go2_interfaces
+CMAKE_BINARY_DIR = /home/unitree/argo_go2_ws/build/go2_interfaces
 
 # Utility rule file for go2_interfaces__cpp.
 
@@ -129,8 +129,8 @@ rosidl_generator_cpp/go2_interfaces/srv/body_height.hpp: rosidl_adapter/go2_inte
 rosidl_generator_cpp/go2_interfaces/srv/body_height.hpp: rosidl_adapter/go2_interfaces/srv/SpeedLevel.idl
 rosidl_generator_cpp/go2_interfaces/srv/body_height.hpp: rosidl_adapter/go2_interfaces/srv/SwitchGait.idl
 rosidl_generator_cpp/go2_interfaces/srv/body_height.hpp: rosidl_adapter/go2_interfaces/srv/SwitchJoystick.idl
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/giovanna/argo_go2_ws/build/go2_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code for ROS interfaces"
-	/usr/bin/python3 /opt/ros/foxy/share/rosidl_generator_cpp/cmake/../../../lib/rosidl_generator_cpp/rosidl_generator_cpp --generator-arguments-file /home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_generator_cpp__arguments.json
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unitree/argo_go2_ws/build/go2_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code for ROS interfaces"
+	/home/unitree/.pyenv/shims/python3 /opt/ros/foxy/share/rosidl_generator_cpp/cmake/../../../lib/rosidl_generator_cpp/rosidl_generator_cpp --generator-arguments-file /home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_cpp__arguments.json
 
 rosidl_generator_cpp/go2_interfaces/srv/detail/body_height__builder.hpp: rosidl_generator_cpp/go2_interfaces/srv/body_height.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/go2_interfaces/srv/detail/body_height__builder.hpp
@@ -324,6 +324,6 @@ CMakeFiles/go2_interfaces__cpp.dir/clean:
 .PHONY : CMakeFiles/go2_interfaces__cpp.dir/clean
 
 CMakeFiles/go2_interfaces__cpp.dir/depend:
-	cd /home/giovanna/argo_go2_ws/build/go2_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/giovanna/argo_go2_ws/src/go2_interfaces /home/giovanna/argo_go2_ws/src/go2_interfaces /home/giovanna/argo_go2_ws/build/go2_interfaces /home/giovanna/argo_go2_ws/build/go2_interfaces /home/giovanna/argo_go2_ws/build/go2_interfaces/CMakeFiles/go2_interfaces__cpp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/unitree/argo_go2_ws/build/go2_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/unitree/argo_go2_ws/src/go2_interfaces /home/unitree/argo_go2_ws/src/go2_interfaces /home/unitree/argo_go2_ws/build/go2_interfaces /home/unitree/argo_go2_ws/build/go2_interfaces /home/unitree/argo_go2_ws/build/go2_interfaces/CMakeFiles/go2_interfaces__cpp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/go2_interfaces__cpp.dir/depend
 

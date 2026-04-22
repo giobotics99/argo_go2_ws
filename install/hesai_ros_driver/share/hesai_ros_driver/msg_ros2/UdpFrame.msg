@@ -1,1 +1,2 @@
-/home/giovanna/argo_go2_ws/src/hesai_ros_driver/msg/msg_ros2/UdpFrame.msg
+std_msgs/Header header
+UdpPacket[] packets

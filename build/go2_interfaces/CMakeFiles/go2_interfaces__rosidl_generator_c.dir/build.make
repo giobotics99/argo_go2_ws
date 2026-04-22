@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/giovanna/argo_go2_ws/src/go2_interfaces
+CMAKE_SOURCE_DIR = /home/unitree/argo_go2_ws/src/go2_interfaces
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/giovanna/argo_go2_ws/build/go2_interfaces
+CMAKE_BINARY_DIR = /home/unitree/argo_go2_ws/build/go2_interfaces
 
 # Include any dependencies generated for this target.
 include CMakeFiles/go2_interfaces__rosidl_generator_c.dir/depend.make
@@ -79,8 +79,8 @@ rosidl_generator_c/go2_interfaces/srv/body_height.h: rosidl_adapter/go2_interfac
 rosidl_generator_c/go2_interfaces/srv/body_height.h: rosidl_adapter/go2_interfaces/srv/SpeedLevel.idl
 rosidl_generator_c/go2_interfaces/srv/body_height.h: rosidl_adapter/go2_interfaces/srv/SwitchGait.idl
 rosidl_generator_c/go2_interfaces/srv/body_height.h: rosidl_adapter/go2_interfaces/srv/SwitchJoystick.idl
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/giovanna/argo_go2_ws/build/go2_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C code for ROS interfaces"
-	/usr/bin/python3 /opt/ros/foxy/share/rosidl_generator_c/cmake/../../../lib/rosidl_generator_c/rosidl_generator_c --generator-arguments-file /home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_generator_c__arguments.json
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unitree/argo_go2_ws/build/go2_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C code for ROS interfaces"
+	/home/unitree/.pyenv/shims/python3 /opt/ros/foxy/share/rosidl_generator_c/cmake/../../../lib/rosidl_generator_c/rosidl_generator_c --generator-arguments-file /home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_c__arguments.json
 
 rosidl_generator_c/go2_interfaces/srv/detail/body_height__functions.h: rosidl_generator_c/go2_interfaces/srv/body_height.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/go2_interfaces/srv/detail/body_height__functions.h
@@ -216,120 +216,120 @@ rosidl_generator_c/go2_interfaces/srv/detail/switch_joystick__functions.c: rosid
 
 CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/body_height__functions.c.o: CMakeFiles/go2_interfaces__rosidl_generator_c.dir/flags.make
 CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/body_height__functions.c.o: rosidl_generator_c/go2_interfaces/srv/detail/body_height__functions.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/giovanna/argo_go2_ws/build/go2_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/body_height__functions.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/body_height__functions.c.o   -c /home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/body_height__functions.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/unitree/argo_go2_ws/build/go2_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/body_height__functions.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/body_height__functions.c.o   -c /home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/body_height__functions.c
 
 CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/body_height__functions.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/body_height__functions.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/body_height__functions.c > CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/body_height__functions.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/body_height__functions.c > CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/body_height__functions.c.i
 
 CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/body_height__functions.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/body_height__functions.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/body_height__functions.c -o CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/body_height__functions.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/body_height__functions.c -o CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/body_height__functions.c.s
 
 CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/continuous_gait__functions.c.o: CMakeFiles/go2_interfaces__rosidl_generator_c.dir/flags.make
 CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/continuous_gait__functions.c.o: rosidl_generator_c/go2_interfaces/srv/detail/continuous_gait__functions.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/giovanna/argo_go2_ws/build/go2_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/continuous_gait__functions.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/continuous_gait__functions.c.o   -c /home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/continuous_gait__functions.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/unitree/argo_go2_ws/build/go2_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/continuous_gait__functions.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/continuous_gait__functions.c.o   -c /home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/continuous_gait__functions.c
 
 CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/continuous_gait__functions.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/continuous_gait__functions.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/continuous_gait__functions.c > CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/continuous_gait__functions.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/continuous_gait__functions.c > CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/continuous_gait__functions.c.i
 
 CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/continuous_gait__functions.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/continuous_gait__functions.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/continuous_gait__functions.c -o CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/continuous_gait__functions.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/continuous_gait__functions.c -o CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/continuous_gait__functions.c.s
 
 CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/euler__functions.c.o: CMakeFiles/go2_interfaces__rosidl_generator_c.dir/flags.make
 CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/euler__functions.c.o: rosidl_generator_c/go2_interfaces/srv/detail/euler__functions.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/giovanna/argo_go2_ws/build/go2_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/euler__functions.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/euler__functions.c.o   -c /home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/euler__functions.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/unitree/argo_go2_ws/build/go2_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/euler__functions.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/euler__functions.c.o   -c /home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/euler__functions.c
 
 CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/euler__functions.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/euler__functions.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/euler__functions.c > CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/euler__functions.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/euler__functions.c > CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/euler__functions.c.i
 
 CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/euler__functions.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/euler__functions.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/euler__functions.c -o CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/euler__functions.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/euler__functions.c -o CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/euler__functions.c.s
 
 CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/foot_raise_height__functions.c.o: CMakeFiles/go2_interfaces__rosidl_generator_c.dir/flags.make
 CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/foot_raise_height__functions.c.o: rosidl_generator_c/go2_interfaces/srv/detail/foot_raise_height__functions.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/giovanna/argo_go2_ws/build/go2_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/foot_raise_height__functions.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/foot_raise_height__functions.c.o   -c /home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/foot_raise_height__functions.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/unitree/argo_go2_ws/build/go2_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/foot_raise_height__functions.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/foot_raise_height__functions.c.o   -c /home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/foot_raise_height__functions.c
 
 CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/foot_raise_height__functions.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/foot_raise_height__functions.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/foot_raise_height__functions.c > CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/foot_raise_height__functions.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/foot_raise_height__functions.c > CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/foot_raise_height__functions.c.i
 
 CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/foot_raise_height__functions.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/foot_raise_height__functions.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/foot_raise_height__functions.c -o CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/foot_raise_height__functions.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/foot_raise_height__functions.c -o CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/foot_raise_height__functions.c.s
 
 CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/mode__functions.c.o: CMakeFiles/go2_interfaces__rosidl_generator_c.dir/flags.make
 CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/mode__functions.c.o: rosidl_generator_c/go2_interfaces/srv/detail/mode__functions.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/giovanna/argo_go2_ws/build/go2_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/mode__functions.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/mode__functions.c.o   -c /home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/mode__functions.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/unitree/argo_go2_ws/build/go2_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/mode__functions.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/mode__functions.c.o   -c /home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/mode__functions.c
 
 CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/mode__functions.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/mode__functions.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/mode__functions.c > CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/mode__functions.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/mode__functions.c > CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/mode__functions.c.i
 
 CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/mode__functions.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/mode__functions.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/mode__functions.c -o CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/mode__functions.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/mode__functions.c -o CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/mode__functions.c.s
 
 CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/pose__functions.c.o: CMakeFiles/go2_interfaces__rosidl_generator_c.dir/flags.make
 CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/pose__functions.c.o: rosidl_generator_c/go2_interfaces/srv/detail/pose__functions.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/giovanna/argo_go2_ws/build/go2_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/pose__functions.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/pose__functions.c.o   -c /home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/pose__functions.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/unitree/argo_go2_ws/build/go2_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/pose__functions.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/pose__functions.c.o   -c /home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/pose__functions.c
 
 CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/pose__functions.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/pose__functions.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/pose__functions.c > CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/pose__functions.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/pose__functions.c > CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/pose__functions.c.i
 
 CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/pose__functions.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/pose__functions.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/pose__functions.c -o CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/pose__functions.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/pose__functions.c -o CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/pose__functions.c.s
 
 CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/speed_level__functions.c.o: CMakeFiles/go2_interfaces__rosidl_generator_c.dir/flags.make
 CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/speed_level__functions.c.o: rosidl_generator_c/go2_interfaces/srv/detail/speed_level__functions.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/giovanna/argo_go2_ws/build/go2_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/speed_level__functions.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/speed_level__functions.c.o   -c /home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/speed_level__functions.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/unitree/argo_go2_ws/build/go2_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/speed_level__functions.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/speed_level__functions.c.o   -c /home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/speed_level__functions.c
 
 CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/speed_level__functions.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/speed_level__functions.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/speed_level__functions.c > CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/speed_level__functions.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/speed_level__functions.c > CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/speed_level__functions.c.i
 
 CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/speed_level__functions.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/speed_level__functions.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/speed_level__functions.c -o CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/speed_level__functions.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/speed_level__functions.c -o CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/speed_level__functions.c.s
 
 CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/switch_gait__functions.c.o: CMakeFiles/go2_interfaces__rosidl_generator_c.dir/flags.make
 CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/switch_gait__functions.c.o: rosidl_generator_c/go2_interfaces/srv/detail/switch_gait__functions.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/giovanna/argo_go2_ws/build/go2_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/switch_gait__functions.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/switch_gait__functions.c.o   -c /home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/switch_gait__functions.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/unitree/argo_go2_ws/build/go2_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/switch_gait__functions.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/switch_gait__functions.c.o   -c /home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/switch_gait__functions.c
 
 CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/switch_gait__functions.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/switch_gait__functions.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/switch_gait__functions.c > CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/switch_gait__functions.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/switch_gait__functions.c > CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/switch_gait__functions.c.i
 
 CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/switch_gait__functions.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/switch_gait__functions.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/switch_gait__functions.c -o CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/switch_gait__functions.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/switch_gait__functions.c -o CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/switch_gait__functions.c.s
 
 CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/switch_joystick__functions.c.o: CMakeFiles/go2_interfaces__rosidl_generator_c.dir/flags.make
 CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/switch_joystick__functions.c.o: rosidl_generator_c/go2_interfaces/srv/detail/switch_joystick__functions.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/giovanna/argo_go2_ws/build/go2_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/switch_joystick__functions.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/switch_joystick__functions.c.o   -c /home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/switch_joystick__functions.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/unitree/argo_go2_ws/build/go2_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/switch_joystick__functions.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/switch_joystick__functions.c.o   -c /home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/switch_joystick__functions.c
 
 CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/switch_joystick__functions.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/switch_joystick__functions.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/switch_joystick__functions.c > CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/switch_joystick__functions.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/switch_joystick__functions.c > CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/switch_joystick__functions.c.i
 
 CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/switch_joystick__functions.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/switch_joystick__functions.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/switch_joystick__functions.c -o CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/switch_joystick__functions.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/switch_joystick__functions.c -o CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/srv/detail/switch_joystick__functions.c.s
 
 # Object files for target go2_interfaces__rosidl_generator_c
 go2_interfaces__rosidl_generator_c_OBJECTS = \
@@ -359,7 +359,7 @@ libgo2_interfaces__rosidl_generator_c.so: CMakeFiles/go2_interfaces__rosidl_gene
 libgo2_interfaces__rosidl_generator_c.so: /opt/ros/foxy/lib/librosidl_runtime_c.so
 libgo2_interfaces__rosidl_generator_c.so: /opt/ros/foxy/lib/librcutils.so
 libgo2_interfaces__rosidl_generator_c.so: CMakeFiles/go2_interfaces__rosidl_generator_c.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/giovanna/argo_go2_ws/build/go2_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking C shared library libgo2_interfaces__rosidl_generator_c.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/unitree/argo_go2_ws/build/go2_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking C shared library libgo2_interfaces__rosidl_generator_c.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/go2_interfaces__rosidl_generator_c.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -416,6 +416,6 @@ CMakeFiles/go2_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/go2
 CMakeFiles/go2_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/go2_interfaces/srv/detail/speed_level__functions.c
 CMakeFiles/go2_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/go2_interfaces/srv/detail/switch_gait__functions.c
 CMakeFiles/go2_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/go2_interfaces/srv/detail/switch_joystick__functions.c
-	cd /home/giovanna/argo_go2_ws/build/go2_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/giovanna/argo_go2_ws/src/go2_interfaces /home/giovanna/argo_go2_ws/src/go2_interfaces /home/giovanna/argo_go2_ws/build/go2_interfaces /home/giovanna/argo_go2_ws/build/go2_interfaces /home/giovanna/argo_go2_ws/build/go2_interfaces/CMakeFiles/go2_interfaces__rosidl_generator_c.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/unitree/argo_go2_ws/build/go2_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/unitree/argo_go2_ws/src/go2_interfaces /home/unitree/argo_go2_ws/src/go2_interfaces /home/unitree/argo_go2_ws/build/go2_interfaces /home/unitree/argo_go2_ws/build/go2_interfaces /home/unitree/argo_go2_ws/build/go2_interfaces/CMakeFiles/go2_interfaces__rosidl_generator_c.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/go2_interfaces__rosidl_generator_c.dir/depend
 

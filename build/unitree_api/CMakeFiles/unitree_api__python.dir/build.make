@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/giovanna/argo_go2_ws/src/unitree_api
+CMAKE_SOURCE_DIR = /home/unitree/argo_go2_ws/src/unitree_api
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/giovanna/argo_go2_ws/build/unitree_api
+CMAKE_BINARY_DIR = /home/unitree/argo_go2_ws/build/unitree_api
 
 # Include any dependencies generated for this target.
 include CMakeFiles/unitree_api__python.dir/depend.make
@@ -59,107 +59,107 @@ include CMakeFiles/unitree_api__python.dir/flags.make
 
 CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_request_s.c.o: CMakeFiles/unitree_api__python.dir/flags.make
 CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_request_s.c.o: rosidl_generator_py/unitree_api/msg/_request_s.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/giovanna/argo_go2_ws/build/unitree_api/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_request_s.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_request_s.c.o   -c /home/giovanna/argo_go2_ws/build/unitree_api/rosidl_generator_py/unitree_api/msg/_request_s.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/unitree/argo_go2_ws/build/unitree_api/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_request_s.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_request_s.c.o   -c /home/unitree/argo_go2_ws/build/unitree_api/rosidl_generator_py/unitree_api/msg/_request_s.c
 
 CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_request_s.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_request_s.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/giovanna/argo_go2_ws/build/unitree_api/rosidl_generator_py/unitree_api/msg/_request_s.c > CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_request_s.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/unitree/argo_go2_ws/build/unitree_api/rosidl_generator_py/unitree_api/msg/_request_s.c > CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_request_s.c.i
 
 CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_request_s.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_request_s.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/giovanna/argo_go2_ws/build/unitree_api/rosidl_generator_py/unitree_api/msg/_request_s.c -o CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_request_s.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/unitree/argo_go2_ws/build/unitree_api/rosidl_generator_py/unitree_api/msg/_request_s.c -o CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_request_s.c.s
 
 CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_request_header_s.c.o: CMakeFiles/unitree_api__python.dir/flags.make
 CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_request_header_s.c.o: rosidl_generator_py/unitree_api/msg/_request_header_s.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/giovanna/argo_go2_ws/build/unitree_api/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_request_header_s.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_request_header_s.c.o   -c /home/giovanna/argo_go2_ws/build/unitree_api/rosidl_generator_py/unitree_api/msg/_request_header_s.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/unitree/argo_go2_ws/build/unitree_api/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_request_header_s.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_request_header_s.c.o   -c /home/unitree/argo_go2_ws/build/unitree_api/rosidl_generator_py/unitree_api/msg/_request_header_s.c
 
 CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_request_header_s.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_request_header_s.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/giovanna/argo_go2_ws/build/unitree_api/rosidl_generator_py/unitree_api/msg/_request_header_s.c > CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_request_header_s.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/unitree/argo_go2_ws/build/unitree_api/rosidl_generator_py/unitree_api/msg/_request_header_s.c > CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_request_header_s.c.i
 
 CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_request_header_s.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_request_header_s.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/giovanna/argo_go2_ws/build/unitree_api/rosidl_generator_py/unitree_api/msg/_request_header_s.c -o CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_request_header_s.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/unitree/argo_go2_ws/build/unitree_api/rosidl_generator_py/unitree_api/msg/_request_header_s.c -o CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_request_header_s.c.s
 
 CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_request_identity_s.c.o: CMakeFiles/unitree_api__python.dir/flags.make
 CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_request_identity_s.c.o: rosidl_generator_py/unitree_api/msg/_request_identity_s.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/giovanna/argo_go2_ws/build/unitree_api/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_request_identity_s.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_request_identity_s.c.o   -c /home/giovanna/argo_go2_ws/build/unitree_api/rosidl_generator_py/unitree_api/msg/_request_identity_s.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/unitree/argo_go2_ws/build/unitree_api/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_request_identity_s.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_request_identity_s.c.o   -c /home/unitree/argo_go2_ws/build/unitree_api/rosidl_generator_py/unitree_api/msg/_request_identity_s.c
 
 CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_request_identity_s.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_request_identity_s.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/giovanna/argo_go2_ws/build/unitree_api/rosidl_generator_py/unitree_api/msg/_request_identity_s.c > CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_request_identity_s.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/unitree/argo_go2_ws/build/unitree_api/rosidl_generator_py/unitree_api/msg/_request_identity_s.c > CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_request_identity_s.c.i
 
 CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_request_identity_s.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_request_identity_s.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/giovanna/argo_go2_ws/build/unitree_api/rosidl_generator_py/unitree_api/msg/_request_identity_s.c -o CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_request_identity_s.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/unitree/argo_go2_ws/build/unitree_api/rosidl_generator_py/unitree_api/msg/_request_identity_s.c -o CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_request_identity_s.c.s
 
 CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_request_lease_s.c.o: CMakeFiles/unitree_api__python.dir/flags.make
 CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_request_lease_s.c.o: rosidl_generator_py/unitree_api/msg/_request_lease_s.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/giovanna/argo_go2_ws/build/unitree_api/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_request_lease_s.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_request_lease_s.c.o   -c /home/giovanna/argo_go2_ws/build/unitree_api/rosidl_generator_py/unitree_api/msg/_request_lease_s.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/unitree/argo_go2_ws/build/unitree_api/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_request_lease_s.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_request_lease_s.c.o   -c /home/unitree/argo_go2_ws/build/unitree_api/rosidl_generator_py/unitree_api/msg/_request_lease_s.c
 
 CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_request_lease_s.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_request_lease_s.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/giovanna/argo_go2_ws/build/unitree_api/rosidl_generator_py/unitree_api/msg/_request_lease_s.c > CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_request_lease_s.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/unitree/argo_go2_ws/build/unitree_api/rosidl_generator_py/unitree_api/msg/_request_lease_s.c > CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_request_lease_s.c.i
 
 CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_request_lease_s.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_request_lease_s.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/giovanna/argo_go2_ws/build/unitree_api/rosidl_generator_py/unitree_api/msg/_request_lease_s.c -o CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_request_lease_s.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/unitree/argo_go2_ws/build/unitree_api/rosidl_generator_py/unitree_api/msg/_request_lease_s.c -o CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_request_lease_s.c.s
 
 CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_request_policy_s.c.o: CMakeFiles/unitree_api__python.dir/flags.make
 CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_request_policy_s.c.o: rosidl_generator_py/unitree_api/msg/_request_policy_s.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/giovanna/argo_go2_ws/build/unitree_api/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_request_policy_s.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_request_policy_s.c.o   -c /home/giovanna/argo_go2_ws/build/unitree_api/rosidl_generator_py/unitree_api/msg/_request_policy_s.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/unitree/argo_go2_ws/build/unitree_api/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_request_policy_s.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_request_policy_s.c.o   -c /home/unitree/argo_go2_ws/build/unitree_api/rosidl_generator_py/unitree_api/msg/_request_policy_s.c
 
 CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_request_policy_s.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_request_policy_s.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/giovanna/argo_go2_ws/build/unitree_api/rosidl_generator_py/unitree_api/msg/_request_policy_s.c > CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_request_policy_s.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/unitree/argo_go2_ws/build/unitree_api/rosidl_generator_py/unitree_api/msg/_request_policy_s.c > CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_request_policy_s.c.i
 
 CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_request_policy_s.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_request_policy_s.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/giovanna/argo_go2_ws/build/unitree_api/rosidl_generator_py/unitree_api/msg/_request_policy_s.c -o CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_request_policy_s.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/unitree/argo_go2_ws/build/unitree_api/rosidl_generator_py/unitree_api/msg/_request_policy_s.c -o CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_request_policy_s.c.s
 
 CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_response_s.c.o: CMakeFiles/unitree_api__python.dir/flags.make
 CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_response_s.c.o: rosidl_generator_py/unitree_api/msg/_response_s.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/giovanna/argo_go2_ws/build/unitree_api/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_response_s.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_response_s.c.o   -c /home/giovanna/argo_go2_ws/build/unitree_api/rosidl_generator_py/unitree_api/msg/_response_s.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/unitree/argo_go2_ws/build/unitree_api/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_response_s.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_response_s.c.o   -c /home/unitree/argo_go2_ws/build/unitree_api/rosidl_generator_py/unitree_api/msg/_response_s.c
 
 CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_response_s.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_response_s.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/giovanna/argo_go2_ws/build/unitree_api/rosidl_generator_py/unitree_api/msg/_response_s.c > CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_response_s.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/unitree/argo_go2_ws/build/unitree_api/rosidl_generator_py/unitree_api/msg/_response_s.c > CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_response_s.c.i
 
 CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_response_s.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_response_s.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/giovanna/argo_go2_ws/build/unitree_api/rosidl_generator_py/unitree_api/msg/_response_s.c -o CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_response_s.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/unitree/argo_go2_ws/build/unitree_api/rosidl_generator_py/unitree_api/msg/_response_s.c -o CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_response_s.c.s
 
 CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_response_header_s.c.o: CMakeFiles/unitree_api__python.dir/flags.make
 CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_response_header_s.c.o: rosidl_generator_py/unitree_api/msg/_response_header_s.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/giovanna/argo_go2_ws/build/unitree_api/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_response_header_s.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_response_header_s.c.o   -c /home/giovanna/argo_go2_ws/build/unitree_api/rosidl_generator_py/unitree_api/msg/_response_header_s.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/unitree/argo_go2_ws/build/unitree_api/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_response_header_s.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_response_header_s.c.o   -c /home/unitree/argo_go2_ws/build/unitree_api/rosidl_generator_py/unitree_api/msg/_response_header_s.c
 
 CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_response_header_s.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_response_header_s.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/giovanna/argo_go2_ws/build/unitree_api/rosidl_generator_py/unitree_api/msg/_response_header_s.c > CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_response_header_s.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/unitree/argo_go2_ws/build/unitree_api/rosidl_generator_py/unitree_api/msg/_response_header_s.c > CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_response_header_s.c.i
 
 CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_response_header_s.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_response_header_s.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/giovanna/argo_go2_ws/build/unitree_api/rosidl_generator_py/unitree_api/msg/_response_header_s.c -o CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_response_header_s.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/unitree/argo_go2_ws/build/unitree_api/rosidl_generator_py/unitree_api/msg/_response_header_s.c -o CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_response_header_s.c.s
 
 CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_response_status_s.c.o: CMakeFiles/unitree_api__python.dir/flags.make
 CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_response_status_s.c.o: rosidl_generator_py/unitree_api/msg/_response_status_s.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/giovanna/argo_go2_ws/build/unitree_api/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_response_status_s.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_response_status_s.c.o   -c /home/giovanna/argo_go2_ws/build/unitree_api/rosidl_generator_py/unitree_api/msg/_response_status_s.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/unitree/argo_go2_ws/build/unitree_api/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_response_status_s.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_response_status_s.c.o   -c /home/unitree/argo_go2_ws/build/unitree_api/rosidl_generator_py/unitree_api/msg/_response_status_s.c
 
 CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_response_status_s.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_response_status_s.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/giovanna/argo_go2_ws/build/unitree_api/rosidl_generator_py/unitree_api/msg/_response_status_s.c > CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_response_status_s.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/unitree/argo_go2_ws/build/unitree_api/rosidl_generator_py/unitree_api/msg/_response_status_s.c > CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_response_status_s.c.i
 
 CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_response_status_s.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_response_status_s.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/giovanna/argo_go2_ws/build/unitree_api/rosidl_generator_py/unitree_api/msg/_response_status_s.c -o CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_response_status_s.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/unitree/argo_go2_ws/build/unitree_api/rosidl_generator_py/unitree_api/msg/_response_status_s.c -o CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_response_status_s.c.s
 
 # Object files for target unitree_api__python
 unitree_api__python_OBJECTS = \
@@ -185,7 +185,7 @@ rosidl_generator_py/unitree_api/libunitree_api__python.so: CMakeFiles/unitree_ap
 rosidl_generator_py/unitree_api/libunitree_api__python.so: CMakeFiles/unitree_api__python.dir/rosidl_generator_py/unitree_api/msg/_response_status_s.c.o
 rosidl_generator_py/unitree_api/libunitree_api__python.so: CMakeFiles/unitree_api__python.dir/build.make
 rosidl_generator_py/unitree_api/libunitree_api__python.so: libunitree_api__rosidl_generator_c.so
-rosidl_generator_py/unitree_api/libunitree_api__python.so: /usr/lib/x86_64-linux-gnu/libpython3.8.so
+rosidl_generator_py/unitree_api/libunitree_api__python.so: /usr/lib/aarch64-linux-gnu/libpython3.8.so
 rosidl_generator_py/unitree_api/libunitree_api__python.so: libunitree_api__rosidl_typesupport_c.so
 rosidl_generator_py/unitree_api/libunitree_api__python.so: /opt/ros/foxy/share/geometry_msgs/cmake/../../../lib/libgeometry_msgs__python.so
 rosidl_generator_py/unitree_api/libunitree_api__python.so: /opt/ros/foxy/share/std_msgs/cmake/../../../lib/libstd_msgs__python.so
@@ -213,7 +213,7 @@ rosidl_generator_py/unitree_api/libunitree_api__python.so: /opt/ros/foxy/lib/lib
 rosidl_generator_py/unitree_api/libunitree_api__python.so: /opt/ros/foxy/lib/librcpputils.so
 rosidl_generator_py/unitree_api/libunitree_api__python.so: /opt/ros/foxy/lib/librcutils.so
 rosidl_generator_py/unitree_api/libunitree_api__python.so: CMakeFiles/unitree_api__python.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/giovanna/argo_go2_ws/build/unitree_api/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking C shared library rosidl_generator_py/unitree_api/libunitree_api__python.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/unitree/argo_go2_ws/build/unitree_api/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking C shared library rosidl_generator_py/unitree_api/libunitree_api__python.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/unitree_api__python.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -226,6 +226,6 @@ CMakeFiles/unitree_api__python.dir/clean:
 .PHONY : CMakeFiles/unitree_api__python.dir/clean
 
 CMakeFiles/unitree_api__python.dir/depend:
-	cd /home/giovanna/argo_go2_ws/build/unitree_api && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/giovanna/argo_go2_ws/src/unitree_api /home/giovanna/argo_go2_ws/src/unitree_api /home/giovanna/argo_go2_ws/build/unitree_api /home/giovanna/argo_go2_ws/build/unitree_api /home/giovanna/argo_go2_ws/build/unitree_api/CMakeFiles/unitree_api__python.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/unitree/argo_go2_ws/build/unitree_api && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/unitree/argo_go2_ws/src/unitree_api /home/unitree/argo_go2_ws/src/unitree_api /home/unitree/argo_go2_ws/build/unitree_api /home/unitree/argo_go2_ws/build/unitree_api /home/unitree/argo_go2_ws/build/unitree_api/CMakeFiles/unitree_api__python.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/unitree_api__python.dir/depend
 

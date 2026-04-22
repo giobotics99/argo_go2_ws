@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/giovanna/argo_go2_ws/src/unitree_api
+CMAKE_SOURCE_DIR = /home/unitree/argo_go2_ws/src/unitree_api
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/giovanna/argo_go2_ws/build/unitree_api
+CMAKE_BINARY_DIR = /home/unitree/argo_go2_ws/build/unitree_api
 
 # Utility rule file for unitree_api__dds_connext_idl.
 
@@ -138,8 +138,8 @@ rosidl_generator_dds_idl/unitree_api/msg/dds_connext/Request_.idl: /opt/ros/foxy
 rosidl_generator_dds_idl/unitree_api/msg/dds_connext/Request_.idl: /opt/ros/foxy/share/std_msgs/msg/UInt8MultiArray.idl
 rosidl_generator_dds_idl/unitree_api/msg/dds_connext/Request_.idl: /opt/ros/foxy/share/builtin_interfaces/msg/Duration.idl
 rosidl_generator_dds_idl/unitree_api/msg/dds_connext/Request_.idl: /opt/ros/foxy/share/builtin_interfaces/msg/Time.idl
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/giovanna/argo_go2_ws/build/unitree_api/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating DDS interfaces"
-	/usr/bin/python3 /opt/ros/foxy/lib/rosidl_generator_dds_idl/rosidl_generator_dds_idl --additional-service-templates --generator-arguments-file /home/giovanna/argo_go2_ws/build/unitree_api/rosidl_generator_dds_idl__dds_connext__arguments.json --subfolders dds_connext --extension
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unitree/argo_go2_ws/build/unitree_api/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating DDS interfaces"
+	/home/unitree/.pyenv/shims/python3 /opt/ros/foxy/lib/rosidl_generator_dds_idl/rosidl_generator_dds_idl --additional-service-templates --generator-arguments-file /home/unitree/argo_go2_ws/build/unitree_api/rosidl_generator_dds_idl__dds_connext__arguments.json --subfolders dds_connext --extension
 
 rosidl_generator_dds_idl/unitree_api/msg/dds_connext/RequestHeader_.idl: rosidl_generator_dds_idl/unitree_api/msg/dds_connext/Request_.idl
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_dds_idl/unitree_api/msg/dds_connext/RequestHeader_.idl
@@ -185,6 +185,6 @@ CMakeFiles/unitree_api__dds_connext_idl.dir/clean:
 .PHONY : CMakeFiles/unitree_api__dds_connext_idl.dir/clean
 
 CMakeFiles/unitree_api__dds_connext_idl.dir/depend:
-	cd /home/giovanna/argo_go2_ws/build/unitree_api && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/giovanna/argo_go2_ws/src/unitree_api /home/giovanna/argo_go2_ws/src/unitree_api /home/giovanna/argo_go2_ws/build/unitree_api /home/giovanna/argo_go2_ws/build/unitree_api /home/giovanna/argo_go2_ws/build/unitree_api/CMakeFiles/unitree_api__dds_connext_idl.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/unitree/argo_go2_ws/build/unitree_api && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/unitree/argo_go2_ws/src/unitree_api /home/unitree/argo_go2_ws/src/unitree_api /home/unitree/argo_go2_ws/build/unitree_api /home/unitree/argo_go2_ws/build/unitree_api /home/unitree/argo_go2_ws/build/unitree_api/CMakeFiles/unitree_api__dds_connext_idl.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/unitree_api__dds_connext_idl.dir/depend
 

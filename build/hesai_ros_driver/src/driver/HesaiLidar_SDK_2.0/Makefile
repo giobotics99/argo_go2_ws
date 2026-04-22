@@ -48,25 +48,13 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/giovanna/argo_go2_ws/src/hesai_ros_driver
+CMAKE_SOURCE_DIR = /home/unitree/argo_go2_ws/src/hesai_ros_driver
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/giovanna/argo_go2_ws/build/hesai_ros_driver
+CMAKE_BINARY_DIR = /home/unitree/argo_go2_ws/build/hesai_ros_driver
 
 #=============================================================================
 # Targets provided globally by CMake.
-
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local/fast
 
 # Special rule for the target install
 install: preinstall
@@ -103,8 +91,8 @@ rebuild_cache/fast: rebuild_cache
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
+	/usr/bin/cmake-gui -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -123,6 +111,18 @@ test/fast: test
 
 .PHONY : test/fast
 
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
 # Special rule for the target install/strip
 install/strip: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
@@ -137,14 +137,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/giovanna/argo_go2_ws/build/hesai_ros_driver && $(CMAKE_COMMAND) -E cmake_progress_start /home/giovanna/argo_go2_ws/build/hesai_ros_driver/CMakeFiles /home/giovanna/argo_go2_ws/build/hesai_ros_driver/src/driver/HesaiLidar_SDK_2.0/CMakeFiles/progress.marks
-	cd /home/giovanna/argo_go2_ws/build/hesai_ros_driver && $(MAKE) -f CMakeFiles/Makefile2 src/driver/HesaiLidar_SDK_2.0/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/giovanna/argo_go2_ws/build/hesai_ros_driver/CMakeFiles 0
+	cd /home/unitree/argo_go2_ws/build/hesai_ros_driver && $(CMAKE_COMMAND) -E cmake_progress_start /home/unitree/argo_go2_ws/build/hesai_ros_driver/CMakeFiles /home/unitree/argo_go2_ws/build/hesai_ros_driver/src/driver/HesaiLidar_SDK_2.0/CMakeFiles/progress.marks
+	cd /home/unitree/argo_go2_ws/build/hesai_ros_driver && $(MAKE) -f CMakeFiles/Makefile2 src/driver/HesaiLidar_SDK_2.0/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/unitree/argo_go2_ws/build/hesai_ros_driver/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/giovanna/argo_go2_ws/build/hesai_ros_driver && $(MAKE) -f CMakeFiles/Makefile2 src/driver/HesaiLidar_SDK_2.0/clean
+	cd /home/unitree/argo_go2_ws/build/hesai_ros_driver && $(MAKE) -f CMakeFiles/Makefile2 src/driver/HesaiLidar_SDK_2.0/clean
 .PHONY : clean
 
 # The main clean target
@@ -154,22 +154,37 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/giovanna/argo_go2_ws/build/hesai_ros_driver && $(MAKE) -f CMakeFiles/Makefile2 src/driver/HesaiLidar_SDK_2.0/preinstall
+	cd /home/unitree/argo_go2_ws/build/hesai_ros_driver && $(MAKE) -f CMakeFiles/Makefile2 src/driver/HesaiLidar_SDK_2.0/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/giovanna/argo_go2_ws/build/hesai_ros_driver && $(MAKE) -f CMakeFiles/Makefile2 src/driver/HesaiLidar_SDK_2.0/preinstall
+	cd /home/unitree/argo_go2_ws/build/hesai_ros_driver && $(MAKE) -f CMakeFiles/Makefile2 src/driver/HesaiLidar_SDK_2.0/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/giovanna/argo_go2_ws/build/hesai_ros_driver && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/unitree/argo_go2_ws/build/hesai_ros_driver && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
+src/driver/HesaiLidar_SDK_2.0/CMakeFiles/sample_gpu.dir/rule:
+	cd /home/unitree/argo_go2_ws/build/hesai_ros_driver && $(MAKE) -f CMakeFiles/Makefile2 src/driver/HesaiLidar_SDK_2.0/CMakeFiles/sample_gpu.dir/rule
+.PHONY : src/driver/HesaiLidar_SDK_2.0/CMakeFiles/sample_gpu.dir/rule
+
+# Convenience name for target.
+sample_gpu: src/driver/HesaiLidar_SDK_2.0/CMakeFiles/sample_gpu.dir/rule
+
+.PHONY : sample_gpu
+
+# fast build rule for target.
+sample_gpu/fast:
+	cd /home/unitree/argo_go2_ws/build/hesai_ros_driver && $(MAKE) -f src/driver/HesaiLidar_SDK_2.0/CMakeFiles/sample_gpu.dir/build.make src/driver/HesaiLidar_SDK_2.0/CMakeFiles/sample_gpu.dir/build
+.PHONY : sample_gpu/fast
+
+# Convenience name for target.
 src/driver/HesaiLidar_SDK_2.0/CMakeFiles/sample.dir/rule:
-	cd /home/giovanna/argo_go2_ws/build/hesai_ros_driver && $(MAKE) -f CMakeFiles/Makefile2 src/driver/HesaiLidar_SDK_2.0/CMakeFiles/sample.dir/rule
+	cd /home/unitree/argo_go2_ws/build/hesai_ros_driver && $(MAKE) -f CMakeFiles/Makefile2 src/driver/HesaiLidar_SDK_2.0/CMakeFiles/sample.dir/rule
 .PHONY : src/driver/HesaiLidar_SDK_2.0/CMakeFiles/sample.dir/rule
 
 # Convenience name for target.
@@ -179,7 +194,7 @@ sample: src/driver/HesaiLidar_SDK_2.0/CMakeFiles/sample.dir/rule
 
 # fast build rule for target.
 sample/fast:
-	cd /home/giovanna/argo_go2_ws/build/hesai_ros_driver && $(MAKE) -f src/driver/HesaiLidar_SDK_2.0/CMakeFiles/sample.dir/build.make src/driver/HesaiLidar_SDK_2.0/CMakeFiles/sample.dir/build
+	cd /home/unitree/argo_go2_ws/build/hesai_ros_driver && $(MAKE) -f src/driver/HesaiLidar_SDK_2.0/CMakeFiles/sample.dir/build.make src/driver/HesaiLidar_SDK_2.0/CMakeFiles/sample.dir/build
 .PHONY : sample/fast
 
 test/test.o: test/test.cc.o
@@ -188,7 +203,7 @@ test/test.o: test/test.cc.o
 
 # target to build an object file
 test/test.cc.o:
-	cd /home/giovanna/argo_go2_ws/build/hesai_ros_driver && $(MAKE) -f src/driver/HesaiLidar_SDK_2.0/CMakeFiles/sample.dir/build.make src/driver/HesaiLidar_SDK_2.0/CMakeFiles/sample.dir/test/test.cc.o
+	cd /home/unitree/argo_go2_ws/build/hesai_ros_driver && $(MAKE) -f src/driver/HesaiLidar_SDK_2.0/CMakeFiles/sample.dir/build.make src/driver/HesaiLidar_SDK_2.0/CMakeFiles/sample.dir/test/test.cc.o
 .PHONY : test/test.cc.o
 
 test/test.i: test/test.cc.i
@@ -197,7 +212,7 @@ test/test.i: test/test.cc.i
 
 # target to preprocess a source file
 test/test.cc.i:
-	cd /home/giovanna/argo_go2_ws/build/hesai_ros_driver && $(MAKE) -f src/driver/HesaiLidar_SDK_2.0/CMakeFiles/sample.dir/build.make src/driver/HesaiLidar_SDK_2.0/CMakeFiles/sample.dir/test/test.cc.i
+	cd /home/unitree/argo_go2_ws/build/hesai_ros_driver && $(MAKE) -f src/driver/HesaiLidar_SDK_2.0/CMakeFiles/sample.dir/build.make src/driver/HesaiLidar_SDK_2.0/CMakeFiles/sample.dir/test/test.cc.i
 .PHONY : test/test.cc.i
 
 test/test.s: test/test.cc.s
@@ -206,7 +221,7 @@ test/test.s: test/test.cc.s
 
 # target to generate assembly for a file
 test/test.cc.s:
-	cd /home/giovanna/argo_go2_ws/build/hesai_ros_driver && $(MAKE) -f src/driver/HesaiLidar_SDK_2.0/CMakeFiles/sample.dir/build.make src/driver/HesaiLidar_SDK_2.0/CMakeFiles/sample.dir/test/test.cc.s
+	cd /home/unitree/argo_go2_ws/build/hesai_ros_driver && $(MAKE) -f src/driver/HesaiLidar_SDK_2.0/CMakeFiles/sample.dir/build.make src/driver/HesaiLidar_SDK_2.0/CMakeFiles/sample.dir/test/test.cc.s
 .PHONY : test/test.cc.s
 
 # Help Target
@@ -215,12 +230,13 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... install/local"
 	@echo "... install"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... test"
+	@echo "... install/local"
+	@echo "... sample_gpu"
 	@echo "... install/strip"
 	@echo "... sample"
 	@echo "... test/test.o"
@@ -237,6 +253,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/giovanna/argo_go2_ws/build/hesai_ros_driver && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/unitree/argo_go2_ws/build/hesai_ros_driver && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

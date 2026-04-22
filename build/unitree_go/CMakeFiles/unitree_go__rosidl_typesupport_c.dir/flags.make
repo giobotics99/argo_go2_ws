@@ -6,5 +6,5 @@ CXX_FLAGS = -fPIC   -Wall -std=gnu++14
 
 CXX_DEFINES = -DRCUTILS_ENABLE_FAULT_INJECTION -DROS_PACKAGE_NAME=\"unitree_go\" -Dunitree_go__rosidl_typesupport_c_EXPORTS
 
-CXX_INCLUDES = -I/home/giovanna/argo_go2_ws/build/unitree_go/rosidl_generator_c -I/home/giovanna/argo_go2_ws/build/unitree_go/rosidl_typesupport_c -isystem /opt/ros/foxy/include 
+CXX_INCLUDES = -I/home/unitree/argo_go2_ws/build/unitree_go/rosidl_generator_c -I/home/unitree/argo_go2_ws/build/unitree_go/rosidl_typesupport_c -isystem /opt/ros/foxy/include 
 

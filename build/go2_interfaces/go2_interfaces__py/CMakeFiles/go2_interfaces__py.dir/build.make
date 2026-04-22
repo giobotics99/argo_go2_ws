@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/giovanna/argo_go2_ws/src/go2_interfaces
+CMAKE_SOURCE_DIR = /home/unitree/argo_go2_ws/src/go2_interfaces
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/giovanna/argo_go2_ws/build/go2_interfaces
+CMAKE_BINARY_DIR = /home/unitree/argo_go2_ws/build/go2_interfaces
 
 # Utility rule file for go2_interfaces__py.
 
@@ -99,8 +99,8 @@ rosidl_generator_py/go2_interfaces/_go2_interfaces_s.ep.rosidl_typesupport_fastr
 rosidl_generator_py/go2_interfaces/_go2_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/go2_interfaces/srv/SpeedLevel.idl
 rosidl_generator_py/go2_interfaces/_go2_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/go2_interfaces/srv/SwitchGait.idl
 rosidl_generator_py/go2_interfaces/_go2_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/go2_interfaces/srv/SwitchJoystick.idl
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/giovanna/argo_go2_ws/build/go2_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python code for ROS interfaces"
-	cd /home/giovanna/argo_go2_ws/build/go2_interfaces/go2_interfaces__py && /usr/bin/python3 /opt/ros/foxy/share/rosidl_generator_py/cmake/../../../lib/rosidl_generator_py/rosidl_generator_py --generator-arguments-file /home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_generator_py__arguments.json --typesupport-impls "rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c;rosidl_typesupport_c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unitree/argo_go2_ws/build/go2_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python code for ROS interfaces"
+	cd /home/unitree/argo_go2_ws/build/go2_interfaces/go2_interfaces__py && /home/unitree/.pyenv/shims/python3 /opt/ros/foxy/share/rosidl_generator_py/cmake/../../../lib/rosidl_generator_py/rosidl_generator_py --generator-arguments-file /home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_py__arguments.json --typesupport-impls "rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c;rosidl_typesupport_c"
 
 rosidl_generator_py/go2_interfaces/_go2_interfaces_s.ep.rosidl_typesupport_introspection_c.c: rosidl_generator_py/go2_interfaces/_go2_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/go2_interfaces/_go2_interfaces_s.ep.rosidl_typesupport_introspection_c.c
@@ -198,10 +198,10 @@ go2_interfaces__py/CMakeFiles/go2_interfaces__py.dir/build: go2_interfaces__py
 .PHONY : go2_interfaces__py/CMakeFiles/go2_interfaces__py.dir/build
 
 go2_interfaces__py/CMakeFiles/go2_interfaces__py.dir/clean:
-	cd /home/giovanna/argo_go2_ws/build/go2_interfaces/go2_interfaces__py && $(CMAKE_COMMAND) -P CMakeFiles/go2_interfaces__py.dir/cmake_clean.cmake
+	cd /home/unitree/argo_go2_ws/build/go2_interfaces/go2_interfaces__py && $(CMAKE_COMMAND) -P CMakeFiles/go2_interfaces__py.dir/cmake_clean.cmake
 .PHONY : go2_interfaces__py/CMakeFiles/go2_interfaces__py.dir/clean
 
 go2_interfaces__py/CMakeFiles/go2_interfaces__py.dir/depend:
-	cd /home/giovanna/argo_go2_ws/build/go2_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/giovanna/argo_go2_ws/src/go2_interfaces /home/giovanna/argo_go2_ws/build/go2_interfaces/go2_interfaces__py /home/giovanna/argo_go2_ws/build/go2_interfaces /home/giovanna/argo_go2_ws/build/go2_interfaces/go2_interfaces__py /home/giovanna/argo_go2_ws/build/go2_interfaces/go2_interfaces__py/CMakeFiles/go2_interfaces__py.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/unitree/argo_go2_ws/build/go2_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/unitree/argo_go2_ws/src/go2_interfaces /home/unitree/argo_go2_ws/build/go2_interfaces/go2_interfaces__py /home/unitree/argo_go2_ws/build/go2_interfaces /home/unitree/argo_go2_ws/build/go2_interfaces/go2_interfaces__py /home/unitree/argo_go2_ws/build/go2_interfaces/go2_interfaces__py/CMakeFiles/go2_interfaces__py.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : go2_interfaces__py/CMakeFiles/go2_interfaces__py.dir/depend
 

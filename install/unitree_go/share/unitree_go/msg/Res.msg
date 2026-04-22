@@ -1,1 +1,3 @@
-/home/giovanna/argo_go2_ws/src/unitree_go/msg/Res.msg
+string uuid
+uint8[] data
+string body

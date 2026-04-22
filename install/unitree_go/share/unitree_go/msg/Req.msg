@@ -1,1 +1,2 @@
-/home/giovanna/argo_go2_ws/src/unitree_go/msg/Req.msg
+string uuid
+string body

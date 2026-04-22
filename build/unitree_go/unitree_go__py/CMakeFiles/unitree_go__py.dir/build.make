@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/giovanna/argo_go2_ws/src/unitree_go
+CMAKE_SOURCE_DIR = /home/unitree/argo_go2_ws/src/unitree_go
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/giovanna/argo_go2_ws/build/unitree_go
+CMAKE_BINARY_DIR = /home/unitree/argo_go2_ws/build/unitree_go
 
 # Utility rule file for unitree_go__py.
 
@@ -202,8 +202,8 @@ rosidl_generator_py/unitree_go/_unitree_go_s.ep.rosidl_typesupport_fastrtps_c.c:
 rosidl_generator_py/unitree_go/_unitree_go_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/foxy/share/std_msgs/msg/UInt8MultiArray.idl
 rosidl_generator_py/unitree_go/_unitree_go_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/foxy/share/builtin_interfaces/msg/Duration.idl
 rosidl_generator_py/unitree_go/_unitree_go_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/foxy/share/builtin_interfaces/msg/Time.idl
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/giovanna/argo_go2_ws/build/unitree_go/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python code for ROS interfaces"
-	cd /home/giovanna/argo_go2_ws/build/unitree_go/unitree_go__py && /usr/bin/python3 /opt/ros/foxy/share/rosidl_generator_py/cmake/../../../lib/rosidl_generator_py/rosidl_generator_py --generator-arguments-file /home/giovanna/argo_go2_ws/build/unitree_go/rosidl_generator_py__arguments.json --typesupport-impls "rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c;rosidl_typesupport_c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unitree/argo_go2_ws/build/unitree_go/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python code for ROS interfaces"
+	cd /home/unitree/argo_go2_ws/build/unitree_go/unitree_go__py && /home/unitree/.pyenv/shims/python3 /opt/ros/foxy/share/rosidl_generator_py/cmake/../../../lib/rosidl_generator_py/rosidl_generator_py --generator-arguments-file /home/unitree/argo_go2_ws/build/unitree_go/rosidl_generator_py__arguments.json --typesupport-impls "rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c;rosidl_typesupport_c"
 
 rosidl_generator_py/unitree_go/_unitree_go_s.ep.rosidl_typesupport_introspection_c.c: rosidl_generator_py/unitree_go/_unitree_go_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/unitree_go/_unitree_go_s.ep.rosidl_typesupport_introspection_c.c
@@ -413,10 +413,10 @@ unitree_go__py/CMakeFiles/unitree_go__py.dir/build: unitree_go__py
 .PHONY : unitree_go__py/CMakeFiles/unitree_go__py.dir/build
 
 unitree_go__py/CMakeFiles/unitree_go__py.dir/clean:
-	cd /home/giovanna/argo_go2_ws/build/unitree_go/unitree_go__py && $(CMAKE_COMMAND) -P CMakeFiles/unitree_go__py.dir/cmake_clean.cmake
+	cd /home/unitree/argo_go2_ws/build/unitree_go/unitree_go__py && $(CMAKE_COMMAND) -P CMakeFiles/unitree_go__py.dir/cmake_clean.cmake
 .PHONY : unitree_go__py/CMakeFiles/unitree_go__py.dir/clean
 
 unitree_go__py/CMakeFiles/unitree_go__py.dir/depend:
-	cd /home/giovanna/argo_go2_ws/build/unitree_go && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/giovanna/argo_go2_ws/src/unitree_go /home/giovanna/argo_go2_ws/build/unitree_go/unitree_go__py /home/giovanna/argo_go2_ws/build/unitree_go /home/giovanna/argo_go2_ws/build/unitree_go/unitree_go__py /home/giovanna/argo_go2_ws/build/unitree_go/unitree_go__py/CMakeFiles/unitree_go__py.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/unitree/argo_go2_ws/build/unitree_go && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/unitree/argo_go2_ws/src/unitree_go /home/unitree/argo_go2_ws/build/unitree_go/unitree_go__py /home/unitree/argo_go2_ws/build/unitree_go /home/unitree/argo_go2_ws/build/unitree_go/unitree_go__py /home/unitree/argo_go2_ws/build/unitree_go/unitree_go__py/CMakeFiles/unitree_go__py.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : unitree_go__py/CMakeFiles/unitree_go__py.dir/depend
 

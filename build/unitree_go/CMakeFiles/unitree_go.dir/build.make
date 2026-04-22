@@ -43,39 +43,39 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/giovanna/argo_go2_ws/src/unitree_go
+CMAKE_SOURCE_DIR = /home/unitree/argo_go2_ws/src/unitree_go
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/giovanna/argo_go2_ws/build/unitree_go
+CMAKE_BINARY_DIR = /home/unitree/argo_go2_ws/build/unitree_go
 
 # Utility rule file for unitree_go.
 
 # Include the progress variables for this target.
 include CMakeFiles/unitree_go.dir/progress.make
 
-CMakeFiles/unitree_go: /home/giovanna/argo_go2_ws/src/unitree_go/msg/AudioData.msg
-CMakeFiles/unitree_go: /home/giovanna/argo_go2_ws/src/unitree_go/msg/BmsCmd.msg
-CMakeFiles/unitree_go: /home/giovanna/argo_go2_ws/src/unitree_go/msg/BmsState.msg
-CMakeFiles/unitree_go: /home/giovanna/argo_go2_ws/src/unitree_go/msg/Error.msg
-CMakeFiles/unitree_go: /home/giovanna/argo_go2_ws/src/unitree_go/msg/HeightMap.msg
-CMakeFiles/unitree_go: /home/giovanna/argo_go2_ws/src/unitree_go/msg/IMUState.msg
-CMakeFiles/unitree_go: /home/giovanna/argo_go2_ws/src/unitree_go/msg/InterfaceConfig.msg
-CMakeFiles/unitree_go: /home/giovanna/argo_go2_ws/src/unitree_go/msg/LidarState.msg
-CMakeFiles/unitree_go: /home/giovanna/argo_go2_ws/src/unitree_go/msg/LowCmd.msg
-CMakeFiles/unitree_go: /home/giovanna/argo_go2_ws/src/unitree_go/msg/LowState.msg
-CMakeFiles/unitree_go: /home/giovanna/argo_go2_ws/src/unitree_go/msg/MotorCmd.msg
-CMakeFiles/unitree_go: /home/giovanna/argo_go2_ws/src/unitree_go/msg/MotorCmds.msg
-CMakeFiles/unitree_go: /home/giovanna/argo_go2_ws/src/unitree_go/msg/MotorState.msg
-CMakeFiles/unitree_go: /home/giovanna/argo_go2_ws/src/unitree_go/msg/MotorStates.msg
-CMakeFiles/unitree_go: /home/giovanna/argo_go2_ws/src/unitree_go/msg/PathPoint.msg
-CMakeFiles/unitree_go: /home/giovanna/argo_go2_ws/src/unitree_go/msg/Req.msg
-CMakeFiles/unitree_go: /home/giovanna/argo_go2_ws/src/unitree_go/msg/Res.msg
-CMakeFiles/unitree_go: /home/giovanna/argo_go2_ws/src/unitree_go/msg/SportModeCmd.msg
-CMakeFiles/unitree_go: /home/giovanna/argo_go2_ws/src/unitree_go/msg/SportModeState.msg
-CMakeFiles/unitree_go: /home/giovanna/argo_go2_ws/src/unitree_go/msg/TimeSpec.msg
-CMakeFiles/unitree_go: /home/giovanna/argo_go2_ws/src/unitree_go/msg/UwbState.msg
-CMakeFiles/unitree_go: /home/giovanna/argo_go2_ws/src/unitree_go/msg/UwbSwitch.msg
-CMakeFiles/unitree_go: /home/giovanna/argo_go2_ws/src/unitree_go/msg/WirelessController.msg
+CMakeFiles/unitree_go: /home/unitree/argo_go2_ws/src/unitree_go/msg/AudioData.msg
+CMakeFiles/unitree_go: /home/unitree/argo_go2_ws/src/unitree_go/msg/BmsCmd.msg
+CMakeFiles/unitree_go: /home/unitree/argo_go2_ws/src/unitree_go/msg/BmsState.msg
+CMakeFiles/unitree_go: /home/unitree/argo_go2_ws/src/unitree_go/msg/Error.msg
+CMakeFiles/unitree_go: /home/unitree/argo_go2_ws/src/unitree_go/msg/HeightMap.msg
+CMakeFiles/unitree_go: /home/unitree/argo_go2_ws/src/unitree_go/msg/IMUState.msg
+CMakeFiles/unitree_go: /home/unitree/argo_go2_ws/src/unitree_go/msg/InterfaceConfig.msg
+CMakeFiles/unitree_go: /home/unitree/argo_go2_ws/src/unitree_go/msg/LidarState.msg
+CMakeFiles/unitree_go: /home/unitree/argo_go2_ws/src/unitree_go/msg/LowCmd.msg
+CMakeFiles/unitree_go: /home/unitree/argo_go2_ws/src/unitree_go/msg/LowState.msg
+CMakeFiles/unitree_go: /home/unitree/argo_go2_ws/src/unitree_go/msg/MotorCmd.msg
+CMakeFiles/unitree_go: /home/unitree/argo_go2_ws/src/unitree_go/msg/MotorCmds.msg
+CMakeFiles/unitree_go: /home/unitree/argo_go2_ws/src/unitree_go/msg/MotorState.msg
+CMakeFiles/unitree_go: /home/unitree/argo_go2_ws/src/unitree_go/msg/MotorStates.msg
+CMakeFiles/unitree_go: /home/unitree/argo_go2_ws/src/unitree_go/msg/PathPoint.msg
+CMakeFiles/unitree_go: /home/unitree/argo_go2_ws/src/unitree_go/msg/Req.msg
+CMakeFiles/unitree_go: /home/unitree/argo_go2_ws/src/unitree_go/msg/Res.msg
+CMakeFiles/unitree_go: /home/unitree/argo_go2_ws/src/unitree_go/msg/SportModeCmd.msg
+CMakeFiles/unitree_go: /home/unitree/argo_go2_ws/src/unitree_go/msg/SportModeState.msg
+CMakeFiles/unitree_go: /home/unitree/argo_go2_ws/src/unitree_go/msg/TimeSpec.msg
+CMakeFiles/unitree_go: /home/unitree/argo_go2_ws/src/unitree_go/msg/UwbState.msg
+CMakeFiles/unitree_go: /home/unitree/argo_go2_ws/src/unitree_go/msg/UwbSwitch.msg
+CMakeFiles/unitree_go: /home/unitree/argo_go2_ws/src/unitree_go/msg/WirelessController.msg
 CMakeFiles/unitree_go: /opt/ros/foxy/share/geometry_msgs/msg/Accel.idl
 CMakeFiles/unitree_go: /opt/ros/foxy/share/geometry_msgs/msg/AccelStamped.idl
 CMakeFiles/unitree_go: /opt/ros/foxy/share/geometry_msgs/msg/AccelWithCovariance.idl
@@ -122,6 +122,6 @@ CMakeFiles/unitree_go.dir/clean:
 .PHONY : CMakeFiles/unitree_go.dir/clean
 
 CMakeFiles/unitree_go.dir/depend:
-	cd /home/giovanna/argo_go2_ws/build/unitree_go && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/giovanna/argo_go2_ws/src/unitree_go /home/giovanna/argo_go2_ws/src/unitree_go /home/giovanna/argo_go2_ws/build/unitree_go /home/giovanna/argo_go2_ws/build/unitree_go /home/giovanna/argo_go2_ws/build/unitree_go/CMakeFiles/unitree_go.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/unitree/argo_go2_ws/build/unitree_go && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/unitree/argo_go2_ws/src/unitree_go /home/unitree/argo_go2_ws/src/unitree_go /home/unitree/argo_go2_ws/build/unitree_go /home/unitree/argo_go2_ws/build/unitree_go /home/unitree/argo_go2_ws/build/unitree_go/CMakeFiles/unitree_go.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/unitree_go.dir/depend
 

@@ -4,7 +4,7 @@
 # compile C with /usr/bin/cc
 C_FLAGS = -O3 -DNDEBUG -fPIC   -O3 -std=c++14 -Wall -std=gnu11
 
-C_DEFINES = -DPROJECT_PATH=\"/home/giovanna/argo_go2_ws/src/hesai_ros_driver\" -DRCUTILS_ENABLE_FAULT_INJECTION -DROS2_FOUND -DROS_PACKAGE_NAME=\"hesai_ros_driver\" -Dhesai_ros_driver__rosidl_typesupport_introspection_c_EXPORTS
+C_DEFINES = -DPROJECT_PATH=\"/home/unitree/argo_go2_ws/src/hesai_ros_driver\" -DRCUTILS_ENABLE_FAULT_INJECTION -DROS2_FOUND -DROS_PACKAGE_NAME=\"hesai_ros_driver\" -Dhesai_ros_driver__rosidl_typesupport_introspection_c_EXPORTS
 
-C_INCLUDES = -I/home/giovanna/argo_go2_ws/build/hesai_ros_driver/rosidl_generator_c -I/home/giovanna/argo_go2_ws/build/hesai_ros_driver/rosidl_typesupport_introspection_c -I/home/giovanna/argo_go2_ws/src/hesai_ros_driver/src -isystem /opt/ros/foxy/include 
+C_INCLUDES = -I/home/unitree/argo_go2_ws/build/hesai_ros_driver/rosidl_generator_c -I/home/unitree/argo_go2_ws/build/hesai_ros_driver/rosidl_typesupport_introspection_c -I/home/unitree/argo_go2_ws/src/hesai_ros_driver/src -I/usr/local/cuda-11.4/include -isystem /opt/ros/foxy/include 
 

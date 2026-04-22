@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/giovanna/argo_go2_ws/src/hesai_ros_driver
+CMAKE_SOURCE_DIR = /home/unitree/argo_go2_ws/src/hesai_ros_driver
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/giovanna/argo_go2_ws/build/hesai_ros_driver
+CMAKE_BINARY_DIR = /home/unitree/argo_go2_ws/build/hesai_ros_driver
 
 # Include any dependencies generated for this target.
 include src/driver/HesaiLidar_SDK_2.0/CMakeFiles/sample.dir/depend.make
@@ -58,17 +58,17 @@ include src/driver/HesaiLidar_SDK_2.0/CMakeFiles/sample.dir/progress.make
 include src/driver/HesaiLidar_SDK_2.0/CMakeFiles/sample.dir/flags.make
 
 src/driver/HesaiLidar_SDK_2.0/CMakeFiles/sample.dir/test/test.cc.o: src/driver/HesaiLidar_SDK_2.0/CMakeFiles/sample.dir/flags.make
-src/driver/HesaiLidar_SDK_2.0/CMakeFiles/sample.dir/test/test.cc.o: /home/giovanna/argo_go2_ws/src/hesai_ros_driver/src/driver/HesaiLidar_SDK_2.0/test/test.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/giovanna/argo_go2_ws/build/hesai_ros_driver/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/driver/HesaiLidar_SDK_2.0/CMakeFiles/sample.dir/test/test.cc.o"
-	cd /home/giovanna/argo_go2_ws/build/hesai_ros_driver/src/driver/HesaiLidar_SDK_2.0 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/sample.dir/test/test.cc.o -c /home/giovanna/argo_go2_ws/src/hesai_ros_driver/src/driver/HesaiLidar_SDK_2.0/test/test.cc
+src/driver/HesaiLidar_SDK_2.0/CMakeFiles/sample.dir/test/test.cc.o: /home/unitree/argo_go2_ws/src/hesai_ros_driver/src/driver/HesaiLidar_SDK_2.0/test/test.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/unitree/argo_go2_ws/build/hesai_ros_driver/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/driver/HesaiLidar_SDK_2.0/CMakeFiles/sample.dir/test/test.cc.o"
+	cd /home/unitree/argo_go2_ws/build/hesai_ros_driver/src/driver/HesaiLidar_SDK_2.0 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/sample.dir/test/test.cc.o -c /home/unitree/argo_go2_ws/src/hesai_ros_driver/src/driver/HesaiLidar_SDK_2.0/test/test.cc
 
 src/driver/HesaiLidar_SDK_2.0/CMakeFiles/sample.dir/test/test.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sample.dir/test/test.cc.i"
-	cd /home/giovanna/argo_go2_ws/build/hesai_ros_driver/src/driver/HesaiLidar_SDK_2.0 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/giovanna/argo_go2_ws/src/hesai_ros_driver/src/driver/HesaiLidar_SDK_2.0/test/test.cc > CMakeFiles/sample.dir/test/test.cc.i
+	cd /home/unitree/argo_go2_ws/build/hesai_ros_driver/src/driver/HesaiLidar_SDK_2.0 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/unitree/argo_go2_ws/src/hesai_ros_driver/src/driver/HesaiLidar_SDK_2.0/test/test.cc > CMakeFiles/sample.dir/test/test.cc.i
 
 src/driver/HesaiLidar_SDK_2.0/CMakeFiles/sample.dir/test/test.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sample.dir/test/test.cc.s"
-	cd /home/giovanna/argo_go2_ws/build/hesai_ros_driver/src/driver/HesaiLidar_SDK_2.0 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/giovanna/argo_go2_ws/src/hesai_ros_driver/src/driver/HesaiLidar_SDK_2.0/test/test.cc -o CMakeFiles/sample.dir/test/test.cc.s
+	cd /home/unitree/argo_go2_ws/build/hesai_ros_driver/src/driver/HesaiLidar_SDK_2.0 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/unitree/argo_go2_ws/src/hesai_ros_driver/src/driver/HesaiLidar_SDK_2.0/test/test.cc -o CMakeFiles/sample.dir/test/test.cc.s
 
 # Object files for target sample
 sample_OBJECTS = \
@@ -85,12 +85,12 @@ src/driver/HesaiLidar_SDK_2.0/sample: src/driver/HesaiLidar_SDK_2.0/libhesai/lib
 src/driver/HesaiLidar_SDK_2.0/sample: src/driver/HesaiLidar_SDK_2.0/libhesai/libserialClient_lib.so
 src/driver/HesaiLidar_SDK_2.0/sample: src/driver/HesaiLidar_SDK_2.0/libhesai/libptcParser_lib.so
 src/driver/HesaiLidar_SDK_2.0/sample: src/driver/HesaiLidar_SDK_2.0/libhesai/liblog_lib.so
-src/driver/HesaiLidar_SDK_2.0/sample: /usr/lib/x86_64-linux-gnu/libssl.so
-src/driver/HesaiLidar_SDK_2.0/sample: /usr/lib/x86_64-linux-gnu/libcrypto.so
+src/driver/HesaiLidar_SDK_2.0/sample: /usr/lib/aarch64-linux-gnu/libssl.so
+src/driver/HesaiLidar_SDK_2.0/sample: /usr/lib/aarch64-linux-gnu/libcrypto.so
 src/driver/HesaiLidar_SDK_2.0/sample: src/driver/HesaiLidar_SDK_2.0/libhesai/libplatutils_lib.so
 src/driver/HesaiLidar_SDK_2.0/sample: src/driver/HesaiLidar_SDK_2.0/CMakeFiles/sample.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/giovanna/argo_go2_ws/build/hesai_ros_driver/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable sample"
-	cd /home/giovanna/argo_go2_ws/build/hesai_ros_driver/src/driver/HesaiLidar_SDK_2.0 && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/sample.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/unitree/argo_go2_ws/build/hesai_ros_driver/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable sample"
+	cd /home/unitree/argo_go2_ws/build/hesai_ros_driver/src/driver/HesaiLidar_SDK_2.0 && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/sample.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 src/driver/HesaiLidar_SDK_2.0/CMakeFiles/sample.dir/build: src/driver/HesaiLidar_SDK_2.0/sample
@@ -98,10 +98,10 @@ src/driver/HesaiLidar_SDK_2.0/CMakeFiles/sample.dir/build: src/driver/HesaiLidar
 .PHONY : src/driver/HesaiLidar_SDK_2.0/CMakeFiles/sample.dir/build
 
 src/driver/HesaiLidar_SDK_2.0/CMakeFiles/sample.dir/clean:
-	cd /home/giovanna/argo_go2_ws/build/hesai_ros_driver/src/driver/HesaiLidar_SDK_2.0 && $(CMAKE_COMMAND) -P CMakeFiles/sample.dir/cmake_clean.cmake
+	cd /home/unitree/argo_go2_ws/build/hesai_ros_driver/src/driver/HesaiLidar_SDK_2.0 && $(CMAKE_COMMAND) -P CMakeFiles/sample.dir/cmake_clean.cmake
 .PHONY : src/driver/HesaiLidar_SDK_2.0/CMakeFiles/sample.dir/clean
 
 src/driver/HesaiLidar_SDK_2.0/CMakeFiles/sample.dir/depend:
-	cd /home/giovanna/argo_go2_ws/build/hesai_ros_driver && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/giovanna/argo_go2_ws/src/hesai_ros_driver /home/giovanna/argo_go2_ws/src/hesai_ros_driver/src/driver/HesaiLidar_SDK_2.0 /home/giovanna/argo_go2_ws/build/hesai_ros_driver /home/giovanna/argo_go2_ws/build/hesai_ros_driver/src/driver/HesaiLidar_SDK_2.0 /home/giovanna/argo_go2_ws/build/hesai_ros_driver/src/driver/HesaiLidar_SDK_2.0/CMakeFiles/sample.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/unitree/argo_go2_ws/build/hesai_ros_driver && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/unitree/argo_go2_ws/src/hesai_ros_driver /home/unitree/argo_go2_ws/src/hesai_ros_driver/src/driver/HesaiLidar_SDK_2.0 /home/unitree/argo_go2_ws/build/hesai_ros_driver /home/unitree/argo_go2_ws/build/hesai_ros_driver/src/driver/HesaiLidar_SDK_2.0 /home/unitree/argo_go2_ws/build/hesai_ros_driver/src/driver/HesaiLidar_SDK_2.0/CMakeFiles/sample.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : src/driver/HesaiLidar_SDK_2.0/CMakeFiles/sample.dir/depend
 

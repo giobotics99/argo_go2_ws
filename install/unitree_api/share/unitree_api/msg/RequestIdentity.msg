@@ -1,1 +1,2 @@
-/home/giovanna/argo_go2_ws/src/unitree_api/msg/RequestIdentity.msg
+int64  id
+int64 api_id

@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/giovanna/argo_go2_ws/src/go2_interfaces
+CMAKE_SOURCE_DIR = /home/unitree/argo_go2_ws/src/go2_interfaces
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/giovanna/argo_go2_ws/build/go2_interfaces
+CMAKE_BINARY_DIR = /home/unitree/argo_go2_ws/build/go2_interfaces
 
 # Include any dependencies generated for this target.
 include CMakeFiles/go2_interfaces__python.dir/depend.make
@@ -59,120 +59,120 @@ include CMakeFiles/go2_interfaces__python.dir/flags.make
 
 CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_body_height_s.c.o: CMakeFiles/go2_interfaces__python.dir/flags.make
 CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_body_height_s.c.o: rosidl_generator_py/go2_interfaces/srv/_body_height_s.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/giovanna/argo_go2_ws/build/go2_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_body_height_s.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_body_height_s.c.o   -c /home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_generator_py/go2_interfaces/srv/_body_height_s.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/unitree/argo_go2_ws/build/go2_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_body_height_s.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_body_height_s.c.o   -c /home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_py/go2_interfaces/srv/_body_height_s.c
 
 CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_body_height_s.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_body_height_s.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_generator_py/go2_interfaces/srv/_body_height_s.c > CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_body_height_s.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_py/go2_interfaces/srv/_body_height_s.c > CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_body_height_s.c.i
 
 CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_body_height_s.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_body_height_s.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_generator_py/go2_interfaces/srv/_body_height_s.c -o CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_body_height_s.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_py/go2_interfaces/srv/_body_height_s.c -o CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_body_height_s.c.s
 
 CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_continuous_gait_s.c.o: CMakeFiles/go2_interfaces__python.dir/flags.make
 CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_continuous_gait_s.c.o: rosidl_generator_py/go2_interfaces/srv/_continuous_gait_s.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/giovanna/argo_go2_ws/build/go2_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_continuous_gait_s.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_continuous_gait_s.c.o   -c /home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_generator_py/go2_interfaces/srv/_continuous_gait_s.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/unitree/argo_go2_ws/build/go2_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_continuous_gait_s.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_continuous_gait_s.c.o   -c /home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_py/go2_interfaces/srv/_continuous_gait_s.c
 
 CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_continuous_gait_s.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_continuous_gait_s.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_generator_py/go2_interfaces/srv/_continuous_gait_s.c > CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_continuous_gait_s.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_py/go2_interfaces/srv/_continuous_gait_s.c > CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_continuous_gait_s.c.i
 
 CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_continuous_gait_s.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_continuous_gait_s.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_generator_py/go2_interfaces/srv/_continuous_gait_s.c -o CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_continuous_gait_s.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_py/go2_interfaces/srv/_continuous_gait_s.c -o CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_continuous_gait_s.c.s
 
 CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_euler_s.c.o: CMakeFiles/go2_interfaces__python.dir/flags.make
 CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_euler_s.c.o: rosidl_generator_py/go2_interfaces/srv/_euler_s.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/giovanna/argo_go2_ws/build/go2_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_euler_s.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_euler_s.c.o   -c /home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_generator_py/go2_interfaces/srv/_euler_s.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/unitree/argo_go2_ws/build/go2_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_euler_s.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_euler_s.c.o   -c /home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_py/go2_interfaces/srv/_euler_s.c
 
 CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_euler_s.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_euler_s.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_generator_py/go2_interfaces/srv/_euler_s.c > CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_euler_s.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_py/go2_interfaces/srv/_euler_s.c > CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_euler_s.c.i
 
 CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_euler_s.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_euler_s.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_generator_py/go2_interfaces/srv/_euler_s.c -o CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_euler_s.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_py/go2_interfaces/srv/_euler_s.c -o CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_euler_s.c.s
 
 CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_foot_raise_height_s.c.o: CMakeFiles/go2_interfaces__python.dir/flags.make
 CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_foot_raise_height_s.c.o: rosidl_generator_py/go2_interfaces/srv/_foot_raise_height_s.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/giovanna/argo_go2_ws/build/go2_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_foot_raise_height_s.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_foot_raise_height_s.c.o   -c /home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_generator_py/go2_interfaces/srv/_foot_raise_height_s.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/unitree/argo_go2_ws/build/go2_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_foot_raise_height_s.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_foot_raise_height_s.c.o   -c /home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_py/go2_interfaces/srv/_foot_raise_height_s.c
 
 CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_foot_raise_height_s.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_foot_raise_height_s.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_generator_py/go2_interfaces/srv/_foot_raise_height_s.c > CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_foot_raise_height_s.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_py/go2_interfaces/srv/_foot_raise_height_s.c > CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_foot_raise_height_s.c.i
 
 CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_foot_raise_height_s.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_foot_raise_height_s.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_generator_py/go2_interfaces/srv/_foot_raise_height_s.c -o CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_foot_raise_height_s.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_py/go2_interfaces/srv/_foot_raise_height_s.c -o CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_foot_raise_height_s.c.s
 
 CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_mode_s.c.o: CMakeFiles/go2_interfaces__python.dir/flags.make
 CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_mode_s.c.o: rosidl_generator_py/go2_interfaces/srv/_mode_s.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/giovanna/argo_go2_ws/build/go2_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_mode_s.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_mode_s.c.o   -c /home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_generator_py/go2_interfaces/srv/_mode_s.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/unitree/argo_go2_ws/build/go2_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_mode_s.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_mode_s.c.o   -c /home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_py/go2_interfaces/srv/_mode_s.c
 
 CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_mode_s.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_mode_s.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_generator_py/go2_interfaces/srv/_mode_s.c > CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_mode_s.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_py/go2_interfaces/srv/_mode_s.c > CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_mode_s.c.i
 
 CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_mode_s.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_mode_s.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_generator_py/go2_interfaces/srv/_mode_s.c -o CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_mode_s.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_py/go2_interfaces/srv/_mode_s.c -o CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_mode_s.c.s
 
 CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_pose_s.c.o: CMakeFiles/go2_interfaces__python.dir/flags.make
 CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_pose_s.c.o: rosidl_generator_py/go2_interfaces/srv/_pose_s.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/giovanna/argo_go2_ws/build/go2_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_pose_s.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_pose_s.c.o   -c /home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_generator_py/go2_interfaces/srv/_pose_s.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/unitree/argo_go2_ws/build/go2_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_pose_s.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_pose_s.c.o   -c /home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_py/go2_interfaces/srv/_pose_s.c
 
 CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_pose_s.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_pose_s.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_generator_py/go2_interfaces/srv/_pose_s.c > CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_pose_s.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_py/go2_interfaces/srv/_pose_s.c > CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_pose_s.c.i
 
 CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_pose_s.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_pose_s.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_generator_py/go2_interfaces/srv/_pose_s.c -o CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_pose_s.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_py/go2_interfaces/srv/_pose_s.c -o CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_pose_s.c.s
 
 CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_speed_level_s.c.o: CMakeFiles/go2_interfaces__python.dir/flags.make
 CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_speed_level_s.c.o: rosidl_generator_py/go2_interfaces/srv/_speed_level_s.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/giovanna/argo_go2_ws/build/go2_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_speed_level_s.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_speed_level_s.c.o   -c /home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_generator_py/go2_interfaces/srv/_speed_level_s.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/unitree/argo_go2_ws/build/go2_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_speed_level_s.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_speed_level_s.c.o   -c /home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_py/go2_interfaces/srv/_speed_level_s.c
 
 CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_speed_level_s.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_speed_level_s.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_generator_py/go2_interfaces/srv/_speed_level_s.c > CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_speed_level_s.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_py/go2_interfaces/srv/_speed_level_s.c > CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_speed_level_s.c.i
 
 CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_speed_level_s.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_speed_level_s.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_generator_py/go2_interfaces/srv/_speed_level_s.c -o CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_speed_level_s.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_py/go2_interfaces/srv/_speed_level_s.c -o CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_speed_level_s.c.s
 
 CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_switch_gait_s.c.o: CMakeFiles/go2_interfaces__python.dir/flags.make
 CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_switch_gait_s.c.o: rosidl_generator_py/go2_interfaces/srv/_switch_gait_s.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/giovanna/argo_go2_ws/build/go2_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_switch_gait_s.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_switch_gait_s.c.o   -c /home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_generator_py/go2_interfaces/srv/_switch_gait_s.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/unitree/argo_go2_ws/build/go2_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_switch_gait_s.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_switch_gait_s.c.o   -c /home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_py/go2_interfaces/srv/_switch_gait_s.c
 
 CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_switch_gait_s.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_switch_gait_s.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_generator_py/go2_interfaces/srv/_switch_gait_s.c > CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_switch_gait_s.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_py/go2_interfaces/srv/_switch_gait_s.c > CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_switch_gait_s.c.i
 
 CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_switch_gait_s.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_switch_gait_s.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_generator_py/go2_interfaces/srv/_switch_gait_s.c -o CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_switch_gait_s.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_py/go2_interfaces/srv/_switch_gait_s.c -o CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_switch_gait_s.c.s
 
 CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_switch_joystick_s.c.o: CMakeFiles/go2_interfaces__python.dir/flags.make
 CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_switch_joystick_s.c.o: rosidl_generator_py/go2_interfaces/srv/_switch_joystick_s.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/giovanna/argo_go2_ws/build/go2_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_switch_joystick_s.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_switch_joystick_s.c.o   -c /home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_generator_py/go2_interfaces/srv/_switch_joystick_s.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/unitree/argo_go2_ws/build/go2_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_switch_joystick_s.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_switch_joystick_s.c.o   -c /home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_py/go2_interfaces/srv/_switch_joystick_s.c
 
 CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_switch_joystick_s.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_switch_joystick_s.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_generator_py/go2_interfaces/srv/_switch_joystick_s.c > CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_switch_joystick_s.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_py/go2_interfaces/srv/_switch_joystick_s.c > CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_switch_joystick_s.c.i
 
 CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_switch_joystick_s.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_switch_joystick_s.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_generator_py/go2_interfaces/srv/_switch_joystick_s.c -o CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_switch_joystick_s.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_py/go2_interfaces/srv/_switch_joystick_s.c -o CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_switch_joystick_s.c.s
 
 # Object files for target go2_interfaces__python
 go2_interfaces__python_OBJECTS = \
@@ -200,14 +200,14 @@ rosidl_generator_py/go2_interfaces/libgo2_interfaces__python.so: CMakeFiles/go2_
 rosidl_generator_py/go2_interfaces/libgo2_interfaces__python.so: CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_switch_joystick_s.c.o
 rosidl_generator_py/go2_interfaces/libgo2_interfaces__python.so: CMakeFiles/go2_interfaces__python.dir/build.make
 rosidl_generator_py/go2_interfaces/libgo2_interfaces__python.so: libgo2_interfaces__rosidl_generator_c.so
-rosidl_generator_py/go2_interfaces/libgo2_interfaces__python.so: /usr/lib/x86_64-linux-gnu/libpython3.8.so
+rosidl_generator_py/go2_interfaces/libgo2_interfaces__python.so: /usr/lib/aarch64-linux-gnu/libpython3.8.so
 rosidl_generator_py/go2_interfaces/libgo2_interfaces__python.so: libgo2_interfaces__rosidl_typesupport_c.so
 rosidl_generator_py/go2_interfaces/libgo2_interfaces__python.so: /opt/ros/foxy/lib/librosidl_typesupport_c.so
 rosidl_generator_py/go2_interfaces/libgo2_interfaces__python.so: /opt/ros/foxy/lib/librosidl_runtime_c.so
 rosidl_generator_py/go2_interfaces/libgo2_interfaces__python.so: /opt/ros/foxy/lib/librcpputils.so
 rosidl_generator_py/go2_interfaces/libgo2_interfaces__python.so: /opt/ros/foxy/lib/librcutils.so
 rosidl_generator_py/go2_interfaces/libgo2_interfaces__python.so: CMakeFiles/go2_interfaces__python.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/giovanna/argo_go2_ws/build/go2_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking C shared library rosidl_generator_py/go2_interfaces/libgo2_interfaces__python.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/unitree/argo_go2_ws/build/go2_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking C shared library rosidl_generator_py/go2_interfaces/libgo2_interfaces__python.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/go2_interfaces__python.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -220,6 +220,6 @@ CMakeFiles/go2_interfaces__python.dir/clean:
 .PHONY : CMakeFiles/go2_interfaces__python.dir/clean
 
 CMakeFiles/go2_interfaces__python.dir/depend:
-	cd /home/giovanna/argo_go2_ws/build/go2_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/giovanna/argo_go2_ws/src/go2_interfaces /home/giovanna/argo_go2_ws/src/go2_interfaces /home/giovanna/argo_go2_ws/build/go2_interfaces /home/giovanna/argo_go2_ws/build/go2_interfaces /home/giovanna/argo_go2_ws/build/go2_interfaces/CMakeFiles/go2_interfaces__python.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/unitree/argo_go2_ws/build/go2_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/unitree/argo_go2_ws/src/go2_interfaces /home/unitree/argo_go2_ws/src/go2_interfaces /home/unitree/argo_go2_ws/build/go2_interfaces /home/unitree/argo_go2_ws/build/go2_interfaces /home/unitree/argo_go2_ws/build/go2_interfaces/CMakeFiles/go2_interfaces__python.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/go2_interfaces__python.dir/depend
 

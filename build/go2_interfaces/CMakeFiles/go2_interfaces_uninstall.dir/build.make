@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/giovanna/argo_go2_ws/src/go2_interfaces
+CMAKE_SOURCE_DIR = /home/unitree/argo_go2_ws/src/go2_interfaces
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/giovanna/argo_go2_ws/build/go2_interfaces
+CMAKE_BINARY_DIR = /home/unitree/argo_go2_ws/build/go2_interfaces
 
 # Utility rule file for go2_interfaces_uninstall.
 
@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/giovanna/argo_go2_ws/build/go2_interfaces
 include CMakeFiles/go2_interfaces_uninstall.dir/progress.make
 
 CMakeFiles/go2_interfaces_uninstall:
-	/usr/bin/cmake -P /home/giovanna/argo_go2_ws/build/go2_interfaces/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
+	/usr/bin/cmake -P /home/unitree/argo_go2_ws/build/go2_interfaces/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
 
 go2_interfaces_uninstall: CMakeFiles/go2_interfaces_uninstall
 go2_interfaces_uninstall: CMakeFiles/go2_interfaces_uninstall.dir/build.make
@@ -71,6 +71,6 @@ CMakeFiles/go2_interfaces_uninstall.dir/clean:
 .PHONY : CMakeFiles/go2_interfaces_uninstall.dir/clean
 
 CMakeFiles/go2_interfaces_uninstall.dir/depend:
-	cd /home/giovanna/argo_go2_ws/build/go2_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/giovanna/argo_go2_ws/src/go2_interfaces /home/giovanna/argo_go2_ws/src/go2_interfaces /home/giovanna/argo_go2_ws/build/go2_interfaces /home/giovanna/argo_go2_ws/build/go2_interfaces /home/giovanna/argo_go2_ws/build/go2_interfaces/CMakeFiles/go2_interfaces_uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/unitree/argo_go2_ws/build/go2_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/unitree/argo_go2_ws/src/go2_interfaces /home/unitree/argo_go2_ws/src/go2_interfaces /home/unitree/argo_go2_ws/build/go2_interfaces /home/unitree/argo_go2_ws/build/go2_interfaces /home/unitree/argo_go2_ws/build/go2_interfaces/CMakeFiles/go2_interfaces_uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/go2_interfaces_uninstall.dir/depend
 

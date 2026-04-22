@@ -43,24 +43,24 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/giovanna/argo_go2_ws/src/unitree_api
+CMAKE_SOURCE_DIR = /home/unitree/argo_go2_ws/src/unitree_api
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/giovanna/argo_go2_ws/build/unitree_api
+CMAKE_BINARY_DIR = /home/unitree/argo_go2_ws/build/unitree_api
 
 # Utility rule file for unitree_api.
 
 # Include the progress variables for this target.
 include CMakeFiles/unitree_api.dir/progress.make
 
-CMakeFiles/unitree_api: /home/giovanna/argo_go2_ws/src/unitree_api/msg/Request.msg
-CMakeFiles/unitree_api: /home/giovanna/argo_go2_ws/src/unitree_api/msg/RequestHeader.msg
-CMakeFiles/unitree_api: /home/giovanna/argo_go2_ws/src/unitree_api/msg/RequestIdentity.msg
-CMakeFiles/unitree_api: /home/giovanna/argo_go2_ws/src/unitree_api/msg/RequestLease.msg
-CMakeFiles/unitree_api: /home/giovanna/argo_go2_ws/src/unitree_api/msg/RequestPolicy.msg
-CMakeFiles/unitree_api: /home/giovanna/argo_go2_ws/src/unitree_api/msg/Response.msg
-CMakeFiles/unitree_api: /home/giovanna/argo_go2_ws/src/unitree_api/msg/ResponseHeader.msg
-CMakeFiles/unitree_api: /home/giovanna/argo_go2_ws/src/unitree_api/msg/ResponseStatus.msg
+CMakeFiles/unitree_api: /home/unitree/argo_go2_ws/src/unitree_api/msg/Request.msg
+CMakeFiles/unitree_api: /home/unitree/argo_go2_ws/src/unitree_api/msg/RequestHeader.msg
+CMakeFiles/unitree_api: /home/unitree/argo_go2_ws/src/unitree_api/msg/RequestIdentity.msg
+CMakeFiles/unitree_api: /home/unitree/argo_go2_ws/src/unitree_api/msg/RequestLease.msg
+CMakeFiles/unitree_api: /home/unitree/argo_go2_ws/src/unitree_api/msg/RequestPolicy.msg
+CMakeFiles/unitree_api: /home/unitree/argo_go2_ws/src/unitree_api/msg/Response.msg
+CMakeFiles/unitree_api: /home/unitree/argo_go2_ws/src/unitree_api/msg/ResponseHeader.msg
+CMakeFiles/unitree_api: /home/unitree/argo_go2_ws/src/unitree_api/msg/ResponseStatus.msg
 CMakeFiles/unitree_api: /opt/ros/foxy/share/geometry_msgs/msg/Accel.idl
 CMakeFiles/unitree_api: /opt/ros/foxy/share/geometry_msgs/msg/AccelStamped.idl
 CMakeFiles/unitree_api: /opt/ros/foxy/share/geometry_msgs/msg/AccelWithCovariance.idl
@@ -107,6 +107,6 @@ CMakeFiles/unitree_api.dir/clean:
 .PHONY : CMakeFiles/unitree_api.dir/clean
 
 CMakeFiles/unitree_api.dir/depend:
-	cd /home/giovanna/argo_go2_ws/build/unitree_api && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/giovanna/argo_go2_ws/src/unitree_api /home/giovanna/argo_go2_ws/src/unitree_api /home/giovanna/argo_go2_ws/build/unitree_api /home/giovanna/argo_go2_ws/build/unitree_api /home/giovanna/argo_go2_ws/build/unitree_api/CMakeFiles/unitree_api.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/unitree/argo_go2_ws/build/unitree_api && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/unitree/argo_go2_ws/src/unitree_api /home/unitree/argo_go2_ws/src/unitree_api /home/unitree/argo_go2_ws/build/unitree_api /home/unitree/argo_go2_ws/build/unitree_api /home/unitree/argo_go2_ws/build/unitree_api/CMakeFiles/unitree_api.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/unitree_api.dir/depend
 

@@ -1,1 +1,2 @@
-/home/giovanna/argo_go2_ws/src/hesai_ros_driver/msg/msg_ros2/LossPacket.msg
+uint32 total_packet_count
+uint32 total_packet_loss_count

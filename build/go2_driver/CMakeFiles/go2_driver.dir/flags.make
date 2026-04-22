@@ -6,5 +6,5 @@ CXX_FLAGS = -fPIC   -Wall -Wextra -Wpedantic
 
 CXX_DEFINES = -DDEFAULT_RMW_IMPLEMENTATION=rmw_fastrtps_cpp -DRCUTILS_ENABLE_FAULT_INJECTION -DSPDLOG_COMPILED_LIB -Dgo2_driver_EXPORTS
 
-CXX_INCLUDES = -I/home/giovanna/argo_go2_ws/src/go2_driver/include -isystem /home/giovanna/argo_go2_ws/install/unitree_go/include -isystem /home/giovanna/argo_go2_ws/install/unitree_api/include -isystem /home/giovanna/argo_go2_ws/install/go2_interfaces/include -isystem /opt/ros/foxy/include 
+CXX_INCLUDES = -I/home/unitree/argo_go2_ws/src/go2_driver/include -isystem /home/unitree/argo_go2_ws/install/unitree_go/include -isystem /home/unitree/argo_go2_ws/install/unitree_api/include -isystem /home/unitree/argo_go2_ws/install/go2_interfaces/include -isystem /opt/ros/foxy/include 
 

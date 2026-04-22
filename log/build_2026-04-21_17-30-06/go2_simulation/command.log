@@ -1,6 +1,0 @@
-Invoking command in '/home/giovanna/argo_go2_ws/build/go2_simulation': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/giovanna/argo_go2_ws/src/go2_simulation -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/giovanna/argo_go2_ws/install/go2_simulation
-Invoked command in '/home/giovanna/argo_go2_ws/build/go2_simulation' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/giovanna/argo_go2_ws/src/go2_simulation -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/giovanna/argo_go2_ws/install/go2_simulation
-Invoking command in '/home/giovanna/argo_go2_ws/build/go2_simulation': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/giovanna/argo_go2_ws/build/go2_simulation -- -j16 -l16
-Invoked command in '/home/giovanna/argo_go2_ws/build/go2_simulation' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/giovanna/argo_go2_ws/build/go2_simulation -- -j16 -l16
-Invoking command in '/home/giovanna/argo_go2_ws/build/go2_simulation': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/giovanna/argo_go2_ws/build/go2_simulation
-Invoked command in '/home/giovanna/argo_go2_ws/build/go2_simulation' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/giovanna/argo_go2_ws/build/go2_simulation

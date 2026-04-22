@@ -1,1 +1,4 @@
-/home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_cmake/srv/Pose_Request.msg
+# Set true to pose and false to restore
+
+bool flag
+

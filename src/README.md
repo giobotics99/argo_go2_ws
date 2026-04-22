@@ -107,99 +107,66 @@ ros:
 sudo apt install ros-humble-realsense2-camera
 ```
 
-## Usage
-### Bringup the robot
-Either from your computer, or from inside the robot, execute the following:
+## Tutorial: Running Go2 on ROS2 Foxy
+
+This tutorial guides you through bringing up the Unitree Go2 robot and enabling Nav2 navigation on Ubuntu 20.04.
+
+### 1. Build the Workspace
+Ensure all dependencies are installed and build the workspace:
 ```bash
-ros2 launch go2_bringup go2.launch.py
+cd ~/argo_go2_ws
+source /opt/ros/foxy/setup.bash
+colcon build --symlink-install
+source install/setup.bash
 ```
-> If you have a realsense and a lidar inside the robot, use the lidar or realsense parameters.
-> It will only work if you throw everything inside the robot
 
-If you want to see your robot through rviz, do it as follows:
+### 2. Robot Bringup
+The bringup command initializes the hardware communication and the robot's state.
+
+**Command:**
 ```bash
-ros2 launch go2_bringup go2.launch.py rviz:=True
+ros2 launch go2_bringup go2.launch.py lidar:=True rviz:=True
 ```
 
-### Change modes
-If what you want is for your robot to be able to change modes, thus performing the movements predefined by the controller, use the following service:
+**What this runs:**
+*   **`go2_driver`**: Communicates with the Unitree Go2 via their low-level API. It publishes Odometry (`/odom`) and Joint States (`/joint_states`).
+*   **`robot_state_publisher`**: Uses the URDF from `go2_description` to publish the robot's TF tree.
+*   **`hesai_ros_driver`**: Connects to the Hesai 3D Lidar and publishes the point cloud (`/lidar_points`).
+*   **`rviz2`**: Opens a pre-configured visualization window.
+
+**Verification:**
+*   Run `ros2 topic list`. You should see `/odom`, `/lidar_points`, and `/joint_states`.
+*   In Rviz, you should see the 3D model of the Go2 and the lidar point cloud.
+*   Run `ros2 run tf2_tools view_frames.py` (if available) to verify the TF tree from `map` -> `odom` -> `base_link`.
+
+### 3. Navigation Stack
+Once the robot is localized, you can send goals for autonomous movement.
+
+**Command:**
 ```bash
-ros2 service call /mode go2_interfaces/srv/Mode "mode: 'hello'"
+ros2 launch go2_nav navigation.launch.foxy.py
 ```
 
-<details>
-<summary>Available modes</summary>
-```
-damp
-balance_stand
-stop_move
-stand_up
-stand_down
-sit
-rise_sit
-hello
-stretch
-wallow
-scrape
-front_flip
-front_jump
-front_pounce
-dance1
-dance2
-finger_heart
-```
-</details>
+**What this runs:**
+*   **AMCL**: Localization system that uses lidar data to find the robot's position on a map.
+*   **Planner Server**: Computes a path from the current position to the goal.
+*   **Controller Server (DWB)**: Follows the path while avoiding obstacles detected by the lidar.
+*   **Behavior Tree (BT) Navigator**: Orchestrates the navigation logic (retries, recoveries).
 
-### Change configurations for robot
-If you want, you can modify the ways the robot walks, the height of the base, the height of the legs when walking... I show you the different parameters that can be modified:
+**Verification:**
+*   In Rviz, use the **"2D Pose Estimate"** tool to set the robot's initial position on the map.
+*   Use the **"2D Goal Pose"** tool to set a destination. The robot should plan a path (visualized as a line) and start moving.
+*   Check `/cmd_vel` to see the velocity commands being sent to the robot.
 
-- BodyHeight: Set the relative height of the body above the ground when standing and walking. [0.3 ~ 0.5]
-  ```bash
-  ros2 service call /body_height go2_interfaces/srv/BodyHeight  "height: 0.0"
-  ```
-- ContinuousGait: Continuous movement
-  ```bash
-  ros2 service call /continuous_gait go2_interfaces/srv/ContinuousGait  "flag: false"
-  ```
-- Euler: Posture when standing and walking. [-0.75 ~ 0.75] [-0.75 ~ 0.75] [-1.5 ~ 1.5]
-  ```bash
-  ros2 service call /euler go2_interfaces/srv/Euler "roll: 0.0 pitch: 0.0 yaw: 0.0"
-  ```
-- FootRaiseHeight: Set the relative height of foot lift during movement [-0.06 ~ 0.03]
-  ```bash
-  ros2 service call /foot_raise_height go2_interfaces/srv/FootRaiseHeight "height: 0.0"
-  ```
-- Pose: Set true to pose and false to restore
-  ```bash
-  ros2 service call /pose go2_interfaces/srv/Pose "flag: false"
-  ```
-- SpeedLevel: Set the speed range [-1 ~ 1]
-  ```bash
-  ros2 service call /speed_level go2_interfaces/srv/SpeedLevel "level: 0"
-  ```
-- SwitchGait: Switch gait [0 - 4]
-  ```bash
-  ros2 service call /switch_gait go2_interfaces/srv/SwitchGait  "d: 0"
-  ```
-- SwitchJoystick: Native remote control response switch
-  ```bash
-  ros2 service call /switch_joystick go2_interfaces/srv/SwitchJoystick "flag: false"
-  ```
-
-## SLAM
-In the future, work in progress.
-
-## NAVIGATION
-In the future, work in progress.
-
-## Demos
-### Robot description
-
-[go2_tf.webm](https://github.com/IntelligentRoboticsLabs/go2_robot/assets/44479765/b019e6fc-875f-4870-a510-afa6e1353e08)
-
-### Robot PointCloud
-
-https://github.com/IntelligentRoboticsLabs/go2_robot/assets/44479765/c164840a-6857-4d95-a50e-023c5bb44edb
+### 4. Useful Commands
+*   **Change to Stand Up mode:**
+    ```bash
+    ros2 service call /mode go2_interfaces/srv/Mode "{mode: 'stand_up'}"
+    ```
+*   **Check Lidar Health:**
+    ```bash
+    ros2 topic echo /lidar_points --count 1
+    ```
 
 ## Acknowledgment
 Thanks to [unitree](https://github.com/unitreerobotics/unitree_ros2) for providing the support and communication interfaces with the robot.

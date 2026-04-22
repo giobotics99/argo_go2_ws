@@ -1,1 +1,4 @@
-/home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_cmake/srv/SwitchJoystick_Request.msg
+# Native remote control response switch
+
+bool flag
+

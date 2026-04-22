@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/giovanna/argo_go2_ws/src/unitree_api
+CMAKE_SOURCE_DIR = /home/unitree/argo_go2_ws/src/unitree_api
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/giovanna/argo_go2_ws/build/unitree_api
+CMAKE_BINARY_DIR = /home/unitree/argo_go2_ws/build/unitree_api
 
 # Utility rule file for unitree_api_uninstall.
 
@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/giovanna/argo_go2_ws/build/unitree_api
 include CMakeFiles/unitree_api_uninstall.dir/progress.make
 
 CMakeFiles/unitree_api_uninstall:
-	/usr/bin/cmake -P /home/giovanna/argo_go2_ws/build/unitree_api/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
+	/usr/bin/cmake -P /home/unitree/argo_go2_ws/build/unitree_api/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
 
 unitree_api_uninstall: CMakeFiles/unitree_api_uninstall
 unitree_api_uninstall: CMakeFiles/unitree_api_uninstall.dir/build.make
@@ -71,6 +71,6 @@ CMakeFiles/unitree_api_uninstall.dir/clean:
 .PHONY : CMakeFiles/unitree_api_uninstall.dir/clean
 
 CMakeFiles/unitree_api_uninstall.dir/depend:
-	cd /home/giovanna/argo_go2_ws/build/unitree_api && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/giovanna/argo_go2_ws/src/unitree_api /home/giovanna/argo_go2_ws/src/unitree_api /home/giovanna/argo_go2_ws/build/unitree_api /home/giovanna/argo_go2_ws/build/unitree_api /home/giovanna/argo_go2_ws/build/unitree_api/CMakeFiles/unitree_api_uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/unitree/argo_go2_ws/build/unitree_api && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/unitree/argo_go2_ws/src/unitree_api /home/unitree/argo_go2_ws/src/unitree_api /home/unitree/argo_go2_ws/build/unitree_api /home/unitree/argo_go2_ws/build/unitree_api /home/unitree/argo_go2_ws/build/unitree_api/CMakeFiles/unitree_api_uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/unitree_api_uninstall.dir/depend
 

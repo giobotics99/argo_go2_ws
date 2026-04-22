@@ -1,8 +1,8 @@
-# Install script for directory: /home/giovanna/argo_go2_ws/build/unitree_api/unitree_api__py
+# Install script for directory: /home/unitree/argo_go2_ws/build/unitree_api/unitree_api__py
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/giovanna/argo_go2_ws/install/unitree_api")
+  set(CMAKE_INSTALL_PREFIX "/home/unitree/argo_go2_ws/install/unitree_api")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

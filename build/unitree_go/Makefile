@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/giovanna/argo_go2_ws/src/unitree_go
+CMAKE_SOURCE_DIR = /home/unitree/argo_go2_ws/src/unitree_go
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/giovanna/argo_go2_ws/build/unitree_go
+CMAKE_BINARY_DIR = /home/unitree/argo_go2_ws/build/unitree_go
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -93,8 +93,8 @@ rebuild_cache/fast: rebuild_cache
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
+	/usr/bin/cmake-gui -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -137,9 +137,9 @@ list_install_components/fast: list_install_components
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/giovanna/argo_go2_ws/build/unitree_go/CMakeFiles /home/giovanna/argo_go2_ws/build/unitree_go/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/unitree/argo_go2_ws/build/unitree_go/CMakeFiles /home/unitree/argo_go2_ws/build/unitree_go/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/giovanna/argo_go2_ws/build/unitree_go/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/unitree/argo_go2_ws/build/unitree_go/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -166,6 +166,19 @@ preinstall/fast:
 depend:
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
+
+#=============================================================================
+# Target rules for targets named unitree_go__dds_connext_idl
+
+# Build rule for target.
+unitree_go__dds_connext_idl: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 unitree_go__dds_connext_idl
+.PHONY : unitree_go__dds_connext_idl
+
+# fast build rule for target.
+unitree_go__dds_connext_idl/fast:
+	$(MAKE) -f CMakeFiles/unitree_go__dds_connext_idl.dir/build.make CMakeFiles/unitree_go__dds_connext_idl.dir/build
+.PHONY : unitree_go__dds_connext_idl/fast
 
 #=============================================================================
 # Target rules for targets named unitree_go__rosidl_typesupport_c__pyext
@@ -5434,6 +5447,7 @@ help:
 	@echo "... install/local"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... unitree_go__dds_connext_idl"
 	@echo "... unitree_go__rosidl_typesupport_c__pyext"
 	@echo "... unitree_go__rosidl_typesupport_introspection_c__pyext"
 	@echo "... test"
