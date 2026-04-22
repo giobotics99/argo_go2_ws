@@ -1,8 +1,10 @@
 /home/unitree/argo_go2_ws/install/go2_nav/share/go2_nav/launch/slam.launch.py
 /home/unitree/argo_go2_ws/install/go2_nav/share/go2_nav/launch/navigation.launch.py
 /home/unitree/argo_go2_ws/install/go2_nav/share/go2_nav/launch/navigation.launch.foxy.py
+/home/unitree/argo_go2_ws/install/go2_nav/share/go2_nav/params/slam_toolbox_params.yaml
 /home/unitree/argo_go2_ws/install/go2_nav/share/go2_nav/params/go2_nav_params_foxy.yaml
 /home/unitree/argo_go2_ws/install/go2_nav/share/go2_nav/params/go2_nav_params.yaml
+/home/unitree/argo_go2_ws/install/go2_nav/share/go2_nav/rviz/slam_view.rviz
 /home/unitree/argo_go2_ws/install/go2_nav/share/ament_index/resource_index/package_run_dependencies/go2_nav
 /home/unitree/argo_go2_ws/install/go2_nav/share/ament_index/resource_index/parent_prefix_path/go2_nav
 /home/unitree/argo_go2_ws/install/go2_nav/share/go2_nav/environment/ament_prefix_path.sh

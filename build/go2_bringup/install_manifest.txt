@@ -1,4 +1,6 @@
 /home/unitree/argo_go2_ws/install/go2_bringup/share/go2_bringup/launch/go2.launch.py
+/home/unitree/argo_go2_ws/install/go2_bringup/share/go2_bringup/config/realsense_params.yaml
+/home/unitree/argo_go2_ws/install/go2_bringup/share/go2_bringup/config/empty
 /home/unitree/argo_go2_ws/install/go2_bringup/share/ament_index/resource_index/package_run_dependencies/go2_bringup
 /home/unitree/argo_go2_ws/install/go2_bringup/share/ament_index/resource_index/parent_prefix_path/go2_bringup
 /home/unitree/argo_go2_ws/install/go2_bringup/share/go2_bringup/environment/ament_prefix_path.sh

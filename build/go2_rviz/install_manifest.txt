@@ -1,4 +1,5 @@
 /home/unitree/argo_go2_ws/install/go2_rviz/share/go2_rviz/launch/rviz.launch.py
+/home/unitree/argo_go2_ws/install/go2_rviz/share/go2_rviz/config/go2_rviz2.rviz
 /home/unitree/argo_go2_ws/install/go2_rviz/share/go2_rviz/config/go2_rviz.rviz
 /home/unitree/argo_go2_ws/install/go2_rviz/share/ament_index/resource_index/package_run_dependencies/go2_rviz
 /home/unitree/argo_go2_ws/install/go2_rviz/share/ament_index/resource_index/parent_prefix_path/go2_rviz

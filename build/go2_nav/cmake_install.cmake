@@ -41,6 +41,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/go2_nav" TYPE DIRECTORY FILES
     "/home/unitree/argo_go2_ws/src/go2_nav/launch"
     "/home/unitree/argo_go2_ws/src/go2_nav/params"
+    "/home/unitree/argo_go2_ws/src/go2_nav/rviz"
     )
 endif()
 
