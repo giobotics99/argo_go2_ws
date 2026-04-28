@@ -4,6 +4,7 @@
 /home/unitree/argo_go2_ws/install/go2_nav/share/go2_nav/launch/__pycache__/slam.launch.cpython-38.pyc
 /home/unitree/argo_go2_ws/install/go2_nav/share/go2_nav/params/slam_toolbox_params.yaml
 /home/unitree/argo_go2_ws/install/go2_nav/share/go2_nav/params/go2_nav_params_foxy.yaml
+/home/unitree/argo_go2_ws/install/go2_nav/share/go2_nav/params/go2_nav2.yaml
 /home/unitree/argo_go2_ws/install/go2_nav/share/go2_nav/params/go2_nav_params.yaml
 /home/unitree/argo_go2_ws/install/go2_nav/share/go2_nav/rviz/slam_view.rviz
 /home/unitree/argo_go2_ws/install/go2_nav/share/go2_nav/scripts/__pycache__/pointcloud_filter.cpython-38.pyc

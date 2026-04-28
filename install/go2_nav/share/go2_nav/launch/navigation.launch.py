@@ -60,13 +60,13 @@ def generate_launch_description():
         'rviz', default_value='True')
 
     declare_map_cmd = DeclareLaunchArgument(
-        'map', default_value='')
+        'map', default_value='/home/unitree/argo_go2_ws/src/go2_nav/maps/map_1777364759.yaml')
 
     declare_nav_params_cmd = DeclareLaunchArgument(
         'params_file', default_value=os.path.join(
             package_dir,
             'params',
-            'go2_nav_params_foxy.yaml')
+            'go2_nav2.yaml')
     )
 
     declare_namespace_cmd = DeclareLaunchArgument(
@@ -121,7 +121,7 @@ def generate_launch_description():
     ld.add_action(declare_namespace_cmd)
     ld.add_action(localization_cmd)
     ld.add_action(navigation_cmd)
-    ld.add_action(rviz_cmd)
+    # ld.add_action(rviz_cmd)
     ld.add_action(cmd_vel_remap)
 
     return ld

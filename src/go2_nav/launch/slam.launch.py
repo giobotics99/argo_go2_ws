@@ -163,7 +163,7 @@ def generate_launch_description():
     # ld.add_action(pc_filter)
     # ld.add_action(pc2las)
     ld.add_action(start_slam_toolbox_cmd)
-    ld.add_action(start_navigation_cmd)
+    # ld.add_action(start_navigation_cmd)
     ld.add_action(start_map_saver_server_cmd)
     ld.add_action(start_lifecycle_manager_cmd)
     ld.add_action(rviz)

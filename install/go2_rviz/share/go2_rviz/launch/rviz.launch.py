@@ -45,6 +45,6 @@ def generate_launch_description():
             output='screen',
             arguments=['-d',
                        os.path.join(get_package_share_directory('go2_rviz'),
-                                    'config', 'go2_rviz.rviz')]
+                                    'config', 'go2_nav2.rviz')]
         )
     ])
