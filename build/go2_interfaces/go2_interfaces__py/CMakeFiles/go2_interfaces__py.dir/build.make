@@ -100,7 +100,7 @@ rosidl_generator_py/go2_interfaces/_go2_interfaces_s.ep.rosidl_typesupport_fastr
 rosidl_generator_py/go2_interfaces/_go2_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/go2_interfaces/srv/SwitchGait.idl
 rosidl_generator_py/go2_interfaces/_go2_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/go2_interfaces/srv/SwitchJoystick.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unitree/argo_go2_ws/build/go2_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python code for ROS interfaces"
-	cd /home/unitree/argo_go2_ws/build/go2_interfaces/go2_interfaces__py && /home/unitree/.pyenv/shims/python3 /opt/ros/foxy/share/rosidl_generator_py/cmake/../../../lib/rosidl_generator_py/rosidl_generator_py --generator-arguments-file /home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_py__arguments.json --typesupport-impls "rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c;rosidl_typesupport_c"
+	cd /home/unitree/argo_go2_ws/build/go2_interfaces/go2_interfaces__py && /home/unitree/argo_icra_ws/venv-argo/bin/python3 /opt/ros/foxy/share/rosidl_generator_py/cmake/../../../lib/rosidl_generator_py/rosidl_generator_py --generator-arguments-file /home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_py__arguments.json --typesupport-impls "rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c;rosidl_typesupport_c"
 
 rosidl_generator_py/go2_interfaces/_go2_interfaces_s.ep.rosidl_typesupport_introspection_c.c: rosidl_generator_py/go2_interfaces/_go2_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/go2_interfaces/_go2_interfaces_s.ep.rosidl_typesupport_introspection_c.c

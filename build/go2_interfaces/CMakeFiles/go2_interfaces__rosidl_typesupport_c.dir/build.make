@@ -73,7 +73,7 @@ rosidl_typesupport_c/go2_interfaces/srv/body_height__type_support.cpp: rosidl_ad
 rosidl_typesupport_c/go2_interfaces/srv/body_height__type_support.cpp: rosidl_adapter/go2_interfaces/srv/SwitchGait.idl
 rosidl_typesupport_c/go2_interfaces/srv/body_height__type_support.cpp: rosidl_adapter/go2_interfaces/srv/SwitchJoystick.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unitree/argo_go2_ws/build/go2_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C type support dispatch for ROS interfaces"
-	/home/unitree/.pyenv/shims/python3 /opt/ros/foxy/lib/rosidl_typesupport_c/rosidl_typesupport_c --generator-arguments-file /home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_typesupport_c__arguments.json --typesupports rosidl_typesupport_fastrtps_c rosidl_typesupport_introspection_c
+	/home/unitree/argo_icra_ws/venv-argo/bin/python3 /opt/ros/foxy/lib/rosidl_typesupport_c/rosidl_typesupport_c --generator-arguments-file /home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_typesupport_c__arguments.json --typesupports rosidl_typesupport_fastrtps_c rosidl_typesupport_introspection_c
 
 rosidl_typesupport_c/go2_interfaces/srv/continuous_gait__type_support.cpp: rosidl_typesupport_c/go2_interfaces/srv/body_height__type_support.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_c/go2_interfaces/srv/continuous_gait__type_support.cpp

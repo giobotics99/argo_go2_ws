@@ -249,7 +249,7 @@ endif()
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   execute_process(
         COMMAND
-        "/home/unitree/.pyenv/shims/python3" "-m" "compileall"
+        "/home/unitree/argo_icra_ws/venv-argo/bin/python3" "-m" "compileall"
         "/home/unitree/argo_go2_ws/install/hesai_ros_driver/lib/python3.8/site-packages/hesai_ros_driver/__init__.py"
       )
 endif()

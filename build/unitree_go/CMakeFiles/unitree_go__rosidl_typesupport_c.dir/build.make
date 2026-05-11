@@ -148,7 +148,7 @@ rosidl_typesupport_c/unitree_go/msg/audio_data__type_support.cpp: /opt/ros/foxy/
 rosidl_typesupport_c/unitree_go/msg/audio_data__type_support.cpp: /opt/ros/foxy/share/builtin_interfaces/msg/Duration.idl
 rosidl_typesupport_c/unitree_go/msg/audio_data__type_support.cpp: /opt/ros/foxy/share/builtin_interfaces/msg/Time.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unitree/argo_go2_ws/build/unitree_go/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C type support dispatch for ROS interfaces"
-	/home/unitree/.pyenv/shims/python3 /opt/ros/foxy/lib/rosidl_typesupport_c/rosidl_typesupport_c --generator-arguments-file /home/unitree/argo_go2_ws/build/unitree_go/rosidl_typesupport_c__arguments.json --typesupports rosidl_typesupport_fastrtps_c rosidl_typesupport_introspection_c
+	/home/unitree/argo_icra_ws/venv-argo/bin/python3 /opt/ros/foxy/lib/rosidl_typesupport_c/rosidl_typesupport_c --generator-arguments-file /home/unitree/argo_go2_ws/build/unitree_go/rosidl_typesupport_c__arguments.json --typesupports rosidl_typesupport_fastrtps_c rosidl_typesupport_introspection_c
 
 rosidl_typesupport_c/unitree_go/msg/bms_cmd__type_support.cpp: rosidl_typesupport_c/unitree_go/msg/audio_data__type_support.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_c/unitree_go/msg/bms_cmd__type_support.cpp

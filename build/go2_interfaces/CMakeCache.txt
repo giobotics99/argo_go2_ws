@@ -265,7 +265,7 @@ OPENSSL_SSL_LIBRARY:FILEPATH=/usr/lib/aarch64-linux-gnu/libssl.so
 PKG_CONFIG_EXECUTABLE:FILEPATH=/usr/bin/pkg-config
 
 //Path to a program.
-PYTHON_EXECUTABLE:FILEPATH=/home/unitree/.pyenv/shims/python3
+PYTHON_EXECUTABLE:FILEPATH=/home/unitree/argo_icra_ws/venv-argo/bin/python3
 
 //Path to a file.
 PYTHON_INCLUDE_DIR:PATH=/usr/include/python3.8
@@ -661,7 +661,7 @@ FIND_PACKAGE_MESSAGE_DETAILS_OpenSSL:INTERNAL=[/usr/lib/aarch64-linux-gnu/libcry
 //Details about finding PythonExtra
 FIND_PACKAGE_MESSAGE_DETAILS_PythonExtra:INTERNAL=[.so][/usr/include/python3.8][/usr/lib/aarch64-linux-gnu/libpython3.8.so][.cpython-38-aarch64-linux-gnu][v()]
 //Details about finding PythonInterp
-FIND_PACKAGE_MESSAGE_DETAILS_PythonInterp:INTERNAL=[/home/unitree/.pyenv/shims/python3][v3.8.10(3.5)]
+FIND_PACKAGE_MESSAGE_DETAILS_PythonInterp:INTERNAL=[/home/unitree/argo_icra_ws/venv-argo/bin/python3][v3.8.18(3.5)]
 //Details about finding PythonLibs
 FIND_PACKAGE_MESSAGE_DETAILS_PythonLibs:INTERNAL=[/usr/lib/aarch64-linux-gnu/libpython3.8.so][/usr/include/python3.8][v3.8.10(3.5)]
 //ADVANCED property for variable: OPENSSL_CRYPTO_LIBRARY

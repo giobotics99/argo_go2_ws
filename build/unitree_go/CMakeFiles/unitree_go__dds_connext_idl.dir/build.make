@@ -169,7 +169,7 @@ rosidl_generator_dds_idl/unitree_go/msg/dds_connext/AudioData_.idl: /opt/ros/fox
 rosidl_generator_dds_idl/unitree_go/msg/dds_connext/AudioData_.idl: /opt/ros/foxy/share/builtin_interfaces/msg/Duration.idl
 rosidl_generator_dds_idl/unitree_go/msg/dds_connext/AudioData_.idl: /opt/ros/foxy/share/builtin_interfaces/msg/Time.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unitree/argo_go2_ws/build/unitree_go/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating DDS interfaces"
-	/home/unitree/.pyenv/shims/python3 /opt/ros/foxy/lib/rosidl_generator_dds_idl/rosidl_generator_dds_idl --additional-service-templates --generator-arguments-file /home/unitree/argo_go2_ws/build/unitree_go/rosidl_generator_dds_idl__dds_connext__arguments.json --subfolders dds_connext --extension
+	/home/unitree/argo_icra_ws/venv-argo/bin/python3 /opt/ros/foxy/lib/rosidl_generator_dds_idl/rosidl_generator_dds_idl --additional-service-templates --generator-arguments-file /home/unitree/argo_go2_ws/build/unitree_go/rosidl_generator_dds_idl__dds_connext__arguments.json --subfolders dds_connext --extension
 
 rosidl_generator_dds_idl/unitree_go/msg/dds_connext/BmsCmd_.idl: rosidl_generator_dds_idl/unitree_go/msg/dds_connext/AudioData_.idl
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_dds_idl/unitree_go/msg/dds_connext/BmsCmd_.idl

@@ -112,6 +112,12 @@ def generate_launch_description():
     # Remappings
     cmd_vel_remap = SetRemap(src='cmd_vel_nav', dst='cmd_vel')
 
+    from launch.actions import TimerAction
+    delayed_localization_cmd = TimerAction(
+        period=5.0,
+        actions=[localization_cmd]
+    )
+
     ld = LaunchDescription()
     ld.add_action(declare_use_sim_time_cmd)
     ld.add_action(declare_slam_cmd)
@@ -119,8 +125,8 @@ def generate_launch_description():
     ld.add_action(declare_use_rviz_cmd)
     ld.add_action(declare_map_cmd)
     ld.add_action(declare_namespace_cmd)
-    ld.add_action(localization_cmd)
     ld.add_action(navigation_cmd)
+    ld.add_action(delayed_localization_cmd)
     # ld.add_action(rviz_cmd)
     ld.add_action(cmd_vel_remap)
 

@@ -75,7 +75,7 @@ rosidl_typesupport_introspection_c/go2_interfaces/srv/detail/body_height__rosidl
 rosidl_typesupport_introspection_c/go2_interfaces/srv/detail/body_height__rosidl_typesupport_introspection_c.h: rosidl_adapter/go2_interfaces/srv/SwitchGait.idl
 rosidl_typesupport_introspection_c/go2_interfaces/srv/detail/body_height__rosidl_typesupport_introspection_c.h: rosidl_adapter/go2_interfaces/srv/SwitchJoystick.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unitree/argo_go2_ws/build/go2_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C introspection for ROS interfaces"
-	/home/unitree/.pyenv/shims/python3 /opt/ros/foxy/lib/rosidl_typesupport_introspection_c/rosidl_typesupport_introspection_c --generator-arguments-file /home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_typesupport_introspection_c__arguments.json
+	/home/unitree/argo_icra_ws/venv-argo/bin/python3 /opt/ros/foxy/lib/rosidl_typesupport_introspection_c/rosidl_typesupport_introspection_c --generator-arguments-file /home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_typesupport_introspection_c__arguments.json
 
 rosidl_typesupport_introspection_c/go2_interfaces/srv/detail/continuous_gait__rosidl_typesupport_introspection_c.h: rosidl_typesupport_introspection_c/go2_interfaces/srv/detail/body_height__rosidl_typesupport_introspection_c.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/go2_interfaces/srv/detail/continuous_gait__rosidl_typesupport_introspection_c.h
