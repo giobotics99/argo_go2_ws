@@ -8,7 +8,7 @@ endif()
 find_package(ament_cmake REQUIRED)
 
 # Install configuration directories
-install(DIRECTORY launch params rviz scripts
+install(DIRECTORY launch params rviz scripts behavior_trees
   DESTINATION share/${PROJECT_NAME}
 )
 

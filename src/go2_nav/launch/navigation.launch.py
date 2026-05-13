@@ -49,6 +49,7 @@ def generate_launch_description():
     map_file = LaunchConfiguration('map')
     params_file = LaunchConfiguration('params_file')
     namespace = LaunchConfiguration('namespace')
+    default_bt_xml_filename = LaunchConfiguration('default_bt_xml_filename')
 
     declare_use_sim_time_cmd = DeclareLaunchArgument(
         'use_sim_time', default_value='false')
@@ -73,6 +74,12 @@ def generate_launch_description():
         'namespace', default_value=''
     )
 
+    declare_bt_xml_cmd = DeclareLaunchArgument(
+        'default_bt_xml_filename',
+        default_value=os.path.join(package_dir, 'behavior_trees', 'follow_point.xml'),
+        description='Full path to the behavior tree xml file to use'
+    )
+
     # Actions
     localization_cmd = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
@@ -94,6 +101,7 @@ def generate_launch_description():
         launch_arguments={
             'use_sim_time': use_sim_time,
             'params_file': params_file,
+            'default_bt_xml_filename': default_bt_xml_filename,
             'namespace': namespace
         }.items()
     )
@@ -125,6 +133,7 @@ def generate_launch_description():
     ld.add_action(declare_use_rviz_cmd)
     ld.add_action(declare_map_cmd)
     ld.add_action(declare_namespace_cmd)
+    ld.add_action(declare_bt_xml_cmd)
     ld.add_action(navigation_cmd)
     ld.add_action(delayed_localization_cmd)
     # ld.add_action(rviz_cmd)
