@@ -35,6 +35,8 @@ from launch import LaunchDescription
 from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch.substitutions import LaunchConfiguration
+from launch.conditions import IfCondition, UnlessCondition
+from launch.actions import SetLaunchConfiguration
 from launch_ros.actions import SetRemap
 
 
@@ -50,6 +52,7 @@ def generate_launch_description():
     params_file = LaunchConfiguration('params_file')
     namespace = LaunchConfiguration('namespace')
     default_bt_xml_filename = LaunchConfiguration('default_bt_xml_filename')
+    follow_me = LaunchConfiguration('follow_me')
 
     declare_use_sim_time_cmd = DeclareLaunchArgument(
         'use_sim_time', default_value='false')
@@ -74,10 +77,24 @@ def generate_launch_description():
         'namespace', default_value=''
     )
 
-    declare_bt_xml_cmd = DeclareLaunchArgument(
-        'default_bt_xml_filename',
-        default_value=os.path.join(package_dir, 'behavior_trees', 'follow_point.xml'),
-        description='Full path to the behavior tree xml file to use'
+    declare_follow_me_cmd = DeclareLaunchArgument(
+        'follow_me',
+        default_value='False',
+        description='Whether to use the follow point behavior tree'
+    )
+
+    nav2_bt_dir = get_package_share_directory('nav2_bt_navigator')
+
+    set_normal_bt_cmd = SetLaunchConfiguration(
+        name='default_bt_xml_filename',
+        value=os.path.join(nav2_bt_dir, 'behavior_trees', 'navigate_w_replanning_and_recovery.xml'),
+        condition=UnlessCondition(follow_me)
+    )
+
+    set_follow_bt_cmd = SetLaunchConfiguration(
+        name='default_bt_xml_filename',
+        value=os.path.join(package_dir, 'behavior_trees', 'follow_point.xml'),
+        condition=IfCondition(follow_me)
     )
 
     # Actions
@@ -133,9 +150,11 @@ def generate_launch_description():
     ld.add_action(declare_use_rviz_cmd)
     ld.add_action(declare_map_cmd)
     ld.add_action(declare_namespace_cmd)
-    ld.add_action(declare_bt_xml_cmd)
+    ld.add_action(declare_follow_me_cmd)
+    ld.add_action(set_normal_bt_cmd)
+    ld.add_action(set_follow_bt_cmd)
+    ld.add_action(localization_cmd)
     ld.add_action(navigation_cmd)
-    ld.add_action(delayed_localization_cmd)
     # ld.add_action(rviz_cmd)
     ld.add_action(cmd_vel_remap)
 

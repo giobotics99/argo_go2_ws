@@ -32,14 +32,19 @@ colcon build --packages-select go2_nav
 source install/setup.bash
 ```
 
-Launch the navigation stack:
+Launch the normal navigation stack (default behavior):
 ```bash
 ros2 launch go2_nav navigation.launch.py
 ```
-*Note: Because we modified `navigation.launch.py`, Nav2 will automatically load the `follow_point.xml` tree.*
+*Nav2 will load the standard point-to-point navigation behavior tree.*
 
 ### 3. Start Following!
-To command the robot to start following:
+To use the Follow Me strategy instead, simply append the `follow_me` argument when launching:
+```bash
+ros2 launch go2_nav navigation.launch.py follow_me:=true
+```
+
+Once running in follow me mode:
 1. Send a standard `NavigateToPose` action goal to Nav2 (using an Action Client in your code, or via RViz). The initial goal doesn't matter too much as it will be overwritten.
 2. Have your perception node publish the detected object's coordinates (as a `geometry_msgs/msg/PoseStamped`) to the `/goal_update` topic at a high rate (e.g., 10 Hz).
 
@@ -50,9 +55,5 @@ ros2 topic pub /goal_update geometry_msgs/msg/PoseStamped "{header: {frame_id: '
 
 As long as the `/goal_update` topic receives new poses, the robot will seamlessly adjust its path and follow the object, keeping a 1.0m clearance.
 
-### 4. How to Revert to Normal Navigation
-If you want to use standard Point A to Point B navigation without the following behavior, you can override the launch argument when starting the launch file:
-```bash
-ros2 launch go2_nav navigation.launch.py default_bt_xml_filename:=/opt/ros/foxy/share/nav2_bt_navigator/behavior_trees/navigate_w_replanning_and_recovery.xml
-```
-(Replace `/opt/ros/foxy/` with your ROS 2 installation path if necessary).
+### 4. Reverting to Normal Navigation
+Because the `follow_me` argument defaults to `false`, simply omitting it when launching `navigation.launch.py` will restore normal A-to-B navigation functionality.
