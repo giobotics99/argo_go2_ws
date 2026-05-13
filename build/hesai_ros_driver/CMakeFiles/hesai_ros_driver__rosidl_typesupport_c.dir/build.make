@@ -101,7 +101,7 @@ rosidl_typesupport_c/hesai_ros_driver/msg/udp_packet__type_support.cpp: /opt/ros
 rosidl_typesupport_c/hesai_ros_driver/msg/udp_packet__type_support.cpp: /opt/ros/foxy/share/std_msgs/msg/UInt8.idl
 rosidl_typesupport_c/hesai_ros_driver/msg/udp_packet__type_support.cpp: /opt/ros/foxy/share/std_msgs/msg/UInt8MultiArray.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unitree/argo_go2_ws/build/hesai_ros_driver/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C type support dispatch for ROS interfaces"
-	/home/unitree/argo_icra_ws/venv-argo/bin/python3 /opt/ros/foxy/lib/rosidl_typesupport_c/rosidl_typesupport_c --generator-arguments-file /home/unitree/argo_go2_ws/build/hesai_ros_driver/rosidl_typesupport_c__arguments.json --typesupports rosidl_typesupport_fastrtps_c rosidl_typesupport_introspection_c
+	/home/unitree/.pyenv/shims/python3 /opt/ros/foxy/lib/rosidl_typesupport_c/rosidl_typesupport_c --generator-arguments-file /home/unitree/argo_go2_ws/build/hesai_ros_driver/rosidl_typesupport_c__arguments.json --typesupports rosidl_typesupport_fastrtps_c rosidl_typesupport_introspection_c
 
 rosidl_typesupport_c/hesai_ros_driver/msg/udp_frame__type_support.cpp: rosidl_typesupport_c/hesai_ros_driver/msg/udp_packet__type_support.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_c/hesai_ros_driver/msg/udp_frame__type_support.cpp

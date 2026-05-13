@@ -175,7 +175,7 @@ local_costmap:
   local_costmap:
     ros__parameters:
       update_frequency: 5.0
-      publish_frequency: 2.0
+      publish_frequency: 5.0
       global_frame: odom
       robot_base_frame: base_link
       use_sim_time: False
@@ -183,7 +183,8 @@ local_costmap:
       width: 6
       height: 6
       resolution: 0.05
-      robot_radius: 0.4
+      footprint: "[ [0.345, 0.150], [0.345, -0.150], [-0.430, -0.150], [-0.430, 0.150] ]"
+      footprint_padding: 0.00 # 0.05
       plugins: ["obstacle_layer", "voxel_layer", "inflation_layer"]
       obstacle_layer:
         plugin: "nav2_costmap_2d::ObstacleLayer"
@@ -228,26 +229,22 @@ local_costmap:
 global_costmap:
   global_costmap:
     ros__parameters:
-      update_frequency: 1.0
-      publish_frequency: 1.0
+      update_frequency: 2.0
+      publish_frequency: 0.5
       global_frame: map
       robot_base_frame: base_link
       use_sim_time: False
-      robot_radius: 0.4
+      footprint: "[ [0.350, 0.150], [0.350, -0.150], [-0.440, -0.150], [-0.440, 0.150] ]"
+      footprint_padding: 0.01 # 0.05
       # La risoluzione qui deve corrispondere a quella del file .yaml della mappa
       resolution: 0.05 
-      always_send_full_costmap: True
-      
-      track_unknown_space: true
+      track_unknown_space: false
       rolling_window: false
-      plugins: ["static_layer", "obstacle_layer", "inflation_layer"]
-      
-      static_layer:
-        plugin: "nav2_costmap_2d::StaticLayer"
-        map_subscribe_transient_local: True
-        map_topic: "/map"
-        enabled: True
-        
+      width: 500
+      height: 500
+      origin_x: -250.0
+      origin_y: -250.0
+      plugins: ["static_layer", "obstacle_layer", "inflation_layer"]  
       obstacle_layer:
         plugin: "nav2_costmap_2d::ObstacleLayer"
         enabled: True
@@ -260,16 +257,21 @@ global_costmap:
           data_type: "LaserScan"
           # Impedisce al sensore di espandere la mappa all'infinito
           obstacle_max_range: 2.5
-          raytrace_max_range: 3.0
-          
+          raytrace_max_range: 3.0 
+      static_layer:
+        plugin: "nav2_costmap_2d::StaticLayer"
+        map_subscribe_transient_local: True    
+        footprint_clearing_enabled: True
+        enabled: false
       inflation_layer:
         plugin: "nav2_costmap_2d::InflationLayer"
         cost_scaling_factor: 3.0
         inflation_radius: 0.55
+      always_send_full_costmap: True
 
 planner_server:
   ros__parameters:
-    expected_planner_frequency: 20.0
+    expected_planner_frequency: 10.0
     use_sim_time: False
     planner_plugins: ["GridBased"]
     GridBased:

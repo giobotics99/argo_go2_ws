@@ -43,6 +43,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
     "/home/unitree/argo_go2_ws/src/go2_nav/params"
     "/home/unitree/argo_go2_ws/src/go2_nav/rviz"
     "/home/unitree/argo_go2_ws/src/go2_nav/scripts"
+    "/home/unitree/argo_go2_ws/src/go2_nav/behavior_trees"
     )
 endif()
 

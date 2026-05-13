@@ -103,7 +103,7 @@ rosidl_typesupport_introspection_cpp/hesai_ros_driver/msg/detail/udp_packet__ros
 rosidl_typesupport_introspection_cpp/hesai_ros_driver/msg/detail/udp_packet__rosidl_typesupport_introspection_cpp.hpp: /opt/ros/foxy/share/std_msgs/msg/UInt8.idl
 rosidl_typesupport_introspection_cpp/hesai_ros_driver/msg/detail/udp_packet__rosidl_typesupport_introspection_cpp.hpp: /opt/ros/foxy/share/std_msgs/msg/UInt8MultiArray.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unitree/argo_go2_ws/build/hesai_ros_driver/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ introspection for ROS interfaces"
-	/home/unitree/argo_icra_ws/venv-argo/bin/python3 /opt/ros/foxy/lib/rosidl_typesupport_introspection_cpp/rosidl_typesupport_introspection_cpp --generator-arguments-file /home/unitree/argo_go2_ws/build/hesai_ros_driver/rosidl_typesupport_introspection_cpp__arguments.json
+	/home/unitree/.pyenv/shims/python3 /opt/ros/foxy/lib/rosidl_typesupport_introspection_cpp/rosidl_typesupport_introspection_cpp --generator-arguments-file /home/unitree/argo_go2_ws/build/hesai_ros_driver/rosidl_typesupport_introspection_cpp__arguments.json
 
 rosidl_typesupport_introspection_cpp/hesai_ros_driver/msg/detail/udp_frame__rosidl_typesupport_introspection_cpp.hpp: rosidl_typesupport_introspection_cpp/hesai_ros_driver/msg/detail/udp_packet__rosidl_typesupport_introspection_cpp.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_cpp/hesai_ros_driver/msg/detail/udp_frame__rosidl_typesupport_introspection_cpp.hpp

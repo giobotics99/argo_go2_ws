@@ -185,7 +185,7 @@ rosidl_generator_cpp/unitree_api/msg/request.hpp: /opt/ros/foxy/share/std_msgs/m
 rosidl_generator_cpp/unitree_api/msg/request.hpp: /opt/ros/foxy/share/builtin_interfaces/msg/Duration.idl
 rosidl_generator_cpp/unitree_api/msg/request.hpp: /opt/ros/foxy/share/builtin_interfaces/msg/Time.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unitree/argo_go2_ws/build/unitree_api/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code for ROS interfaces"
-	/home/unitree/argo_icra_ws/venv-argo/bin/python3 /opt/ros/foxy/share/rosidl_generator_cpp/cmake/../../../lib/rosidl_generator_cpp/rosidl_generator_cpp --generator-arguments-file /home/unitree/argo_go2_ws/build/unitree_api/rosidl_generator_cpp__arguments.json
+	/home/unitree/.pyenv/shims/python3 /opt/ros/foxy/share/rosidl_generator_cpp/cmake/../../../lib/rosidl_generator_cpp/rosidl_generator_cpp --generator-arguments-file /home/unitree/argo_go2_ws/build/unitree_api/rosidl_generator_cpp__arguments.json
 
 rosidl_generator_cpp/unitree_api/msg/detail/request__builder.hpp: rosidl_generator_cpp/unitree_api/msg/request.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/unitree_api/msg/detail/request__builder.hpp
