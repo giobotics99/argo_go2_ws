@@ -48,7 +48,10 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/go2_nav" TYPE PROGRAM FILES "/home/unitree/argo_go2_ws/src/go2_nav/scripts/pointcloud_filter.py")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/go2_nav" TYPE PROGRAM FILES
+    "/home/unitree/argo_go2_ws/src/go2_nav/scripts/pointcloud_filter.py"
+    "/home/unitree/argo_go2_ws/src/go2_nav/scripts/skeleton_tracker.py"
+    )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)

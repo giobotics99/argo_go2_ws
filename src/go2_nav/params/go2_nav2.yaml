@@ -27,10 +27,10 @@ amcl:
     recovery_alpha_slow: 0.0
     resample_interval: 1
     robot_model_type: "omnidirectional"
-    save_pose_rate: 0.5
     sigma_hit: 0.2
     tf_broadcast: true
-    transform_tolerance: 1.0
+    transform_tolerance: 2.0
+    save_pose_rate: 1.0
     update_min_a: 0.2
     update_min_d: 0.25
     z_hit: 0.5
@@ -150,20 +150,24 @@ controller_server:
       sim_time: 1.7
       linear_granularity: 0.05
       angular_granularity: 0.025
-      transform_tolerance: 0.2
+      transform_tolerance: 1.0
       xy_goal_tolerance: 0.25
       trans_stopped_velocity: 0.25
       short_circuit_trajectory_evaluation: True
       stateful: True
       critics: ["RotateToGoal", "Oscillation", "BaseObstacle", "GoalAlign", "PathAlign", "PathDist", "GoalDist"]
       BaseObstacle.scale: 0.02
-      PathAlign.scale: 32.0
+      PathAlign.scale: 45.0             # Alzato da 32.0 -> Forte accoppiamento al percorso
       PathAlign.forward_point_distance: 0.1
-      GoalAlign.scale: 24.0
+      GoalAlign.scale: 35.0             # Alzato da 24.0 -> Cerca di puntare la faccia al goal
       GoalAlign.forward_point_distance: 0.1
+      
       PathDist.scale: 32.0
       GoalDist.scale: 24.0
-      RotateToGoal.scale: 32.0
+      
+      # CONFIGURAZIONE ROTAZIONE SUL POSTO
+      # Spinge il cane a girarsi verso di te PRIMA di camminare se l'angolo è troppo accentuato
+      RotateToGoal.scale: 40.0          # Alzato da 32.0
       RotateToGoal.slowing_factor: 5.0
       RotateToGoal.lookahead_time: -1.0
 
@@ -274,7 +278,7 @@ global_costmap:
 
 planner_server:
   ros__parameters:
-    expected_planner_frequency: 10.0
+    expected_planner_frequency: 2.0
     use_sim_time: False
     planner_plugins: ["GridBased"]
     GridBased:

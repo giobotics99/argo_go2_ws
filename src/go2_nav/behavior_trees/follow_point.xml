@@ -1,7 +1,8 @@
 <root main_tree_to_execute="MainTree">
   <BehaviorTree ID="MainTree">
     <PipelineSequence name="NavigateWithReplanning">
-      <RateController hz="5.0">
+      <!-- Aggiorna il percorso e invia il goal dinamicamente -->
+      <RateController hz="2.0"> <!-- Ridotto a 2Hz, sufficiente per un umano che cammina -->
         <Sequence>
           <GoalUpdater input_goal="{goal}" output_goal="{updated_goal}">
             <ComputePathToPose goal="{updated_goal}" path="{path}" planner_id="GridBased"/>
@@ -9,9 +10,9 @@
           <TruncatePath distance="1.0" input_path="{path}" output_path="{truncated_path}"/>
         </Sequence>
       </RateController>
-      <KeepRunningUntilFailure>
-        <FollowPath path="{truncated_path}" controller_id="FollowPath"/>
-      </KeepRunningUntilFailure>
+      
+      <!-- Invece di mandarlo in loop continuo che fallisce, usa una ReactiveSequence standard di Nav2 -->
+      <FollowPath path="{truncated_path}" controller_id="FollowPath"/>
     </PipelineSequence>
   </BehaviorTree>
 </root>
