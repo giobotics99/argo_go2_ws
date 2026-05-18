@@ -11,8 +11,10 @@
         </Sequence>
       </RateController>
       
-      <!-- Invece di mandarlo in loop continuo che fallisce, usa una ReactiveSequence standard di Nav2 -->
-      <FollowPath path="{truncated_path}" controller_id="FollowPath"/>
+      <!-- Manteniamo in esecuzione il FollowPath per inseguire in modo continuo -->
+      <KeepRunningUntilFailure>
+        <FollowPath path="{truncated_path}" controller_id="FollowPath"/>
+      </KeepRunningUntilFailure>
     </PipelineSequence>
   </BehaviorTree>
 </root>

@@ -157,13 +157,13 @@ controller_server:
       stateful: True
       critics: ["RotateToGoal", "Oscillation", "BaseObstacle", "GoalAlign", "PathAlign", "PathDist", "GoalDist"]
       BaseObstacle.scale: 0.02
-      PathAlign.scale: 45.0             # Alzato da 32.0 -> Forte accoppiamento al percorso
+      PathAlign.scale: 15.0             # Abbassato per inseguimento fluido
       PathAlign.forward_point_distance: 0.1
-      GoalAlign.scale: 35.0             # Alzato da 24.0 -> Cerca di puntare la faccia al goal
+      GoalAlign.scale: 15.0             # Abbassato per inseguimento fluido
       GoalAlign.forward_point_distance: 0.1
       
       PathDist.scale: 32.0
-      GoalDist.scale: 24.0
+      GoalDist.scale: 32.0              # Alzato per favorire arrivo vicino al goal
       
       # CONFIGURAZIONE ROTAZIONE SUL POSTO
       # Spinge il cane a girarsi verso di te PRIMA di camminare se l'angolo è troppo accentuato
