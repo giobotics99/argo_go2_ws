@@ -11,6 +11,7 @@ from rclpy.node import Node
 from rclpy.qos import QoSProfile, ReliabilityPolicy, HistoryPolicy
 from message_filters import Subscriber, ApproximateTimeSynchronizer
 from rclpy.duration import Duration
+from rclpy.action import ActionClient
 
 import tf2_ros
 import tf2_geometry_msgs
@@ -20,6 +21,9 @@ from std_msgs.msg import ColorRGBA
 from geometry_msgs.msg import Point, PointStamped, PoseStamped
 from visualization_msgs.msg import Marker
 from sensor_msgs.msg import Image, CameraInfo
+
+# Importiamo l'azione corretta per Foxy
+from nav2_msgs.action import NavigateToPose
 
 import sys 
 sys.path.append("/home/unitree/assistive_robodog/ROS/3d_human_detection")
@@ -60,6 +64,12 @@ class SkeletonTracker3D(Node):
         self.marker_pub = self.create_publisher(Marker, 'visualization_marker', 10)
         self.human_marker_pub = self.create_publisher(Marker, 'human_marker_cl', 10)
         self.human_pose_pub = self.create_publisher(PoseStamped, '/detected_body_pose', 10)
+        
+        # Publisher per l'aggiornamento continuo (intercettato dal GoalUpdater di Nav2)
+        self.goal_update_pub = self.create_publisher(PoseStamped, '/goal_update', 10)
+        
+        # Action Client per risvegliare l'albero di navigazione in Foxy
+        self.nav_to_pose_client = ActionClient(self, NavigateToPose, 'navigate_to_pose')
 
         self.camera_info_received = False
         self._intrinsics = None
@@ -70,8 +80,9 @@ class SkeletonTracker3D(Node):
         
         # Filtro per Nav2: memorizza l'ultimo goal effettivamente pubblicato
         self.last_sent_goal = None
-        
-        self.get_logger().info("Nodo SkeletonTracker3D avviato con Sincronizzazione Temporale e Filtro Goal.")
+        self.tree_started = False
+
+        self.get_logger().info("Nodo SkeletonTracker3D avviato con Successo. Architettura Foxy: Action + GoalUpdater.")
 
     def camera_info_sub_callback(self, msg):
         if not self.camera_info_received:
@@ -96,6 +107,7 @@ class SkeletonTracker3D(Node):
         frame = self.br.imgmsg_to_cv2(rgb_msg, desired_encoding="bgr8")
         depth_map = self.br.imgmsg_to_cv2(depth_msg, desired_encoding="passthrough")
 
+        # FUNZIONE ORIGINALE RIPRISTINATA PER EVITARE ATTRIBUTE ERROR
         img_landmarks, _ = self.landmark_extractor.get_body_landmarks(frame)
 
         if img_landmarks is not None:
@@ -156,7 +168,7 @@ class SkeletonTracker3D(Node):
         if not points:
             return
         
-        # Marker Punti per visualizzazione locale
+        # 1. Pubblica il Marker originale per vedere l'umano su RViz
         marker = Marker()
         marker.header.frame_id = self.camera_frame
         marker.header.stamp = timestamp
@@ -174,61 +186,90 @@ class SkeletonTracker3D(Node):
         self.human_marker_pub.publish(marker)
 
         try:
+            # Prendiamo le coordinate dell'umano relative alla telecamera (Frame Locale)
+            human_cam_x = points[0][0]
+            human_cam_y = points[0][1]
+            
+            # Calcoliamo la distanza tra robot (0,0) e umano direttamente nel frame locale
+            distance_to_human = math.sqrt(human_cam_x**2 + human_cam_y**2)
+            safe_distance = 0.4
+
+            # Calcoliamo il GOAL direttamente nel frame locale
+            if distance_to_human > safe_distance:
+                # Accorciamo il vettore di 40cm prima della trasformazione globale
+                scale = (distance_to_human - safe_distance) / distance_to_human
+                goal_cam_x = human_cam_x * scale
+                goal_cam_y = human_cam_y * scale
+            else:
+                # Se l'umano è già più vicino di 40cm, il goal diventa il robot stesso (0,0 nel frame locale)
+                goal_cam_x = 0.0
+                goal_cam_y = 0.0
+
+            # 2. UNICO LOOKUP TF: Trasformiamo il goal locale in goal globale
             transform = self.tf_buffer.lookup_transform(
                 self.global_frame, 
                 self.camera_frame, 
-                timestamp, 
+                rclpy.time.Time(), 
                 timeout=Duration(seconds=0.1)
             )
             
             point_ = PointStamped()
             point_.header.frame_id = self.camera_frame
-            point_.header.stamp = timestamp
-            point_.point.x, point_.point.y, point_.point.z = points[0][0], points[0][1], points[0][2]
+            point_.header.stamp = rclpy.time.Time().to_msg() 
+            point_.point.x = goal_cam_x
+            point_.point.y = goal_cam_y
+            point_.point.z = 0.0 # Navigazione 2D pianeggiante
+            
             point_in_global = tf2_geometry_msgs.do_transform_point(point_, transform)
+            goal_x = point_in_global.point.x
+            goal_y = point_in_global.point.y
 
-            curr_p = point_in_global.point
-
-            # CORREZIONE LOGICA YAW
-            if self.prev_pose_global is not None:
-                dx = curr_p.x - self.prev_pose_global.x
-                dy = curr_p.y - self.prev_pose_global.y
-                distance = math.sqrt(dx**2 + dy**2)
-                
-                if distance > 0.08: # Soglia di movimento per lo Yaw
-                    self.current_yaw = math.atan2(dy, dx)
-                    self.prev_pose_global = curr_p 
-            else:
-                self.prev_pose_global = curr_p
-
-            qx, qy, qz, qw = self.get_quaternion_from_euler(0, 0, self.current_yaw)
-
-            # FILTRO DISTANZA DI INVIO PER NAV2
+            # 3. Controllo del filtro di invio per Nav2
             should_send_goal = True
             if self.last_sent_goal is not None:
                 dist_from_last_goal = math.sqrt(
-                    (curr_p.x - self.last_sent_goal.x)**2 + 
-                    (curr_p.y - self.last_sent_goal.y)**2
+                    (goal_x - self.last_sent_goal.x)**2 + 
+                    (goal_y - self.last_sent_goal.y)**2
                 )
-                # Invia il goal solo se lo spostamento umano supera i 15 cm
-                if dist_from_last_goal < 0.15: 
+                if dist_from_last_goal < 0.25: 
                     should_send_goal = False
 
             if should_send_goal:
                 pose_msg = PoseStamped()
-                pose_msg.header.stamp = timestamp
+                # pose_msg.header.stamp = timestamp
+                pose_msg.header.stamp = self.get_clock().now().to_msg()
                 pose_msg.header.frame_id = self.global_frame
-                pose_msg.pose.position = curr_p
-                pose_msg.pose.orientation.x = qx
-                pose_msg.pose.orientation.y = qy
-                pose_msg.pose.orientation.z = qz
-                pose_msg.pose.orientation.w = qw
+                pose_msg.pose.position.x = goal_x
+                pose_msg.pose.position.y = goal_y
+                pose_msg.pose.position.z = 0.0 
                 
-                self.human_pose_pub.publish(pose_msg)
-                self.last_sent_goal = curr_p # Salva la coordinata attuale come ultimo riferimento inviato
+                pose_msg.pose.orientation.x = 0.0
+                pose_msg.pose.orientation.y = 0.0
+                pose_msg.pose.orientation.z = 0.0
+                pose_msg.pose.orientation.w = 1.0
+                
+                if not self.tree_started:
+                    self.send_initial_action_goal(pose_msg)
+                else:
+                    self.goal_update_pub.publish(pose_msg)
+                    self.get_logger().info(f"Nuovo Goal proiettato (Locale): x={goal_x:.2f}, y={goal_y:.2f} (Distanza: {distance_to_human:.2f}m)")
+
+                self.last_sent_goal = pose_msg.pose.position 
 
         except (tf2_ros.LookupException, tf2_ros.ConnectivityException, tf2_ros.ExtrapolationException) as e:
-            self.get_logger().warn(f"Failed to transform: {str(e)}")
+            self.get_logger().warn(f"Failed to transform goal position: {str(e)}")
+            
+    def send_initial_action_goal(self, pose_msg):
+        if not self.nav_to_pose_client.wait_for_server(timeout_sec=1.0):
+            self.get_logger().warn("Attesa Action Server 'navigate_to_pose'...")
+            return
+
+        goal_msg = NavigateToPose.Goal()
+        goal_msg.pose = pose_msg
+
+        self.get_logger().info("Innesco iniziale Nav2 tramite Action NavigateToPose...")
+        self.nav_to_pose_client.send_goal_async(goal_msg)
+        self.tree_started = True
 
     def get_quaternion_from_euler(self, roll, pitch, yaw):
         qx = np.sin(roll/2) * np.cos(pitch/2) * np.cos(yaw/2) - np.cos(roll/2) * np.sin(pitch/2) * np.sin(yaw/2)

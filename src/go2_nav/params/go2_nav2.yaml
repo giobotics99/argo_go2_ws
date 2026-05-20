@@ -38,12 +38,12 @@ amcl:
     z_rand: 0.5
     z_short: 0.05
     scan_topic: /scan
-    set_initial_pose: true
-    initial_pose:
-      x: 0.0
-      y: 0.0
-      z: 0.0
-      yaw: 0.0
+    set_initial_pose: false
+    # initial_pose:
+    #   x: 0.0
+    #   y: 0.0
+    #   z: 0.0
+    #   yaw: 0.0
 
 amcl_map_client:
   ros__parameters:
@@ -58,7 +58,7 @@ map_server:
     use_sim_time: False
     # Overridden in launch by the "map" launch configuration or provided default value.
     # To use in yaml, remove the default "map" value in the tb3_simulation_launch.py file & provide full path to map below.
-    yaml_filename: "/home/unitree/argo_go2_ws/src/go2_nav/maps/map_lab.yaml"
+    yaml_filename: "/home/unitree/argo_go2_ws/src/go2_nav/maps/map_caffe_cnr.yaml"
 
 map_saver:
   ros__parameters:
@@ -206,7 +206,7 @@ local_costmap:
       inflation_layer:
         plugin: "nav2_costmap_2d::InflationLayer"
         cost_scaling_factor: 3.0
-        inflation_radius: 0.55
+        inflation_radius: 0.3
       # voxel_layer:
       #   plugin: "nav2_costmap_2d::VoxelLayer"
       #   enabled: True
@@ -285,7 +285,7 @@ planner_server:
       plugin: "nav2_navfn_planner/NavfnPlanner"
       tolerance: 1.0
       use_astar: true
-      allow_unknown: true
+      allow_unknown: false
 
 planner_server_rclcpp_node:
   ros__parameters:
@@ -295,7 +295,7 @@ recoveries_server:
   ros__parameters:
     costmap_topic: local_costmap/costmap_raw
     footprint_topic: local_costmap/published_footprint
-    cycle_frequency: 10.0
+    cycle_frequency: 15.0
     recovery_plugins: ["spin", "back_up", "wait"]
     spin:
       plugin: "nav2_recoveries/Spin"
@@ -305,7 +305,7 @@ recoveries_server:
       plugin: "nav2_recoveries/Wait"
     global_frame: odom
     robot_base_frame: base_link
-    transform_timeout: 0.1
+    transform_timeout: 1.0
     use_sim_time: false
     simulate_ahead_time: 2.0
     max_rotational_vel: 1.0

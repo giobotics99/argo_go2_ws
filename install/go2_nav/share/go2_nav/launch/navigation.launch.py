@@ -34,7 +34,7 @@ def generate_launch_description():
         'rviz', default_value='True')
 
     declare_map_cmd = DeclareLaunchArgument(
-        'map', default_value='/home/unitree/argo_go2_ws/src/go2_nav/maps/map_lab.yaml')
+        'map', default_value='/home/unitree/argo_go2_ws/src/go2_nav/maps/map_caffe_cnr.yaml')
 
     declare_nav_params_cmd = DeclareLaunchArgument(
         'params_file', default_value=os.path.join(
