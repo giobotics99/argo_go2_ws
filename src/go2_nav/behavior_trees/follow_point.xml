@@ -3,8 +3,8 @@
     <PipelineSequence name="NavigateWithReplanning">
       <RateController hz="2.0">
         <Sequence>
-          <GoalUpdater input_goal="{goal}" output_goal="{goal_update}">
-            <ComputePathToPose goal="{goal_update}" path="{path}" planner_id="GridBased"/>
+          <GoalUpdater input_goal="{goal}" output_goal="{goal}">
+            <ComputePathToPose goal="{goal}" path="{path}" planner_id="GridBased"/>
           </GoalUpdater>
          <TruncatePath distance="1.0" input_path="{path}" output_path="{truncated_path}"/>
         </Sequence>

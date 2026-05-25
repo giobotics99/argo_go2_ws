@@ -41,7 +41,7 @@ class SkeletonTracker3D(Node):
             depth=10
         )
 
-        self.declare_parameter('global_frame', 'odom')
+        self.declare_parameter('global_frame', 'map')
         self.declare_parameter('camera_frame', 'camera_link')
 
         self.global_frame = self.get_parameter('global_frame').get_parameter_value().string_value
@@ -66,7 +66,7 @@ class SkeletonTracker3D(Node):
         self.human_pose_pub = self.create_publisher(PoseStamped, '/detected_body_pose', 10)
         
         # Publisher per l'aggiornamento continuo (intercettato dal GoalUpdater di Nav2)
-        self.goal_update_pub = self.create_publisher(PoseStamped, '/goal_update', 10)
+        self.goal_update_pub = self.create_publisher(PoseStamped, '/goal_pose', 10)
         
         # Action Client per risvegliare l'albero di navigazione in Foxy
         self.nav_to_pose_client = ActionClient(self, NavigateToPose, 'navigate_to_pose')
@@ -107,11 +107,12 @@ class SkeletonTracker3D(Node):
         frame = self.br.imgmsg_to_cv2(rgb_msg, desired_encoding="bgr8")
         depth_map = self.br.imgmsg_to_cv2(depth_msg, desired_encoding="passthrough")
 
-        # FUNZIONE ORIGINALE RIPRISTINATA PER EVITARE ATTRIBUTE ERROR
+        # Estrazione dei landmark
         img_landmarks, _ = self.landmark_extractor.get_body_landmarks(frame)
 
+        image_out = frame.copy()
+
         if img_landmarks is not None:
-            image_out = frame.copy()
             cx, cy = self.get_body_center(img_landmarks)
 
             window_size = 21
@@ -129,24 +130,26 @@ class SkeletonTracker3D(Node):
                 target_depth = np.percentile(valid_depths, 10)
                 real_x, real_y, real_z = self.project_landmark_to_3D(cx, cy, target_depth)
 
-                # Coordinate per RViz (RealSense -> ROS)
-                rviz_x = float(real_z) / 1000.0
-                rviz_y = float(-real_x) / 1000.0
-                rviz_z = float(-real_y) / 1000.0
+                # Mappatura corretta per il frame standard ROS 'camera_link'
+                cam_x = float(real_z) / 1000.0   # La profondità della telecamera diventa l'asse X (avanti)
+                cam_y = float(-real_x) / 1000.0  # L'asse laterale invertito diventa l'asse Y (sinistra)
+                cam_z = float(-real_y) / 1000.0  # L'altezza invertita diventa l'asse Z (alto)
 
-                # Smoothing
+                # Filtro di smoothing (Alpha-Beta)
                 alpha = 0.2
                 if not hasattr(self, 'smoothed_pos'):
-                    self.smoothed_pos = [rviz_x, rviz_y, rviz_z]
+                    self.smoothed_pos = [cam_x, cam_y, cam_z]
                 else:
-                    self.smoothed_pos[0] = alpha * rviz_x + (1 - alpha) * self.smoothed_pos[0]
-                    self.smoothed_pos[1] = alpha * rviz_y + (1 - alpha) * self.smoothed_pos[1]
-                    self.smoothed_pos[2] = alpha * rviz_z + (1 - alpha) * self.smoothed_pos[2]
+                    self.smoothed_pos[0] = alpha * cam_x + (1 - alpha) * self.smoothed_pos[0]
+                    self.smoothed_pos[1] = alpha * cam_y + (1 - alpha) * self.smoothed_pos[1]
+                    self.smoothed_pos[2] = alpha * cam_z + (1 - alpha) * self.smoothed_pos[2]
 
+                # Disegna il pallino verde sul centro del corpo nell'immagine di output
                 cv2.circle(image_out, (cx, cy), 10, (0, 255, 0), thickness=-1)
+                
+                # Invia il punto alla pipeline di calcolo del Goal
                 self.visualize_points([self.smoothed_pos], timestamp)
         else:
-            image_out = frame.copy()
             if hasattr(self, 'smoothed_pos'):
                 del self.smoothed_pos
         
@@ -165,99 +168,101 @@ class SkeletonTracker3D(Node):
         return int(c_x), int(c_y)
 
     def visualize_points(self, points, timestamp):
-        if not points:
-            return
-        
-        # 1. Pubblica il Marker originale per vedere l'umano su RViz
-        marker = Marker()
-        marker.header.frame_id = self.camera_frame
-        marker.header.stamp = timestamp
-        marker.ns = "points"
-        marker.id = 0
-        marker.type = Marker.POINTS
-        marker.action = Marker.ADD
-        marker.scale.x, marker.scale.y = 0.1, 0.1
-        marker.color = ColorRGBA(r=1.0, g=0.0, b=0.0, a=1.0)
-        
-        for pt in points:
-            p = Point()
-            p.x, p.y, p.z = pt[0], pt[1], pt[2]
-            marker.points.append(p)
-        self.human_marker_pub.publish(marker)
-
-        try:
-            # Prendiamo le coordinate dell'umano relative alla telecamera (Frame Locale)
-            human_cam_x = points[0][0]
-            human_cam_y = points[0][1]
+            if not points:
+                return
             
-            # Calcoliamo la distanza tra robot (0,0) e umano direttamente nel frame locale
-            distance_to_human = math.sqrt(human_cam_x**2 + human_cam_y**2)
-            safe_distance = 0.4
-
-            # Calcoliamo il GOAL direttamente nel frame locale
-            if distance_to_human > safe_distance:
-                # Accorciamo il vettore di 40cm prima della trasformazione globale
-                scale = (distance_to_human - safe_distance) / distance_to_human
-                goal_cam_x = human_cam_x * scale
-                goal_cam_y = human_cam_y * scale
-            else:
-                # Se l'umano è già più vicino di 40cm, il goal diventa il robot stesso (0,0 nel frame locale)
-                goal_cam_x = 0.0
-                goal_cam_y = 0.0
-
-            # 2. UNICO LOOKUP TF: Trasformiamo il goal locale in goal globale
-            transform = self.tf_buffer.lookup_transform(
-                self.global_frame, 
-                self.camera_frame, 
-                rclpy.time.Time(), 
-                timeout=Duration(seconds=0.1)
-            )
+            # 1. Pubblica il Marker originale per vedere l'umano su RViz nel frame ottico corretto
+            marker = Marker()
+            marker.header.frame_id = self.camera_frame
+            marker.header.stamp = timestamp
+            marker.ns = "points"
+            marker.id = 0
+            marker.type = Marker.POINTS
+            marker.action = Marker.ADD
+            marker.scale.x, marker.scale.y = 0.1, 0.1
+            marker.color = ColorRGBA(r=1.0, g=0.0, b=0.0, a=1.0)
             
-            point_ = PointStamped()
-            point_.header.frame_id = self.camera_frame
-            point_.header.stamp = rclpy.time.Time().to_msg() 
-            point_.point.x = goal_cam_x
-            point_.point.y = goal_cam_y
-            point_.point.z = 0.0 # Navigazione 2D pianeggiante
-            
-            point_in_global = tf2_geometry_msgs.do_transform_point(point_, transform)
-            goal_x = point_in_global.point.x
-            goal_y = point_in_global.point.y
+            for pt in points:
+                p = Point()
+                p.x, p.y, p.z = pt[0], pt[1], pt[2]
+                marker.points.append(p)
+            self.human_marker_pub.publish(marker)
 
-            # 3. Controllo del filtro di invio per Nav2
-            should_send_goal = True
-            if self.last_sent_goal is not None:
-                dist_from_last_goal = math.sqrt(
-                    (goal_x - self.last_sent_goal.x)**2 + 
-                    (goal_y - self.last_sent_goal.y)**2
-                )
-                if dist_from_last_goal < 0.25: 
-                    should_send_goal = False
-
-            if should_send_goal:
-                pose_msg = PoseStamped()
-                # pose_msg.header.stamp = timestamp
-                pose_msg.header.stamp = self.get_clock().now().to_msg()
-                pose_msg.header.frame_id = self.global_frame
-                pose_msg.pose.position.x = goal_x
-                pose_msg.pose.position.y = goal_y
-                pose_msg.pose.position.z = 0.0 
+            try:
+                # Recuperiamo le coordinate dell'umano dal frame ottico (X=Destra, Y=Basso, Z=Profondità)
+                human_cam_x = points[0][0]
+                human_cam_y = points[0][1]
+                human_cam_z = points[0][2]
                 
-                pose_msg.pose.orientation.x = 0.0
-                pose_msg.pose.orientation.y = 0.0
-                pose_msg.pose.orientation.z = 0.0
-                pose_msg.pose.orientation.w = 1.0
-                
-                if not self.tree_started:
-                    self.send_initial_action_goal(pose_msg)
+                # Calcoliamo la reale distanza euclidea 3D dall'ottica della telecamera
+                distance_to_human = math.sqrt(human_cam_x**2 + human_cam_y**2 + human_cam_z**2)
+                safe_distance = 0.4
+
+                # Calcoliamo il GOAL riducendo il vettore direttamente nello spazio ottico della telecamera
+                if distance_to_human > safe_distance:
+                    # Accorciamo il vettore di 40cm mantenendo la stessa linea retta visiva
+                    scale = (distance_to_human - safe_distance) / distance_to_human
+                    goal_cam_x = human_cam_x * scale
+                    goal_cam_y = human_cam_y * scale
+                    goal_cam_z = human_cam_z * scale
                 else:
-                    self.goal_update_pub.publish(pose_msg)
-                    self.get_logger().info(f"Nuovo Goal proiettato (Locale): x={goal_x:.2f}, y={goal_y:.2f} (Distanza: {distance_to_human:.2f}m)")
+                    # Se l'umano è già entro i 40cm, fermati sul posto
+                    goal_cam_x = 0.0
+                    goal_cam_y = 0.0
+                    goal_cam_z = 0.0
 
-                self.last_sent_goal = pose_msg.pose.position 
+                # 2. TRASFORMAZIONE TF: Trasformiamo il goal ottico in coordinate globali di mappa
+                transform = self.tf_buffer.lookup_transform(
+                    self.global_frame, 
+                    self.camera_frame, 
+                    rclpy.time.Time(), 
+                    timeout=Duration(seconds=0.1)
+                )
+                
+                point_ = PointStamped()
+                point_.header.frame_id = self.camera_frame
+                point_.header.stamp = timestamp # Sincronizzato con il tempo dello scatto del frame
+                point_.point.x = goal_cam_x
+                point_.point.y = goal_cam_y
+                point_.point.z = goal_cam_z # Inseriamo la Z ottica corretta prima della rotazione di TF
+                
+                point_in_global = tf2_geometry_msgs.do_transform_point(point_, transform)
+                goal_x = point_in_global.point.x
+                goal_y = point_in_global.point.y
 
-        except (tf2_ros.LookupException, tf2_ros.ConnectivityException, tf2_ros.ExtrapolationException) as e:
-            self.get_logger().warn(f"Failed to transform goal position: {str(e)}")
+                # 3. Controllo del filtro di invio per Nav2 (Banda morta di 25cm)
+                should_send_goal = True
+                if self.last_sent_goal is not None:
+                    dist_from_last_goal = math.sqrt(
+                        (goal_x - self.last_sent_goal.x)**2 + 
+                        (goal_y - self.last_sent_goal.y)**2
+                    )
+                    if dist_from_last_goal < 0.25: 
+                        should_send_goal = False
+
+                if should_send_goal:
+                    pose_msg = PoseStamped()
+                    pose_msg.header.stamp = self.get_clock().now().to_msg()
+                    pose_msg.header.frame_id = self.global_frame
+                    pose_msg.pose.position.x = goal_x
+                    pose_msg.pose.position.y = goal_y
+                    pose_msg.pose.position.z = 0.0 # Navigazione 2D (la mappa schiaccia a terra l'altezza)
+                    
+                    pose_msg.pose.orientation.x = 0.0
+                    pose_msg.pose.orientation.y = 0.0
+                    pose_msg.pose.orientation.z = 0.0
+                    pose_msg.pose.orientation.w = 1.0
+                    
+                    if not self.tree_started:
+                        self.send_initial_action_goal(pose_msg)
+                    else:
+                        self.goal_update_pub.publish(pose_msg)
+                        self.get_logger().info(f"Nuovo Goal proiettato (Globale): x={goal_x:.2f}, y={goal_y:.2f} (Distanza: {distance_to_human:.2f}m)")
+
+                    self.last_sent_goal = pose_msg.pose.position 
+
+            except (tf2_ros.LookupException, tf2_ros.ConnectivityException, tf2_ros.ExtrapolationException) as e:
+                self.get_logger().warn(f"Failed to transform goal position: {str(e)}")
             
     def send_initial_action_goal(self, pose_msg):
         if not self.nav_to_pose_client.wait_for_server(timeout_sec=1.0):
