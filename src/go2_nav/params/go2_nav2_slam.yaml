@@ -1,10 +1,15 @@
+map_server:
+  ros__parameters:
+    use_sim_time: False
+    yaml_filename: ""
+
 map_saver:
   ros__parameters:
     use_sim_time: False
     save_map_timeout: 5.0
     free_thresh_default: 0.25
     occupied_thresh_default: 0.65
-    map_subscribe_transient_local: True
+    map_subscribe_transient_local: True    
 
 bt_navigator:
   ros__parameters:
@@ -88,7 +93,7 @@ controller_server:
       sim_time: 1.7
       linear_granularity: 0.05
       angular_granularity: 0.025
-      transform_tolerance: 1.0
+      transform_tolerance: 0.3
       xy_goal_tolerance: 0.25
       trans_stopped_velocity: 0.25
       short_circuit_trajectory_evaluation: True
@@ -207,7 +212,7 @@ global_costmap:
         plugin: "nav2_costmap_2d::StaticLayer"
         map_subscribe_transient_local: True    
         footprint_clearing_enabled: True
-        enabled: false
+        enabled: True
       inflation_layer:
         plugin: "nav2_costmap_2d::InflationLayer"
         cost_scaling_factor: 3.0
@@ -283,6 +288,7 @@ velocity_smoother:
 
 slam_toolbox:
   ros__parameters:
+
     # Plugin params
     solver_plugin: solver_plugins::CeresSolver
     ceres_linear_solver: SPARSE_NORMAL_CHOLESKY
@@ -296,7 +302,24 @@ slam_toolbox:
     map_frame: map
     base_frame: base_link
     scan_topic: /scan
-    mode: mapping
+    use_map_saver: false #true
+    mode: localization # mapping 
+    # map_start_pose: [15.6759, 2.52999, 0]
+    map_start_at_dock: true
+    map_file_name: /home/unitree/argo_go2_ws/src/go2_nav/maps/STIIMA
+
+    # Mapper params
+    debug_logging: false
+    throttle_scans: 1
+    transform_publish_period: 0.02 #if 0 never publishes odometry
+    map_update_interval: 2.0
+    resolution: 0.05
+    max_laser_range: 20.0 #for rastering images
+    minimum_time_interval: 0.5
+    transform_timeout: 0.2
+    tf_buffer_duration: 30.
+    stack_size_to_use: 40000000 # program needs a larger stack size to serialize large maps
+    enable_interactive_mode: true
 
     # General Parameters
     use_scan_matching: true
@@ -314,7 +337,23 @@ slam_toolbox:
     loop_match_minimum_response_coarse: 0.35    
     loop_match_minimum_response_fine: 0.45
 
-    # Map settings
-    map_update_interval: 5.0
-    resolution: 0.05
-    max_laser_range: 10.0 # Match this to your raytrace_max_range
+    # Correlation Parameters - Correlation Parameters
+    correlation_search_space_dimension: 0.5
+    correlation_search_space_resolution: 0.01
+    correlation_search_space_smear_deviation: 0.1 
+
+    # Correlation Parameters - Loop Closure Parameters
+    loop_search_space_dimension: 8.0
+    loop_search_space_resolution: 0.05
+    loop_search_space_smear_deviation: 0.03
+
+    # Scan Matcher Parameters
+    distance_variance_penalty: 0.5      
+    angle_variance_penalty: 1.0    
+
+    fine_search_angle_offset: 0.00349     
+    coarse_search_angle_offset: 0.349   
+    coarse_angle_resolution: 0.0349        
+    minimum_angle_penalty: 0.9
+    minimum_distance_penalty: 0.5
+    use_response_expansion: true

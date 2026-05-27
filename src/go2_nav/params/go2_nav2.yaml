@@ -26,7 +26,7 @@ amcl:
     recovery_alpha_fast: 0.0
     recovery_alpha_slow: 0.0
     resample_interval: 1
-    robot_model_type: "omnidirectional"
+    robot_model_type: "differential"
     sigma_hit: 0.2
     tf_broadcast: true
     transform_tolerance: 2.0
@@ -58,7 +58,7 @@ map_server:
     use_sim_time: False
     # Overridden in launch by the "map" launch configuration or provided default value.
     # To use in yaml, remove the default "map" value in the tb3_simulation_launch.py file & provide full path to map below.
-    yaml_filename: "/home/unitree/argo_go2_ws/src/go2_nav/maps/map_caffe_cnr.yaml"
+    yaml_filename: "/home/unitree/argo_go2_ws/src/go2_nav/maps/map_1779889723.yaml"
 
 map_saver:
   ros__parameters:
@@ -267,9 +267,10 @@ global_costmap:
           raytrace_max_range: 10.0 
       static_layer:
         plugin: "nav2_costmap_2d::StaticLayer"
-        map_subscribe_transient_local: True    
+        map_topic: /map
+        map_subscribe_transient_local: True
         footprint_clearing_enabled: True
-        enabled: false
+        enabled: True
       inflation_layer:
         plugin: "nav2_costmap_2d::InflationLayer"
         cost_scaling_factor: 3.0
