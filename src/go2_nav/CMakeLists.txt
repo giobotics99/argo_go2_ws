@@ -14,7 +14,10 @@ install(DIRECTORY launch params rviz scripts behavior_trees
 
 # Install Python scripts as programs to lib/${PROJECT_NAME}
 # This allows them to be found by 'ros2 run' and in launch files
-install(PROGRAMS scripts/pointcloud_filter.py scripts/skeleton_tracker.py
+install(PROGRAMS
+  scripts/pointcloud_filter.py
+  scripts/skeleton_tracker.py
+  scripts/yolo_detector.py
   DESTINATION lib/${PROJECT_NAME}
 )
 

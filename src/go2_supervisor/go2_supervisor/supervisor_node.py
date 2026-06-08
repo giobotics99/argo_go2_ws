@@ -164,12 +164,14 @@ class SupervisorNode(Node):
         self.declare_parameter("gemma_timeout_explain", GEMMA_TIMEOUT_EXPLAIN)
         self.declare_parameter("gemma_timeout_dispatch", GEMMA_TIMEOUT_DISPATCH)
         self.declare_parameter("current_goal_name", "Meeting_Room_A")
+        self.declare_parameter("auto_recovery_mode", True)
 
         self._api_base: str = self.get_parameter("gemma_api_base").value
         self._model_id: str = self.get_parameter("gemma_model_id").value
         self._timeout_explain: float = self.get_parameter("gemma_timeout_explain").value
         self._timeout_dispatch: float = self.get_parameter("gemma_timeout_dispatch").value
         self._current_goal_name: str = self.get_parameter("current_goal_name").value
+        self._auto_recovery_mode: bool = self.get_parameter("auto_recovery_mode").value
 
         # ── Concurrency guards ────────────────────────────────────────
         self._llm_pool = ThreadPoolExecutor(
@@ -233,6 +235,11 @@ class SupervisorNode(Node):
             "/goal_pose",
             10,
         )
+        self._explain_pub = self.create_publisher(
+            String,
+            "/supervisor/explanation",
+            10,
+        )
 
         # ── Startup telemetry ─────────────────────────────────────────
         self.get_logger().info("=" * 60)
@@ -241,6 +248,7 @@ class SupervisorNode(Node):
         self.get_logger().info(f"  Model     : {self._model_id}")
         self.get_logger().info(f"  Waypoints : {len(OFFICE_WAYPOINTS)}")
         self.get_logger().info(f"  Goal      : {self._current_goal_name}")
+        self.get_logger().info(f"  Auto Mode : {self._auto_recovery_mode}")
         self.get_logger().info("=" * 60)
 
     # =====================================================================
@@ -348,8 +356,8 @@ class SupervisorNode(Node):
 
     def _step1_explain_failure(self) -> None:
         """
-        Query Gemma 4 E2B to produce a concise, human-readable explanation
-        of why the robot is stuck, based on current YOLO detections.
+        Query Gemma 4 E2B to produce an explanation of why the robot is stuck.
+        In auto_recovery_mode, it also automatically selects the next waypoint.
 
         Runs on a background thread – NEVER on the executor.
         """
@@ -375,86 +383,179 @@ class SupervisorNode(Node):
             f"Available alternative waypoints: {', '.join(WAYPOINT_NAMES)}"
         )
 
-        self.get_logger().info(
-            f"[STEP1] Compiled state payload:\n{state_text}"
-        )
+        if self._auto_recovery_mode:
+            self.get_logger().info(f"[AUTO RECOVERY] Compiling autonomous payload:\n{state_text}")
 
-        # ── Build prompt ──────────────────────────────────────────────
-        system_prompt = (
-            "You are an onboard AI assistant on a Unitree Go2 quadruped robot "
-            "navigating an office. The robot's path planner has FAILED. "
-            "Given the robot's current sensor data and failed goal, provide "
-            "a concise (1-2 sentences), natural-language explanation of why "
-            "the robot cannot reach its destination. "
-            "Speak in first person as the robot (e.g., 'I cannot pass because…'). "
-            "Be specific about which detected objects are likely blocking the path. "
-            "Do NOT suggest alternatives – only explain the failure."
-        )
-
-        payload = {
-            "model": self._model_id,
-            "messages": [
-                {"role": "system", "content": system_prompt},
-                {"role": "user", "content": state_text},
-            ],
-            "max_tokens": 128,
-            "temperature": 0.3,
-            "stream": False,
-        }
-
-        # ── Call Gemma 4 E2B ──────────────────────────────────────────
-        try:
-            url = f"{self._api_base}/chat/completions"
-            self.get_logger().info(f"[STEP1] POST → {url}")
-
-            response = _post_json(url, payload, self._timeout_explain)
-
-            explanation = (
-                response.get("choices", [{}])[0]
-                .get("message", {})
-                .get("content", "")
-                .strip()
+            system_prompt = (
+                "You are an onboard AI assistant on a Unitree Go2 quadruped robot. "
+                "The robot's path planner has FAILED. "
+                "Based on the failed target and the detected obstacles, you must: "
+                "1. Explain the failure in first person (e.g., 'I cannot pass because...'). "
+                "2. Select the best alternative waypoint from the list of available waypoints "
+                "that avoids the obstacles. "
+                "You MUST return your answer in raw JSON format matching this exact schema:\n"
+                "{\n"
+                "  \"explanation\": \"<1-2 sentences explanation>\",\n"
+                "  \"new_target\": \"<one of the available waypoints>\"\n"
+                "}\n"
+                "Do not include any markdown formatting, code block backticks (like ```json), or other text. Return ONLY the raw JSON."
             )
 
-            elapsed = time.monotonic() - t0
+            payload = {
+                "model": self._model_id,
+                "messages": [
+                    {"role": "system", "content": system_prompt},
+                    {"role": "user", "content": state_text},
+                ],
+                "max_tokens": 160,
+                "temperature": 0.2,
+                "stream": False,
+            }
+
+            try:
+                url = f"{self._api_base}/chat/completions"
+                self.get_logger().info(f"[AUTO RECOVERY] POST → {url}")
+                response = _post_json(url, payload, self._timeout_explain)
+
+                content = (
+                    response.get("choices", [{}])[0]
+                    .get("message", {})
+                    .get("content", "")
+                    .strip()
+                )
+
+                elapsed = time.monotonic() - t0
+                self.get_logger().info(f"[AUTO RECOVERY] Gemma response ({elapsed:.1f}s):\n{content}")
+
+                # Clean up any potential markdown code blocks
+                if content.startswith("```"):
+                    lines = content.splitlines()
+                    if lines[0].startswith("```"):
+                        lines = lines[1:]
+                    if lines[-1].startswith("```"):
+                        lines = lines[:-1]
+                    content = "\n".join(lines).strip()
+
+                data = json.loads(content)
+                explanation = data.get("explanation", "").strip()
+                waypoint_name = data.get("new_target", "").strip()
+
+                if not explanation:
+                    raise ValueError("Empty explanation in JSON")
+                if not waypoint_name:
+                    raise ValueError("Empty new_target in JSON")
+
+                # ── Publish explanation ───────────────────────────────
+                explain_msg = String()
+                explain_msg.data = explanation
+                self._explain_pub.publish(explain_msg)
+                self.get_logger().info(f"[EXPLAIN] Published explanation to /supervisor/explanation: \"{explanation}\"")
+
+                # ── Trigger TTS ───────────────────────────────────────
+                trigger_text_to_speech(explanation)
+                self.get_logger().info(f"[TTS] Speaking: \"{explanation}\"")
+
+                # ── Validate and dispatch ─────────────────────────────
+                if waypoint_name in OFFICE_WAYPOINTS:
+                    self._dispatch_goal(waypoint_name)
+                else:
+                    self.get_logger().error(
+                        f"[AUTO RECOVERY] Waypoint '{waypoint_name}' not in OFFICE_WAYPOINTS. "
+                        f"Valid: {WAYPOINT_NAMES}"
+                    )
+
+            except Exception as e:
+                self.get_logger().error(f"[AUTO RECOVERY] Pipeline failure: {e}")
+            finally:
+                self._recovery_in_progress.clear()
+
+        else:
             self.get_logger().info(
-                f"[STEP1] Gemma response ({elapsed:.1f}s): \"{explanation}\""
+                f"[STEP1] Compiled state payload:\n{state_text}"
             )
 
-            if not explanation:
-                raise ValueError("Empty explanation from Gemma 4 E2B")
-
-        except (urllib.error.URLError, urllib.error.HTTPError) as e:
-            self.get_logger().error(
-                f"[STEP1] HTTP error contacting Gemma 4: {e}"
+            # ── Build prompt ──────────────────────────────────────────────
+            system_prompt = (
+                "You are an onboard AI assistant on a Unitree Go2 quadruped robot "
+                "navigating an office. The robot's path planner has FAILED. "
+                "Given the robot's current sensor data and failed goal, provide "
+                "a concise (1-2 sentences), natural-language explanation of why "
+                "the robot cannot reach its destination. "
+                "Speak in first person as the robot (e.g., 'I cannot pass because…'). "
+                "Be specific about which detected objects are likely blocking the path. "
+                "Do NOT suggest alternatives – only explain the failure."
             )
-            self._recovery_in_progress.clear()
-            return
-        except (json.JSONDecodeError, ValueError, KeyError, IndexError) as e:
-            self.get_logger().error(
-                f"[STEP1] Failed to parse Gemma 4 response: {e}"
+
+            payload = {
+                "model": self._model_id,
+                "messages": [
+                    {"role": "system", "content": system_prompt},
+                    {"role": "user", "content": state_text},
+                ],
+                "max_tokens": 128,
+                "temperature": 0.3,
+                "stream": False,
+            }
+
+            # ── Call Gemma 4 E2B ──────────────────────────────────────────
+            try:
+                url = f"{self._api_base}/chat/completions"
+                self.get_logger().info(f"[STEP1] POST → {url}")
+
+                response = _post_json(url, payload, self._timeout_explain)
+
+                explanation = (
+                    response.get("choices", [{}])[0]
+                    .get("message", {})
+                    .get("content", "")
+                    .strip()
+                )
+
+                elapsed = time.monotonic() - t0
+                self.get_logger().info(
+                    f"[STEP1] Gemma response ({elapsed:.1f}s): \"{explanation}\""
+                )
+
+                if not explanation:
+                    raise ValueError("Empty explanation from Gemma 4 E2B")
+
+            except (urllib.error.URLError, urllib.error.HTTPError) as e:
+                self.get_logger().error(
+                    f"[STEP1] HTTP error contacting Gemma 4: {e}"
+                )
+                self._recovery_in_progress.clear()
+                return
+            except (json.JSONDecodeError, ValueError, KeyError, IndexError) as e:
+                self.get_logger().error(
+                    f"[STEP1] Failed to parse Gemma 4 response: {e}"
+                )
+                self._recovery_in_progress.clear()
+                return
+            except Exception as e:
+                self.get_logger().error(
+                    f"[STEP1] Unexpected error: {type(e).__name__}: {e}"
+                )
+                self._recovery_in_progress.clear()
+                return
+
+            # ── Publish explanation ───────────────────────────────
+            explain_msg = String()
+            explain_msg.data = explanation
+            self._explain_pub.publish(explain_msg)
+            self.get_logger().info(f"[EXPLAIN] Published explanation to /supervisor/explanation: \"{explanation}\"")
+
+            # ── Trigger TTS ───────────────────────────────────────────────
+            trigger_text_to_speech(explanation)
+            self.get_logger().info(f"[TTS] Speaking: \"{explanation}\"")
+
+            # ── Await human verbal input ──────────────────────────────────
+            self._pending_explanation = explanation
+            self._awaiting_human_input = True
+
+            self.get_logger().info(
+                "[STEP1] ✓ Explanation dispatched to TTS. "
+                "Awaiting human speech input on /human/speech_input …"
             )
-            self._recovery_in_progress.clear()
-            return
-        except Exception as e:
-            self.get_logger().error(
-                f"[STEP1] Unexpected error: {type(e).__name__}: {e}"
-            )
-            self._recovery_in_progress.clear()
-            return
-
-        # ── Trigger TTS ───────────────────────────────────────────────
-        trigger_text_to_speech(explanation)
-        self.get_logger().info(f"[TTS] Speaking: \"{explanation}\"")
-
-        # ── Await human verbal input ──────────────────────────────────
-        self._pending_explanation = explanation
-        self._awaiting_human_input = True
-
-        self.get_logger().info(
-            "[STEP1] ✓ Explanation dispatched to TTS. "
-            "Awaiting human speech input on /human/speech_input …"
-        )
 
     # ------------------------------------------------------------------
     # Step 2 – Parse human intent → structured waypoint JSON
