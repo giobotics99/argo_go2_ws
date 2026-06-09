@@ -68,22 +68,30 @@ source install/setup.bash
 
 ## Step-by-Step Execution Guide
 
-### Step 1: Start Gemma 4 via vLLM
-Ensure your Jetson Orin is connected to the internet (for the first download) and accept the model license terms on Hugging Face. Replace `your_hf_token_here` with your HF read token.
+### Step 1: Start Gemma 4 via llama.cpp Server 
+Ensure your Jetson Orin is connected to the internet for the first automated model download from Hugging Face. We use the optimized GGUF weights to run efficiently within the remaining 10Gi hardware memory budget of the Jetson Orin NX.
+
+Run the compiled high-performance local server using all available hardware resources:
 ```bash
-sudo docker run -it --rm --pull always \
-  --runtime=nvidia --network host \
-  -e HF_TOKEN="your_hf_token_here" \
-  -v $HOME/.cache/huggingface:/root/.cache/huggingface \
-  ghcr.io/nvidia-ai-iot/vllm:gemma4-jetson-orin \
-  vllm serve google/gemma-4-E2B-it \
-    --gpu-memory-utilization 0.75 \
-    --enable-auto-tool-choice \
-    --reasoning-parser gemma4 \
-    --tool-call-parser gemma4
+~/llama.cpp/build/bin/llama-server \
+  -hf unsloth/gemma-4-E2B-it-GGUF \
+  --model "*Q8_0.gguf" \
+  --port 8000 \
+  --ctx-size 4096 \
+  --n-gpu-layers 99 \
+  --reasoning off
 ```
 
-Verify that the local API is online and responding:
+```bash
+~/llama.cpp/build/bin/llama-server   -m ~/models/gemma-4-E2B-it-Q8_0.gguf   --port 8000   --ctx-size 4096   --n-gpu-layers 99   --reasoning off
+
+```
+
+
+
+Real-Time Latency Note: The --chat-template-kwargs '{"enable_thinking":false}' flag is mandatory. It forces Gemma 4 to bypass its internal reasoning tokens and generate the text/JSON layout directly, dropping inference latency to real-time constraints required by the quadruped path-planner.
+
+Verify that the local OpenAI-compatible API is online and responding:
 ```bash
 curl http://localhost:8000/v1/models
 ```

@@ -177,6 +177,8 @@ class SkeletonTracker3D(Node):
             marker.header.stamp = timestamp
             marker.ns = "points"
             marker.id = 0
+            marker.text = "human"
+            
             marker.type = Marker.POINTS
             marker.action = Marker.ADD
             marker.scale.x, marker.scale.y = 0.1, 0.1

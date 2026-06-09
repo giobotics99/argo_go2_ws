@@ -9,12 +9,14 @@
 /home/unitree/argo_go2_ws/install/go2_nav/share/go2_nav/params/go2_nav2.yaml
 /home/unitree/argo_go2_ws/install/go2_nav/share/go2_nav/params/go2_nav_params.yaml
 /home/unitree/argo_go2_ws/install/go2_nav/share/go2_nav/rviz/slam_view.rviz
+/home/unitree/argo_go2_ws/install/go2_nav/share/go2_nav/scripts/yolo_detector.py
 /home/unitree/argo_go2_ws/install/go2_nav/share/go2_nav/scripts/__pycache__/pointcloud_filter.cpython-38.pyc
 /home/unitree/argo_go2_ws/install/go2_nav/share/go2_nav/scripts/skeleton_tracker.py
 /home/unitree/argo_go2_ws/install/go2_nav/share/go2_nav/scripts/pointcloud_filter.py
 /home/unitree/argo_go2_ws/install/go2_nav/share/go2_nav/behavior_trees/follow_point.xml
 /home/unitree/argo_go2_ws/install/go2_nav/lib/go2_nav/pointcloud_filter.py
 /home/unitree/argo_go2_ws/install/go2_nav/lib/go2_nav/skeleton_tracker.py
+/home/unitree/argo_go2_ws/install/go2_nav/lib/go2_nav/yolo_detector.py
 /home/unitree/argo_go2_ws/install/go2_nav/share/ament_index/resource_index/package_run_dependencies/go2_nav
 /home/unitree/argo_go2_ws/install/go2_nav/share/ament_index/resource_index/parent_prefix_path/go2_nav
 /home/unitree/argo_go2_ws/install/go2_nav/share/go2_nav/environment/ament_prefix_path.sh
