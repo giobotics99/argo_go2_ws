@@ -15,6 +15,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "srv/ContinuousGait.srv"
   "srv/Euler.srv"
   "srv/FootRaiseHeight.srv"
+  "srv/GemmaCommand.srv"
   "srv/Mode.srv"
   "srv/Pose.srv"
   "srv/SpeedLevel.srv"

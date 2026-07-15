@@ -3,3 +3,5 @@ install/
 log/
 venv-argo/
 yolov8n.pt
+src/ros2_planning_system/
+src/ros2_planning_system_examples/
