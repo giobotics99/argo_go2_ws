@@ -1,2 +1,2 @@
 # generated from colcon_core/shell/template/command_prefix.sh.em
-. "/home/unitree/argo_go2_ws/install/go2_description/share/go2_description/package.sh"
+. "/home/giovanna/argo_go2_ws/install/go2_description/share/go2_description/package.sh"

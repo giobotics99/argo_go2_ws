@@ -1,3 +1,1 @@
-# Set the relative height of the body above the ground when standing and walking.
-float32 height
-
+/home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_cmake/srv/BodyHeight_Request.msg

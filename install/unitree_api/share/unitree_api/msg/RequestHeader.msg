@@ -1,3 +1,1 @@
-RequestIdentity identity
-RequestLease lease
-RequestPolicy policy
+/home/giovanna/argo_go2_ws/src/unitree_api/msg/RequestHeader.msg

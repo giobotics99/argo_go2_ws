@@ -1,6 +1,1 @@
-# Continuous movement
-
-bool flag
-
----
-bool success
+/home/giovanna/argo_go2_ws/src/go2_interfaces/srv/ContinuousGait.srv

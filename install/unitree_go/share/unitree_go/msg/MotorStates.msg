@@ -1,1 +1,1 @@
-MotorState[] states
+/home/giovanna/argo_go2_ws/src/unitree_go/msg/MotorStates.msg

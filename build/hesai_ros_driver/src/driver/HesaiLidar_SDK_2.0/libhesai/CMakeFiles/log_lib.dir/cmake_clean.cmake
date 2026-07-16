@@ -1,6 +1,5 @@
 file(REMOVE_RECURSE
   "CMakeFiles/log_lib.dir/Logger/src/logger.cc.o"
-  "CMakeFiles/log_lib.dir/Logger/src/logger.cc.o.d"
   "liblog_lib.pdb"
   "liblog_lib.so"
 )

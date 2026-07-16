@@ -74,7 +74,6 @@ def generate_launch_description():
         ),
         launch_arguments={
             'use_sim_time': use_sim_time,
-            'slam': slam,
             'map': map_file,
             'params_file': params_file,
             'namespace': namespace

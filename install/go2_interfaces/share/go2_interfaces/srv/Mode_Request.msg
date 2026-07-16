@@ -1,2 +1,1 @@
-string mode
-
+/home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_cmake/srv/Mode_Request.msg

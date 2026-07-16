@@ -1,8 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/platutils_lib.dir/src/auto_tick_count.cc.o"
-  "CMakeFiles/platutils_lib.dir/src/auto_tick_count.cc.o.d"
   "CMakeFiles/platutils_lib.dir/src/plat_utils.cc.o"
-  "CMakeFiles/platutils_lib.dir/src/plat_utils.cc.o.d"
   "libplatutils_lib.pdb"
   "libplatutils_lib.so"
 )

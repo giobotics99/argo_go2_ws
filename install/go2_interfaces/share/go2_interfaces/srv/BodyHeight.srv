@@ -1,6 +1,1 @@
-# Set the relative height of the body above the ground when standing and walking.
-float32 height
-
----
-bool success
-string message
+/home/giovanna/argo_go2_ws/src/go2_interfaces/srv/BodyHeight.srv

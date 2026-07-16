@@ -27,7 +27,6 @@
     :duration (= ?duration 5)
     :condition (and
       (at start (robot_at ?r ?rm))
-      (at start (not (inspected ?rm)))
     )
     :effect (and
       (at end (inspected ?rm))

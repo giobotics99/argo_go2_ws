@@ -1,2 +1,1 @@
-uint32 source
-uint32 state
+/home/giovanna/argo_go2_ws/src/unitree_go/msg/Error.msg

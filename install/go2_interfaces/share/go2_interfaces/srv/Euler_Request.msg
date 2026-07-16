@@ -1,6 +1,1 @@
-# Posture when standing and walking
-
-float32 roll
-float32 pitch
-float32 yaw
-
+/home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_cmake/srv/Euler_Request.msg

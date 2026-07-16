@@ -144,6 +144,7 @@ class GemmaBridge(Node):
         # 6. Esegui il piano in modo asincrono
         self.get_logger().info("Sending plan to executor...")
         exec_goal = ExecutePlan.Goal()
+        exec_goal.plan = plan_res.plan
         self.exec_plan_cli.wait_for_server()
         self.exec_plan_cli.send_goal_async(exec_goal)
         

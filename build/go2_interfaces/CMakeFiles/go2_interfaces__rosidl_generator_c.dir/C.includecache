@@ -6,9 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/body_height__functions.c
+/home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/body_height__functions.c
 go2_interfaces/srv/detail/body_height__functions.h
-/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/go2_interfaces/srv/detail/body_height__functions.h
+/home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/go2_interfaces/srv/detail/body_height__functions.h
 assert.h
 -
 stdbool.h
@@ -18,13 +18,13 @@ stdlib.h
 string.h
 -
 rcutils/allocator.h
-/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/rcutils/allocator.h
+/home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/rcutils/allocator.h
 rosidl_runtime_c/string_functions.h
-/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/rosidl_runtime_c/string_functions.h
+/home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/rosidl_runtime_c/string_functions.h
 
-/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/continuous_gait__functions.c
+/home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/continuous_gait__functions.c
 go2_interfaces/srv/detail/continuous_gait__functions.h
-/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/go2_interfaces/srv/detail/continuous_gait__functions.h
+/home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/go2_interfaces/srv/detail/continuous_gait__functions.h
 assert.h
 -
 stdbool.h
@@ -34,11 +34,11 @@ stdlib.h
 string.h
 -
 rcutils/allocator.h
-/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/rcutils/allocator.h
+/home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/rcutils/allocator.h
 
-/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/euler__functions.c
+/home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/euler__functions.c
 go2_interfaces/srv/detail/euler__functions.h
-/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/go2_interfaces/srv/detail/euler__functions.h
+/home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/go2_interfaces/srv/detail/euler__functions.h
 assert.h
 -
 stdbool.h
@@ -48,13 +48,13 @@ stdlib.h
 string.h
 -
 rcutils/allocator.h
-/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/rcutils/allocator.h
+/home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/rcutils/allocator.h
 rosidl_runtime_c/string_functions.h
-/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/rosidl_runtime_c/string_functions.h
+/home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/rosidl_runtime_c/string_functions.h
 
-/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/foot_raise_height__functions.c
+/home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/foot_raise_height__functions.c
 go2_interfaces/srv/detail/foot_raise_height__functions.h
-/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/go2_interfaces/srv/detail/foot_raise_height__functions.h
+/home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/go2_interfaces/srv/detail/foot_raise_height__functions.h
 assert.h
 -
 stdbool.h
@@ -64,13 +64,29 @@ stdlib.h
 string.h
 -
 rcutils/allocator.h
-/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/rcutils/allocator.h
+/home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/rcutils/allocator.h
 rosidl_runtime_c/string_functions.h
-/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/rosidl_runtime_c/string_functions.h
+/home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/rosidl_runtime_c/string_functions.h
 
-/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/mode__functions.c
+/home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/gemma_command__functions.c
+go2_interfaces/srv/detail/gemma_command__functions.h
+/home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/go2_interfaces/srv/detail/gemma_command__functions.h
+assert.h
+-
+stdbool.h
+-
+stdlib.h
+-
+string.h
+-
+rcutils/allocator.h
+/home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/rcutils/allocator.h
+rosidl_runtime_c/string_functions.h
+/home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/rosidl_runtime_c/string_functions.h
+
+/home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/mode__functions.c
 go2_interfaces/srv/detail/mode__functions.h
-/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/go2_interfaces/srv/detail/mode__functions.h
+/home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/go2_interfaces/srv/detail/mode__functions.h
 assert.h
 -
 stdbool.h
@@ -80,13 +96,13 @@ stdlib.h
 string.h
 -
 rcutils/allocator.h
-/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/rcutils/allocator.h
+/home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/rcutils/allocator.h
 rosidl_runtime_c/string_functions.h
-/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/rosidl_runtime_c/string_functions.h
+/home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/rosidl_runtime_c/string_functions.h
 
-/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/pose__functions.c
+/home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/pose__functions.c
 go2_interfaces/srv/detail/pose__functions.h
-/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/go2_interfaces/srv/detail/pose__functions.h
+/home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/go2_interfaces/srv/detail/pose__functions.h
 assert.h
 -
 stdbool.h
@@ -96,11 +112,11 @@ stdlib.h
 string.h
 -
 rcutils/allocator.h
-/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/rcutils/allocator.h
+/home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/rcutils/allocator.h
 
-/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/speed_level__functions.c
+/home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/speed_level__functions.c
 go2_interfaces/srv/detail/speed_level__functions.h
-/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/go2_interfaces/srv/detail/speed_level__functions.h
+/home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/go2_interfaces/srv/detail/speed_level__functions.h
 assert.h
 -
 stdbool.h
@@ -110,13 +126,13 @@ stdlib.h
 string.h
 -
 rcutils/allocator.h
-/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/rcutils/allocator.h
+/home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/rcutils/allocator.h
 rosidl_runtime_c/string_functions.h
-/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/rosidl_runtime_c/string_functions.h
+/home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/rosidl_runtime_c/string_functions.h
 
-/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/switch_gait__functions.c
+/home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/switch_gait__functions.c
 go2_interfaces/srv/detail/switch_gait__functions.h
-/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/go2_interfaces/srv/detail/switch_gait__functions.h
+/home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/go2_interfaces/srv/detail/switch_gait__functions.h
 assert.h
 -
 stdbool.h
@@ -126,13 +142,13 @@ stdlib.h
 string.h
 -
 rcutils/allocator.h
-/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/rcutils/allocator.h
+/home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/rcutils/allocator.h
 rosidl_runtime_c/string_functions.h
-/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/rosidl_runtime_c/string_functions.h
+/home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/rosidl_runtime_c/string_functions.h
 
-/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/switch_joystick__functions.c
+/home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/switch_joystick__functions.c
 go2_interfaces/srv/detail/switch_joystick__functions.h
-/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/go2_interfaces/srv/detail/switch_joystick__functions.h
+/home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/go2_interfaces/srv/detail/switch_joystick__functions.h
 assert.h
 -
 stdbool.h
@@ -142,7 +158,7 @@ stdlib.h
 string.h
 -
 rcutils/allocator.h
-/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/rcutils/allocator.h
+/home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/detail/rcutils/allocator.h
 
 /opt/ros/foxy/include/rcutils/allocator.h
 stdbool.h
@@ -287,6 +303,28 @@ go2_interfaces/srv/detail/foot_raise_height__struct.h
 rosidl_generator_c/go2_interfaces/srv/detail/go2_interfaces/srv/detail/foot_raise_height__struct.h
 
 rosidl_generator_c/go2_interfaces/srv/detail/foot_raise_height__struct.h
+stdbool.h
+-
+stddef.h
+-
+stdint.h
+-
+rosidl_runtime_c/string.h
+rosidl_generator_c/go2_interfaces/srv/detail/rosidl_runtime_c/string.h
+
+rosidl_generator_c/go2_interfaces/srv/detail/gemma_command__functions.h
+stdbool.h
+-
+stdlib.h
+-
+rosidl_runtime_c/visibility_control.h
+rosidl_generator_c/go2_interfaces/srv/detail/rosidl_runtime_c/visibility_control.h
+go2_interfaces/msg/rosidl_generator_c__visibility_control.h
+rosidl_generator_c/go2_interfaces/srv/detail/go2_interfaces/msg/rosidl_generator_c__visibility_control.h
+go2_interfaces/srv/detail/gemma_command__struct.h
+rosidl_generator_c/go2_interfaces/srv/detail/go2_interfaces/srv/detail/gemma_command__struct.h
+
+rosidl_generator_c/go2_interfaces/srv/detail/gemma_command__struct.h
 stdbool.h
 -
 stddef.h

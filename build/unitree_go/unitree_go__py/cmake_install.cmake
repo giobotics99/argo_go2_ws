@@ -1,8 +1,8 @@
-# Install script for directory: /home/unitree/argo_go2_ws/build/unitree_go/unitree_go__py
+# Install script for directory: /home/giovanna/argo_go2_ws/build/unitree_go/unitree_go__py
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/unitree/argo_go2_ws/install/unitree_go")
+  set(CMAKE_INSTALL_PREFIX "/home/giovanna/argo_go2_ws/install/unitree_go")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -35,10 +35,5 @@ endif()
 # Is this installation the result of a crosscompile?
 if(NOT DEFINED CMAKE_CROSSCOMPILING)
   set(CMAKE_CROSSCOMPILING "FALSE")
-endif()
-
-# Set default install directory permissions.
-if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "/usr/bin/objdump")
 endif()
 
