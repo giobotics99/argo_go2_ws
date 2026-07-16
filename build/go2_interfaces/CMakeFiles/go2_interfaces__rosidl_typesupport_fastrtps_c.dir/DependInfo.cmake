@@ -1,40 +1,23 @@
+
+# Consider dependencies only in project.
+set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)
+
 # The set of languages for which implicit dependencies are needed:
 set(CMAKE_DEPENDS_LANGUAGES
-  "CXX"
-  )
-# The set of files for implicit dependencies of each language:
-set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_typesupport_fastrtps_c/go2_interfaces/srv/detail/body_height__type_support_c.cpp" "/home/unitree/argo_go2_ws/build/go2_interfaces/CMakeFiles/go2_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/go2_interfaces/srv/detail/body_height__type_support_c.cpp.o"
-  "/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_typesupport_fastrtps_c/go2_interfaces/srv/detail/continuous_gait__type_support_c.cpp" "/home/unitree/argo_go2_ws/build/go2_interfaces/CMakeFiles/go2_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/go2_interfaces/srv/detail/continuous_gait__type_support_c.cpp.o"
-  "/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_typesupport_fastrtps_c/go2_interfaces/srv/detail/euler__type_support_c.cpp" "/home/unitree/argo_go2_ws/build/go2_interfaces/CMakeFiles/go2_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/go2_interfaces/srv/detail/euler__type_support_c.cpp.o"
-  "/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_typesupport_fastrtps_c/go2_interfaces/srv/detail/foot_raise_height__type_support_c.cpp" "/home/unitree/argo_go2_ws/build/go2_interfaces/CMakeFiles/go2_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/go2_interfaces/srv/detail/foot_raise_height__type_support_c.cpp.o"
-  "/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_typesupport_fastrtps_c/go2_interfaces/srv/detail/mode__type_support_c.cpp" "/home/unitree/argo_go2_ws/build/go2_interfaces/CMakeFiles/go2_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/go2_interfaces/srv/detail/mode__type_support_c.cpp.o"
-  "/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_typesupport_fastrtps_c/go2_interfaces/srv/detail/pose__type_support_c.cpp" "/home/unitree/argo_go2_ws/build/go2_interfaces/CMakeFiles/go2_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/go2_interfaces/srv/detail/pose__type_support_c.cpp.o"
-  "/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_typesupport_fastrtps_c/go2_interfaces/srv/detail/speed_level__type_support_c.cpp" "/home/unitree/argo_go2_ws/build/go2_interfaces/CMakeFiles/go2_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/go2_interfaces/srv/detail/speed_level__type_support_c.cpp.o"
-  "/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_typesupport_fastrtps_c/go2_interfaces/srv/detail/switch_gait__type_support_c.cpp" "/home/unitree/argo_go2_ws/build/go2_interfaces/CMakeFiles/go2_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/go2_interfaces/srv/detail/switch_gait__type_support_c.cpp.o"
-  "/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_typesupport_fastrtps_c/go2_interfaces/srv/detail/switch_joystick__type_support_c.cpp" "/home/unitree/argo_go2_ws/build/go2_interfaces/CMakeFiles/go2_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/go2_interfaces/srv/detail/switch_joystick__type_support_c.cpp.o"
-  )
-set(CMAKE_CXX_COMPILER_ID "GNU")
-
-# Preprocessor definitions for this target.
-set(CMAKE_TARGET_DEFINITIONS_CXX
-  "FOONATHAN_MEMORY=1"
-  "FOONATHAN_MEMORY_VERSION_MAJOR=0"
-  "FOONATHAN_MEMORY_VERSION_MINOR=7"
-  "FOONATHAN_MEMORY_VERSION_PATCH=1"
-  "RCUTILS_ENABLE_FAULT_INJECTION"
-  "ROS_PACKAGE_NAME=\"go2_interfaces\""
-  "go2_interfaces__rosidl_typesupport_fastrtps_c_EXPORTS"
   )
 
-# The include file search paths:
-set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "rosidl_generator_c"
-  "rosidl_generator_cpp"
-  "rosidl_typesupport_fastrtps_c"
-  "rosidl_typesupport_fastrtps_cpp"
-  "/opt/ros/foxy/include"
-  "/opt/ros/foxy/include/foonathan_memory"
+# The set of dependency files which are needed:
+set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_typesupport_fastrtps_c/go2_interfaces/srv/detail/body_height__type_support_c.cpp" "CMakeFiles/go2_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/go2_interfaces/srv/detail/body_height__type_support_c.cpp.o" "gcc" "CMakeFiles/go2_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/go2_interfaces/srv/detail/body_height__type_support_c.cpp.o.d"
+  "/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_typesupport_fastrtps_c/go2_interfaces/srv/detail/continuous_gait__type_support_c.cpp" "CMakeFiles/go2_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/go2_interfaces/srv/detail/continuous_gait__type_support_c.cpp.o" "gcc" "CMakeFiles/go2_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/go2_interfaces/srv/detail/continuous_gait__type_support_c.cpp.o.d"
+  "/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_typesupport_fastrtps_c/go2_interfaces/srv/detail/euler__type_support_c.cpp" "CMakeFiles/go2_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/go2_interfaces/srv/detail/euler__type_support_c.cpp.o" "gcc" "CMakeFiles/go2_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/go2_interfaces/srv/detail/euler__type_support_c.cpp.o.d"
+  "/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_typesupport_fastrtps_c/go2_interfaces/srv/detail/foot_raise_height__type_support_c.cpp" "CMakeFiles/go2_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/go2_interfaces/srv/detail/foot_raise_height__type_support_c.cpp.o" "gcc" "CMakeFiles/go2_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/go2_interfaces/srv/detail/foot_raise_height__type_support_c.cpp.o.d"
+  "/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_typesupport_fastrtps_c/go2_interfaces/srv/detail/gemma_command__type_support_c.cpp" "CMakeFiles/go2_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/go2_interfaces/srv/detail/gemma_command__type_support_c.cpp.o" "gcc" "CMakeFiles/go2_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/go2_interfaces/srv/detail/gemma_command__type_support_c.cpp.o.d"
+  "/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_typesupport_fastrtps_c/go2_interfaces/srv/detail/mode__type_support_c.cpp" "CMakeFiles/go2_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/go2_interfaces/srv/detail/mode__type_support_c.cpp.o" "gcc" "CMakeFiles/go2_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/go2_interfaces/srv/detail/mode__type_support_c.cpp.o.d"
+  "/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_typesupport_fastrtps_c/go2_interfaces/srv/detail/pose__type_support_c.cpp" "CMakeFiles/go2_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/go2_interfaces/srv/detail/pose__type_support_c.cpp.o" "gcc" "CMakeFiles/go2_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/go2_interfaces/srv/detail/pose__type_support_c.cpp.o.d"
+  "/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_typesupport_fastrtps_c/go2_interfaces/srv/detail/speed_level__type_support_c.cpp" "CMakeFiles/go2_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/go2_interfaces/srv/detail/speed_level__type_support_c.cpp.o" "gcc" "CMakeFiles/go2_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/go2_interfaces/srv/detail/speed_level__type_support_c.cpp.o.d"
+  "/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_typesupport_fastrtps_c/go2_interfaces/srv/detail/switch_gait__type_support_c.cpp" "CMakeFiles/go2_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/go2_interfaces/srv/detail/switch_gait__type_support_c.cpp.o" "gcc" "CMakeFiles/go2_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/go2_interfaces/srv/detail/switch_gait__type_support_c.cpp.o.d"
+  "/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_typesupport_fastrtps_c/go2_interfaces/srv/detail/switch_joystick__type_support_c.cpp" "CMakeFiles/go2_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/go2_interfaces/srv/detail/switch_joystick__type_support_c.cpp.o" "gcc" "CMakeFiles/go2_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/go2_interfaces/srv/detail/switch_joystick__type_support_c.cpp.o.d"
   )
 
 # Pairs of files generated by the same build rule.
@@ -46,6 +29,8 @@ set(CMAKE_MULTIPLE_OUTPUT_PAIRS
   "/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_typesupport_fastrtps_c/go2_interfaces/srv/detail/euler__type_support_c.cpp" "/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_typesupport_fastrtps_c/go2_interfaces/srv/detail/body_height__rosidl_typesupport_fastrtps_c.h"
   "/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_typesupport_fastrtps_c/go2_interfaces/srv/detail/foot_raise_height__rosidl_typesupport_fastrtps_c.h" "/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_typesupport_fastrtps_c/go2_interfaces/srv/detail/body_height__rosidl_typesupport_fastrtps_c.h"
   "/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_typesupport_fastrtps_c/go2_interfaces/srv/detail/foot_raise_height__type_support_c.cpp" "/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_typesupport_fastrtps_c/go2_interfaces/srv/detail/body_height__rosidl_typesupport_fastrtps_c.h"
+  "/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_typesupport_fastrtps_c/go2_interfaces/srv/detail/gemma_command__rosidl_typesupport_fastrtps_c.h" "/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_typesupport_fastrtps_c/go2_interfaces/srv/detail/body_height__rosidl_typesupport_fastrtps_c.h"
+  "/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_typesupport_fastrtps_c/go2_interfaces/srv/detail/gemma_command__type_support_c.cpp" "/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_typesupport_fastrtps_c/go2_interfaces/srv/detail/body_height__rosidl_typesupport_fastrtps_c.h"
   "/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_typesupport_fastrtps_c/go2_interfaces/srv/detail/mode__rosidl_typesupport_fastrtps_c.h" "/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_typesupport_fastrtps_c/go2_interfaces/srv/detail/body_height__rosidl_typesupport_fastrtps_c.h"
   "/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_typesupport_fastrtps_c/go2_interfaces/srv/detail/mode__type_support_c.cpp" "/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_typesupport_fastrtps_c/go2_interfaces/srv/detail/body_height__rosidl_typesupport_fastrtps_c.h"
   "/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_typesupport_fastrtps_c/go2_interfaces/srv/detail/pose__rosidl_typesupport_fastrtps_c.h" "/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_typesupport_fastrtps_c/go2_interfaces/srv/detail/body_height__rosidl_typesupport_fastrtps_c.h"
@@ -59,10 +44,12 @@ set(CMAKE_MULTIPLE_OUTPUT_PAIRS
   )
 
 
-# Targets to which this target links.
-set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/unitree/argo_go2_ws/build/go2_interfaces/CMakeFiles/go2_interfaces__rosidl_generator_c.dir/DependInfo.cmake"
-  "/home/unitree/argo_go2_ws/build/go2_interfaces/CMakeFiles/go2_interfaces__rosidl_typesupport_fastrtps_cpp.dir/DependInfo.cmake"
+# Targets to which this target links which contain Fortran sources.
+set(CMAKE_Fortran_TARGET_LINKED_INFO_FILES
+  )
+
+# Targets to which this target links which contain Fortran sources.
+set(CMAKE_Fortran_TARGET_FORWARD_LINKED_INFO_FILES
   )
 
 # Fortran module output directory.

@@ -2,6 +2,7 @@ from go2_interfaces.srv._body_height import BodyHeight  # noqa: F401
 from go2_interfaces.srv._continuous_gait import ContinuousGait  # noqa: F401
 from go2_interfaces.srv._euler import Euler  # noqa: F401
 from go2_interfaces.srv._foot_raise_height import FootRaiseHeight  # noqa: F401
+from go2_interfaces.srv._gemma_command import GemmaCommand  # noqa: F401
 from go2_interfaces.srv._mode import Mode  # noqa: F401
 from go2_interfaces.srv._pose import Pose  # noqa: F401
 from go2_interfaces.srv._speed_level import SpeedLevel  # noqa: F401

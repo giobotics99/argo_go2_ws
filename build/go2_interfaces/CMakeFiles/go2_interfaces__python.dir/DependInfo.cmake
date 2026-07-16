@@ -1,41 +1,31 @@
+
+# Consider dependencies only in project.
+set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)
+
 # The set of languages for which implicit dependencies are needed:
 set(CMAKE_DEPENDS_LANGUAGES
-  "C"
-  )
-# The set of files for implicit dependencies of each language:
-set(CMAKE_DEPENDS_CHECK_C
-  "/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_py/go2_interfaces/srv/_body_height_s.c" "/home/unitree/argo_go2_ws/build/go2_interfaces/CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_body_height_s.c.o"
-  "/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_py/go2_interfaces/srv/_continuous_gait_s.c" "/home/unitree/argo_go2_ws/build/go2_interfaces/CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_continuous_gait_s.c.o"
-  "/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_py/go2_interfaces/srv/_euler_s.c" "/home/unitree/argo_go2_ws/build/go2_interfaces/CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_euler_s.c.o"
-  "/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_py/go2_interfaces/srv/_foot_raise_height_s.c" "/home/unitree/argo_go2_ws/build/go2_interfaces/CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_foot_raise_height_s.c.o"
-  "/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_py/go2_interfaces/srv/_mode_s.c" "/home/unitree/argo_go2_ws/build/go2_interfaces/CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_mode_s.c.o"
-  "/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_py/go2_interfaces/srv/_pose_s.c" "/home/unitree/argo_go2_ws/build/go2_interfaces/CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_pose_s.c.o"
-  "/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_py/go2_interfaces/srv/_speed_level_s.c" "/home/unitree/argo_go2_ws/build/go2_interfaces/CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_speed_level_s.c.o"
-  "/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_py/go2_interfaces/srv/_switch_gait_s.c" "/home/unitree/argo_go2_ws/build/go2_interfaces/CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_switch_gait_s.c.o"
-  "/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_py/go2_interfaces/srv/_switch_joystick_s.c" "/home/unitree/argo_go2_ws/build/go2_interfaces/CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_switch_joystick_s.c.o"
-  )
-set(CMAKE_C_COMPILER_ID "GNU")
-
-# Preprocessor definitions for this target.
-set(CMAKE_TARGET_DEFINITIONS_C
-  "RCUTILS_ENABLE_FAULT_INJECTION"
-  "ROS_PACKAGE_NAME=\"go2_interfaces\""
-  "go2_interfaces__python_EXPORTS"
   )
 
-# The include file search paths:
-set(CMAKE_C_TARGET_INCLUDE_PATH
-  "rosidl_generator_c"
-  "rosidl_generator_py"
-  "/usr/include/python3.8"
-  "rosidl_typesupport_c"
-  "/opt/ros/foxy/include"
+# The set of dependency files which are needed:
+set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_py/go2_interfaces/srv/_body_height_s.c" "CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_body_height_s.c.o" "gcc" "CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_body_height_s.c.o.d"
+  "/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_py/go2_interfaces/srv/_continuous_gait_s.c" "CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_continuous_gait_s.c.o" "gcc" "CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_continuous_gait_s.c.o.d"
+  "/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_py/go2_interfaces/srv/_euler_s.c" "CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_euler_s.c.o" "gcc" "CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_euler_s.c.o.d"
+  "/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_py/go2_interfaces/srv/_foot_raise_height_s.c" "CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_foot_raise_height_s.c.o" "gcc" "CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_foot_raise_height_s.c.o.d"
+  "/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_py/go2_interfaces/srv/_gemma_command_s.c" "CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_gemma_command_s.c.o" "gcc" "CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_gemma_command_s.c.o.d"
+  "/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_py/go2_interfaces/srv/_mode_s.c" "CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_mode_s.c.o" "gcc" "CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_mode_s.c.o.d"
+  "/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_py/go2_interfaces/srv/_pose_s.c" "CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_pose_s.c.o" "gcc" "CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_pose_s.c.o.d"
+  "/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_py/go2_interfaces/srv/_speed_level_s.c" "CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_speed_level_s.c.o" "gcc" "CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_speed_level_s.c.o.d"
+  "/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_py/go2_interfaces/srv/_switch_gait_s.c" "CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_switch_gait_s.c.o" "gcc" "CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_switch_gait_s.c.o.d"
+  "/home/unitree/argo_go2_ws/build/go2_interfaces/rosidl_generator_py/go2_interfaces/srv/_switch_joystick_s.c" "CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_switch_joystick_s.c.o" "gcc" "CMakeFiles/go2_interfaces__python.dir/rosidl_generator_py/go2_interfaces/srv/_switch_joystick_s.c.o.d"
   )
 
-# Targets to which this target links.
-set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/unitree/argo_go2_ws/build/go2_interfaces/CMakeFiles/go2_interfaces__rosidl_generator_c.dir/DependInfo.cmake"
-  "/home/unitree/argo_go2_ws/build/go2_interfaces/CMakeFiles/go2_interfaces__rosidl_typesupport_c.dir/DependInfo.cmake"
+# Targets to which this target links which contain Fortran sources.
+set(CMAKE_Fortran_TARGET_LINKED_INFO_FILES
+  )
+
+# Targets to which this target links which contain Fortran sources.
+set(CMAKE_Fortran_TARGET_FORWARD_LINKED_INFO_FILES
   )
 
 # Fortran module output directory.

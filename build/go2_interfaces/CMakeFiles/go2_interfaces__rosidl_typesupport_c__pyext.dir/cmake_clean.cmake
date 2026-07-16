@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/go2_interfaces__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/go2_interfaces/_go2_interfaces_s.ep.rosidl_typesupport_c.c.o"
+  "CMakeFiles/go2_interfaces__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/go2_interfaces/_go2_interfaces_s.ep.rosidl_typesupport_c.c.o.d"
   "rosidl_generator_py/go2_interfaces/go2_interfaces_s__rosidl_typesupport_c.cpython-38-aarch64-linux-gnu.pdb"
   "rosidl_generator_py/go2_interfaces/go2_interfaces_s__rosidl_typesupport_c.cpython-38-aarch64-linux-gnu.so"
 )

@@ -4,6 +4,7 @@
 /home/unitree/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/body_height.h
 /home/unitree/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/foot_raise_height.h
 /home/unitree/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/pose.h
+/home/unitree/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/gemma_command.h
 /home/unitree/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/euler.h
 /home/unitree/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/switch_gait.h
 /home/unitree/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/mode__functions.h
@@ -19,9 +20,12 @@
 /home/unitree/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/pose__functions.c
 /home/unitree/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/switch_gait__struct.h
 /home/unitree/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/body_height__struct.h
+/home/unitree/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/gemma_command__functions.h
+/home/unitree/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/gemma_command__functions.c
 /home/unitree/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/switch_joystick__functions.h
 /home/unitree/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/pose__functions.h
 /home/unitree/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/body_height__type_support.h
+/home/unitree/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/gemma_command__type_support.h
 /home/unitree/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/mode__struct.h
 /home/unitree/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/continuous_gait__type_support.h
 /home/unitree/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/switch_gait__type_support.h
@@ -34,6 +38,7 @@
 /home/unitree/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/speed_level__struct.h
 /home/unitree/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/speed_level__functions.h
 /home/unitree/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/foot_raise_height__functions.c
+/home/unitree/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/gemma_command__struct.h
 /home/unitree/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/mode__functions.c
 /home/unitree/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/euler__struct.h
 /home/unitree/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/pose__struct.h
@@ -53,6 +58,7 @@
 /home/unitree/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/body_height__rosidl_typesupport_fastrtps_c.h
 /home/unitree/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/pose__rosidl_typesupport_fastrtps_c.h
 /home/unitree/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/foot_raise_height__rosidl_typesupport_fastrtps_c.h
+/home/unitree/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/gemma_command__rosidl_typesupport_fastrtps_c.h
 /home/unitree/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/speed_level__rosidl_typesupport_fastrtps_c.h
 /home/unitree/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/continuous_gait__rosidl_typesupport_fastrtps_c.h
 /home/unitree/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/mode__rosidl_typesupport_fastrtps_c.h
@@ -66,6 +72,7 @@
 /home/unitree/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/pose__rosidl_typesupport_fastrtps_cpp.hpp
 /home/unitree/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/mode__rosidl_typesupport_fastrtps_cpp.hpp
 /home/unitree/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/continuous_gait__rosidl_typesupport_fastrtps_cpp.hpp
+/home/unitree/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/gemma_command__rosidl_typesupport_fastrtps_cpp.hpp
 /home/unitree/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/switch_joystick__rosidl_typesupport_fastrtps_cpp.hpp
 /home/unitree/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/euler__rosidl_typesupport_fastrtps_cpp.hpp
 /home/unitree/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
@@ -73,6 +80,7 @@
 /home/unitree/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/pose__type_support.c
 /home/unitree/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/speed_level__rosidl_typesupport_introspection_c.h
 /home/unitree/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/foot_raise_height__rosidl_typesupport_introspection_c.h
+/home/unitree/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/gemma_command__type_support.c
 /home/unitree/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/mode__rosidl_typesupport_introspection_c.h
 /home/unitree/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/continuous_gait__type_support.c
 /home/unitree/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/euler__rosidl_typesupport_introspection_c.h
@@ -81,6 +89,7 @@
 /home/unitree/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/pose__rosidl_typesupport_introspection_c.h
 /home/unitree/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/mode__type_support.c
 /home/unitree/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/body_height__rosidl_typesupport_introspection_c.h
+/home/unitree/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/gemma_command__rosidl_typesupport_introspection_c.h
 /home/unitree/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/continuous_gait__rosidl_typesupport_introspection_c.h
 /home/unitree/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/speed_level__type_support.c
 /home/unitree/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/switch_gait__type_support.c
@@ -107,17 +116,21 @@
 /home/unitree/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/speed_level__type_support.hpp
 /home/unitree/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/euler__struct.hpp
 /home/unitree/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/pose__builder.hpp
+/home/unitree/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/gemma_command__traits.hpp
 /home/unitree/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/switch_gait__struct.hpp
 /home/unitree/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/switch_gait__type_support.hpp
 /home/unitree/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/body_height__builder.hpp
 /home/unitree/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/switch_gait__builder.hpp
 /home/unitree/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/body_height__type_support.hpp
 /home/unitree/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/body_height__traits.hpp
+/home/unitree/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/gemma_command__struct.hpp
+/home/unitree/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/gemma_command__builder.hpp
 /home/unitree/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/switch_joystick__builder.hpp
 /home/unitree/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/continuous_gait__type_support.hpp
 /home/unitree/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/foot_raise_height__type_support.hpp
 /home/unitree/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/switch_joystick__traits.hpp
 /home/unitree/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/switch_joystick__type_support.hpp
+/home/unitree/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/gemma_command__type_support.hpp
 /home/unitree/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/mode__builder.hpp
 /home/unitree/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/pose__traits.hpp
 /home/unitree/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/foot_raise_height__traits.hpp
@@ -135,10 +148,12 @@
 /home/unitree/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/switch_joystick__struct.hpp
 /home/unitree/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/pose__struct.hpp
 /home/unitree/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/foot_raise_height__struct.hpp
+/home/unitree/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/gemma_command.hpp
 /home/unitree/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/continuous_gait.hpp
 /home/unitree/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp
 /home/unitree/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/body_height__rosidl_typesupport_introspection_cpp.hpp
 /home/unitree/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/continuous_gait__type_support.cpp
+/home/unitree/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/gemma_command__rosidl_typesupport_introspection_cpp.hpp
 /home/unitree/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/pose__rosidl_typesupport_introspection_cpp.hpp
 /home/unitree/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/euler__type_support.cpp
 /home/unitree/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/euler__rosidl_typesupport_introspection_cpp.hpp
@@ -147,6 +162,7 @@
 /home/unitree/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/switch_gait__rosidl_typesupport_introspection_cpp.hpp
 /home/unitree/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/mode__rosidl_typesupport_introspection_cpp.hpp
 /home/unitree/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/mode__type_support.cpp
+/home/unitree/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/gemma_command__type_support.cpp
 /home/unitree/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/body_height__type_support.cpp
 /home/unitree/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/foot_raise_height__type_support.cpp
 /home/unitree/argo_go2_ws/install/go2_interfaces/include/go2_interfaces/srv/detail/speed_level__rosidl_typesupport_introspection_cpp.hpp
@@ -170,6 +186,7 @@
 /home/unitree/argo_go2_ws/install/go2_interfaces/lib/python3.8/site-packages/go2_interfaces/srv/_speed_level_s.c
 /home/unitree/argo_go2_ws/install/go2_interfaces/lib/python3.8/site-packages/go2_interfaces/srv/_switch_joystick.py
 /home/unitree/argo_go2_ws/install/go2_interfaces/lib/python3.8/site-packages/go2_interfaces/srv/_foot_raise_height.py
+/home/unitree/argo_go2_ws/install/go2_interfaces/lib/python3.8/site-packages/go2_interfaces/srv/_gemma_command_s.c
 /home/unitree/argo_go2_ws/install/go2_interfaces/lib/python3.8/site-packages/go2_interfaces/srv/_body_height.py
 /home/unitree/argo_go2_ws/install/go2_interfaces/lib/python3.8/site-packages/go2_interfaces/srv/_switch_gait_s.c
 /home/unitree/argo_go2_ws/install/go2_interfaces/lib/python3.8/site-packages/go2_interfaces/srv/__init__.py
@@ -179,6 +196,7 @@
 /home/unitree/argo_go2_ws/install/go2_interfaces/lib/python3.8/site-packages/go2_interfaces/srv/_switch_gait.py
 /home/unitree/argo_go2_ws/install/go2_interfaces/lib/python3.8/site-packages/go2_interfaces/srv/_body_height_s.c
 /home/unitree/argo_go2_ws/install/go2_interfaces/lib/python3.8/site-packages/go2_interfaces/srv/_switch_joystick_s.c
+/home/unitree/argo_go2_ws/install/go2_interfaces/lib/python3.8/site-packages/go2_interfaces/srv/_gemma_command.py
 /home/unitree/argo_go2_ws/install/go2_interfaces/lib/python3.8/site-packages/go2_interfaces/go2_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-38-aarch64-linux-gnu.so
 /home/unitree/argo_go2_ws/install/go2_interfaces/lib/python3.8/site-packages/go2_interfaces/go2_interfaces_s__rosidl_typesupport_introspection_c.cpython-38-aarch64-linux-gnu.so
 /home/unitree/argo_go2_ws/install/go2_interfaces/lib/python3.8/site-packages/go2_interfaces/go2_interfaces_s__rosidl_typesupport_c.cpython-38-aarch64-linux-gnu.so
@@ -187,6 +205,7 @@
 /home/unitree/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/srv/ContinuousGait.idl
 /home/unitree/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/srv/Euler.idl
 /home/unitree/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/srv/FootRaiseHeight.idl
+/home/unitree/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/srv/GemmaCommand.idl
 /home/unitree/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/srv/Mode.idl
 /home/unitree/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/srv/Pose.idl
 /home/unitree/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/srv/SpeedLevel.idl
@@ -204,6 +223,9 @@
 /home/unitree/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/srv/FootRaiseHeight.srv
 /home/unitree/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/srv/FootRaiseHeight_Request.msg
 /home/unitree/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/srv/FootRaiseHeight_Response.msg
+/home/unitree/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/srv/GemmaCommand.srv
+/home/unitree/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/srv/GemmaCommand_Request.msg
+/home/unitree/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/srv/GemmaCommand_Response.msg
 /home/unitree/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/srv/Mode.srv
 /home/unitree/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/srv/Mode_Request.msg
 /home/unitree/argo_go2_ws/install/go2_interfaces/share/go2_interfaces/srv/Mode_Response.msg

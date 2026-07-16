@@ -1,6 +1,9 @@
 cmake_minimum_required(VERSION 3.8)
 project(go2_patrol_mission)
 
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
 if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
   add_compile_options(-Wall -Wextra -Wpedantic)
 endif()
@@ -26,11 +29,16 @@ set(dependencies
   yaml-cpp
 )
 
+# --- COMPILAZIONE NODO NAVIGATE ---
 add_executable(navigate_action_node src/navigate_action_node.cpp)
 ament_target_dependencies(navigate_action_node ${dependencies})
+# yaml-cpp non è un pacchetto ament, quindi va linkato a parte
+target_link_libraries(navigate_action_node yaml-cpp)
 
+# --- COMPILAZIONE NODO INSPECT ---
 add_executable(inspect_action_node src/inspect_action_node.cpp)
 ament_target_dependencies(inspect_action_node ${dependencies})
+target_link_libraries(inspect_action_node yaml-cpp)
 
 install(DIRECTORY launch pddl config DESTINATION share/${PROJECT_NAME})
 

@@ -14,6 +14,10 @@ srv/FootRaiseHeight.idl
 srv/FootRaiseHeight.srv
 srv/FootRaiseHeight_Request.msg
 srv/FootRaiseHeight_Response.msg
+srv/GemmaCommand.idl
+srv/GemmaCommand.srv
+srv/GemmaCommand_Request.msg
+srv/GemmaCommand_Response.msg
 srv/Mode.idl
 srv/Mode.srv
 srv/Mode_Request.msg
