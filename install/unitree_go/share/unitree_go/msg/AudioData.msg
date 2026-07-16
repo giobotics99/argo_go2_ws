@@ -1,1 +1,2 @@
-/home/giovanna/argo_go2_ws/src/unitree_go/msg/AudioData.msg
+uint64 time_frame
+uint8[] data

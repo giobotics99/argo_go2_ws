@@ -1,1 +1,2 @@
-/home/giovanna/argo_go2_ws/build/go2_nav/ament_cmake_environment_hooks/local_setup.dsv
+source;share/go2_nav/environment/ament_prefix_path.sh
+source;share/go2_nav/environment/path.sh

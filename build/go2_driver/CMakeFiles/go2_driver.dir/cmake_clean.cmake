@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/go2_driver.dir/src/go2_driver/go2_driver.cpp.o"
+  "CMakeFiles/go2_driver.dir/src/go2_driver/go2_driver.cpp.o.d"
   "libgo2_driver.pdb"
   "libgo2_driver.so"
 )

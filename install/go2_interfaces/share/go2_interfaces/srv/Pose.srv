@@ -1,1 +1,6 @@
-/home/giovanna/argo_go2_ws/src/go2_interfaces/srv/Pose.srv
+# Set true to pose and false to restore
+
+bool flag
+
+---
+bool success

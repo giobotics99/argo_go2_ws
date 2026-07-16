@@ -87,6 +87,8 @@ def generate_launch_description():
         launch_arguments={
             'use_sim_time': use_sim_time,
             'params_file': params_file,
+            'map': map_file,
+            'autostart': 'true',
             'default_bt_xml_filename': default_bt_xml_filename,
             'namespace': namespace
         }.items()
@@ -107,9 +109,9 @@ def generate_launch_description():
     cmd_vel_remap = SetRemap(src='cmd_vel_nav', dst='cmd_vel')
 
     from launch.actions import TimerAction
-    delayed_localization_cmd = TimerAction(
-        period=5.0,
-        actions=[localization_cmd]
+    delayed_navigation_cmd = TimerAction(
+        period=8.0,
+        actions=[navigation_cmd]
     )
 
     ld = LaunchDescription()
@@ -123,7 +125,7 @@ def generate_launch_description():
     ld.add_action(set_normal_bt_cmd)
     ld.add_action(set_follow_bt_cmd)
     ld.add_action(localization_cmd)
-    ld.add_action(navigation_cmd)
+    ld.add_action(delayed_navigation_cmd)
     # ld.add_action(rviz_cmd)
     ld.add_action(cmd_vel_remap)
 

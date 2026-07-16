@@ -1,1 +1,9 @@
-/home/giovanna/argo_go2_ws/src/go2_interfaces/srv/Euler.srv
+# Posture when standing and walking
+
+float32 roll
+float32 pitch
+float32 yaw
+
+---
+bool success
+string message

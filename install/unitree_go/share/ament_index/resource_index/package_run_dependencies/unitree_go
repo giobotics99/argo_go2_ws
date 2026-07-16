@@ -1,1 +1,1 @@
-/home/giovanna/argo_go2_ws/build/unitree_go/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/unitree_go
+rosidl_generator_dds_idl;geometry_msgs;rosidl_default_runtime;ament_lint_auto;ament_lint_common

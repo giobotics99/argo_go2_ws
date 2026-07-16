@@ -1,6 +1,6 @@
 # CMake generated Testfile for 
-# Source directory: /home/giovanna/argo_go2_ws/src/hesai_ros_driver
-# Build directory: /home/giovanna/argo_go2_ws/build/hesai_ros_driver
+# Source directory: /home/unitree/argo_go2_ws/src/hesai_ros_driver
+# Build directory: /home/unitree/argo_go2_ws/build/hesai_ros_driver
 # 
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.

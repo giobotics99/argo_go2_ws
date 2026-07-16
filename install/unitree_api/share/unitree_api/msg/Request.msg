@@ -1,1 +1,3 @@
-/home/giovanna/argo_go2_ws/src/unitree_api/msg/Request.msg
+RequestHeader header
+string parameter
+uint8[] binary

@@ -1,1 +1,3 @@
-/home/giovanna/argo_go2_ws/src/unitree_go/msg/InterfaceConfig.msg
+uint8 mode
+uint8 value
+uint8[2] reserve

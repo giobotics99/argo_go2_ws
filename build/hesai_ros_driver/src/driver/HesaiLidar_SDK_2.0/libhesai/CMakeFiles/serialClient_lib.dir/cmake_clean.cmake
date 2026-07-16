@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/serialClient_lib.dir/SerialClient/src/serial_client.cc.o"
+  "CMakeFiles/serialClient_lib.dir/SerialClient/src/serial_client.cc.o.d"
   "libserialClient_lib.pdb"
   "libserialClient_lib.so"
 )

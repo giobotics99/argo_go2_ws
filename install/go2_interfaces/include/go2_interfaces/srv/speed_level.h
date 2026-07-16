@@ -1,1 +1,12 @@
-/home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_generator_c/go2_interfaces/srv/speed_level.h
+// generated from rosidl_generator_c/resource/idl.h.em
+// with input from go2_interfaces:srv/SpeedLevel.idl
+// generated code does not contain a copyright notice
+
+#ifndef GO2_INTERFACES__SRV__SPEED_LEVEL_H_
+#define GO2_INTERFACES__SRV__SPEED_LEVEL_H_
+
+#include "go2_interfaces/srv/detail/speed_level__struct.h"
+#include "go2_interfaces/srv/detail/speed_level__functions.h"
+#include "go2_interfaces/srv/detail/speed_level__type_support.h"
+
+#endif  // GO2_INTERFACES__SRV__SPEED_LEVEL_H_

@@ -99,6 +99,8 @@ private:
       goal_msg.pose.pose.orientation.w = std::cos(theta / 2.0);
 
       auto send_goal_options = rclcpp_action::Client<nav2_msgs::action::NavigateToPose>::SendGoalOptions();
+      send_goal_options.goal_response_callback =
+        std::bind(&NavigateAction::goal_response_callback, this, std::placeholders::_1);
       send_goal_options.feedback_callback =
         std::bind(&NavigateAction::feedback_callback, this, std::placeholders::_1, std::placeholders::_2);
       send_goal_options.result_callback =
@@ -110,6 +112,19 @@ private:
       goal_sent_ = true;
     }
   }
+
+  void goal_response_callback(
+      std::shared_future<rclcpp_action::ClientGoalHandle<nav2_msgs::action::NavigateToPose>::SharedPtr> future)
+    {
+      auto goal_handle = future.get();
+      if (!goal_handle) {
+        RCLCPP_ERROR(this->get_logger(), "Goal was rejected by server");
+        finish(false, 0.0, "Goal rejected by Nav2");
+        goal_sent_ = false;
+      } else {
+        RCLCPP_INFO(this->get_logger(), "Goal accepted by server, waiting for result");
+      }
+    }
 
   void feedback_callback(
     rclcpp_action::ClientGoalHandle<nav2_msgs::action::NavigateToPose>::SharedPtr,
@@ -156,7 +171,10 @@ int main(int argc, char ** argv)
   node->set_parameter(rclcpp::Parameter("action_name", "navigate"));
   node->trigger_transition(lifecycle_msgs::msg::Transition::TRANSITION_CONFIGURE);
 
-  rclcpp::spin(node->get_node_base_interface());
+  // Usa un esecutore multi-thread anziché il classico rclcpp::spin singolo
+  rclcpp::executors::MultiThreadedExecutor executor;
+  executor.add_node(node->get_node_base_interface());
+  executor.spin();
 
   rclcpp::shutdown();
   return 0;
