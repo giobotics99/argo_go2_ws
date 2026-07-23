@@ -143,6 +143,7 @@ def generate_launch_description():
             'output_topic': '/lidar_points_filtered',
             'bounding_box_min': [-0.5, -0.4, -0.2],
             'bounding_box_max': [0.5, 0.4, 0.5],
+            'enable_downsampling': True,
             'use_sim_time': False
         }]
     )

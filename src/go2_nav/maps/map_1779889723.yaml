@@ -1,4 +1,4 @@
-image: map_1779889723_bis.pgm
+image: map_1779889723_bis_walls.pgm
 mode: trinary
 resolution: 0.05
 origin: [-1.22, -5.36, 0]

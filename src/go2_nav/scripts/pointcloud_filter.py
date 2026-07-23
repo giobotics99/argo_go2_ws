@@ -121,38 +121,78 @@ class PointCloudFilterNode(Node):
         except Exception as e:
             return None, str(e)
 
-    def pc_callback(self, msg):
-        points_np, error = self.read_points_numpy_fast(msg)
-        if error or points_np.shape[0] == 0: return
+    # def pc_callback(self, msg):
+    #     points_np, error = self.read_points_numpy_fast(msg)
+    #     if error or points_np.shape[0] == 0: return
 
-        points = torch.from_numpy(points_np).to(self.device)
-        x, y, z = points[:, 0], points[:, 1], points[:, 2]
+    #     points = torch.from_numpy(points_np).to(self.device)
+    #     x, y, z = points[:, 0], points[:, 1], points[:, 2]
         
-        in_box = (x >= self.bbox_min[0]) & (x <= self.bbox_min[0]) & \
-                 (y >= self.bbox_min[1]) & (y <= self.bbox_min[1]) & \
-                 (z >= self.bbox_min[2]) & (z <= self.bbox_min[2])
+    #     in_box = (x >= self.bbox_min[0]) & (x <= self.bbox_min[0]) & \
+    #              (y >= self.bbox_min[1]) & (y <= self.bbox_min[1]) & \
+    #              (z >= self.bbox_min[2]) & (z <= self.bbox_min[2])
         
-        # Correzione logica in_box per evitare errori di indice
-        in_box = (x >= self.bbox_min[0]) & (x <= self.bbox_max[0]) & \
-                 (y >= self.bbox_min[1]) & (y <= self.bbox_max[1]) & \
-                 (z >= self.bbox_min[2]) & (z <= self.bbox_max[2])
+    #     # Correzione logica in_box per evitare errori di indice
+    #     in_box = (x >= self.bbox_min[0]) & (x <= self.bbox_max[0]) & \
+    #              (y >= self.bbox_min[1]) & (y <= self.bbox_max[1]) & \
+    #              (z >= self.bbox_min[2]) & (z <= self.bbox_max[2])
 
-        keep_mask = ~in_box
+    #     keep_mask = ~in_box
         
-        if self.enable_height_filter:
-            keep_mask &= (z >= self.min_height) & (z <= self.max_height)
-        if self.enable_radius_filter:
-            keep_mask &= (x.square() + y.square() <= self.max_radius_sq)
+    #     if self.enable_height_filter:
+    #         keep_mask &= (z >= self.min_height) & (z <= self.max_height)
+    #     if self.enable_radius_filter:
+    #         keep_mask &= (x.square() + y.square() <= self.max_radius_sq)
             
-        points = points[keep_mask]
+    #     points = points[keep_mask]
         
-        # Create output message
-        out_msg = self.create_cloud_xyz32(msg.header, points.cpu().numpy() if points.size(0) > 0 else np.empty((0, 3)))
+    #     # Create output message
+    #     out_msg = self.create_cloud_xyz32(msg.header, points.cpu().numpy() if points.size(0) > 0 else np.empty((0, 3)))
         
-        # --- FIX: Overwrite timestamp to current system time to solve the 2019 vs 2026 issue ---
-        out_msg.header.stamp = self.get_clock().now().to_msg()
+    #     # --- FIX: Overwrite timestamp to current system time to solve the 2019 vs 2026 issue ---
+    #     out_msg.header.stamp = self.get_clock().now().to_msg()
         
-        self.pub.publish(out_msg)
+    #     self.pub.publish(out_msg)
+
+    def pc_callback(self, msg):
+        try:
+            # 1. Lettura veloce dei punti
+            points_np, error = self.read_points_numpy_fast(msg)
+            if error or points_np is None or points_np.shape[0] == 0:
+                return
+
+            # 2. Spostamento su GPU CUDA
+            points = torch.from_numpy(points_np).to(self.device)
+            x, y, z = points[:, 0], points[:, 1], points[:, 2]
+
+            # 3. Filtro Bounding Box (taglio del corpo del robot)
+            in_box = (x >= self.bbox_min[0]) & (x <= self.bbox_max[0]) & \
+                     (y >= self.bbox_min[1]) & (y <= self.bbox_max[1]) & \
+                     (z >= self.bbox_min[2]) & (z <= self.bbox_max[2])
+
+            keep_mask = ~in_box
+
+            # 4. Filtri di altezza e raggio
+            if self.enable_height_filter:
+                keep_mask &= (z >= self.min_height) & (z <= self.max_height)
+            if self.enable_radius_filter:
+                keep_mask &= (x.square() + y.square() <= self.max_radius_sq)
+
+            points = points[keep_mask]
+
+            # 5. Downsampling leggero ed eseguito IN GPU (Slicing strided 1:4)
+            if self.enable_downsampling and points.shape[0] > 0:
+                # Prende 1 punto ogni 4 direttamente in VRAM (zero carico CPU)
+                points = points[::4]
+
+            # 6. Conversione e pubblicazione del messaggio
+            out_points_np = points.cpu().numpy() if points.size(0) > 0 else np.empty((0, 3), dtype=np.float32)
+            out_msg = self.create_cloud_xyz32(msg.header, out_points_np)
+
+            self.pub.publish(out_msg)
+
+        except Exception as e:
+            self.get_logger().error(f"Errore nel callback di filtraggio: {e}")
 
 def main(args=None):
     rclpy.init(args=args)
