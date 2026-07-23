@@ -1,1 +1,4 @@
-/home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_cmake/srv/SpeedLevel_Request.msg
+# Set the speed range
+
+int32 level
+

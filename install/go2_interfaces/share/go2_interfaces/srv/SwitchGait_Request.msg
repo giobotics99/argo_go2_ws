@@ -1,1 +1,10 @@
-/home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_cmake/srv/SwitchGait_Request.msg
+# Switch gait
+
+int32 IDLE = 0
+int32 TROT = 1
+int32 TROT_RUN_NING = 2
+int32 FORWARD_CLIMBING_MODE = 3
+int32 REVERSE_CLIMBING_MODE = 4
+
+int32 d
+

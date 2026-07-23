@@ -6,7 +6,6 @@
   (:predicates
     (robot_at ?r - robot ?rm - room)
     (connected ?rm1 ?rm2 - room)
-    (blocked ?rm1 ?rm2 - room)
     (inspected ?rm - room)
   )
 
@@ -16,7 +15,6 @@
     :condition (and
       (at start (robot_at ?r ?from))
       (at start (connected ?from ?to))
-      (at start (not (blocked ?from ?to)))
     )
     :effect (and
       (at start (not (robot_at ?r ?from)))

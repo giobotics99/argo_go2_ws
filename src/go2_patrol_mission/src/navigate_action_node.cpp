@@ -204,9 +204,13 @@ int main(int argc, char ** argv)
   auto node = std::make_shared<NavigateAction>();
 
   node->set_parameter(rclcpp::Parameter("action_name", "navigate"));
+  
+  // 1. Configura il nodo
   node->trigger_transition(lifecycle_msgs::msg::Transition::TRANSITION_CONFIGURE);
+  
+  // 2. AGGIUNGI QUESTA RIGA per attivare publisher e client lifecycle!
+  node->trigger_transition(lifecycle_msgs::msg::Transition::TRANSITION_ACTIVATE);
 
-  // Usa un esecutore multi-thread anziché il classico rclcpp::spin singolo
   rclcpp::executors::MultiThreadedExecutor executor;
   executor.add_node(node->get_node_base_interface());
   executor.spin();

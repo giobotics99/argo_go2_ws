@@ -1,11 +1,11 @@
 waypoints:
   lab_robotics:
-    x: 2.27
-    y: 0.0
+    x: 2.5
+    y: 0.5
     theta: 0.0
   corridor:
-    x: 8.5
-    y: 2.47
+    x: 11.0
+    y: 3.2
     theta: 0.0
   openspace:
     x: 4.0

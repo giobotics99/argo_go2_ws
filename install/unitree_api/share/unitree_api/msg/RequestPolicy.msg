@@ -1,1 +1,2 @@
-/home/giovanna/argo_go2_ws/src/unitree_api/msg/RequestPolicy.msg
+int32 priority
+bool noreply

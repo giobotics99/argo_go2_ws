@@ -1,1 +1,1 @@
-/home/giovanna/argo_go2_ws/build/go2_driver/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/go2_driver
+rclcpp;rclcpp_lifecycle;rclcpp_components;sensor_msgs;geometry_msgs;nav_msgs;unitree_go;unitree_api;tf2_ros;go2_interfaces;nlohmann-json-dev;ament_lint_auto;ament_lint_common
