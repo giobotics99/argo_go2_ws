@@ -1,3 +1,1 @@
-ResponseHeader header
-string data
-int8[] binary
+/home/giovanna/argo_go2_ws/src/unitree_api/msg/Response.msg

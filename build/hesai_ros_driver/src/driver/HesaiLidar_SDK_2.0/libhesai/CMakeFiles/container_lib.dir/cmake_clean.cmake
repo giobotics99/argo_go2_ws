@@ -1,8 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/container_lib.dir/Container/src/ring_2d_shared.cc.o"
-  "CMakeFiles/container_lib.dir/Container/src/ring_2d_shared.cc.o.d"
   "CMakeFiles/container_lib.dir/Container/src/ring_2dex.cc.o"
-  "CMakeFiles/container_lib.dir/Container/src/ring_2dex.cc.o.d"
   "libcontainer_lib.pdb"
   "libcontainer_lib.so"
 )

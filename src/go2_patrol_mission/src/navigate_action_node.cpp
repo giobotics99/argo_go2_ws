@@ -8,6 +8,7 @@
 #include "rclcpp_action/rclcpp_action.hpp"
 #include "nav2_msgs/action/navigate_to_pose.hpp"
 #include "geometry_msgs/msg/pose_stamped.hpp"
+#include "std_msgs/msg/string.hpp"
 #include "yaml-cpp/yaml.h"
 
 using namespace std::chrono_literals;
@@ -50,10 +51,20 @@ public:
       this,
       "navigate_to_pose");
 
+    events_pub_ = this->create_publisher<std_msgs::msg::String>("/patrol/action_events", 10);
+    events_pub_->on_activate();
+
     progress_ = 0.0;
     goal_sent_ = false;
 
     return ActionExecutorClient::on_activate(previous_state);
+  }
+
+  rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn
+  on_deactivate(const rclcpp_lifecycle::State & previous_state)
+  {
+    events_pub_->on_deactivate();
+    return ActionExecutorClient::on_deactivate(previous_state);
   }
 
 private:
@@ -70,6 +81,7 @@ private:
       }
       
       std::string target_room = args[2];
+      std::string from_room = args[1];
       if (waypoints_.find(target_room) == waypoints_.end()) {
         RCLCPP_ERROR(this->get_logger(), "Waypoint %s not found in config", target_room.c_str());
         finish(false, 0.0, "Waypoint not found");
@@ -109,6 +121,11 @@ private:
       RCLCPP_INFO(this->get_logger(), "Sending goal to Nav2: %s", target_room.c_str());
       nav2_client_->async_send_goal(goal_msg, send_goal_options);
       
+      // Publish start event
+      auto msg = std::make_shared<std_msgs::msg::String>();
+      msg->data = "start:navigate:" + args[0] + ":" + from_room + ":" + target_room;
+      events_pub_->publish(*msg);
+
       goal_sent_ = true;
     }
   }
@@ -119,6 +136,12 @@ private:
       auto goal_handle = future.get();
       if (!goal_handle) {
         RCLCPP_ERROR(this->get_logger(), "Goal was rejected by server");
+        
+        auto msg = std::make_shared<std_msgs::msg::String>();
+        auto args = get_arguments();
+        msg->data = "failure:navigate:" + args[0] + ":" + args[1] + ":" + args[2];
+        events_pub_->publish(*msg);
+
         finish(false, 0.0, "Goal rejected by Nav2");
         goal_sent_ = false;
       } else {
@@ -136,21 +159,32 @@ private:
 
   void result_callback(const rclcpp_action::ClientGoalHandle<nav2_msgs::action::NavigateToPose>::WrappedResult & result)
   {
+    auto args = get_arguments();
+    auto msg = std::make_shared<std_msgs::msg::String>();
+
     switch (result.code) {
       case rclcpp_action::ResultCode::SUCCEEDED:
         RCLCPP_INFO(this->get_logger(), "Nav2 Goal Succeeded!");
+        msg->data = "success:navigate:" + args[0] + ":" + args[1] + ":" + args[2];
+        events_pub_->publish(*msg);
         finish(true, 1.0, "Navigation completed");
         break;
       case rclcpp_action::ResultCode::ABORTED:
         RCLCPP_ERROR(this->get_logger(), "Nav2 Goal was aborted");
+        msg->data = "failure:navigate:" + args[0] + ":" + args[1] + ":" + args[2];
+        events_pub_->publish(*msg);
         finish(false, 0.0, "Navigation aborted");
         break;
       case rclcpp_action::ResultCode::CANCELED:
         RCLCPP_ERROR(this->get_logger(), "Nav2 Goal was canceled");
+        msg->data = "failure:navigate:" + args[0] + ":" + args[1] + ":" + args[2];
+        events_pub_->publish(*msg);
         finish(false, 0.0, "Navigation canceled");
         break;
       default:
         RCLCPP_ERROR(this->get_logger(), "Unknown result code");
+        msg->data = "failure:navigate:" + args[0] + ":" + args[1] + ":" + args[2];
+        events_pub_->publish(*msg);
         finish(false, 0.0, "Navigation unknown error");
         break;
     }
@@ -159,6 +193,7 @@ private:
 
   std::map<std::string, std::vector<double>> waypoints_;
   rclcpp_action::Client<nav2_msgs::action::NavigateToPose>::SharedPtr nav2_client_;
+  rclcpp_lifecycle::LifecyclePublisher<std_msgs::msg::String>::SharedPtr events_pub_;
   float progress_;
   bool goal_sent_;
 };

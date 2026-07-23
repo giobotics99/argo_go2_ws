@@ -1,2 +1,1 @@
-uint8 off
-uint8[3] reserve
+/home/giovanna/argo_go2_ws/src/unitree_go/msg/BmsCmd.msg

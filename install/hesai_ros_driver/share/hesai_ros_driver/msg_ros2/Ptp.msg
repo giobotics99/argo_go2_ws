@@ -1,2 +1,1 @@
-uint8 ptp_lock_offset
-uint8[16] ptp_status
+/home/giovanna/argo_go2_ws/src/hesai_ros_driver/msg/msg_ros2/Ptp.msg

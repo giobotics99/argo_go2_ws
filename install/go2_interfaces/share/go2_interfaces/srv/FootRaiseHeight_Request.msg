@@ -1,4 +1,1 @@
-# Set the relative height of foot lift during movement
-
-float32 height
-
+/home/giovanna/argo_go2_ws/build/go2_interfaces/rosidl_cmake/srv/FootRaiseHeight_Request.msg

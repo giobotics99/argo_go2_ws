@@ -1,1 +1,1 @@
-int32 code
+/home/giovanna/argo_go2_ws/src/unitree_api/msg/ResponseStatus.msg
