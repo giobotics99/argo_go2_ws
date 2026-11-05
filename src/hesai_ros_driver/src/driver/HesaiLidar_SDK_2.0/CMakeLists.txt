@@ -74,14 +74,19 @@ target_link_libraries(sample
 # if install different cuda version, set the cuda path, like cuda-11.4
 # set(CUDA_TOOLKIT_ROOT_DIR /usr/local/cuda-11.4/)
 # find_package(CUDA REQUIRED)
-find_package(CUDA )
-if(${CUDA_FOUND})
+# GPU sample is only built when the ROS driver is built with HESAI_USE_CUDA=ON
+if(NOT DEFINED HESAI_CUDA_ARCH)
+  set(HESAI_CUDA_ARCH "87")
+endif()
+if(HESAI_USE_CUDA)
+  find_package(CUDA REQUIRED)
+endif()
+if(HESAI_USE_CUDA AND CUDA_FOUND)
 	set(CUDA_SOURCE_PROPERTY_FORMAT OBJ)
 	set(CUDA_SEPARABLE_COMPILATION ON)
 	include_directories(${CUDA_INCLUDE_DIRS})
 	set(CUDA_PROPAGATE_HOST_FLAGS OFF)
-	set(CUDA_NVCC_FLAGS -arch=sm_61;-O3;-G;-g;-std=c++14)#根据具体GPU性能更改算力参数
-	link_directories($ENV{CUDA_PATH}/lib/x64)
+	set(CUDA_NVCC_FLAGS -gencode;arch=compute_${HESAI_CUDA_ARCH},code=sm_${HESAI_CUDA_ARCH};-O3;-std=c++14)
   file(GLOB_RECURSE CURRENT_HEADERS  *.h *.hpp *.cuh)
   file(GLOB CURRENT_SOURCES  *.cpp *.cu)
   file(GLOB CURRENT_SOURCES  *.cpp *.cu)
@@ -99,7 +104,7 @@ if(${CUDA_FOUND})
   ptcParser_lib
   ${OPENSSL_LIBRARIES}
 )
-else(${CUDA_FOUND})
-	MESSAGE(STATUS "cuda not found!")
-endif(${CUDA_FOUND})
+else()
+	MESSAGE(STATUS "Hesai SDK GPU sample disabled (HESAI_USE_CUDA=OFF)")
+endif()
 

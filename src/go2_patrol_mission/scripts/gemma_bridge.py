@@ -28,15 +28,15 @@ class GemmaBridge(Node):
         super().__init__('gemma_bridge')
         
         self.cb_group = ReentrantCallbackGroup()
-        self.state_lock = threading.Lock()  # Lock per la concorrenza dei thread[cite: 6]
+        self.state_lock = threading.Lock()  # Lock per la concorrenza dei thread
         
-        # Dichiarazione parametri LLM[cite: 6]
+        # Dichiarazione parametri LLM
         self.declare_parameter('gemma_api_base', 'http://127.0.0.1:8000/v1')
         self.declare_parameter('gemma_model_id', 'google/gemma-4-E2B-it')
         self.gemma_api_base = self.get_parameter('gemma_api_base').value
         self.gemma_model_id = self.get_parameter('gemma_model_id').value
         
-        # Stato interno[cite: 6]
+        # Stato interno
         self.target_rooms = []
         
         self.srv = self.create_service(
@@ -46,7 +46,7 @@ class GemmaBridge(Node):
             callback_group=self.cb_group
         )
         
-        # Sottoscrizione eventi azioni per recupero/replanning[cite: 6]
+        # Sottoscrizione eventi azioni per recupero/replanning
         self.events_sub = self.create_subscription(
             String,
             '/patrol/action_events',
@@ -55,10 +55,10 @@ class GemmaBridge(Node):
             callback_group=self.cb_group
         )
         
-        # Publisher per spiegazioni in linguaggio naturale[cite: 6]
+        # Publisher per spiegazioni in linguaggio naturale
         self.explain_pub = self.create_publisher(String, '/supervisor/explanation', 10)
         
-        # Client PlanSys2[cite: 6]
+        # Client PlanSys2
         self.get_state_cli = self.create_client(GetState, '/problem_expert/get_state', callback_group=self.cb_group)
         self.get_domain_cli = self.create_client(GetDomain, '/domain_expert/get_domain', callback_group=self.cb_group)
         self.get_problem_cli = self.create_client(GetProblem, '/problem_expert/get_problem', callback_group=self.cb_group)
@@ -70,13 +70,13 @@ class GemmaBridge(Node):
         self.set_goal_cli = self.create_client(AddProblemGoal, '/problem_expert/add_problem_goal', callback_group=self.cb_group)
         self.get_plan_cli = self.create_client(GetPlan, '/planner/get_plan', callback_group=self.cb_group)
         
-        # Action client per eseguire il piano[cite: 6]
+        # Action client per eseguire il piano
         self.exec_plan_cli = ActionClient(self, ExecutePlan, '/execute_plan', callback_group=self.cb_group)
         
         self.get_logger().info("Gemma Bridge started. Waiting for commands on /gemma_interface/send_command")
 
     def call_service(self, client, request, timeout_sec=5.0):
-        """Esegue una chiamata di servizio sicura con timeout per evitare stalli."""[cite: 6]
+        """Esegue una chiamata di servizio sicura con timeout per evitare stalli."""
         if not client.wait_for_service(timeout_sec=timeout_sec):
             srv_name = getattr(client, 'srv_name', getattr(client, 'service_name', 'unknown_service'))
             self.get_logger().error(f'Service {srv_name} not available after {timeout_sec}s.')
@@ -95,7 +95,7 @@ class GemmaBridge(Node):
         return future.result()
 
     def wait_for_plansys2_active(self, timeout_sec=15.0):
-        self.get_logger().info("Verifica dello stato di PlanSys2...")[cite: 6]
+        self.get_logger().info("Verifica dello stato di PlanSys2...")
         start_time = time.time()
         while (time.time() - start_time) < timeout_sec:
             if not self.get_state_cli.wait_for_service(timeout_sec=1.0):
@@ -177,6 +177,23 @@ class GemmaBridge(Node):
             self.get_logger().error(f"[LLM] Error querying Gemma Text: {e}")
             return None
 
+    def query_gemma_json(self, system_prompt, user_prompt):
+        """Ask Gemma for JSON and parse it; returns a dict or None (-> keyword fallback)."""
+        text = self.query_gemma_text(system_prompt, user_prompt)
+        if not text:
+            return None
+        self.get_logger().info(f"[LLM] Raw Gemma output: {text}")
+        # Tolerate ```json fences or extra prose around the object
+        start, end = text.find('{'), text.rfind('}')
+        if start == -1 or end <= start:
+            return None
+        try:
+            parsed = json.loads(text[start:end + 1])
+            return parsed if isinstance(parsed, dict) else None
+        except json.JSONDecodeError as e:
+            self.get_logger().warn(f"[LLM] Could not parse JSON from Gemma: {e}")
+            return None
+
     def command_callback(self, request, response):
         command_text = request.command.lower()
         self.get_logger().info(f"Received natural command: {command_text}")
@@ -195,7 +212,7 @@ class GemmaBridge(Node):
             "  \"target_rooms\": [\"room_id_1\", \"room_id_2\", ...]\n"
             "}\n"
             "Do not include markdown formatting or backticks."
-        )[cite: 6]
+        )
         
         parsed = self.query_gemma_json(system_prompt, f"Command: '{command_text}'")
         target_rooms = []
@@ -317,7 +334,7 @@ class GemmaBridge(Node):
             "You are an onboard AI assistant on a Unitree Go2 quadruped robot. "
             f"While navigating to the room '{to_room}' from '{from_room}', the path planner failed due to an obstruction. "
             "Explain the failure to the user in a concise sentence in first person. Return ONLY the explanation."
-        )[cite: 6]
+        )
         explanation = self.query_gemma_text(system_prompt, f"Failed to navigate from {from_room} to {to_room}.")
         if not explanation:
             explanation = f"I failed to navigate from {from_room} to {to_room} because of a path blockage."
@@ -386,7 +403,7 @@ class GemmaBridge(Node):
                 "You are an onboard AI assistant on a Unitree Go2 quadruped robot. "
                 "The path planning system failed to find an alternative route to remaining rooms "
                 f"({', '.join(remaining_rooms)}). Explain to the user in first person that you are stuck."
-            )[cite: 6]
+            )
             no_path_explanation = self.query_gemma_text(no_path_prompt, "No plan found.")
             if not no_path_explanation:
                 no_path_explanation = f"I cannot find any alternative route to reach: {', '.join(remaining_rooms)}."
@@ -407,7 +424,7 @@ class GemmaBridge(Node):
         req = AffectParam.Request()
         req.param.name = name
         req.param.type = type_name
-        self.call_service(self.add_inst_cli, req)[cite: 6]
+        self.call_service(self.add_inst_cli, req)
         
     def add_predicate(self, name, params):
         req = AffectNode.Request()

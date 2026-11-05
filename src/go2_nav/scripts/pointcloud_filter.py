@@ -4,12 +4,12 @@ import rclpy
 from rclpy.node import Node
 from rclpy.qos import QoSProfile, QoSHistoryPolicy, QoSReliabilityPolicy
 from sensor_msgs.msg import PointCloud2, PointField
-import torch
 import numpy as np
 import math
 import struct
 import sys
 import ctypes
+import array
 
 class PointCloudFilterNode(Node):
     def __init__(self):
@@ -27,6 +27,10 @@ class PointCloudFilterNode(Node):
         self.declare_parameter("max_height", float('inf'))
         self.declare_parameter("enable_radius_filter", False)
         self.declare_parameter("max_radius", float('inf'))
+        # GPU is OFF by default: the mask on a single lidar scan is ~1 ms on the
+        # Orin CPU, while a CUDA context costs ~0.5-1 GB of the unified memory
+        # that llama.cpp (Gemma) and YOLO need. Enable only for very dense clouds.
+        self.declare_parameter("use_gpu", False)
 
         # Get parameters
         self.input_topic = self.get_parameter("input_topic").value
@@ -35,13 +39,26 @@ class PointCloudFilterNode(Node):
         bbox_min_list = self.get_parameter("bounding_box_min").value
         bbox_max_list = self.get_parameter("bounding_box_max").value
         
-        # Check device
-        self.device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-        self.get_logger().info(f"Using device: {self.device}")
+        # Device selection (CPU numpy by default, optional torch/CUDA)
+        self.torch = None
+        self.device = None
+        if self.get_parameter("use_gpu").value:
+            try:
+                import torch
+                if torch.cuda.is_available():
+                    self.device = torch.device('cuda')
+                    torch.zeros(1, device=self.device)  # force context creation now
+                    self.torch = torch
+                else:
+                    self.get_logger().warn("use_gpu=True but torch has no CUDA support: falling back to CPU")
+            except Exception as e:
+                self.get_logger().warn(f"use_gpu=True but CUDA init failed ({e}): falling back to CPU")
+                self.torch = None
+        self.get_logger().info(f"Using device: {'cuda (torch)' if self.torch else 'cpu (numpy)'}")
 
         # Parameter setup
-        self.bbox_min = torch.tensor(bbox_min_list, device=self.device, dtype=torch.float32)
-        self.bbox_max = torch.tensor(bbox_max_list, device=self.device, dtype=torch.float32)
+        self.bbox_min = np.asarray(bbox_min_list, dtype=np.float32)
+        self.bbox_max = np.asarray(bbox_max_list, dtype=np.float32)
 
         self.enable_downsampling = self.get_parameter("enable_downsampling").value
         self.voxel_size = self.get_parameter("voxel_size").value
@@ -93,7 +110,8 @@ class PointCloudFilterNode(Node):
             PointField(name='z', offset=8, datatype=PointField.FLOAT32, count=1),
         ]
         
-        msg.data = points.astype(np.float32).tobytes()
+        # array('B') hits rclpy's fast path (a bytes object is validated element by element)
+        msg.data = array.array('B', points.astype(np.float32).tobytes())
         return msg
 
     def read_points_numpy_fast(self, msg):
@@ -121,74 +139,56 @@ class PointCloudFilterNode(Node):
         except Exception as e:
             return None, str(e)
 
-    # def pc_callback(self, msg):
-    #     points_np, error = self.read_points_numpy_fast(msg)
-    #     if error or points_np.shape[0] == 0: return
+    def _filter_mask_numpy(self, pts):
+        x, y, z = pts[:, 0], pts[:, 1], pts[:, 2]
+        in_box = np.all((pts >= self.bbox_min) & (pts <= self.bbox_max), axis=1)
+        keep = ~in_box & np.isfinite(pts).all(axis=1)
+        if self.enable_height_filter:
+            keep &= (z >= self.min_height) & (z <= self.max_height)
+        if self.enable_radius_filter:
+            keep &= (x * x + y * y) <= self.max_radius_sq
+        return keep
 
-    #     points = torch.from_numpy(points_np).to(self.device)
-    #     x, y, z = points[:, 0], points[:, 1], points[:, 2]
-        
-    #     in_box = (x >= self.bbox_min[0]) & (x <= self.bbox_min[0]) & \
-    #              (y >= self.bbox_min[1]) & (y <= self.bbox_min[1]) & \
-    #              (z >= self.bbox_min[2]) & (z <= self.bbox_min[2])
-        
-    #     # Correzione logica in_box per evitare errori di indice
-    #     in_box = (x >= self.bbox_min[0]) & (x <= self.bbox_max[0]) & \
-    #              (y >= self.bbox_min[1]) & (y <= self.bbox_max[1]) & \
-    #              (z >= self.bbox_min[2]) & (z <= self.bbox_max[2])
-
-    #     keep_mask = ~in_box
-        
-    #     if self.enable_height_filter:
-    #         keep_mask &= (z >= self.min_height) & (z <= self.max_height)
-    #     if self.enable_radius_filter:
-    #         keep_mask &= (x.square() + y.square() <= self.max_radius_sq)
-            
-    #     points = points[keep_mask]
-        
-    #     # Create output message
-    #     out_msg = self.create_cloud_xyz32(msg.header, points.cpu().numpy() if points.size(0) > 0 else np.empty((0, 3)))
-        
-    #     # --- FIX: Overwrite timestamp to current system time to solve the 2019 vs 2026 issue ---
-    #     out_msg.header.stamp = self.get_clock().now().to_msg()
-        
-    #     self.pub.publish(out_msg)
+    def _filter_torch(self, pts_np):
+        torch = self.torch
+        pts = torch.from_numpy(pts_np).to(self.device)
+        bmin = torch.from_numpy(self.bbox_min).to(self.device)
+        bmax = torch.from_numpy(self.bbox_max).to(self.device)
+        x, y, z = pts[:, 0], pts[:, 1], pts[:, 2]
+        in_box = ((pts >= bmin) & (pts <= bmax)).all(dim=1)
+        keep = ~in_box & torch.isfinite(pts).all(dim=1)
+        if self.enable_height_filter:
+            keep &= (z >= self.min_height) & (z <= self.max_height)
+        if self.enable_radius_filter:
+            keep &= (x * x + y * y) <= self.max_radius_sq
+        pts = pts[keep]
+        if self.enable_downsampling:
+            pts = pts[::4]
+        return pts.cpu().numpy()
 
     def pc_callback(self, msg):
         try:
-            # 1. Lettura veloce dei punti
+            # 1. Fast zero-copy read of x/y/z
             points_np, error = self.read_points_numpy_fast(msg)
             if error or points_np is None or points_np.shape[0] == 0:
                 return
 
-            # 2. Spostamento su GPU CUDA
-            points = torch.from_numpy(points_np).to(self.device)
-            x, y, z = points[:, 0], points[:, 1], points[:, 2]
+            # 2. Remove robot body (bounding box), NaNs, optional height/radius
+            if self.torch is not None:
+                try:
+                    out_points_np = self._filter_torch(points_np)
+                except Exception as e:
+                    self.get_logger().error(f"CUDA filter failed ({e}); switching to CPU permanently")
+                    self.torch = None
+                    return
+            else:
+                out_points_np = points_np[self._filter_mask_numpy(points_np)]
+                # 3. Light downsampling (1 point out of 4)
+                if self.enable_downsampling:
+                    out_points_np = out_points_np[::4]
 
-            # 3. Filtro Bounding Box (taglio del corpo del robot)
-            in_box = (x >= self.bbox_min[0]) & (x <= self.bbox_max[0]) & \
-                     (y >= self.bbox_min[1]) & (y <= self.bbox_max[1]) & \
-                     (z >= self.bbox_min[2]) & (z <= self.bbox_max[2])
-
-            keep_mask = ~in_box
-
-            # 4. Filtri di altezza e raggio
-            if self.enable_height_filter:
-                keep_mask &= (z >= self.min_height) & (z <= self.max_height)
-            if self.enable_radius_filter:
-                keep_mask &= (x.square() + y.square() <= self.max_radius_sq)
-
-            points = points[keep_mask]
-
-            # 5. Downsampling leggero ed eseguito IN GPU (Slicing strided 1:4)
-            if self.enable_downsampling and points.shape[0] > 0:
-                # Prende 1 punto ogni 4 direttamente in VRAM (zero carico CPU)
-                points = points[::4]
-
-            # 6. Conversione e pubblicazione del messaggio
-            out_points_np = points.cpu().numpy() if points.size(0) > 0 else np.empty((0, 3), dtype=np.float32)
-            out_msg = self.create_cloud_xyz32(msg.header, out_points_np)
-
+            # 4. Publish
+            out_msg = self.create_cloud_xyz32(msg.header, np.ascontiguousarray(out_points_np, dtype=np.float32))
             self.pub.publish(out_msg)
 
         except Exception as e:

@@ -302,7 +302,9 @@ class SupervisorNode(Node):
         )
 
         # Check for abort (honour both spec-literal 4 AND actual enum 6)
-        if status in (STATUS_ABORTED, USER_SPECIFIED_ABORT_VALUE):
+        # NOTE: only 6 is ABORTED. 4 is SUCCEEDED in action_msgs/GoalStatus,
+        # so treating 4 as a failure fired "recovery" after every success.
+        if status == STATUS_ABORTED:
             self.get_logger().warn(
                 "[NAV2] *** PLANNER FAILURE DETECTED *** – "
                 "initiating Gemma 4 recovery pipeline"

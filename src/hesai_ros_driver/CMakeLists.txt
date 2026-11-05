@@ -153,20 +153,27 @@ find_package(Boost REQUIRED COMPONENTS thread)
 include_directories(${Boost_INCLUDE_DIRS})
 link_directories(${Boost_LIBRARY_DIRS})
 
-# if install different cuda version, set the cuda path, like cuda-11.4
-# set(CUDA_TOOLKIT_ROOT_DIR /usr/local/cuda-11.4/)
-# find_package(CUDA REQUIRED)
-find_package(CUDA )
+# GPU point-cloud parsing is OPT-IN.
+# On the Go2 the Jetson Orin GPU is shared with llama.cpp (Gemma) and YOLO:
+# every extra CUDA context costs hundreds of MB of the unified memory and the
+# CPU parser is more than fast enough for a single Hesai XT/QT lidar.
+# Enable with:  colcon build --cmake-args -DHESAI_USE_CUDA=ON
+# The CUDA architecture defaults to sm_87 (Jetson Orin). Override with
+#   -DHESAI_CUDA_ARCH=<xx>  (e.g. 72 for Xavier, 86 for RTX 30xx).
+option(HESAI_USE_CUDA "Build the Hesai driver with the CUDA point-cloud parser" OFF)
+set(HESAI_CUDA_ARCH "87" CACHE STRING "CUDA compute capability for the Hesai GPU parser")
 
-if(CUDA_FOUND)
+if(HESAI_USE_CUDA)
+  find_package(CUDA REQUIRED)
+endif()
+
+if(HESAI_USE_CUDA AND CUDA_FOUND)
   
   message(=============================================================)
-  message("-- CUDA Found. CUDA Support is turned On.")
+  message("-- CUDA Found. CUDA Support is turned On (sm_${HESAI_CUDA_ARCH}).")
   message(=============================================================)
 
-  link_directories($ENV{CUDA_PATH}/lib/x64)
-  set(CUDA_NVCC_FLAGS "-arch=sm_75;-O2")#根据具体GPU性能更改算力参数
-  set(CMAKE_CUDA_FLAGS "${CMAKE_CUDA_FLAGS} -rdc=true")
+  set(CUDA_NVCC_FLAGS "-gencode;arch=compute_${HESAI_CUDA_ARCH},code=sm_${HESAI_CUDA_ARCH};-O2")
   list(APPEND CUDA_NVCC_FLAGS -Xcompiler -fPIC)
 
   CUDA_ADD_EXECUTABLE(hesai_ros_driver_node
@@ -174,7 +181,7 @@ if(CUDA_FOUND)
                 src/manager/node_manager.cu
                 ./src/driver/HesaiLidar_SDK_2.0/libhesai/UdpParserGpu/src/buffer.cu
                 )
-  set(CUDA_LIBS "${CUDA_TOOLKIT_ROOT_DIR}/lib64/libcudart.so")
+  set(CUDA_LIBS ${CUDA_LIBRARIES})
 
   target_link_libraries(hesai_ros_driver_node                   
                 ${YAML_CPP_LIBRARIES}
@@ -188,10 +195,10 @@ if(CUDA_FOUND)
                 ${CUDA_LIBS}
                 # libhesai
     )
-else(CUDA_FOUND)
+else()
 
   message(=============================================================)
-  message("-- CUDA Not Found. CUDA Support is turned Off.")
+  message("-- Hesai CUDA parser disabled (HESAI_USE_CUDA=OFF). Using CPU parser.")
   message(=============================================================)
   add_executable(hesai_ros_driver_node
                 node/hesai_ros_driver_node.cc
@@ -209,7 +216,7 @@ else(CUDA_FOUND)
               # libhesai
   )            
 
-endif(CUDA_FOUND)
+endif()
 
 
   target_include_directories(hesai_ros_driver_node PRIVATE
