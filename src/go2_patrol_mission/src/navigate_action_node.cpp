@@ -113,8 +113,9 @@ private:
       auto send_goal_options = rclcpp_action::Client<nav2_msgs::action::NavigateToPose>::SendGoalOptions();
       send_goal_options.goal_response_callback =
         std::bind(&NavigateAction::goal_response_callback, this, std::placeholders::_1);
-      send_goal_options.feedback_callback =
-        std::bind(&NavigateAction::feedback_callback, this, std::placeholders::_1, std::placeholders::_2);
+      // Nessun feedback_callback: con Nav2 Humble (nel container) il feedback di NavigateToPose
+      // ha un campo in più (estimated_time_remaining) e distance_remaining arriverebbe sballato
+      // a questo nodo Foxy. Goal e risultato sono identici tra Foxy e Humble.
       send_goal_options.result_callback =
         std::bind(&NavigateAction::result_callback, this, std::placeholders::_1);
 
@@ -148,14 +149,6 @@ private:
         RCLCPP_INFO(this->get_logger(), "Goal accepted by server, waiting for result");
       }
     }
-
-  void feedback_callback(
-    rclcpp_action::ClientGoalHandle<nav2_msgs::action::NavigateToPose>::SharedPtr,
-    const std::shared_ptr<const nav2_msgs::action::NavigateToPose::Feedback> feedback)
-  {
-    // Optionally update progress based on distance remaining
-    send_feedback(std::max(0.0f, std::min(1.0f, 1.0f - (float)feedback->distance_remaining / 10.0f)), "Moving");
-  }
 
   void result_callback(const rclcpp_action::ClientGoalHandle<nav2_msgs::action::NavigateToPose>::WrappedResult & result)
   {

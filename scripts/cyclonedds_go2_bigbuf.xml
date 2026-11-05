@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Come cyclonedds_go2.xml (eth1) + buffer di ricezione UDP da 10 MB per le nuvole Hesai (~1.5 MB).
+     Richiede net.core.rmem_max >= 10 MB (vedi /etc/sysctl.d/60-cyclonedds.conf),
+     altrimenti CycloneDDS rifiuta di partire: argo_env.sh lo sceglie solo in quel caso. -->
+<CycloneDDS xmlns="https://cdds.io/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://cdds.io/config https://raw.githubusercontent.com/eclipse-cyclonedds/cyclonedds/master/etc/cyclonedds.xsd">
+    <Domain Id="any">
+        <General>
+            <Interfaces>
+                <NetworkInterface name="eth1" priority="default" multicast="default" />
+            </Interfaces>
+            <AllowMulticast>spdp</AllowMulticast>
+        </General>
+        <Internal>
+            <SocketReceiveBufferSize min="10MB"/>
+        </Internal>
+    </Domain>
+</CycloneDDS>
