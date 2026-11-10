@@ -1,0 +1,7 @@
+image: /home/unitree/argo_go2_ws/src/go2_nav/maps/institute_stiima_cnr.pgm
+mode: trinary
+resolution: 0.05
+origin: [-2.96, -11.7, 0]
+negate: 0
+occupied_thresh: 0.65
+free_thresh: 0.25

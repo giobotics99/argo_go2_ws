@@ -1,13 +1,47 @@
+# Pose sulla mappa institute_stiima_cnr (frame map). theta in radianti.
 waypoints:
+  # robotics_lab: l'id "lab_robotics" è usato da gemma_bridge.py e argo_voice_node.py
   lab_robotics:
-    x: 2.5
-    y: 0.5
+    x: 1.94
+    y: -1.0
     theta: 0.0
   corridor:
-    x: 11.0
-    y: 3.2
+    x: 11.6
+    y: 2.85
     theta: 0.0
   openspace:
-    x: 4.0
-    y: 2.0
-    theta: 1.57
+    x: 12.5
+    y: -1.13
+    theta: 0.0
+  coffee_break_area:
+    x: 13.1
+    y: 3.5
+    theta: 0.0
+  administrative_room:
+    x: 22.2
+    y: -1.97
+    theta: 0.0
+  vision_lab:
+    x: 23.7
+    y: 2.75
+    theta: 0.0
+  max_room:
+    x: 23.4
+    y: 8.31
+    theta: 0.0
+  beppe_room:
+    x: 26.5
+    y: 12.8
+    theta: 0.0
+  gianni_room:
+    x: 20.2
+    y: 16.5
+    theta: 0.0
+  research_director_room:
+    x: 22.8
+    y: 22.2
+    theta: 0.0
+  angelo_room:
+    x: 16.6
+    y: 6.52
+    theta: 0.0

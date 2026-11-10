@@ -52,6 +52,7 @@ install(TARGETS
 
 install(PROGRAMS
   scripts/gemma_bridge.py
+  scripts/waypoint_markers.py
   DESTINATION lib/${PROJECT_NAME}
 )
 

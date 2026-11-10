@@ -21,7 +21,7 @@ set -e
 SESSION=argo
 WS="$HOME/argo_go2_ws"
 ENV="$WS/scripts/argo_env.sh"
-MAP="${MAP:-$WS/src/go2_nav/maps/map_1779889723.yaml}"
+MAP="${MAP:-$WS/src/go2_nav/maps/institute_stiima_cnr.yaml}"
 YOLO="${YOLO:-0}"
 RVIZ="${RVIZ:-0}"
 NAV="${NAV:-humble}"

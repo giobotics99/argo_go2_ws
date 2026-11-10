@@ -78,7 +78,7 @@ NAV=foxy ~/argo_go2_ws/scripts/start_pipeline.sh # Nav2 Foxy locale invece di Hu
 ```
 
 Con `NAV=humble` (default) la mappa è quella fissata nel launch del container:
-`~/nobody/src/nobody_bringup/maps/map_1779889723.yaml`. La variabile `MAP` vale solo con `NAV=foxy`.
+`~/nobody/src/nobody_bringup/maps/institute_stiima_cnr.yaml`. La variabile `MAP` vale solo con `NAV=foxy`.
 
 ---
 
@@ -108,7 +108,8 @@ Tutti i comandi tmux si danno in due tempi: premi **`Ctrl+b`**, lascia, poi prem
 3. Controlla che **lo scan (rosso) si sovrapponga ai muri (neri)**. Se non coincide, rifai la
    2D Pose Estimate. Quasi tutti i casi di "robot che si perde" nascono da una posa iniziale sbagliata.
 
-All'avvio AMCL si mette in (0, 0): la 2D Pose Estimate va data **ogni volta**.
+All'avvio AMCL si mette in (0.377, 0.001, yaw -0.065): se il robot parte da quel punto e con quell'orientamento
+la 2D Pose Estimate non serve; se parte da un altro punto va data.
 
 ---
 

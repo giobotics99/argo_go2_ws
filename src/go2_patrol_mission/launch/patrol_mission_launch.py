@@ -58,6 +58,16 @@ def generate_launch_description():
         output='screen'
     )
 
+    waypoint_markers_cmd = Node(
+        package='go2_patrol_mission',
+        executable='waypoint_markers.py',
+        name='waypoint_markers',
+        namespace=namespace,
+        output='screen',
+        parameters=[{
+            'waypoints_file': waypoints_file
+        }])
+
     ld = LaunchDescription()
 
     ld.add_action(declare_namespace_cmd)
@@ -66,5 +76,6 @@ def generate_launch_description():
     ld.add_action(navigate_cmd)
     ld.add_action(inspect_cmd)
     ld.add_action(gemma_bridge_cmd)
+    ld.add_action(waypoint_markers_cmd)
 
     return ld
