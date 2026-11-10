@@ -1,3 +1,4 @@
+#include <atomic>
 #include <memory>
 #include <string>
 #include <map>
@@ -8,7 +9,10 @@
 #include "rclcpp_action/rclcpp_action.hpp"
 #include "nav2_msgs/action/navigate_to_pose.hpp"
 #include "geometry_msgs/msg/pose_stamped.hpp"
+#include "std_msgs/msg/bool.hpp"
 #include "std_msgs/msg/string.hpp"
+#include "go2_interfaces/srv/mode.hpp"
+#include "unitree_go/msg/sport_mode_state.hpp"
 #include "yaml-cpp/yaml.h"
 
 using namespace std::chrono_literals;
@@ -20,6 +24,27 @@ public:
   : plansys2::ActionExecutorClient("navigate", 500ms)
   {
     this->declare_parameter<std::string>("waypoints_file", "");
+    // Il cane parla da fermo: prima di partire aspetto che argo_voice abbia finito.
+    // voice_wait_min lascia arrivare le frasi di partenza; voice_wait_max evita di restare
+    // bloccati se la voce non risponde.
+    this->declare_parameter<double>("voice_wait_min", 1.5);
+    this->declare_parameter<double>("voice_wait_max", 45.0);
+    voice_busy_sub_ = this->create_subscription<std_msgs::msg::Bool>(
+      "/argo/voice_busy", rclcpp::QoS(1).transient_local().reliable(),
+      [this](std_msgs::msg::Bool::SharedPtr msg) {voice_busy_ = msg->data;});
+
+    // Dopo un'ispezione (o un uso del telecomando) il Go2 resta fermo in mode 0 e ignora i
+    // comandi Move finché non lo si rimette in BalanceStand (come il tasto Start del telecomando).
+    // Lo faccio solo se il robot è in piedi: un robot messo a cuccia di proposito non si rialza.
+    this->declare_parameter<bool>("unlock_before_move", true);
+    this->declare_parameter<double>("min_standing_height", 0.2);
+    mode_client_ = this->create_client<go2_interfaces::srv::Mode>("/mode");
+    sport_state_sub_ = this->create_subscription<unitree_go::msg::SportModeState>(
+      "/sportmodestate", rclcpp::SensorDataQoS(),
+      [this](unitree_go::msg::SportModeState::SharedPtr msg) {
+        body_height_ = msg->body_height;
+        last_state_ns_ = std::chrono::steady_clock::now().time_since_epoch().count();
+      });
   }
 
   rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn
@@ -56,6 +81,9 @@ public:
 
     progress_ = 0.0;
     goal_sent_ = false;
+    wait_start_ = this->now();
+    voice_wait_logged_ = false;
+    unlock_state_ = UNLOCK_TODO;
 
     return ActionExecutorClient::on_activate(previous_state);
   }
@@ -71,6 +99,26 @@ private:
   void do_work() override
   {
     if (!goal_sent_) {
+      // Prima parlo, poi parto (sintesi vocale + movimento insieme saturano la CPU)
+      const double waited = (this->now() - wait_start_).seconds();
+      if (waited < this->get_parameter("voice_wait_min").as_double()) {
+        return;
+      }
+      if (voice_busy_) {
+        if (waited < this->get_parameter("voice_wait_max").as_double()) {
+          if (!voice_wait_logged_) {
+            RCLCPP_INFO(this->get_logger(), "Aspetto che il cane finisca di parlare prima di partire");
+            voice_wait_logged_ = true;
+          }
+          return;
+        }
+        RCLCPP_WARN(this->get_logger(), "La voce non ha finito dopo %.0f s: parto comunque", waited);
+      }
+
+      if (!unlock_robot()) {
+        return;  // sblocco in corso: riprovo al prossimo do_work
+      }
+
       // Get arguments from PlanSys2
       // e.g. navigate robot from to
       auto args = get_arguments();
@@ -131,6 +179,45 @@ private:
     }
   }
 
+  // true = si può mandare il goal; false = aspetto che BalanceStand abbia effetto
+  bool unlock_robot()
+  {
+    if (unlock_state_ == UNLOCK_DONE || !this->get_parameter("unlock_before_move").as_bool()) {
+      return true;
+    }
+    if (unlock_state_ == UNLOCK_SENT) {
+      if ((this->now() - unlock_time_).seconds() < 1.0) {
+        return false;
+      }
+      unlock_state_ = UNLOCK_DONE;
+      return true;
+    }
+
+    unlock_state_ = UNLOCK_DONE;  // qualsiasi esito sotto: un solo tentativo per navigazione
+    const auto age = std::chrono::steady_clock::now().time_since_epoch().count() - last_state_ns_;
+    const double min_height = this->get_parameter("min_standing_height").as_double();
+    if (last_state_ns_ == 0 || age > std::chrono::nanoseconds(2s).count()) {
+      RCLCPP_WARN(this->get_logger(), "Nessuno stato recente da /sportmodestate: non sblocco il robot");
+      return true;
+    }
+    if (body_height_ < min_height) {
+      RCLCPP_WARN(
+        this->get_logger(), "Il robot è a terra (altezza %.2f m): non lo sblocco", body_height_.load());
+      return true;
+    }
+    if (!mode_client_->service_is_ready()) {
+      RCLCPP_WARN(this->get_logger(), "Servizio /mode non disponibile: non sblocco il robot");
+      return true;
+    }
+    auto req = std::make_shared<go2_interfaces::srv::Mode::Request>();
+    req->mode = "balance_stand";
+    mode_client_->async_send_request(req);
+    RCLCPP_INFO(this->get_logger(), "Sblocco il robot (balance_stand) prima di partire");
+    unlock_time_ = this->now();
+    unlock_state_ = UNLOCK_SENT;
+    return false;
+  }
+
   void goal_response_callback(
       std::shared_future<rclcpp_action::ClientGoalHandle<nav2_msgs::action::NavigateToPose>::SharedPtr> future)
     {
@@ -189,6 +276,18 @@ private:
   rclcpp_lifecycle::LifecyclePublisher<std_msgs::msg::String>::SharedPtr events_pub_;
   float progress_;
   bool goal_sent_;
+  rclcpp::Subscription<std_msgs::msg::Bool>::SharedPtr voice_busy_sub_;
+  std::atomic<bool> voice_busy_{false};
+  rclcpp::Time wait_start_;
+  bool voice_wait_logged_{false};
+
+  enum UnlockState {UNLOCK_TODO, UNLOCK_SENT, UNLOCK_DONE};
+  UnlockState unlock_state_{UNLOCK_TODO};
+  rclcpp::Time unlock_time_;
+  rclcpp::Client<go2_interfaces::srv::Mode>::SharedPtr mode_client_;
+  rclcpp::Subscription<unitree_go::msg::SportModeState>::SharedPtr sport_state_sub_;
+  std::atomic<float> body_height_{0.0f};
+  std::atomic<int64_t> last_state_ns_{0};
 };
 
 int main(int argc, char ** argv)

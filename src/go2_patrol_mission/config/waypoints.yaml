@@ -45,3 +45,7 @@ waypoints:
     x: 16.6
     y: 6.52
     theta: 0.0
+  vito_room:
+    x: 7.8
+    y: 0.29
+    theta: 0.0

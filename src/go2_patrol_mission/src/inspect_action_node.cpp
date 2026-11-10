@@ -4,6 +4,10 @@
 #include "plansys2_executor/ActionExecutorClient.hpp"
 #include "rclcpp/rclcpp.hpp"
 #include "go2_interfaces/srv/euler.hpp"
+#include "go2_interfaces/srv/mode.hpp"
+#include "unitree_go/msg/sport_mode_state.hpp"
+
+#include <atomic>
 
 using namespace std::chrono_literals;
 
@@ -13,6 +17,14 @@ public:
   InspectAction()
   : plansys2::ActionExecutorClient("inspect", 500ms)
   {
+    // Dopo un comando Euler il Go2 resta fermo "in postura" e ignora i comandi di camminata
+    // finché non riceve BalanceStand (o Start dal telecomando): lo mando a fine ispezione,
+    // così il robot è pronto per qualsiasi goal successivo (missione, RViz, terminale).
+    this->declare_parameter<double>("min_standing_height", 0.2);
+    mode_client_ = this->create_client<go2_interfaces::srv::Mode>("/mode");
+    sport_state_sub_ = this->create_subscription<unitree_go::msg::SportModeState>(
+      "/sportmodestate", rclcpp::SensorDataQoS(),
+      [this](unitree_go::msg::SportModeState::SharedPtr msg) {body_height_ = msg->body_height;});
   }
 
   rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn
@@ -77,6 +89,23 @@ private:
       send_feedback(0.9, "Restoring position");
     } else if (inspect_state_ == 4) {
       if ((this->now() - start_time_).seconds() > 1.0) {
+        // Sblocco il robot dalla postura (solo se è in piedi: a cuccia non lo rialzo)
+        const double min_height = this->get_parameter("min_standing_height").as_double();
+        if (body_height_ >= min_height && mode_client_->service_is_ready()) {
+          auto req = std::make_shared<go2_interfaces::srv::Mode::Request>();
+          req->mode = "balance_stand";
+          mode_client_->async_send_request(req);
+          RCLCPP_INFO(this->get_logger(), "Sblocco il robot dalla postura (balance_stand)");
+        } else {
+          RCLCPP_WARN(
+            this->get_logger(), "Non sblocco il robot (altezza %.2f m, servizio /mode %s)",
+            body_height_.load(), mode_client_->service_is_ready() ? "ok" : "assente");
+        }
+        start_time_ = this->now();
+        inspect_state_ = 5;
+      }
+    } else if (inspect_state_ == 5) {
+      if ((this->now() - start_time_).seconds() > 1.0) {
         RCLCPP_INFO(this->get_logger(), "Inspection completed successfully");
         finish(true, 1.0, "Inspection completed");
         inspect_state_ = 0; // Reset for next time
@@ -85,6 +114,9 @@ private:
   }
 
   rclcpp::Client<go2_interfaces::srv::Euler>::SharedPtr euler_client_;
+  rclcpp::Client<go2_interfaces::srv::Mode>::SharedPtr mode_client_;
+  rclcpp::Subscription<unitree_go::msg::SportModeState>::SharedPtr sport_state_sub_;
+  std::atomic<float> body_height_{0.0f};
   int inspect_state_;
   rclcpp::Time start_time_;
 };

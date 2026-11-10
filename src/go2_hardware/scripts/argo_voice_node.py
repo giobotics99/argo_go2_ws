@@ -35,7 +35,8 @@ import time
 
 import rclpy
 from rclpy.node import Node
-from std_msgs.msg import String
+from rclpy.qos import QoSProfile, DurabilityPolicy, ReliabilityPolicy
+from std_msgs.msg import Bool, String
 
 def _die_with_parent():
     """Nel processo figlio: se il nodo muore (anche con Ctrl+C o kill), il kernel termina il worker.
@@ -78,9 +79,25 @@ class ArgoVoice(Node):
         self.declare_parameter('enabled', True)
         self.declare_parameter('batch_window', 1.5)   # s: frasi arrivate in questo intervallo -> una sola frase
         self.declare_parameter('max_batch', 4)        # massimo di frasi unite (le più vecchie oltre si scartano)
+        # Parla solo da fermo: sintetizzare la voce mentre il robot cammina satura la CPU
+        self.declare_parameter('hold_while_moving', True)
+        self.declare_parameter('max_moving_hold', 600.0)  # s: sicurezza se l'evento di arrivo non arriva mai
 
         self.batch_window = float(self.get_parameter('batch_window').value)
         self.max_batch = int(self.get_parameter('max_batch').value)
+        self.hold_while_moving = bool(self.get_parameter('hold_while_moving').value)
+        self.max_moving_hold = float(self.get_parameter('max_moving_hold').value)
+        self.moving = False
+        self.moving_since = 0.0
+
+        # /argo/voice_busy = True finché ci sono frasi da dire: navigate_action_node aspetta
+        # che torni False prima di mandare il goal a Nav2 (il cane parla e poi parte)
+        latched = QoSProfile(depth=1, durability=DurabilityPolicy.TRANSIENT_LOCAL,
+                             reliability=ReliabilityPolicy.RELIABLE)
+        self.busy_pub = self.create_publisher(Bool, '/argo/voice_busy', latched)
+        self.busy_lock = threading.Lock()
+        self.busy = None
+        self.set_busy(False)
         self.venv = os.environ.get('ARGO_VOICE_VENV', os.path.expanduser('~/argo_go2_ws/venv-voice'))
         self.worker_script = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'go2_speaker_worker.py')
 
@@ -98,6 +115,7 @@ class ArgoVoice(Node):
 
         self.create_subscription(String, '/supervisor/explanation', self.on_text, 10)
         self.create_subscription(String, '/argo/say', self.on_text, 10)
+        self.create_subscription(String, '/patrol/action_events', self.on_action_event, 10)
         threading.Thread(target=self.dispatcher, daemon=True).start()
         self.get_logger().info("Argo voice pronto: ascolto /supervisor/explanation e /argo/say")
 
@@ -164,7 +182,41 @@ class ArgoVoice(Node):
         if not text or text == self.last_text:
             return
         self.last_text = text
-        self.q.put(text)
+        with self.busy_lock:
+            self.q.put(text)
+            self.set_busy(True)
+
+    def set_busy(self, busy):
+        if busy != self.busy:
+            self.busy = busy
+            self.busy_pub.publish(Bool(data=busy))
+
+    def finish_if_idle(self):
+        with self.busy_lock:
+            if self.q.empty():
+                self.set_busy(False)
+
+    def on_action_event(self, msg):
+        """start:navigate:... -> il robot cammina; success/failure:navigate:... -> è fermo."""
+        parts = msg.data.strip().split(':')
+        if len(parts) < 2 or parts[1] != 'navigate':
+            return
+        if parts[0] == 'start':
+            self.moving, self.moving_since = True, time.time()
+        elif parts[0] in ('success', 'failure'):
+            self.moving = False
+
+    def wait_until_still(self):
+        """Aspetta che il robot sia fermo prima di sintetizzare e riprodurre la frase."""
+        if not self.hold_while_moving or not self.moving:
+            return
+        self.get_logger().info("Il robot si sta muovendo: tengo le frasi per quando si ferma")
+        while rclpy.ok() and self.moving:
+            if time.time() - self.moving_since > self.max_moving_hold:
+                self.get_logger().warn("Nessun evento di arrivo da troppo tempo: parlo comunque")
+                self.moving = False
+                break
+            time.sleep(0.2)
 
     def dispatcher(self):
         while rclpy.ok():
@@ -179,6 +231,7 @@ class ArgoVoice(Node):
                     texts.append(self.q.get(timeout=remaining))
                 except queue.Empty:
                     break
+            self.wait_until_still()
             while not self.q.empty():               # se siamo rimasti indietro prendiamo anche il resto
                 texts.append(self.q.get_nowait())
             if len(texts) > self.max_batch:
@@ -186,6 +239,7 @@ class ArgoVoice(Node):
                 texts = texts[-self.max_batch:]
             sentence = ' '.join(t if t.endswith(('.', '!', '?')) else t + '.' for t in texts)
             self.speak(sentence)
+            self.finish_if_idle()
 
 
 def main():

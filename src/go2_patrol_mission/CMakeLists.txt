@@ -17,6 +17,7 @@ find_package(nav2_msgs REQUIRED)
 find_package(geometry_msgs REQUIRED)
 find_package(go2_interfaces REQUIRED)
 find_package(yaml-cpp REQUIRED)
+find_package(unitree_go REQUIRED)
 
 set(dependencies
   rclcpp
@@ -26,6 +27,7 @@ set(dependencies
   nav2_msgs
   geometry_msgs
   go2_interfaces
+  unitree_go
   yaml-cpp
 )
 
