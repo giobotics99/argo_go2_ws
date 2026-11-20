@@ -1,0 +1,12 @@
+# AssessFailure.srv   (G3): pick a recovery strategy from a closed set after a failed action
+string failed_action
+string[] action_args
+string detections_json
+float32 battery
+string[] reachable_targets
+string[] unreachable_targets
+int32 attempts
+---
+string strategy              # WAIT_RETRY | ASK_CLEAR | DROP_UNREACHABLE | RETURN_HOME | ABORT
+string sentence
+bool used_fallback

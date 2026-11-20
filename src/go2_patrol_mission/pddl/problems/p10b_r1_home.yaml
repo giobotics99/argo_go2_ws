@@ -1,0 +1,5 @@
+id: p10b
+mission: home
+start: hub_north3
+battery: 3
+reserve: 0                       # R1 trip home

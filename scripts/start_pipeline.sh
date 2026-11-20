@@ -6,6 +6,7 @@
 #   MAP=/percorso/mappa.yaml ~/argo_go2_ws/scripts/start_pipeline.sh
 #   YOLO=0 RVIZ=1 ~/argo_go2_ws/scripts/start_pipeline.sh   # senza YOLO, con RViz
 #   NAV=foxy ~/argo_go2_ws/scripts/start_pipeline.sh        # Nav2 Foxy locale invece del container Humble
+#   ARGO_VERSION=v2 ~/argo_go2_ws/scripts/start_pipeline.sh # Argo v2: Gemma + mission BT + PlanSys2 v2
 #   REALSENSE=True ~/argo_go2_ws/scripts/start_pipeline.sh  # camera accesa anche senza YOLO
 #   VOICE=0 ~/argo_go2_ws/scripts/start_pipeline.sh         # senza voce (per usare l'app Unitree)
 #
@@ -27,6 +28,7 @@ RVIZ="${RVIZ:-0}"
 NAV="${NAV:-humble}"
 REALSENSE="${REALSENSE:-$([ "$YOLO" = "1" ] && echo True || echo False)}"   # la camera serve solo a YOLO (~80% di CPU)
 VOICE="${VOICE:-1}"   # 1 = il cane legge ad alta voce /supervisor/explanation (WebRTC: l'app Unitree deve essere chiusa)
+ARGO_VERSION="${ARGO_VERSION:-v1}"   # v1 = gemma_bridge + PlanSys2 (patrol); v2 = argo_mission_launch (Gemma + BT + PlanSys2 v2)
 NAV_CONTAINER=nobody-unitree_ros-1
 GEMMA_MODEL="${GEMMA_MODEL:-$HOME/models/gemma-4-E2B-it-Q8_0.gguf}"
 
@@ -112,16 +114,28 @@ if [ "$YOLO" = "1" ]; then
   new_win yolo "wait_topic /camera/color/image_raw sensor_msgs/msg/Image && ros2 run go2_nav yolo_detector.py"
 fi
 
-# 4 — PlanSys2 + action executors + Gemma bridge: aspetta Nav2 attivo e Gemma pronto
-new_win patrol "wait_nav2 && wait_gemma && ros2 launch go2_patrol_mission patrol_mission_launch.py"
+# 4 — Missioni: aspetta Nav2 attivo e Gemma pronto
+if [ "$ARGO_VERSION" = "v2" ]; then
+  # v2: PlanSys2 (dominio v2) + executor + gemma_server + mission BT (comandi su /argo/command)
+  new_win patrol "wait_nav2 && wait_gemma && ros2 launch go2_patrol_mission argo_mission_launch.py"
+  READY_CMD="wait_argo"
+else
+  # v1: PlanSys2 + action executors + Gemma bridge
+  new_win patrol "wait_nav2 && wait_gemma && ros2 launch go2_patrol_mission patrol_mission_launch.py"
+  READY_CMD="wait_plansys2"
+fi
 
-# 5 — Spiegazioni di Gemma
-new_win explain "wait_plansys2 && argo_explain"
+# 5 — Spiegazioni di Gemma (v1: diario /supervisor/explanation; v2: tutto quello che Argo dice)
+if [ "$ARGO_VERSION" = "v2" ]; then
+  new_win explain "$READY_CMD && ros2 topic echo /argo/say std_msgs/msg/String"
+else
+  new_win explain "$READY_CMD && argo_explain"
+fi
 
-# 5b — Voce: il Go2 legge /supervisor/explanation dal suo speaker (Piper + WebRTC)
+# 5b — Voce: il Go2 legge /supervisor/explanation e /argo/say dal suo speaker (Piper + WebRTC)
 if [ "$VOICE" = "1" ]; then
   if [ -d "$WS/venv-voice" ]; then
-    new_win voice "wait_plansys2 && ros2 run go2_hardware argo_voice_node.py"
+    new_win voice "$READY_CMD && ros2 run go2_hardware argo_voice_node.py"
   else
     echo "VOICE=1 ma manca venv-voice: crealo con scripts/setup_voice_venv.sh (avvio senza voce)"
   fi

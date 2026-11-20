@@ -1,0 +1,5 @@
+0.000: (navigate go2 lab_robotics hub_west)  [13.600]
+13.601: (navigate go2 hub_west vito_door)  [4.600]
+18.202: (deliver_message go2 vito_door)  [12.000]
+30.202: (navigate go2 vito_door hub_west)  [4.600]
+34.803: (navigate go2 hub_west lab_robotics)  [13.600]

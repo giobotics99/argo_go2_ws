@@ -18,8 +18,10 @@ find_package(geometry_msgs REQUIRED)
 find_package(go2_interfaces REQUIRED)
 find_package(yaml-cpp REQUIRED)
 find_package(unitree_go REQUIRED)
+find_package(ament_index_cpp REQUIRED)
 
 set(dependencies
+  ament_index_cpp
   rclcpp
   rclcpp_action
   plansys2_msgs
@@ -42,11 +44,34 @@ add_executable(inspect_action_node src/inspect_action_node.cpp)
 ament_target_dependencies(inspect_action_node ${dependencies})
 target_link_libraries(inspect_action_node yaml-cpp)
 
-install(DIRECTORY launch pddl config DESTINATION share/${PROJECT_NAME})
+# --- FAKE EXECUTORS (tutorial step 5: run domain v2 plans without the robot) ---
+add_executable(fake_action_executors src/fake_action_executors.cpp)
+ament_target_dependencies(fake_action_executors ${dependencies})
+
+# --- Argo v2 executors (README Phase 3) ---
+add_executable(advance_action_node src/advance_action_node.cpp)
+ament_target_dependencies(advance_action_node ${dependencies})
+include_directories(include)
+add_executable(announce_action_node src/announce_action_node.cpp)
+ament_target_dependencies(announce_action_node ${dependencies})
+target_link_libraries(announce_action_node yaml-cpp)
+add_executable(chat_action_node src/chat_action_node.cpp)
+ament_target_dependencies(chat_action_node ${dependencies})
+target_link_libraries(chat_action_node yaml-cpp)
+add_executable(deliver_message_action_node src/deliver_message_action_node.cpp)
+ament_target_dependencies(deliver_message_action_node ${dependencies})
+target_link_libraries(deliver_message_action_node yaml-cpp)
+
+install(DIRECTORY launch pddl config test DESTINATION share/${PROJECT_NAME})
 
 install(TARGETS
   navigate_action_node
   inspect_action_node
+  fake_action_executors
+  advance_action_node
+  deliver_message_action_node
+  announce_action_node
+  chat_action_node
   ARCHIVE DESTINATION lib
   LIBRARY DESTINATION lib
   RUNTIME DESTINATION lib/${PROJECT_NAME}
@@ -54,6 +79,7 @@ install(TARGETS
 
 install(PROGRAMS
   scripts/gemma_bridge.py
+  scripts/gemma_server.py
   scripts/waypoint_markers.py
   DESTINATION lib/${PROJECT_NAME}
 )

@@ -1,0 +1,37 @@
+# Pose sul frame map della mappa institute_stiima_cnr (theta in radianti).
+# Fonti:
+#   [rilevata]  x, y rilevati in RViz (gia' in config/waypoints.yaml); theta dal design (README_instruction.md)
+#   [mappa]     ricavata dalla mappa: hub = centro del corridoio davanti alle porte servite,
+#               punto di vista = cella libera piu' vicina alla stima del README con margine >= 0.5 m
+# Aggiungere o correggere le pose sul posto con tools/record_pose.py (stesso formato).
+
+# Stanze
+lab_robotics: {x: 1.94, y: -1.0, theta: 0.0}               # [rilevata]
+vito_room: {x: 7.8, y: 0.29, theta: -1.57}                 # [rilevata] ufficio: deve essere sulla porta (privacy)
+openspace: {x: 12.5, y: -1.13, theta: -1.57}               # [rilevata]
+coffee_break_area: {x: 13.1, y: 3.5, theta: 0.0}           # [rilevata]
+administrative_room: {x: 22.2, y: -1.97, theta: 0.0}       # [rilevata]
+vision_lab: {x: 23.7, y: 2.75, theta: 0.0}                 # [rilevata]
+angelo_room: {x: 16.6, y: 6.52, theta: 3.14}               # [rilevata]
+max_room: {x: 23.4, y: 8.31, theta: 0.0}                   # [rilevata]
+gianni_room: {x: 20.2, y: 16.5, theta: 0.0}                # [rilevata]
+beppe_room: {x: 26.5, y: 12.8, theta: 0.0}                 # [rilevata]
+research_director_room: {x: 22.8, y: 22.2, theta: 0.0}     # [rilevata]
+
+# Hub del corridoio
+hub_west: {x: 6.01, y: 2.58, theta: 0.0}                   # [mappa] margine 0.65 m
+hub_center: {x: 11.6, y: 2.85, theta: 0.0}                 # [rilevata] ex waypoint "corridor"
+hub_junction: {x: 16.62, y: 1.38, theta: 1.57}             # [mappa] margine 0.86 m (incrocio dei corridoi)
+hub_north1: {x: 18.62, y: 7.43, theta: 1.57}               # [mappa] margine 0.70 m (porte di Angelo e Max)
+hub_north2: {x: 19.32, y: 15.43, theta: 1.57}              # [mappa] margine 0.36 m (porte di Gianni e Beppe)
+hub_north3: {x: 20.21, y: 19.53, theta: 1.57}              # [mappa] margine 0.74 m (ufficio del direttore)
+
+# Punti di vista per l'ispezione
+lab_robotics_vp1: {x: 1.97, y: -1.02, theta: 0.0}          # [mappa] margine 1.62 m
+lab_robotics_vp2: {x: 3.12, y: -2.02, theta: 0.0}          # [mappa] margine 0.51 m (stima README 3.5, -2.0)
+openspace_vp1: {x: 12.52, y: -1.12, theta: 0.0}            # [mappa] margine 0.75 m
+openspace_vp2: {x: 10.82, y: -2.52, theta: 0.0}            # [mappa] margine 0.50 m (stima README 11.5, -3.0)
+openspace_vp3: {x: 12.82, y: -1.72, theta: 0.0}            # [mappa] margine 0.50 m (stima README 13.5, -3.0)
+administrative_room_vp1: {x: 22.21, y: -1.97, theta: 0.0}  # [mappa] margine 0.50 m
+vision_lab_vp1: {x: 23.71, y: 2.73, theta: 0.0}            # [mappa] margine 0.89 m
+vision_lab_vp2: {x: 25.32, y: 3.18, theta: 0.0}            # [mappa] margine 0.51 m (stima README 25.5, 3.5)

@@ -21,6 +21,7 @@ public:
     // finché non riceve BalanceStand (o Start dal telecomando): lo mando a fine ispezione,
     // così il robot è pronto per qualsiasi goal successivo (missione, RViz, terminale).
     this->declare_parameter<double>("min_standing_height", 0.2);
+    this->declare_parameter<bool>("check_standing", false);
     mode_client_ = this->create_client<go2_interfaces::srv::Mode>("/mode");
     sport_state_sub_ = this->create_subscription<unitree_go::msg::SportModeState>(
       "/sportmodestate", rclcpp::SensorDataQoS(),
@@ -90,8 +91,10 @@ private:
     } else if (inspect_state_ == 4) {
       if ((this->now() - start_time_).seconds() > 1.0) {
         // Sblocco il robot dalla postura (solo se è in piedi: a cuccia non lo rialzo)
+        // check_standing off by default: body_height is wrong in the stall state (see navigate)
         const double min_height = this->get_parameter("min_standing_height").as_double();
-        if (body_height_ >= min_height && mode_client_->service_is_ready()) {
+        const bool standing = !this->get_parameter("check_standing").as_bool() || body_height_ >= min_height;
+        if (standing && mode_client_->service_is_ready()) {
           auto req = std::make_shared<go2_interfaces::srv::Mode::Request>();
           req->mode = "balance_stand";
           mode_client_->async_send_request(req);

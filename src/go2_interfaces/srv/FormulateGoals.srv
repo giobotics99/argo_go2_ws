@@ -1,0 +1,12 @@
+# FormulateGoals.srv   (G1 + G2): understand the operator's request and turn it into mission goals
+string command
+string context_json          # robot room, battery, mission running
+---
+bool accepted
+string mission               # coffee_call | message | inspect | none
+string[] targets             # place IDs only
+bool ordered
+string message_text          # M2 only
+string clarify_question      # non-empty -> ask, then call again
+string reply                 # sentence to say now
+bool used_fallback

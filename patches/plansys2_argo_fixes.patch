@@ -1,0 +1,216 @@
+diff --git a/plansys2_executor/include/plansys2_executor/ActionExecutor.hpp b/plansys2_executor/include/plansys2_executor/ActionExecutor.hpp
+index bca2a8de..8eb4f6a3 100644
+--- a/plansys2_executor/include/plansys2_executor/ActionExecutor.hpp
++++ b/plansys2_executor/include/plansys2_executor/ActionExecutor.hpp
+@@ -30,7 +30,7 @@
+ namespace plansys2
+ {
+ 
+-class ActionExecutor
++class ActionExecutor : public std::enable_shared_from_this<ActionExecutor>
+ {
+ public:
+   enum Status
+@@ -53,6 +53,7 @@ public:
+ 
+   explicit ActionExecutor(
+     const std::string & action, rclcpp_lifecycle::LifecycleNode::SharedPtr node);
++  ~ActionExecutor();
+ 
+   BT::NodeStatus tick(const rclcpp::Time & now);
+   void cancel();
+diff --git a/plansys2_executor/src/plansys2_executor/ActionExecutor.cpp b/plansys2_executor/src/plansys2_executor/ActionExecutor.cpp
+index fbc0424d..e9ffac49 100644
+--- a/plansys2_executor/src/plansys2_executor/ActionExecutor.cpp
++++ b/plansys2_executor/src/plansys2_executor/ActionExecutor.cpp
+@@ -46,6 +46,15 @@ ActionExecutor::ActionExecutor(
+   state_time_ = start_execution_;
+ }
+ 
++ActionExecutor::~ActionExecutor()
++{
++  // Argo fix: a retry timer left armed after the plan ended fired on a destroyed
++  // ActionExecutor and crashed plansys2_node (SIGSEGV).
++  if (waiting_timer_) {
++    waiting_timer_->cancel();
++  }
++}
++
+ void
+ ActionExecutor::action_hub_callback(const plansys2_msgs::msg::ActionExecution::SharedPtr msg)
+ {
+@@ -190,8 +199,16 @@ ActionExecutor::tick(const rclcpp::Time & now)
+       feedback_ = "";
+ 
+       request_for_performers();
+-      waiting_timer_ = node_->create_wall_timer(
+-        1s, std::bind(&ActionExecutor::wait_timeout, this));
++      {
++        // Argo fix: weak reference, so the timer never calls into a destroyed object
++        std::weak_ptr<ActionExecutor> weak_self = weak_from_this();
++        waiting_timer_ = node_->create_wall_timer(
++          1s, [weak_self]() {
++            if (auto self = weak_self.lock()) {
++              self->wait_timeout();
++            }
++          });
++      }
+       break;
+     case DEALING:
+       {
+@@ -271,6 +288,13 @@ ActionExecutor::get_params(const std::string & action_expr)
+ void
+ ActionExecutor::wait_timeout()
+ {
++  // Argo fix: retry only while still looking for a performer
++  if (state_ != DEALING || !action_hub_pub_) {
++    if (waiting_timer_) {
++      waiting_timer_->cancel();
++    }
++    return;
++  }
+   RCLCPP_WARN(node_->get_logger(), "No action performer for %s. retrying", action_.c_str());
+   request_for_performers();
+ }
+diff --git a/plansys2_executor/src/plansys2_executor/BTBuilder.cpp b/plansys2_executor/src/plansys2_executor/BTBuilder.cpp
+index 54358a0e..ef8c640d 100644
+--- a/plansys2_executor/src/plansys2_executor/BTBuilder.cpp
++++ b/plansys2_executor/src/plansys2_executor/BTBuilder.cpp
+@@ -355,6 +355,9 @@ BTBuilder::get_graph(const plansys2_msgs::msg::Plan & current_plan)
+ 
+   graph->roots = get_roots(action_sequence, predicates, functions, node_counter);
+ 
++  // Argo fix: every node added so far, in plan order (used for cumulative numeric requirements)
++  std::vector<GraphNode::Ptr> added_nodes(graph->roots.begin(), graph->roots.end());
++
+   // Apply root actions
+   for (auto & action_node : graph->roots) {
+     // Create a local copy of the state
+@@ -513,6 +516,57 @@ BTBuilder::get_graph(const plansys2_msgs::msg::Plan & current_plan)
+       action_sequence.begin()->action->at_end_requirements, at_end_requirements, predicates,
+       functions);
+ 
++    // Argo fix: a numeric requirement that no single earlier action satisfies (e.g. chat's
++    // (<= (to_call go2) 0), true only after ALL the announce actions) made the asserts below
++    // abort the process. Such an action is placed after every earlier action of the plan
++    // (the plan of a single robot is sequential anyway); at run time the BT still checks the
++    // requirement against the real knowledge base before starting the action.
++    {
++      const auto & action = action_sequence.begin()->action;
++      bool numeric_left = false;
++      auto drop_numeric = [&numeric_left](
++        std::vector<uint32_t> & reqs, const plansys2_msgs::msg::Tree & tree) {
++          auto it = reqs.begin();
++          while (it != reqs.end()) {
++            const auto type = tree.nodes[*it].node_type;
++            if (type == plansys2_msgs::msg::Node::EXPRESSION ||
++              type == plansys2_msgs::msg::Node::FUNCTION)
++            {
++              numeric_left = true;
++              it = reqs.erase(it);
++            } else {
++              ++it;
++            }
++          }
++        };
++      drop_numeric(at_start_requirements, action->at_start_requirements);
++      drop_numeric(over_all_requirements, action->over_all_requirements);
++      drop_numeric(at_end_requirements, action->at_end_requirements);
++
++      if (numeric_left) {
++        const bool had_parent = !new_node->in_arcs.empty();
++        GraphNode::Ptr latest;
++        for (auto & node : added_nodes) {
++          if (node->out_arcs.empty()) {  // leaf: an earlier action nothing waits for yet
++            node->out_arcs.insert(new_node);
++            new_node->in_arcs.insert(node);
++          }
++          if (!latest || node->action.time > latest->action.time) {
++            latest = node;
++          }
++        }
++        if (!had_parent && latest) {
++          new_node->predicates = latest->predicates;
++          new_node->functions = latest->functions;
++          apply(new_node->action.action->at_start_effects, new_node->predicates, new_node->functions);
++          apply(new_node->action.action->at_end_effects, new_node->predicates, new_node->functions);
++        }
++        std::cerr << "[BTBuilder] requisito numerico cumulativo: " <<
++          parser::pddl::nameActionsToString(action) << " messa dopo le azioni precedenti" <<
++          std::endl;
++      }
++    }
++
+     for (const auto & req : at_start_requirements) {
+       std::cerr << "===> [" << parser::pddl::toString(
+         action_sequence.begin()->action->at_start_requirements, req) << "]" << std::endl;
+@@ -522,12 +576,47 @@ BTBuilder::get_graph(const plansys2_msgs::msg::Plan & current_plan)
+     assert(over_all_requirements.empty());
+     assert(at_end_requirements.empty());
+ 
++    added_nodes.push_back(new_node);
+     action_sequence.erase(action_sequence.begin());
+   }
+ 
+-  std::list<GraphNode::Ptr> used_nodes;
+-  for (auto & root : graph->roots) {
+-    prune_forward(root, used_nodes);
++  // Argo fix: the original prune_forward() removed "already visited" arcs in an order that depends
++  // on pointer values (std::set of shared_ptr), so it could drop a needed ordering arc (e.g.
++  // deliver_message -> navigate back) and run two actions in parallel. Proper transitive reduction:
++  // remove n->m only if m is still reachable from n through another successor.
++  std::set<GraphNode::Ptr> all_nodes;
++  std::vector<GraphNode::Ptr> stack(graph->roots.begin(), graph->roots.end());
++  while (!stack.empty()) {
++    auto n = stack.back();
++    stack.pop_back();
++    if (all_nodes.insert(n).second) {
++      for (const auto & m : n->out_arcs) {stack.push_back(m);}
++    }
++  }
++  auto reachable = [](const GraphNode::Ptr & from, const GraphNode::Ptr & to) {
++      std::set<GraphNode::Ptr> seen;
++      std::vector<GraphNode::Ptr> st{from};
++      while (!st.empty()) {
++        auto n = st.back();
++        st.pop_back();
++        if (n == to) {return true;}
++        if (seen.insert(n).second) {
++          for (const auto & m : n->out_arcs) {st.push_back(m);}
++        }
++      }
++      return false;
++    };
++  for (const auto & n : all_nodes) {
++    const auto successors = n->out_arcs;   // copy: arcs are removed while iterating
++    for (const auto & m : successors) {
++      for (const auto & k : n->out_arcs) {
++        if (k != m && reachable(k, m)) {
++          n->out_arcs.erase(m);
++          m->in_arcs.erase(n);
++          break;
++        }
++      }
++    }
+   }
+   return graph;
+ }
+diff --git a/plansys2_lifecycle_manager/include/plansys2_lifecycle_manager/lifecycle_manager.hpp b/plansys2_lifecycle_manager/include/plansys2_lifecycle_manager/lifecycle_manager.hpp
+index 06818f39..4a3a55be 100644
+--- a/plansys2_lifecycle_manager/include/plansys2_lifecycle_manager/lifecycle_manager.hpp
++++ b/plansys2_lifecycle_manager/include/plansys2_lifecycle_manager/lifecycle_manager.hpp
+@@ -57,10 +57,12 @@ public:
+   explicit LifecycleServiceClient(const std::string & node_name, const std::string & managed_node);
+ 
+   void init();
+-  unsigned int get_state(std::chrono::seconds time_out = std::chrono::seconds(3));
++  // Argo fix: 3 s was too short on the Orin: parsing patrol_domain_v2 takes ~3.4 s in configure,
++  // the manager gave up and never activated the problem expert, planner and executor.
++  unsigned int get_state(std::chrono::seconds time_out = std::chrono::seconds(15));
+   bool change_state(
+     std::uint8_t transition,
+-    std::chrono::seconds time_out = std::chrono::seconds(3));
++    std::chrono::seconds time_out = std::chrono::seconds(15));
+ 
+ private:
+   std::shared_ptr<rclcpp::Client<lifecycle_msgs::srv::GetState>> client_get_state_;

@@ -1,0 +1,3 @@
+id: p03
+mission: coffee_call
+targets: [lab_robotics, vito_room, openspace, administrative_room, vision_lab, angelo_room, max_room, gianni_room, beppe_room, research_director_room]

@@ -1,0 +1,126 @@
+# Argo v2 ontology: the single source of truth for places, hubs, poses, classes, occupants and edges.
+# Read by gemma_server (prompts), the mission BT (PlanSys2 problem), the executors (poses) and the
+# RViz markers. Structure: README_instruction.md section 1.1. Poses: tools/recorded_poses.yaml
+# (frame "map" of institute_stiima_cnr, theta in radians). config/waypoints.yaml stays for v1.
+#
+# Doors (class Door, door_of: <room>) are points ON the corridor: the corridor is a chain of hubs and
+# doors, and a room with a door is reached only through it. Offices (class Office) are served from
+# their door (privacy); the other rooms are entered through their door.
+
+home: lab_robotics
+robot: {id: go2, speed: 0.5, drain: 0.03, reserve: 15}  # m/s, % per metre (calibrate from rosbags), % never planned below
+chat_time: 180                                  # s at the coffee area
+
+hubs:                                           # corridor nodes, centred in the corridor (from the map)
+  hub_west:     {x: 6.01,  y: 2.58,  theta: 0.0}
+  hub_center:   {x: 11.6,  y: 2.85,  theta: 0.0}  # old "corridor" waypoint
+  hub_junction: {x: 16.62, y: 1.38,  theta: 1.57}
+  hub_north1:   {x: 18.62, y: 7.43,  theta: 1.57}
+  hub_north2:   {x: 19.32, y: 15.43, theta: 1.57}
+  hub_north3:   {x: 20.21, y: 19.53, theta: 1.57}
+
+places:
+  lab_robotics:
+    class: Lab
+    pose: {x: 1.94, y: -1.0, theta: 0.0}
+    occupant: ["Simone", "Arianna"]
+    entrance: hub_west
+    dock: true
+    works_here: true
+    viewpoints: [{x: 1.97, y: -1.02}, {x: 3.12, y: -2.02}]
+    synonyms: ["laboratorio di robotica", "lab di robotica", "robotics lab", "casa", "cuccia", "Simone", "Arianna"]
+  vito_room:
+    class: Office
+    occupant: ["Vito", "Nicola M"]
+    pose: {x: 7.8, y: 0.29, theta: -1.57}
+    entrance: vito_door
+    works_here: true
+    synonyms: ["stanza di Vito", "ufficio di Vito", "Vito", "Nicola M"]
+  openspace:
+    class: CommonArea
+    pose: {x: 12.5, y: -1.13, theta: -1.57}
+    entrance: openspace_door
+    works_here: true
+    viewpoints: [{x: 12.52, y: -1.12}, {x: 10.82, y: -2.52}, {x: 12.82, y: -1.72}]
+    synonyms: ["open space", "l'openspace"]
+  coffee_break_area:
+    class: CommonArea
+    social_spot: true
+    pose: {x: 13.1, y: 3.5, theta: 0.0}
+    entrance: hub_center
+    synonyms: ["macchinetta del caffè", "zona caffè", "coffee break"]
+  administrative_room:
+    class: AdminOffice
+    occupant: ["Paola", "Marco", "Rosalba", "Daniela"]
+    pose: {x: 22.2, y: -1.97, theta: 0.0}
+    entrance: administrative_door
+    works_here: true
+    viewpoints: [{x: 22.21, y: -1.97}]
+    synonyms: ["amministrazione", "ufficio amministrativo", "Paola", "Marco", "Rosalba", "Daniela"]
+  vision_lab:
+    class: Lab
+    pose: {x: 23.7, y: 2.75, theta: 0.0}
+    entrance: vision_lab_door
+    works_here: true
+    viewpoints: [{x: 23.71, y: 2.73}, {x: 25.32, y: 3.18}]
+    synonyms: ["laboratorio di visione", "lab di visione", "vision lab"]
+  angelo_room:  {class: Office, occupant: ["Angelo", "Lia"], pose: {x: 16.6, y: 6.52, theta: 3.14}, entrance: angelo_door, works_here: true, synonyms: ["stanza di Angelo", "Angelo", "Lia"]}
+  max_room:     {class: Office, occupant: ["Max", "Teresa", "Mara"], pose: {x: 23.4, y: 8.31, theta: 0.0}, entrance: max_door, works_here: true, synonyms: ["stanza di Max", "Max", "Teresa", "Mara"]}
+  gianni_room:  {class: Office, occupant: ["Gianni", "Nicola A"], pose: {x: 20.2, y: 16.5, theta: 0.0}, entrance: hub_north2, works_here: true, synonyms: ["stanza di Gianni", "Gianni", "Nicola A"]}
+  beppe_room:   {class: Office, occupant: ["Beppe", "Michele"], pose: {x: 26.5, y: 12.8, theta: 0.0}, entrance: beppe_door, works_here: true, synonyms: ["stanza di Beppe", "Beppe", "Michele"]}
+  research_director_room:
+    class: DirectorOffice
+    occupant: ["Tiziana", "Grazia", "Cosimo"]
+    needs_permission: true
+    pose: {x: 22.8, y: 22.2, theta: 0.0}        # INSIDE the room (entered after ask_permission at its door)
+    entrance: director_door
+    works_here: true
+    synonyms: ["ufficio del direttore", "direttore", "director", "Tiziana", "Grazia", "Cosimo"]
+
+  # ---- doors: corridor side, surveyed 20/11 (theta faces the room)
+  vito_door:           {class: Door, door_of: vito_room, pose: {x: 8.0, y: 1.85, theta: 0.0}, entrance: hub_west, synonyms: ["porta di Vito"]}
+  openspace_door:      {class: Door, door_of: openspace, pose: {x: 13.0, y: 0.8, theta: -1.82}, entrance: hub_center, synonyms: ["porta dell'openspace"]}
+  administrative_door: {class: Door, door_of: administrative_room, pose: {x: 19.8, y: -1.57, theta: -0.17}, entrance: hub_junction, synonyms: ["porta dell'amministrazione"]}
+  vision_lab_door:     {class: Door, door_of: vision_lab, pose: {x: 18.6, y: 5.23, theta: -0.45}, entrance: hub_junction, synonyms: ["porta del vision lab"]}
+  angelo_door:         {class: Door, door_of: angelo_room, pose: {x: 17.8, y: 6.22, theta: 2.90}, entrance: hub_north1, synonyms: ["porta di Angelo"]}
+  max_door:            {class: Door, door_of: max_room, pose: {x: 19.0, y: 8.76, theta: -0.10}, entrance: hub_north1, synonyms: ["porta di Max"]}
+  beppe_door:          {class: Door, door_of: beppe_room, pose: {x: 19.5, y: 12.4, theta: 0.06}, entrance: hub_north2, synonyms: ["porta di Beppe"]}
+  director_door:       {class: Door, door_of: research_director_room, pose: {x: 20.0, y: 20.7, theta: 0.49}, entrance: hub_north3, synonyms: ["porta del direttore", "porta di Grazia"]}
+
+# Tree edges (undirected). Distances in metres from tools/compute_distances.py
+edges:
+  # main corridor: a chain of hubs and doors
+  - [hub_west, vito_door, 2.3]
+  - [vito_door, hub_center, 4.0]
+  - [hub_center, openspace_door, 2.6]
+  - [openspace_door, hub_junction, 3.8]
+  - [hub_junction, vision_lab_door, 4.7]
+  - [vision_lab_door, angelo_door, 1.3]
+  - [angelo_door, hub_north1, 1.5]
+  - [hub_north1, max_door, 1.5]
+  - [max_door, beppe_door, 3.9]
+  - [beppe_door, hub_north2, 3.1]
+  - [hub_north2, hub_north3, 4.5]
+  # side branches
+  - [hub_junction, administrative_door, 5.1]
+  - [hub_north3, director_door, 1.2]
+  # rooms: through their door (or straight from a hub when they have none)
+  - [lab_robotics, hub_west, 6.8]
+  - [vito_room, vito_door, 1.6]
+  - [openspace, openspace_door, 2.2]
+  - [coffee_break_area, hub_center, 1.8]
+  - [administrative_room, administrative_door, 2.6]
+  - [vision_lab, vision_lab_door, 6.1]
+  - [angelo_room, angelo_door, 1.3]
+  - [max_room, max_door, 4.6]
+  - [gianni_room, hub_north2, 1.5]
+  - [beppe_room, beppe_door, 7.5]
+  - [research_director_room, director_door, 3.7]
+
+classes:          # what each class allows: read by Gemma and by the KB loader
+  Lab:            {camera_allowed: true}
+  CommonArea:     {camera_allowed: true}
+  AdminOffice:    {camera_allowed: true}
+  Office:         {camera_allowed: false}       # privacy: never inspected, served from the doorway
+  DirectorOffice: {camera_allowed: false}
+  Door:           {camera_allowed: false}       # corridor side of a room's door (door_of: <room>)

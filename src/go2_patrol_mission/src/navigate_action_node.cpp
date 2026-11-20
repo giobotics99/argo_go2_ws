@@ -4,6 +4,7 @@
 #include <map>
 #include <cmath>
 
+#include "ament_index_cpp/get_package_share_directory.hpp"
 #include "plansys2_executor/ActionExecutorClient.hpp"
 #include "rclcpp/rclcpp.hpp"
 #include "rclcpp_action/rclcpp_action.hpp"
@@ -23,10 +24,18 @@ public:
   NavigateAction()
   : plansys2::ActionExecutorClient("navigate", 500ms)
   {
+    // Poses: v1 passes waypoints_file (rooms only); v2 reads hubs and places from ontology.yaml.
     this->declare_parameter<std::string>("waypoints_file", "");
+    this->declare_parameter<std::string>(
+      "ontology_file",
+      ament_index_cpp::get_package_share_directory("go2_patrol_mission") + "/config/ontology.yaml");
     // Il cane parla da fermo: prima di partire aspetto che argo_voice abbia finito.
     // voice_wait_min lascia arrivare le frasi di partenza; voice_wait_max evita di restare
     // bloccati se la voce non risponde.
+    // Give up when Nav2 does not arrive in time (e.g. a closed door: Nav2 keeps trying recoveries
+    // for minutes). Deadline = max(nav_timeout_min, nav_timeout_factor * edge_length / speed).
+    this->declare_parameter<double>("nav_timeout_min", 90.0);
+    this->declare_parameter<double>("nav_timeout_factor", 3.0);
     this->declare_parameter<double>("voice_wait_min", 1.5);
     this->declare_parameter<double>("voice_wait_max", 45.0);
     voice_busy_sub_ = this->create_subscription<std_msgs::msg::Bool>(
@@ -38,6 +47,7 @@ public:
     // Lo faccio solo se il robot è in piedi: un robot messo a cuccia di proposito non si rialza.
     this->declare_parameter<bool>("unlock_before_move", true);
     this->declare_parameter<double>("min_standing_height", 0.2);
+    this->declare_parameter<bool>("check_standing", false);
     mode_client_ = this->create_client<go2_interfaces::srv::Mode>("/mode");
     sport_state_sub_ = this->create_subscription<unitree_go::msg::SportModeState>(
       "/sportmodestate", rclcpp::SensorDataQoS(),
@@ -50,25 +60,7 @@ public:
   rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn
   on_activate(const rclcpp_lifecycle::State & previous_state)
   {
-    std::string waypoints_file = this->get_parameter("waypoints_file").as_string();
-    if (waypoints_file.empty()) {
-      RCLCPP_ERROR(this->get_logger(), "waypoints_file parameter is empty!");
-      return rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn::FAILURE;
-    }
-
-    try {
-      YAML::Node config = YAML::LoadFile(waypoints_file);
-      if (config["waypoints"]) {
-        for (YAML::const_iterator it = config["waypoints"].begin(); it != config["waypoints"].end(); ++it) {
-          std::string name = it->first.as<std::string>();
-          YAML::Node wp = it->second;
-          std::vector<double> coords = {wp["x"].as<double>(), wp["y"].as<double>(), wp["theta"].as<double>()};
-          waypoints_[name] = coords;
-          RCLCPP_INFO(this->get_logger(), "Loaded waypoint: %s", name.c_str());
-        }
-      }
-    } catch (const YAML::Exception& e) {
-      RCLCPP_ERROR(this->get_logger(), "Error parsing YAML file: %s", e.what());
+    if (!load_poses()) {
       return rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn::FAILURE;
     }
 
@@ -81,6 +73,8 @@ public:
 
     progress_ = 0.0;
     goal_sent_ = false;
+    finished_ = false;
+    goal_handle_.reset();
     wait_start_ = this->now();
     voice_wait_logged_ = false;
     unlock_state_ = UNLOCK_TODO;
@@ -96,6 +90,58 @@ public:
   }
 
 private:
+  // Fill waypoints_ (name -> x, y, theta). waypoints_file wins (v1 compatibility), otherwise
+  // the hubs and the place poses of ontology.yaml (v2: navigate goes to places AND hubs).
+  bool load_poses()
+  {
+    const std::string waypoints_file = this->get_parameter("waypoints_file").as_string();
+    const std::string ontology_file = this->get_parameter("ontology_file").as_string();
+    waypoints_.clear();
+    try {
+      if (!waypoints_file.empty()) {
+        YAML::Node config = YAML::LoadFile(waypoints_file);
+        for (const auto & it : config["waypoints"]) {
+          const YAML::Node & wp = it.second;
+          waypoints_[it.first.as<std::string>()] =
+          {wp["x"].as<double>(), wp["y"].as<double>(), wp["theta"].as<double>()};
+        }
+      } else {
+        YAML::Node onto = YAML::LoadFile(ontology_file);
+        for (const auto & it : onto["hubs"]) {
+          const YAML::Node & h = it.second;
+          waypoints_[it.first.as<std::string>()] =
+          {h["x"].as<double>(), h["y"].as<double>(), h["theta"].as<double>()};
+        }
+        for (const auto & it : onto["places"]) {
+          const YAML::Node & p = it.second["pose"];
+          waypoints_[it.first.as<std::string>()] =
+          {p["x"].as<double>(), p["y"].as<double>(), p["theta"].as<double>()};
+        }
+        edge_length_.clear();
+        for (const auto & e : onto["edges"]) {
+          if (e.size() >= 3) {
+            const auto a = e[0].as<std::string>(), b = e[1].as<std::string>();
+            edge_length_[a + "|" + b] = edge_length_[b + "|" + a] = e[2].as<double>();
+          }
+        }
+        if (onto["robot"] && onto["robot"]["speed"]) {
+          speed_ = onto["robot"]["speed"].as<double>();
+        }
+      }
+    } catch (const YAML::Exception & e) {
+      RCLCPP_ERROR(this->get_logger(), "Errore nel leggere le pose: %s", e.what());
+      return false;
+    }
+    if (waypoints_.empty()) {
+      RCLCPP_ERROR(this->get_logger(), "Nessuna posa caricata (waypoints_file e ontology_file)");
+      return false;
+    }
+    RCLCPP_INFO(
+      this->get_logger(), "%zu pose caricate da %s", waypoints_.size(),
+      (waypoints_file.empty() ? ontology_file : waypoints_file).c_str());
+    return true;
+  }
+
   void do_work() override
   {
     if (!goal_sent_) {
@@ -167,7 +213,22 @@ private:
       send_goal_options.result_callback =
         std::bind(&NavigateAction::result_callback, this, std::placeholders::_1);
 
-      RCLCPP_INFO(this->get_logger(), "Sending goal to Nav2: %s", target_room.c_str());
+      // Deadline from the edge length (ontology) or the straight line from the current target
+      double length = 0.0;
+      auto edge = edge_length_.find(from_room + "|" + target_room);
+      if (edge != edge_length_.end()) {
+        length = edge->second;
+      } else if (waypoints_.count(from_room)) {
+        length = std::hypot(wp[0] - waypoints_[from_room][0], wp[1] - waypoints_[from_room][1]);
+      }
+      const double timeout = std::max(
+        this->get_parameter("nav_timeout_min").as_double(),
+        this->get_parameter("nav_timeout_factor").as_double() * length / std::max(speed_, 0.05));
+      deadline_ = this->now() + rclcpp::Duration::from_seconds(timeout);
+
+      RCLCPP_INFO(
+        this->get_logger(), "Sending goal to Nav2: %s (%.1f m, limite %.0f s)", target_room.c_str(),
+        length, timeout);
       nav2_client_->async_send_goal(goal_msg, send_goal_options);
       
       // Publish start event
@@ -176,6 +237,21 @@ private:
       events_pub_->publish(*msg);
 
       goal_sent_ = true;
+    } else if (!finished_ && this->now() > deadline_) {
+      // Nav2 is still trying (closed door, person in the way...): give up and let the mission
+      // decide (the BT asks Gemma for a recovery strategy)
+      auto args = get_arguments();
+      RCLCPP_WARN(
+        this->get_logger(), "Non arrivo a %s nel tempo previsto: annullo il goal Nav2",
+        args.size() > 2 ? args[2].c_str() : "?");
+      finished_ = true;
+      if (goal_handle_) {
+        nav2_client_->async_cancel_goal(goal_handle_);
+      }
+      auto msg = std::make_shared<std_msgs::msg::String>();
+      msg->data = "failure:navigate:" + args[0] + ":" + args[1] + ":" + args[2];
+      events_pub_->publish(*msg);
+      finish(false, 0.0, "Navigation timeout");
     }
   }
 
@@ -196,14 +272,18 @@ private:
     unlock_state_ = UNLOCK_DONE;  // qualsiasi esito sotto: un solo tentativo per navigazione
     const auto age = std::chrono::steady_clock::now().time_since_epoch().count() - last_state_ns_;
     const double min_height = this->get_parameter("min_standing_height").as_double();
-    if (last_state_ns_ == 0 || age > std::chrono::nanoseconds(2s).count()) {
-      RCLCPP_WARN(this->get_logger(), "Nessuno stato recente da /sportmodestate: non sblocco il robot");
-      return true;
-    }
-    if (body_height_ < min_height) {
-      RCLCPP_WARN(
-        this->get_logger(), "Il robot è a terra (altezza %.2f m): non lo sblocco", body_height_.load());
-      return true;
+    // Off by default: in the stall state the Go2 reports a wrong body height (0.09 m while
+    // standing, 20/11), so the check kept the robot blocked. A navigate goal means "move" anyway.
+    if (this->get_parameter("check_standing").as_bool()) {
+      if (last_state_ns_ == 0 || age > std::chrono::nanoseconds(2s).count()) {
+        RCLCPP_WARN(this->get_logger(), "Nessuno stato recente da /sportmodestate: non sblocco il robot");
+        return true;
+      }
+      if (body_height_ < min_height) {
+        RCLCPP_WARN(
+          this->get_logger(), "Il robot è a terra (altezza %.2f m): non lo sblocco", body_height_.load());
+        return true;
+      }
     }
     if (!mode_client_->service_is_ready()) {
       RCLCPP_WARN(this->get_logger(), "Servizio /mode non disponibile: non sblocco il robot");
@@ -222,7 +302,12 @@ private:
       std::shared_future<rclcpp_action::ClientGoalHandle<nav2_msgs::action::NavigateToPose>::SharedPtr> future)
     {
       auto goal_handle = future.get();
+      goal_handle_ = goal_handle;
+      if (finished_) {
+        return;
+      }
       if (!goal_handle) {
+        finished_ = true;
         RCLCPP_ERROR(this->get_logger(), "Goal was rejected by server");
         
         auto msg = std::make_shared<std_msgs::msg::String>();
@@ -239,6 +324,12 @@ private:
 
   void result_callback(const rclcpp_action::ClientGoalHandle<nav2_msgs::action::NavigateToPose>::WrappedResult & result)
   {
+    goal_handle_.reset();
+    if (finished_) {   // already finished by the timeout
+      goal_sent_ = false;
+      return;
+    }
+    finished_ = true;
     auto args = get_arguments();
     auto msg = std::make_shared<std_msgs::msg::String>();
 
@@ -272,6 +363,11 @@ private:
   }
 
   std::map<std::string, std::vector<double>> waypoints_;
+  std::map<std::string, double> edge_length_;   // "a|b" -> metres, from ontology.yaml
+  double speed_{0.5};
+  rclcpp::Time deadline_{0, 0, RCL_ROS_TIME};
+  std::atomic<bool> finished_{false};
+  rclcpp_action::ClientGoalHandle<nav2_msgs::action::NavigateToPose>::SharedPtr goal_handle_;
   rclcpp_action::Client<nav2_msgs::action::NavigateToPose>::SharedPtr nav2_client_;
   rclcpp_lifecycle::LifecyclePublisher<std_msgs::msg::String>::SharedPtr events_pub_;
   float progress_;

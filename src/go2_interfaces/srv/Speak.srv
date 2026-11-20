@@ -1,0 +1,6 @@
+# Speak.srv   (G5): write the sentence Argo says for an event
+string event_type            # announce | message | inspection | failure | battery_low | sensor_fault | permission
+string facts_json
+---
+string sentence
+bool used_fallback

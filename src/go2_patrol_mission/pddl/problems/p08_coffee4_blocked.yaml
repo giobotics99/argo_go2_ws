@@ -1,0 +1,4 @@
+id: p08
+mission: coffee_call
+targets: [vito_room, openspace, vision_lab, angelo_room]
+blocked: [[openspace_door, hub_junction]]   # corridor between hub_center and hub_junction

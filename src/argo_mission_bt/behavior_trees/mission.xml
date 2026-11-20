@@ -1,0 +1,112 @@
+<!-- Argo v2 mission BT (README_instruction.md, Phase 5; BehaviorTree.CPP v3).
+     Differences from the README skeleton:
+     - root SafeSequence: reactive, and it halts the mission when R1/R2 take over (see mission_node.cpp);
+     - Gemma's reply is said, then IsTrue(accepted) stops rejected / unclear commands;
+     - after MissionDone: MissionReport + Say + ClearMission, so the BT waits for the next command;
+     - ReturnHome can fail too: then Argo asks for help instead of looping. -->
+<root main_tree_to_execute="Mission">
+
+ <BehaviorTree ID="Mission">
+  <SafeSequence>
+   <ReactiveFallback name="Safe">            <!-- R1 + R2, checked every tick -->
+    <ReactiveSequence>
+     <BatteryOK min_soc="15"/>
+     <SensorsOK fault="{fault}"/>
+    </ReactiveSequence>
+    <Fallback>
+     <Sequence>
+      <BatteryLow min_soc="15"/>
+      <SubTree ID="R1_GoHomeRecharge" __shared_blackboard="true"/>
+     </Sequence>
+     <SubTree ID="R2_Degrade" __shared_blackboard="true"/>
+    </Fallback>
+   </ReactiveFallback>
+
+   <Fallback name="HasMission">
+    <MissionActive/>
+    <Sequence>
+     <WaitCommand command="{command}"/>
+     <GemmaFormulateGoals command="{command}" accepted="{accepted}" mission="{mission}"
+                          goals="{goals}" ordered="{ordered}" message="{message}" reply="{reply}"/>
+     <Say text="{reply}"/>
+     <IsTrue value="{accepted}"/>
+     <SetBlackboard output_key="stuck" value="false"/>
+     <SetGoals mission="{mission}" goals="{goals}" ordered="{ordered}" message="{message}"/>
+    </Sequence>
+   </Fallback>
+
+   <Sequence name="RunMission">
+    <Fallback name="MissionDone">
+     <GoalSatisfied/>
+     <RetryUntilSuccessful num_attempts="3">
+      <Fallback>
+       <Sequence name="PlanAndAct">
+        <SyncKB/>
+        <ComputePlan/>
+        <ExecutePlan/>
+        <GemmaAppraiseFindings/>
+       </Sequence>
+       <Sequence name="Recover">
+        <SyncKB/>
+        <GemmaAssessFailure strategy="{strategy}" sentence="{sentence}"/>
+        <Say text="{sentence}"/>
+        <ApplyStrategy strategy="{strategy}"/>
+        <AlwaysFailure/>                     <!-- forces the retry with the updated KB -->
+       </Sequence>
+      </Fallback>
+     </RetryUntilSuccessful>
+     <Fallback>
+      <SubTree ID="ReturnHome" __shared_blackboard="true"/>
+      <Sequence>
+       <Say text="Non riesco a tornare in laboratorio da solo: ho bisogno di aiuto."/>
+       <SetBlackboard output_key="stuck" value="true"/>
+      </Sequence>
+     </Fallback>
+    </Fallback>
+    <MissionReport text="{report}" stuck="{stuck}"/>
+    <Say text="{report}"/>
+    <ClearMission/>
+   </Sequence>
+  </SafeSequence>
+ </BehaviorTree>
+
+ <!-- R1: battery below 15 %: stop the mission, say why, go home using the reserve, lie down -->
+ <BehaviorTree ID="R1_GoHomeRecharge">
+  <Sequence>
+   <CancelPlan/>
+   <Say text="Ho la batteria scarica: interrompo e torno in laboratorio a ricaricarmi."/>
+   <SetHomeGoal reserve="0"/>
+   <Fallback>
+    <Sequence>
+     <SyncKB/>
+     <ComputePlan/>
+     <ExecutePlan/>
+    </Sequence>
+    <Say text="Non riesco a tornare in laboratorio: mi fermo qui."/>
+   </Fallback>
+   <LieDown/>
+   <ClearMission/>
+   <WaitBatteryOK min_soc="20"/>
+  </Sequence>
+ </BehaviorTree>
+
+ <!-- R2: a FATAL sensor fault (health_monitor): stop, say what failed, wait until it is back -->
+ <BehaviorTree ID="R2_Degrade">
+  <Sequence>
+   <CancelPlan/>
+   <Say text="Un sensore non funziona: mi fermo per sicurezza."/>
+   <ClearMission/>
+   <WaitHealthy/>
+  </Sequence>
+ </BehaviorTree>
+
+ <BehaviorTree ID="ReturnHome">
+  <Sequence>
+   <SetHomeGoal/>
+   <SyncKB/>
+   <ComputePlan/>
+   <ExecutePlan/>
+  </Sequence>
+ </BehaviorTree>
+
+</root>

@@ -1,0 +1,5 @@
+# Chat.srv   (G6): one small-talk line at the coffee area
+string detections_json
+string history
+---
+string line

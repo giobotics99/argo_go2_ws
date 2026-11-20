@@ -1,0 +1,4 @@
+id: p08b
+mission: coffee_call
+targets: [vito_room, openspace]  # P8 after DROP_UNREACHABLE
+blocked: [[openspace_door, hub_junction]]   # corridor between hub_center and hub_junction

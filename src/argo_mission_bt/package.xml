@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>argo_mission_bt</name>
+  <version>0.1.0</version>
+  <description>Argo v2 mission executive: BehaviorTree.CPP v3 over PlanSys2 and gemma_server</description>
+  <maintainer email="giovanna@todo.com">giovanna</maintainer>
+  <license>Apache License 2.0</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <depend>rclcpp</depend>
+  <depend>ament_index_cpp</depend>
+  <depend>behaviortree_cpp_v3</depend>
+  <depend>plansys2_msgs</depend>
+  <depend>plansys2_domain_expert</depend>
+  <depend>plansys2_problem_expert</depend>
+  <depend>plansys2_planner</depend>
+  <depend>plansys2_executor</depend>
+  <depend>plansys2_pddl_parser</depend>
+  <depend>go2_interfaces</depend>
+  <depend>unitree_go</depend>
+  <depend>geometry_msgs</depend>
+  <depend>std_msgs</depend>
+  <depend>yaml-cpp</depend>
+  <exec_depend>go2_patrol_mission</exec_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

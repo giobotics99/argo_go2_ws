@@ -21,6 +21,12 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "srv/SpeedLevel.srv"
   "srv/SwitchGait.srv"
   "srv/SwitchJoystick.srv"
+  # Argo v2: services of gemma_server.py (README_instruction.md, Phase 2)
+  "srv/FormulateGoals.srv"
+  "srv/AssessFailure.srv"
+  "srv/AppraiseFindings.srv"
+  "srv/Speak.srv"
+  "srv/Chat.srv"
   DEPENDENCIES
 )
 

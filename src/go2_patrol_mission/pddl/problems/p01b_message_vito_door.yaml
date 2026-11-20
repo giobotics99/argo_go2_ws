@@ -1,0 +1,3 @@
+id: p01b
+mission: message
+targets: [vito_room]   # delivered at vito_door

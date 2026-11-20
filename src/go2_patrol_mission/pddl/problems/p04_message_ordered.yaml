@@ -1,0 +1,4 @@
+id: p04
+mission: message
+targets: [max_room, vito_room]   # 'prima da Max, poi da Vito'
+ordered: true

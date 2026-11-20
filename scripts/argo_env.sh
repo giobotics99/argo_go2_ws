@@ -73,6 +73,12 @@ wait_nav2() {
   echo "[argo] Nav2 attivo."
 }
 
+wait_argo() {   # v2: mission_node pronto (servizio /argo/command)
+  echo "[argo] Aspetto il servizio /argo/command (Argo v2) ..."
+  until ros2 service list 2>/dev/null | grep -q '^/argo/command$'; do sleep 2; done
+  echo "[argo] Argo v2 pronto."
+}
+
 wait_plansys2() {
   echo "[argo] Aspetto il servizio /gemma_interface/send_command ..."
   until ros2 service list 2>/dev/null | grep -q /gemma_interface/send_command; do sleep 2; done
@@ -84,7 +90,10 @@ argo_cmd() {
   # Stringa YAML tra doppi apici: gli apostrofi (l'openspace) vanno bene; escape di \ e "
   local txt
   txt=$(printf '%s' "$*" | sed -e 's/\\/\\\\/g' -e 's/"/\\"/g')
-  ros2 service call /gemma_interface/send_command go2_interfaces/srv/GemmaCommand "{command: \"$txt\"}"
+  # v2 (mission BT) se c'è /argo/command, altrimenti il bridge della v1
+  local srv=/gemma_interface/send_command
+  ros2 service list 2>/dev/null | grep -q '^/argo/command$' && srv=/argo/command
+  ros2 service call "$srv" go2_interfaces/srv/GemmaCommand "{command: \"$txt\"}"
 }
 
 # Guida: luoghi che il cane conosce + esempi di comandi

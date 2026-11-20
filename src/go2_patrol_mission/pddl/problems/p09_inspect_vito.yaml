@@ -1,0 +1,3 @@
+id: p09
+mission: inspect
+targets: [vito_room]             # office: no camera_allowed (privacy)

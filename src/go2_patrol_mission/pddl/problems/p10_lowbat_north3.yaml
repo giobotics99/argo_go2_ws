@@ -1,0 +1,5 @@
+id: p10
+mission: message
+targets: [vito_room]
+start: hub_north3
+battery: 3                       # below the 15 % reserve

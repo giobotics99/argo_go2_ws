@@ -1,0 +1,4 @@
+id: p06
+mission: inspect
+targets: [openspace, vision_lab, administrative_room]
+battery: 16                      # 1 % above the 15 % reserve: recharge needed

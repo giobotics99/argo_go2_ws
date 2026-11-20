@@ -1,0 +1,7 @@
+# AppraiseFindings.srv   (G4): judge what an inspection found
+string room
+string detections_json       # {"person": 3, "laptop": 2, ...}
+string time_of_day
+---
+string verdict               # NONE | REPORT
+string sentence

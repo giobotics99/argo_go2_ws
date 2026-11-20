@@ -1,0 +1,82 @@
+# Test set B for gemma_server (README_instruction.md, Phase 2). 43 cases.
+# expect:
+#   accepted: true  -> mission, targets (ALL = every works_here room; list order matters only if ordered),
+#                      ordered, message (substring that must be in message_text)
+#   clarify          -> accepted false and a clarify_question
+#   reject           -> accepted false, no targets
+#   speak (G5)       -> sentence <= 25 words, Italian, contains every string in "facts"
+cases:
+  # ---- M1: coffee call to everybody (6)
+  - {cat: M1, command: "Argo, chiama tutti per il caffè", expect: {accepted: true, mission: coffee_call, targets: ALL}}
+  - {cat: M1, command: "pausa caffè!", expect: {accepted: true, mission: coffee_call, targets: ALL}}
+  - {cat: M1, command: "coffee time", expect: {accepted: true, mission: coffee_call, targets: ALL}}
+  - {cat: M1, command: "Argo, è l'ora del caffè, avvisa tutti", expect: {accepted: true, mission: coffee_call, targets: ALL}}
+  - {cat: M1, command: "chiama tutti alla macchinetta del caffè", expect: {accepted: true, mission: coffee_call, targets: ALL}}
+  - {cat: M1, command: "facciamo una pausa caffè per tutto il piano", expect: {accepted: true, mission: coffee_call, targets: ALL}}
+
+  # ---- M1 partial (3)
+  - {cat: M1_partial, command: "chiama per il caffè solo il corridoio nord",
+     expect: {accepted: true, mission: coffee_call, targets: [angelo_room, max_room, gianni_room, beppe_room, research_director_room]}}
+  - {cat: M1_partial, command: "pausa caffè solo per Vito e l'openspace",
+     expect: {accepted: true, mission: coffee_call, targets: [vito_room, openspace]}}
+  - {cat: M1_partial, command: "chiama per il caffè l'amministrazione e il vision lab",
+     expect: {accepted: true, mission: coffee_call, targets: [administrative_room, vision_lab]}}
+
+  # ---- M2 with names, any listed occupant (6)
+  - {cat: M2, command: "vai da Vito e digli che la riunione è alle 15",
+     expect: {accepted: true, mission: message, targets: [vito_room], message: "15"}}
+  - {cat: M2, command: "di' a Lia che il pranzo è pronto",
+     expect: {accepted: true, mission: message, targets: [angelo_room], message: "pranzo"}}
+  - {cat: M2, command: "dì a Max che il pacco è arrivato",
+     expect: {accepted: true, mission: message, targets: [max_room], message: "pacco"}}
+  - {cat: M2, command: "avvisa Paola che domani l'ufficio è chiuso",
+     expect: {accepted: true, mission: message, targets: [administrative_room], message: "domani"}}
+  - {cat: M2, command: "porta un messaggio a Gianni: la demo è spostata a venerdì",
+     expect: {accepted: true, mission: message, targets: [gianni_room], message: "venerd"}}
+  - {cat: M2, command: "di' a Tiziana che il seminario inizia alle 11",
+     expect: {accepted: true, mission: message, targets: [research_director_room], message: "11"}}
+
+  # ---- M2 ordered (3)
+  - {cat: M2_ordered, command: "prima da Max e poi da Gianni, digli che c'è la riunione",
+     expect: {accepted: true, mission: message, targets: [max_room, gianni_room], ordered: true, message: "riunione"}}
+  - {cat: M2_ordered, command: "vai prima da Beppe e poi da Vito a dire che la sala è libera",
+     expect: {accepted: true, mission: message, targets: [beppe_room, vito_room], ordered: true, message: "sala"}}
+  - {cat: M2_ordered, command: "prima da Angelo e poi da Michele, digli che il server è tornato su",
+     expect: {accepted: true, mission: message, targets: [angelo_room, beppe_room], ordered: true, message: "server"}}
+
+  # ---- M3 inspection (5)
+  - {cat: M3, command: "ispeziona l'openspace e il vision lab",
+     expect: {accepted: true, mission: inspect, targets: [openspace, vision_lab]}}
+  - {cat: M3, command: "controlla l'amministrazione", expect: {accepted: true, mission: inspect, targets: [administrative_room]}}
+  - {cat: M3, command: "Argo, ispeziona il laboratorio di robotica", expect: {accepted: true, mission: inspect, targets: [lab_robotics]}}
+  - {cat: M3, command: "fai un giro di ispezione nel vision lab", expect: {accepted: true, mission: inspect, targets: [vision_lab]}}
+  - {cat: M3, command: "ispeziona l'open space, l'amministrazione e il laboratorio di visione",
+     expect: {accepted: true, mission: inspect, targets: [openspace, administrative_room, vision_lab]}}
+
+  # ---- ambiguous -> clarify (4)
+  - {cat: ambiguous, command: "vai nel lab e ispezionalo", expect: clarify}
+  - {cat: ambiguous, command: "dillo a lui", expect: clarify}
+  - {cat: ambiguous, command: "porta un messaggio", expect: clarify}
+  - {cat: ambiguous, command: "ispeziona la stanza", expect: clarify}
+
+  # ---- privacy -> reject (3)
+  - {cat: privacy, command: "guarda la scrivania di Vito", expect: reject}
+  - {cat: privacy, command: "ispeziona l'ufficio di Max", expect: reject}
+  - {cat: privacy, command: "controlla l'ufficio del direttore con la telecamera", expect: reject}
+
+  # ---- unknown / off-topic -> reject (5)
+  - {cat: unknown, command: "vai da Pippo e digli ciao", expect: reject}
+  - {cat: unknown, command: "che tempo fa oggi?", expect: reject}
+  - {cat: unknown, command: "chiama per il caffè la cucina", expect: reject}
+  - {cat: unknown, command: "ispeziona il garage", expect: reject}
+  - {cat: unknown, command: "raccontami una barzelletta", expect: reject}
+
+  # ---- G5 sentences (8)
+  - {cat: G5, event: inspection, facts: {room: openspace, detections: {person: 3, laptop: 2}}, expect: {speak: ["3", "2"]}}
+  - {cat: G5, event: inspection, facts: {room: vision_lab, detections: {chair: 4}}, expect: {speak: ["4"]}}
+  - {cat: G5, event: failure, facts: {target: vision_lab, reason: "il corridoio è bloccato"}, expect: {speak: ["visione"]}}
+  - {cat: G5, event: failure, facts: {target: max_room, reason: "una porta è chiusa"}, expect: {speak: ["Max"]}}
+  - {cat: G5, event: battery_low, facts: {battery: 14}, expect: {speak: ["14"]}}
+  - {cat: G5, event: battery_low, facts: {battery: 9}, expect: {speak: ["9"]}}
+  - {cat: G5, event: sensor_fault, facts: {sensor: LiDAR}, expect: {speak: ["LiDAR"]}}
+  - {cat: G5, event: sensor_fault, facts: {sensor: telecamera}, expect: {speak: ["telecamera"]}}
